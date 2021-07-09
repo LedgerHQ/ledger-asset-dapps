@@ -1,0 +1,101 @@
+{
+    "name": "Aave",
+    "contracts": [
+        {
+            "contractName": "AaveV2MainMarket",
+            "address": "0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9",
+            "selectors": {
+                "0xe8eda9xdf": {
+                    "method": "deposit",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0xa415bcad": {
+                    "method": "borrow",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x573ade81": {
+                    "method": "repay",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x69328dec": {
+                    "method": "withdraw",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x94ba89a2": {
+                    "method": "swapBorrowRateMode",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x5a3b74b9": {
+                    "method": "setUserUseReserveAsCollateral",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                }
+            }
+        },
+        {
+            "contractName": "AaveV2AmmMarket",
+            "address": "0x7937d4799803fbbe595ed57278bc4ca21f3bffcb",
+            "selectors": {
+                "0xe8eda9xdf": {
+                    "method": "deposit",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0xa415bcad": {
+                    "method": "borrow",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x573ade81": {
+                    "method": "repay",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x69328dec": {
+                    "method": "withdraw",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x94ba89a2": {
+                    "method": "swapBorrowRateMode",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                },
+                "0x5a3b74b9": {
+                    "method": "setUserUseReserveAsCollateral",
+                    "plugin": "Aave",
+                    "erc20OfInterest": [
+                        "asset"
+                    ]
+                }
+            }
+        }
+    ]
+}
