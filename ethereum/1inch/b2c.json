@@ -8,12 +8,12 @@
                 "0x7c025200": {
                     "method": "swap",
                     "plugin": "1inch",
-                    "erc20OfInterest": []
+                    "erc20OfInterest": ["desc.srcToken", "desc.dstToken"]
                 },
                 "0x2e95b6c8": {
                     "method": "unoswap",
                     "plugin": "1inch",
-                    "erc20OfInterest": []
+                    "erc20OfInterest": ["srcToken"]
                 }
            }
         }
