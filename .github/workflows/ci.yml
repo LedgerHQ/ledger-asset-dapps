@@ -1,0 +1,61 @@
+---
+name: CI
+
+on:
+  push:
+    # Trigger a build on tags, on push against main and release branches and ci/ to test
+    tags:
+      - "*"
+    branches:
+      - main
+      - master
+      - release/*
+  pull_request:
+    # Trigger a build on PR against main, feature branches and release branches
+    branches:
+      - main
+      - master
+      - feature/*
+      - release/*
+  # Manual trigger, allows reusage from other workflows (like release)
+  workflow_dispatch:
+
+
+env:
+  PIPENV_NOSPIN: 1
+
+jobs:
+  # Compute metadata once to ensure every following job is using the same
+  # and avoid logic and step repetition
+  lint:
+    name: Static analysis
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      -
+        name: Cache Python dependencies and virtualenv
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-py-${{ hashFiles('Pipfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-py-
+      -
+        name: Install python dependencies
+        run: |
+          mkdir -p ~/.cache/pip && chmod -R a+w ~/.cache/pip
+          pip install -U pip pipenv wheel
+          pipenv sync --dev
+      -
+        name: Validate files and format
+        run: pipenv run validate_files
