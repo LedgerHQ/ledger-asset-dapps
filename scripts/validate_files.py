@@ -12,10 +12,14 @@ from validation.validators import (
 logging.basicConfig(level="INFO")
 
 VALIDATIONS = {
-    "json": ("./ethereum/**/*.json", format_validator, endlines_validator),
-    "contracts": (
+    "json": ("./*/**/*.json", format_validator, endlines_validator),
+    "eth_contracts": (
         "./ethereum/*/b2c.json",
         schema_validator("./ethereum/schema.json")
+    ),
+    "bsc_contracts": (
+        "./bsc/*/b2c.json",
+        schema_validator("./bsc/schema.json")
     )
 }
 
