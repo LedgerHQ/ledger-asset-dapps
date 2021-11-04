@@ -1,0 +1,137 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x1bD435F3C054b6e901B7b108a0ab7617C808677b",
+            "name": "ParaSwap P4",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn",
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                }
+                            },
+                            "valueType": "amount"
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                }
+                            },
+                            "valueType": "amount"
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnUniswapFork",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x0863b7ac"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount",
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken",
+                                        "transaction": "amount"
+                                    }
+                                }
+                            },
+                            "valueType": "amount"
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.path.0.path.-1.to"
+                                    }
+                                }
+                            },
+                            "valueType": "amount"
+                        },
+                        {
+                            "format": "address",
+                            "label": "Received amount",
+                            "name": "beneficiary",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "data.beneficiary"
+                                    }
+                                }
+                            },
+                            "valueType": "address"
+                        },
+                        {
+                            "format": "percent",
+                            "label": "Percentage",
+                            "name": "percent",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.path.1.path.-2.routes.-1.percent"
+                                    }
+                                }
+                            },
+                            "valueType": "number"
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "megaSwap",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0xec1d21dd"
+                }
+            ]
+        }
+    ],
+    "name": "ParaSwap"
+}
