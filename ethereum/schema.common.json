@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "contracts": {
+      "type": "array",
+      "items": {
+          "type": "object",
+          "properties": {
+            "contractName": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            },
+            "selectors": {
+              "type": "object",
+              "additionalProperties": false,
+              "patternProperties": {
+                "^0x[a-z0-9]*$": {
+                  "type": "object",
+                  "properties": {
+                    "method": {
+                      "type": "string"
+                    },
+                    "defaultLabel": {
+                      "type": "string"
+                    },
+                    "conditions": {
+                      "type": "object",
+                      "properties": {
+                        "ethContractAddress": {
+                          "type": "string"
+                        },
+                        "enforeceEthAmountZero": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "ethAmountZero"
+                      ]
+                    },
+                    "arguments": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "patternProperties": {
+                        "^[a-zA-Z0-9]*$": {
+                          "type": "object",
+                          "properties": {
+                            "defaultLabel": {
+                              "type": "string"
+                            },
+                            "valueFormat": {
+                              "type": "string"
+                            },
+                            "typePath": {
+                              "type": "string"
+                            },
+                            "valuePath": {
+                              "type": "object",
+                              "properties": {
+                                "ethereum": {
+                                  "type": "string"
+                                },
+                                "erc20": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          },
+                          "required": [
+                            "defaultLabel",
+                            "valueFormat",
+                            "valuePath"
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "required": [
+                    "method",
+                    "defaultLabel",
+                    "conditions",
+                    "arguments"
+                  ]
+                }
+              }
+            }
+          },
+          "required": [
+            "contractName",
+            "address",
+            "selectors"
+          ]
+        }
+    }
+  },
+  "required": [
+    "name",
+    "contracts"
+  ]
+}

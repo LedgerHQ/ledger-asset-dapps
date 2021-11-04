@@ -1,0 +1,53 @@
+{
+    "name": "Paraswap",
+    "chainId": 1,
+    "contracts": [
+        {
+            "name": "AugustusSwapper",
+            "address": "0x1bd435f3c054b6e901b7b108a0ab7617c808677b",
+            "selectors": {
+                "0xec1d21dd": {
+                    "name": "MegaSwap",
+                    "type": "swap",
+                    "defaultLabel": "Swap",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                        "assertEthAmountIsZero": false
+                    },
+                    "arguments": [
+                        {
+                            "name": "fromAmount",
+                            "type": "amount",
+                            "defaultLabel": "Sent amount",
+                            "format": "amount",
+                            "valuePath": {
+                                "ethereum": "__transaction__.amount",
+                                "default": "data.fromAmount"  // (0)(1)
+                            },
+                            "tokenAddressPath": "data.fromToken"  // (0)(0)
+                        },
+                        {
+                            "name": "toAmount",
+                            "type": "amount",
+                            "defaultLabel": "Received amount",
+                            "format": "amount",
+                            "valuePath": {
+                                "default": "data.toAmount"  // (0)(2)
+                            },
+                            "tokenAddressPath" : "data.path.0.path.-1.to"  // (0)(7)[0](1)[-1](0)
+                        },
+                        {
+                            "name": "beneficiary",
+                            "type": "address",
+                            "defaultLabel" : "Beneficiary address",
+                            "format" : "address",
+                            "valuePath": {
+                                "default": "data.beneficiary"  // (0)(4)
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
