@@ -18,3 +18,9 @@ Only a quorum of Ledger employes is authorized to create new production signatur
 
 ### Test signature
 Not yet supported, coming soon.
+
+# Tips
+In case you need to update to lowercase all Ethereum addresses, you should be able to do this with something like
+```
+sed -e 's/\("0x.*"\)/\L\1/' b2c.json > b2c.json.new
+```
