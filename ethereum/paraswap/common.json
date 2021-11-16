@@ -24,7 +24,7 @@
                                 "ethereum": "__transaction__.amount",
                                 "default": "data.fromAmount"  // (0)(1)
                             },
-                            "tokenAddressPath": "data.fromToken"  // (0)(0)
+                            "addressPath": "data.fromToken"  // (0)(0)
                         },
                         {
                             "name": "toAmount",
@@ -34,7 +34,7 @@
                             "valuePath": {
                                 "default": "data.toAmount"  // (0)(2)
                             },
-                            "tokenAddressPath" : "data.path.0.path.-1.to"  // (0)(7)[0](1)[-1](0)
+                            "addressPath" : "data.path.0.path.-1.to"  // (0)(7)[0](1)[-1](0)
                         },
                         {
                             "name": "beneficiary",
