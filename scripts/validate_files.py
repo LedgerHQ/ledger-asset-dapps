@@ -17,6 +17,10 @@ VALIDATIONS = {
         "./ethereum/*/b2c.json",
         schema_validator("./ethereum/schema.json")
     ),
+    "dapps": (
+        "./ethereum/*/common.json",
+        schema_validator("./ethereum/schema.common.json")
+    ),
     "bsc_contracts": (
         "./bsc/*/b2c.json",
         schema_validator("./bsc/schema.json")
