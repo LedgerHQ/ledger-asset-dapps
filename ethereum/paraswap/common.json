@@ -18,31 +18,35 @@
                         {
                             "name": "fromAmount",
                             "type": "amount",
-                            "defaultLabel": "Sent amount",
                             "format": "amount",
-                            "valuePath": {
-                                "ethereum": "__transaction__.amount",
-                                "default": "data.fromAmount"  // (0)(1)
-                            },
-                            "addressPath": "data.fromToken"  // (0)(0)
+                            "label": "Sent amount",
+                            "value": {
+                                "quantity": {
+                                    "defaultPath": "data.fromAmount"  // (0)(1),
+                                    "cryptoPath": "__transaction__.amount"
+                                },
+                                "tokenPath": "data.fromToken"  // (0)(0)
+                            }
                         },
                         {
                             "name": "toAmount",
                             "type": "amount",
-                            "defaultLabel": "Received amount",
                             "format": "amount",
-                            "valuePath": {
-                                "default": "data.toAmount"  // (0)(2)
-                            },
-                            "addressPath" : "data.path.0.path.-1.to"  // (0)(7)[0](1)[-1](0)
+                            "label": "Received amount",
+                            "value": {
+                                "quantity": {
+                                    "defaultPath": "data.toAmount"  // (0)(2),
+                                },
+                                "tokenPath": "data.path.0.path.-1.to"  // (0)(7)[0](1)[-1](0)
+                            }
                         },
                         {
                             "name": "beneficiary",
                             "type": "address",
-                            "defaultLabel" : "Beneficiary address",
                             "format" : "address",
-                            "valuePath": {
-                                "default": "data.beneficiary"  // (0)(4)
+                            "label" : "Beneficiary address",
+                            "value": {
+                                "addressPath": "data.beneficiary"  // (0)(4)
                             }
                         }
                     ]
