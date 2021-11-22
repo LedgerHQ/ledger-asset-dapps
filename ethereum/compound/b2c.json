@@ -150,6 +150,82 @@
                     "plugin": "Compound"
                 }
             }
+        },
+        {
+            "address": "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
+            "contractName": "cCOMP",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "RepayBorrow",
+                    "plugin": "Compound"
+                },
+                "0x2608f818": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "repayBorrowBehalf",
+                    "plugin": "Compound"
+                },
+                "0x56781388": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "castVote",
+                    "plugin": "Compound"
+                },
+                "0x5c19a95c": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "delegate",
+                    "plugin": "Compound"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "mint",
+                    "plugin": "Compound"
+                },
+                "0xa9059cbb": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "transfer",
+                    "plugin": "Compound"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "borrow",
+                    "plugin": "Compound"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "redeem",
+                    "plugin": "Compound"
+                },
+                "0xf5e3c462": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "liquidateBorrow",
+                    "plugin": "Compound"
+                }
+            }
         }
     ],
     "name": "Compound"
