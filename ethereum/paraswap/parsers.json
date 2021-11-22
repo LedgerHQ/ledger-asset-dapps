@@ -1,0 +1,49 @@
+{
+  "name": "Paraswap",
+  "chainId": 1,
+  "contracts": [
+    {
+      "name": "ParaSwap P4",
+      "address": "0x1bD435F3C054b6e901B7b108a0ab7617C808677b",
+      "parsers": [
+        {
+          "selector": "0x0863b7ac",
+          "name": "swapOnUniswapFork",
+          "type": "swap",
+          "label": "Swap",
+          "options": {
+            "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "assertEthAmountIsZero": false
+          },
+          "arguments": [
+            {
+              "name": "fromAmount",
+              "type": "amount",
+              "format": "amount",
+              "label": "Sent amount",
+              "value": {
+                "quantity": {
+                  "defaultPath": "amountIn",
+                  "cryptoPath": "__transaction__.amount"
+                },
+                "tokenPath": "path.0"
+              }
+            },
+            {
+              "name": "toAmount",
+              "type": "amount",
+              "format": "amount",
+              "label": "Received amount",
+              "value": {
+                "quantity": {
+                  "defaultPath": "amountOutMin"
+                },
+                "tokenPath": "path.-1"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
