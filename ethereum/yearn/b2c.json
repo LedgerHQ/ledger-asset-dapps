@@ -2,18 +2,34 @@
     "chainId": 1,
     "contracts": [
         {
+            "address": "0x92be6adb6a12da0ca607f9d87db2f9978cd6ec3e",
+            "contractName": "Zap In",
+            "selectors": {
+                "0x38b32e68": {
+                    "erc20OfInterest": [
+                        "fromToken"
+                    ],
+                    "method": "ZapIn",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
             "address": "0xbfa4d8aa6d8a379abfe7793399d3ddacc5bbecbb",
             "contractName": "DAI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 }
@@ -24,14 +40,17 @@
             "contractName": "USDC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 }
@@ -42,30 +61,37 @@
             "contractName": "HEGIC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -76,18 +102,22 @@
             "contractName": "DAI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -98,30 +128,37 @@
             "contractName": "USDC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -132,30 +169,37 @@
             "contractName": "Curve stETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -166,18 +210,22 @@
             "contractName": "WBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -188,30 +236,37 @@
             "contractName": "Curve sETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -222,18 +277,22 @@
             "contractName": "ETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -244,18 +303,22 @@
             "contractName": "YFI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -266,30 +329,37 @@
             "contractName": "1INCH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -300,30 +370,37 @@
             "contractName": "Curve Iron Bank",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -334,30 +411,37 @@
             "contractName": "Curve HBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -368,30 +452,37 @@
             "contractName": "yveCRV",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -402,30 +493,37 @@
             "contractName": "Curve sBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -436,30 +534,37 @@
             "contractName": "Curve renBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -470,30 +575,37 @@
             "contractName": "Curve sAave",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -504,30 +616,37 @@
             "contractName": "Curve oBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -538,30 +657,37 @@
             "contractName": "Curve pBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -572,30 +698,37 @@
             "contractName": "Curve LUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -606,30 +739,37 @@
             "contractName": "Curve BBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -640,30 +780,37 @@
             "contractName": "Curve tBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -674,30 +821,37 @@
             "contractName": "USDT",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -708,30 +862,37 @@
             "contractName": "WBTC",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -742,30 +903,37 @@
             "contractName": "Curve FRAX",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -776,30 +944,37 @@
             "contractName": "UNI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -810,30 +985,37 @@
             "contractName": "Curve yBUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -844,30 +1026,37 @@
             "contractName": "Curve Compound",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -878,30 +1067,37 @@
             "contractName": "Curve GUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -912,30 +1108,37 @@
             "contractName": "Curve yCRV",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -946,30 +1149,37 @@
             "contractName": "Curve 3Crv",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -980,30 +1190,37 @@
             "contractName": "Curve TUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1014,30 +1231,37 @@
             "contractName": "Curve BUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1048,30 +1272,37 @@
             "contractName": "Curve DUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1082,30 +1313,37 @@
             "contractName": "Curve UST",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1116,30 +1354,37 @@
             "contractName": "Curve mUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1150,30 +1395,37 @@
             "contractName": "sUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1184,30 +1436,37 @@
             "contractName": "SNX",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1218,30 +1477,37 @@
             "contractName": "Curve sUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1252,30 +1518,37 @@
             "contractName": "Curve LINK",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1286,30 +1559,37 @@
             "contractName": "Curve USDN",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1320,30 +1600,37 @@
             "contractName": "Curve USDP",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1354,30 +1641,37 @@
             "contractName": "Curve alUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1388,30 +1682,37 @@
             "contractName": "Curve rETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1422,30 +1723,37 @@
             "contractName": "Curve aETHc",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1456,30 +1764,37 @@
             "contractName": "Curve Aave",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1490,30 +1805,37 @@
             "contractName": "Curve HUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1524,30 +1846,37 @@
             "contractName": "Curve EURS",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1558,30 +1887,37 @@
             "contractName": "LINK",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1592,30 +1928,37 @@
             "contractName": "RAI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1626,30 +1969,37 @@
             "contractName": "ETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1660,30 +2010,37 @@
             "contractName": "Curve triCrypto",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1694,30 +2051,37 @@
             "contractName": "Curve PAX",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1728,30 +2092,37 @@
             "contractName": "Curve USDT",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1762,30 +2133,37 @@
             "contractName": "Curve USDK",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1796,30 +2174,37 @@
             "contractName": "Curve RSV",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1830,30 +2215,37 @@
             "contractName": "DAI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1864,30 +2256,37 @@
             "contractName": "Curve 3Crypto",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1898,30 +2297,37 @@
             "contractName": "AAVE",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1932,30 +2338,37 @@
             "contractName": "COMP",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -1966,30 +2379,37 @@
             "contractName": "SUSHI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2000,30 +2420,37 @@
             "contractName": "TUSD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2034,30 +2461,37 @@
             "contractName": "Curve EURT",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2068,30 +2502,37 @@
             "contractName": "Curve MIM",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2102,30 +2543,37 @@
             "contractName": "Curve cvxCRV",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2136,30 +2584,37 @@
             "contractName": "Curve ibEUR",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2170,30 +2625,37 @@
             "contractName": "Curve ibKRW",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2204,30 +2666,37 @@
             "contractName": "Curve ibGBP",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2238,30 +2707,37 @@
             "contractName": "Curve ibAUD",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2272,30 +2748,37 @@
             "contractName": "Curve ibCHF",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2306,30 +2789,37 @@
             "contractName": "Curve ibJPY",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2340,30 +2830,37 @@
             "contractName": "YFI",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2374,30 +2871,37 @@
             "contractName": "Curve USDM",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2408,30 +2912,37 @@
             "contractName": "Curve alETH",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2442,30 +2953,37 @@
             "contractName": "Curve EURN",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
                     "plugin": "Yearn"
                 }
@@ -2476,31 +2994,1030 @@
             "contractName": "Curve MIM-UST",
             "selectors": {
                 "0x00f714ce": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to",
                     "plugin": "Yearn"
                 },
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "Yearn"
                 },
                 "0x3ccfd60b": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_all",
                     "plugin": "Yearn"
                 },
                 "0x6e553f65": {
+                    "erc20OfInterest": [],
                     "method": "deposit_to",
                     "plugin": "Yearn"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Yearn"
                 },
                 "0xd0e30db0": {
+                    "erc20OfInterest": [],
                     "method": "deposit_all",
                     "plugin": "Yearn"
                 },
                 "0xe63697c8": {
+                    "erc20OfInterest": [],
                     "method": "withdraw_to_with_slippage",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x41c84c0e2ee0b740cf0d31f63f3b6f627dc6b393",
+            "contractName": "cyWETH",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x8e595470ed749b85c6f7669de83eae304c2ec68f",
+            "contractName": "cyDAI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x7589c9e17bcfce1ccaa1f921196fda177f0207fc",
+            "contractName": "cyY3CRV",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xe7bff2da8a2f619c2586fb83938fa56ce803aa16",
+            "contractName": "cyLINK",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xfa3472f7319477c9bfecdd66e4b948569e7621b9",
+            "contractName": "cyYFI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x12a9cc33a980daa74e00cc2d1a0e74c57a93d12c",
+            "contractName": "cySNX",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x8fc8bfd80d6a9f17fb98a373023d72531792b431",
+            "contractName": "cyWBTC",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x48759f220ed983db51fa7a8c0d2aab8f3ce4166a",
+            "contractName": "cyUSDT",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x76eb2fe28b36b3ee97f3adae0c69606eedb2a37c",
+            "contractName": "cyUSDC",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xbe86e8918dfc7d3cb10d295fc220f941a1470c5c",
+            "contractName": "cyMUSD",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x297d4da727fbc629252845e96538fc46167e453a",
+            "contractName": "cyDUSD",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xa8caea564811af0e92b1e044f3edd18fa9a73e4f",
+            "contractName": "cyEURS",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xca55f9c4e77f7b8524178583b0f7c798de17fd54",
+            "contractName": "cySEUR",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x7736ffb07104c0c400bb0cc9a7c228452a732992",
+            "contractName": "cyDPI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x09bdcce2593f0bef0991188c25fb744897b6572d",
+            "contractName": "cyBUSD",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x9d029cd7cedcb194e2c361948f279f1788135bb2",
+            "contractName": "cyCREAM",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x4f12c9dabb5319a252463e6028ca833f1164d045",
+            "contractName": "cyCDAI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xbb4b067cc612494914a902217cb6078ab4728e36",
+            "contractName": "cyCUSDT",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x950027632fbd6adadfe82644bfb64647642b6c09",
+            "contractName": "cyCUSDC",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xa7c4054afd3dbbbf5bfe80f41862b89ea05c9806",
+            "contractName": "cySUSD",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x1b3e95e8ecf7a7cab6c4de1b344f94865abd12d5",
+            "contractName": "cyCHF",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xfeeb92386a055e2ef7c2b598c872a4047a7db59f",
+            "contractName": "cyUNI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x226f3738238932ba0db2319a8117d9555446102f",
+            "contractName": "cySUSHI",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x30190a3b52b5ab1daf70d46d72536f5171f22340",
+            "contractName": "cyAAVE",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x00e5c0774a5f065c285068170b20393925c84bf3",
+            "contractName": "cyEUR",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xb8c5af54bbdcc61453144cf472a9276ae36109f9",
+            "contractName": "cyCRV",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x3c9f5385c288ce438ed55620938a4b967c080101",
+            "contractName": "cyKRW",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x215f34af6557a6598dbda9aa11cc556f5ae264b1",
+            "contractName": "cyJPY",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x86bbd9ac8b9b44c95ffc6baae58e25033b7548aa",
+            "contractName": "cyAUD",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0xecab2c76f1a8359a06fab5fa0ceea51280a97ecf",
+            "contractName": "cyGBP",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x9e8e207083ffd5bdc3d99a1f32d1e6250869c1a9",
+            "contractName": "cyMIM",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Yearn"
+                }
+            }
+        },
+        {
+            "address": "0x672473908587b10e65dab177dbaeadcbb30bf40b",
+            "contractName": "cyZAR",
+            "selectors": {
+                "0x0e752702": {
+                    "erc20OfInterest": [],
+                    "method": "repayBorrow",
+                    "plugin": "Yearn"
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Yearn"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Yearn"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Yearn"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Yearn"
                 }
             }
