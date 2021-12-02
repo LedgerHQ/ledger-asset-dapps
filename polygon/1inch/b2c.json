@@ -21,6 +21,20 @@
                     "plugin": "1inch"
                 }
             }
+        },
+        {
+            "address": "0x1111111254fb6c44bac0bed2854e76f90643097d",
+            "contractName": "1inchV4",
+            "selectors": {
+                "0x7c025200": {
+                    "erc20OfInterest": [
+                        "desc.srcToken",
+                        "desc.dstToken"
+                    ],
+                    "method": "swap",
+                    "plugin": "1inch"
+                }
+            }
         }
     ],
     "name": "1inch"
