@@ -1,5 +1,5 @@
 {
-    "chainId": 1,
+    "chainId": 137,
     "contracts": [
         {
             "address": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
@@ -87,12 +87,68 @@
             "address": "0x1bd435f3c054b6e901b7b108a0ab7617c808677b",
             "contractName": "AugustusSwapper",
             "selectors": {
+                "0x0863b7ac": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "plugin": "Paraswap"
+                },
+                "0x33635226": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "plugin": "Paraswap"
+                },
+                "0x58b9d179": {
+                    "erc20OfInterest": [
+                        "path.0"
+                    ],
+                    "method": "swapOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0x8f00eccb": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.-1.to"
+                    ],
+                    "plugin": "Paraswap"
+                },
+                "0xa27e8b6b": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "plugin": "Paraswap"
+                },
                 "0xcfc0afeb": {
                     "erc20OfInterest": [
                         "fromToken",
                         "toToken"
                     ],
                     "method": "simpleSwap",
+                    "plugin": "Paraswap"
+                },
+                "0xec1d21dd": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.0.path.-1.to"
+                    ],
+                    "plugin": "Paraswap"
+                },
+                "0xf9355f72": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "plugin": "Paraswap"
+                },
+                "0xf95a49eb": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
                     "plugin": "Paraswap"
                 }
             }
