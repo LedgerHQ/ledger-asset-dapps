@@ -1,30 +1,40 @@
 {
     "chainId": 1,
     "contracts": [
-        {
-            "address": "0xb0ea149212eb707a1e5fc1d2d3fd318a8d94cf05",
-            "contractName": "RaribleContract",
-            "selectors": {
-                "0x450346e0": {
-                    "method": "mintAndTransfer",
-                    "plugin": "Rarible"
-                }
-            }
-        },
-        {
-            "address": "0xaf46e8b5138af2d42fef394cb91a279125d4e8d0",
-            "contractName": "RaribleContract",
-            "selectors": {
-                "0xe2864fe3": {
-                    "method": "cancel",
-                    "plugin": "Rarible"
-                },
-                "0xe99a3f80": {
-                    "method": "matchOrders",
-                    "plugin": "Rarible"
-                }
-            }
+      {
+        "address": "0xb0ea149212eb707a1e5fc1d2d3fd318a8d94cf05",
+        "contractName": "RaribleContract",
+        "selectors": {
+          "0x450346e0": {
+            "method": "mintAndTransfer",
+            "plugin": "Rarible"
+          }
         }
+      },
+      {
+        "address": "0xaf46e8b5138af2d42fef394cb91a279125d4e8d0",
+        "contractName": "RaribleContract",
+        "selectors": {
+          "0xe2864fe3": {
+            "method": "cancel",
+            "plugin": "Rarible"
+          },
+          "0xe99a3f80": {
+            "method": "matchOrders",
+            "plugin": "Rarible"
+          }
+        }
+      },
+      {
+        "address": "0x0330bd3830df5358af73da668fbfe52a6e039dc5",
+        "contractName": "RaribleContract",
+        "selectors": {
+          "0x832fbb29": {
+            "method": "transferFromOrMint",
+            "plugin": "Rarible"
+          }
+        }
+      }
     ],
     "name": "Rarible"
 }
