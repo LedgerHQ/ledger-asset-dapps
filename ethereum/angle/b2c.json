@@ -1,0 +1,136 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x5addc89785d75c86ab939e9e15bfbbb7fc086a87",
+            "contractName": "Angle Protocol: Stable Master Front (agEUR)",
+            "selectors": {
+                "0x074ee446": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Angle"
+                },
+                "0x23e103a8": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Angle"
+                },
+                "0x2e2d2984": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Angle"
+                },
+                "0x6d104216": {
+                    "erc20OfInterest": [],
+                    "method": "burn",
+                    "plugin": "Angle"
+                }
+            }
+        },
+        {
+            "address": "0x5efe48f8383921d950683c46b87e28e21dea9fb5",
+            "contractName": "Angle Protocol: PerpetualManager Front (agEUR-USDC)",
+            "selectors": {
+                "0x1c4b774b": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Angle"
+                },
+                "0x24d83b79": {
+                    "erc20OfInterest": [],
+                    "method": "addToPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xa62b2a3d": {
+                    "erc20OfInterest": [],
+                    "method": "openPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xe5234c7a": {
+                    "erc20OfInterest": [],
+                    "method": "closePerpetual",
+                    "plugin": "Angle"
+                }
+            }
+        },
+        {
+            "address": "0xfc8f9eefc5fce1d9dace2b0a11a1e184381787c4",
+            "contractName": "Angle Protocol: PerpetualManager Front (agEUR-DAI)",
+            "selectors": {
+                "0x1c4b774b": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Angle"
+                },
+                "0x24d83b79": {
+                    "erc20OfInterest": [],
+                    "method": "addToPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xa62b2a3d": {
+                    "erc20OfInterest": [],
+                    "method": "openPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xe5234c7a": {
+                    "erc20OfInterest": [],
+                    "method": "closePerpetual",
+                    "plugin": "Angle"
+                }
+            }
+        },
+        {
+            "address": "0x4121a258674e507c990cdf390f74d4ef27592114",
+            "contractName": "Angle Protocol: PerpetualManager Front (agEUR-FRAX)",
+            "selectors": {
+                "0x1c4b774b": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Angle"
+                },
+                "0x24d83b79": {
+                    "erc20OfInterest": [],
+                    "method": "addToPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xa62b2a3d": {
+                    "erc20OfInterest": [],
+                    "method": "openPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xe5234c7a": {
+                    "erc20OfInterest": [],
+                    "method": "closePerpetual",
+                    "plugin": "Angle"
+                }
+            }
+        },
+        {
+            "address": "0x98fdbc5497599eff830923ea1ee152adb9a4cea5",
+            "contractName": "Angle Protocol: PerpetualManager Front (agEUR-FEI)",
+            "selectors": {
+                "0x1c4b774b": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Angle"
+                },
+                "0x24d83b79": {
+                    "erc20OfInterest": [],
+                    "method": "addToPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xa62b2a3d": {
+                    "erc20OfInterest": [],
+                    "method": "openPerpetual",
+                    "plugin": "Angle"
+                },
+                "0xe5234c7a": {
+                    "erc20OfInterest": [],
+                    "method": "closePerpetual",
+                    "plugin": "Angle"
+                }
+            }
+        }
+    ],
+    "name": "Angle"
+}
