@@ -16,14 +16,15 @@
                 "0x46c67b6d": {
                     "erc20OfInterest": [
                         "data.fromToken",
-                        "data.path.1.path.-1.to"
+                        "data.path.0.path.-1.to"
                     ],
                     "method": "megaSwap",
                     "plugin": "Paraswap"
                 },
                 "0x54840d1a": {
                     "erc20OfInterest": [
-                        "path.0"
+                        "path.0",
+                        "path.-1"
                     ],
                     "method": "swapOnUniswap",
                     "plugin": "Paraswap"
@@ -54,7 +55,8 @@
                 },
                 "0x935fb84b": {
                     "erc20OfInterest": [
-                        "path.1"
+                        "path.0",
+                        "path.-1"
                     ],
                     "method": "buyOnUniswap",
                     "plugin": "Paraswap"
@@ -69,14 +71,16 @@
                 },
                 "0xc03786b0": {
                     "erc20OfInterest": [
-                        "path.1"
+                        "path.0",
+                        "path.-1"
                     ],
                     "method": "buyOnUniswapFork",
                     "plugin": "Paraswap"
                 },
                 "0xf5661034": {
                     "erc20OfInterest": [
-                        "path.0"
+                        "path.0",
+                        "path.-1"
                     ],
                     "method": "swapOnUniswapFork",
                     "plugin": "Paraswap"
@@ -105,7 +109,8 @@
                 },
                 "0x58b9d179": {
                     "erc20OfInterest": [
-                        "path.0"
+                        "path.0",
+                        "path.-1"
                     ],
                     "method": "swapOnUniswap",
                     "plugin": "Paraswap"
