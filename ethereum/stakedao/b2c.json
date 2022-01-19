@@ -1,0 +1,88 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xa2761b0539374eb7af2155f76eb09864af075250",
+            "contractName": "PassiveETH",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "method": "withdraw",
+                    "plugin": "StakeDAO"
+                },
+                "0xb6b55f25": {
+                    "method": "deposit",
+                    "plugin": "StakeDAO"
+                },
+                "0xde5f6268": {
+                    "method": "depositAll",
+                    "plugin": "StakeDAO"
+                }
+            }
+        },
+        {
+            "address": "0x9b8f14554f40705de7908879e2228d2ac94fde1a",
+            "contractName": "ETHCallOpt",
+            "selectors": {
+                "0x5358fbda": {
+                    "method": "depositETH",
+                    "plugin": "StakeDAO"
+                },
+                "0xc7cdea37": {
+                    "method": "withdrawETH",
+                    "plugin": "StakeDAO"
+                }
+            }
+        },
+        {
+            "address": "0x227e4635c5fe22d1e36dab1c921b62f8acc451b9",
+            "contractName": "BTCCallOpt",
+            "selectors": {
+                "0x4d5693ab": {
+                    "method": "depositUnderlying",
+                    "plugin": "StakeDAO"
+                },
+                "0xc22fb4xef": {
+                    "method": "withdrawUnderlying",
+                    "plugin": "StakeDAO"
+                },
+                "0xcc8690ac": {
+                    "method": "depositCrvLp",
+                    "plugin": "StakeDAO"
+                },
+                "0xecfe0521": {
+                    "method": "withdrawCrvLp",
+                    "plugin": "StakeDAO"
+                }
+            }
+        },
+        {
+            "address": "0xac14864ce5a98af3248ffbf549441b04421247d3",
+            "contractName": "Sanctuary",
+            "selectors": {
+                "0x67dfd4c9": {
+                    "method": "leave",
+                    "plugin": "StakeDAO"
+                },
+                "0xa59f3e0c": {
+                    "method": "enter",
+                    "plugin": "StakeDAO"
+                }
+            }
+        },
+        {
+            "address": "0x221738f73fa4bfca91918e77d112b87d918c751f",
+            "contractName": "Palace",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "method": "withdraw",
+                    "plugin": "StakeDAO"
+                },
+                "0xa694fc3a": {
+                    "method": "stake",
+                    "plugin": "StakeDAO"
+                }
+            }
+        }
+    ],
+    "name": "StakeDAO"
+}
