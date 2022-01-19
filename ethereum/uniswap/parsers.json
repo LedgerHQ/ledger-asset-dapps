@@ -1,0 +1,57 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+            "name": "Uniswap V2: Router 2",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin",
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                                }
+                            },
+                            "valueType": "amount"
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin",
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                }
+                            },
+                            "valueType": "amount"
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapExactETHForTokens",
+                    "options": {},
+                    "selector": "0x7ff36ab5"
+                }
+            ]
+        }
+    ],
+    "name": "Uniswap"
+}
