@@ -1,0 +1,38 @@
+{
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x7d60f21072b585351dfd5e8b17109458d97ec120",
+            "contractName": "PassiveEUR",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "method": "withdraw",
+                    "plugin": "StakeDAO"
+                },
+                "0xb6b55f25": {
+                    "method": "deposit",
+                    "plugin": "StakeDAO"
+                },
+                "0xde5f6268": {
+                    "method": "depositAll",
+                    "plugin": "StakeDAO"
+                }
+            }
+        },
+        {
+            "address": "0x68456b298c230415e2de7ad4897a79ee3f1a965a",
+            "contractName": "Masterchef",
+            "selectors": {
+                "0x441a3e70": {
+                    "method": "withdraw",
+                    "plugin": "StakeDAO"
+                },
+                "0xe2bbb158": {
+                    "method": "deposit",
+                    "plugin": "StakeDAO"
+                }
+            }
+        }
+    ],
+    "name": "StakeDAO"
+}
