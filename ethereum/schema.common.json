@@ -1,108 +1,108 @@
 {
-  "$schema": "http://json-schema.org/draft-04/schema#",
-  "type": "object",
-  "properties": {
-    "name": {
-      "type": "string"
-    },
-    "blockchain_name": {
-      "type": "string"
-    },
-    "contracts": {
-      "type": "array",
-      "items": {
-          "type": "object",
-          "properties": {
-            "contractName": {
-              "type": "string"
-            },
-            "address": {
-              "type": "string"
-            },
-            "selectors": {
-              "type": "object",
-              "additionalProperties": false,
-              "patternProperties": {
-                "^0x[a-z0-9]*$": {
-                  "type": "object",
-                  "properties": {
-                    "method": {
-                      "type": "string"
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "blockchain_name": {
+            "type": "string"
+        },
+        "contracts": {
+            "items": {
+                "properties": {
+                    "address": {
+                        "type": "string"
                     },
-                    "defaultLabel": {
-                      "type": "string"
+                    "contractName": {
+                        "type": "string"
                     },
-                    "conditions": {
-                      "type": "object",
-                      "properties": {
-                        "ethContractAddress": {
-                          "type": "string"
-                        },
-                        "enforeceEthAmountZero": {
-                          "type": "boolean"
-                        }
-                      },
-                      "required": [
-                        "ethAmountZero"
-                      ]
-                    },
-                    "arguments": {
-                      "type": "object",
-                      "additionalProperties": false,
-                      "patternProperties": {
-                        "^[a-zA-Z0-9]*$": {
-                          "type": "object",
-                          "properties": {
-                            "defaultLabel": {
-                              "type": "string"
-                            },
-                            "valueFormat": {
-                              "type": "string"
-                            },
-                            "typePath": {
-                              "type": "string"
-                            },
-                            "valuePath": {
-                              "type": "object",
-                              "properties": {
-                                "ethereum": {
-                                  "type": "string"
+                    "selectors": {
+                        "additionalProperties": false,
+                        "patternProperties": {
+                            "^0x[a-z0-9]*$": {
+                                "properties": {
+                                    "arguments": {
+                                        "additionalProperties": false,
+                                        "patternProperties": {
+                                            "^[a-zA-Z0-9]*$": {
+                                                "properties": {
+                                                    "defaultLabel": {
+                                                        "type": "string"
+                                                    },
+                                                    "typePath": {
+                                                        "type": "string"
+                                                    },
+                                                    "valueFormat": {
+                                                        "type": "string"
+                                                    },
+                                                    "valuePath": {
+                                                        "properties": {
+                                                            "erc20": {
+                                                                "type": "string"
+                                                            },
+                                                            "ethereum": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "defaultLabel",
+                                                    "valueFormat",
+                                                    "valuePath"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "conditions": {
+                                        "properties": {
+                                            "enforeceEthAmountZero": {
+                                                "type": "boolean"
+                                            },
+                                            "ethContractAddress": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "ethAmountZero"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "defaultLabel": {
+                                        "type": "string"
+                                    },
+                                    "method": {
+                                        "type": "string"
+                                    }
                                 },
-                                "erc20": {
-                                  "type": "string"
-                                }
-                              }
+                                "required": [
+                                    "method",
+                                    "defaultLabel",
+                                    "conditions",
+                                    "arguments"
+                                ],
+                                "type": "object"
                             }
-                          },
-                          "required": [
-                            "defaultLabel",
-                            "valueFormat",
-                            "valuePath"
-                          ]
-                        }
-                      }
+                        },
+                        "type": "object"
                     }
-                  },
-                  "required": [
-                    "method",
-                    "defaultLabel",
-                    "conditions",
-                    "arguments"
-                  ]
-                }
-              }
-            }
-          },
-          "required": [
-            "contractName",
-            "address",
-            "selectors"
-          ]
+                },
+                "required": [
+                    "contractName",
+                    "address",
+                    "selectors"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
         }
-    }
-  },
-  "required": [
-    "name",
-    "contracts"
-  ]
+    },
+    "required": [
+        "name",
+        "contracts"
+    ],
+    "type": "object"
 }

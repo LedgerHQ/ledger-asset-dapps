@@ -1,11 +1,11 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
-        "chainId": {
-            "type": "integer"
-        },
         "blockchain_name": {
             "type": "string"
+        },
+        "chainId": {
+            "type": "integer"
         },
         "contracts": {
             "items": {
