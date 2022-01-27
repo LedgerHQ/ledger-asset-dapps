@@ -2,265 +2,17 @@
     "chainId": 137,
     "contracts": [
         {
-            "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x6f7c932e7684666c9fd1d44527765433e01ff61d",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xc25351811983818c9fe6d8c580531819c8ade90f",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x0b3f868e0be5597d5db7feb59e1cadbb0fdda50a",
-            "contractName": "UUPSProxy",
-            "selectors": {
-                "0x11bcc81e": {
-                    "erc20OfInterest": [],
-                    "method": "downgrade",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x0000000000000000000000000000000000001010",
-            "contractName": "SETHProxy",
-            "selectors": {
-                "0x160e8be3": {
-                    "erc20OfInterest": [],
-                    "method": "downgradeToETH",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x27c7d067a0c143990ec6ed2772e7136cfcfaecd6",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x71f649eb05aa48cf8d92328d1c486b7d9fdbff6b",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x5786d3754443c0d3d1ddea5bb550ccc476fdf11d",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xe0a0ec8dee2f73943a6b731a2e11484916f45d44",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x8082ab2f4e220dad92689f3682f3e7a42b206b42",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x3941e2e89f7047e0ac7b9cce18fbe90927a32100",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xe093d8a4269ce5c91cd9389a0646badab2c8d9a3",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x93d2d0812c9856141b080e9ef6e97c7a7b342d7f",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xa152715df800db5926598917a6ef3702308bcb7e",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x250efbb94de68dd165bd6c98e804e08153eb91c6",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xc89583fa7b84d81fe54c1339ce3feb10de8b4c96",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xdc19ed26ad3a544e729b72b50b518a231cbad9ab",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x47de4fd666373ca4a793e2e0e7f995ea7d3c9a29",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0x94e5b18309066dd1e5ae97628afc9d4d7eb58161",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
-            "address": "0xbe79a6fd39a8e8b0ff7e1af1ea6e264699680584",
-            "contractName": "StreamExchange",
-            "selectors": {
-                "0xe4fc6b6d": {
-                    "erc20OfInterest": [],
-                    "method": "distribute",
-                    "plugin": "Ricochet"
-                }
-            }
-        },
-        {
             "address": "0x1305f6b6df9dc47159d12eb7ac2804d4a33173c2",
             "contractName": "UUPSProxy",
             "selectors": {
                 "0x45977d03": {
                     "erc20OfInterest": [],
                     "method": "upgrade",
+                    "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
                     "plugin": "Ricochet"
                 }
             }
@@ -273,6 +25,11 @@
                     "erc20OfInterest": [],
                     "method": "upgrade",
                     "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
+                    "plugin": "Ricochet"
                 }
             }
         },
@@ -283,6 +40,11 @@
                 "0x45977d03": {
                     "erc20OfInterest": [],
                     "method": "upgrade",
+                    "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
                     "plugin": "Ricochet"
                 }
             }
@@ -295,6 +57,11 @@
                     "erc20OfInterest": [],
                     "method": "upgrade",
                     "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
+                    "plugin": "Ricochet"
                 }
             }
         },
@@ -305,6 +72,11 @@
                 "0x45977d03": {
                     "erc20OfInterest": [],
                     "method": "upgrade",
+                    "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
                     "plugin": "Ricochet"
                 }
             }
@@ -317,6 +89,11 @@
                     "erc20OfInterest": [],
                     "method": "upgrade",
                     "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
+                    "plugin": "Ricochet"
                 }
             }
         },
@@ -328,9 +105,47 @@
                     "erc20OfInterest": [],
                     "method": "upgrade",
                     "plugin": "Ricochet"
+                },
+                "0x11bcc81e": {
+                    "erc20OfInterest": [],
+                    "method": "downgrade",
+                    "plugin": "Ricochet"
+                }
+            }
+        },
+        {
+            "address": "0x3ad736904e9e65189c3000c7dd2c8ac8bb7cd4e3",
+            "contractName": "SETHProxy",
+            "selectors": {
+                "0xcf81464b": {
+                    "erc20OfInterest": [],
+                    "method": "upgradeByETH",
+                    "plugin": "Ricochet"
+                },
+                "0x160e8be3": {
+                    "erc20OfInterest": [],
+                    "method": "downgradeToETH",
+                    "plugin": "Ricochet"
+                }
+            }
+        },
+        {
+            "address": "0x3e14dc1b13c488a8d5d310918780c983bd5982e7",
+            "contractName": "UUPSProxy",
+            "selectors": {
+                "0x39255d5b": {
+                    "erc20OfInterest": [],
+                    "method": "callAgreement",
+                    "plugin": "Ricochet"
+                },
+                "0x6ad3ca7d": {
+                    "erc20OfInterest": [],
+                    "method": "batchCall",
+                    "plugin": "Ricochet"
                 }
             }
         }
+        
     ],
     "name": "Ricochet"
 }
