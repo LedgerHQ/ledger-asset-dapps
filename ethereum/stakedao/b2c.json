@@ -118,6 +118,20 @@
                     "plugin": "StakeDAO"
                 }
             }
+        },
+        {
+            "address": "0xa324a2e3a6f64bd588565e0e1e2dd50e7a68bdd9",
+            "contractName": "NFtBoost",
+            "selectors": {
+                "0x2def6620": {
+                    "method": "unstake",
+                    "plugin": "StakeDAO"
+                },
+                "0xa694fc3a": {
+                    "method": "stake",
+                    "plugin": "StakeDAO"
+                }
+            }
         }
     ],
     "name": "StakeDAO"
