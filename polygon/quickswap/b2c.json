@@ -1,0 +1,143 @@
+{
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xa5e0829caced8ffdd4de3c43696c57f7d7a678ff",
+            "contractName": "UniswapV2Router02",
+            "selectors": {
+                "0x02751cec": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "removeLiquidityETH",
+                    "plugin": "QuickSwap"
+                },
+                "0x18cbafe5": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactTokensForETH",
+                    "plugin": "QuickSwap"
+                },
+                "0x2195995c": {
+                    "erc20OfInterest": [
+                        "tokenA",
+                        "tokenB"
+                    ],
+                    "method": "removeLiquidityWithPermit",
+                    "plugin": "QuickSwap"
+                },
+                "0x38ed1739": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactTokensForTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0x4a25d94a": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapTokensForExactETH",
+                    "plugin": "QuickSwap"
+                },
+                "0x5b0d5984": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "removeLiquidityETHWithPermitSupportingFeeOnTransferTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0x5c11d795": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactTokensForTokensSupportingFeeOnTransferTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0x791ac947": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactTokensForETHSupportingFeeOnTransferTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0x7ff36ab5": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactETHForTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0x8803dbee": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapTokensForExactTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0xaf2979eb": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "removeLiquidityETHSupportingFeeOnTransferTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0xb6f9de95": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapExactETHForTokensSupportingFeeOnTransferTokens",
+                    "plugin": "QuickSwap"
+                },
+                "0xbaa2abde": {
+                    "erc20OfInterest": [
+                        "tokenA",
+                        "tokenB"
+                    ],
+                    "method": "removeLiquidity",
+                    "plugin": "QuickSwap"
+                },
+                "0xded9382a": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "removeLiquidityETHWithPermit",
+                    "plugin": "QuickSwap"
+                },
+                "0xe8e33700": {
+                    "erc20OfInterest": [
+                        "tokenA",
+                        "tokenB"
+                    ],
+                    "method": "addLiquidity",
+                    "plugin": "QuickSwap"
+                },
+                "0xf305d719": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "addLiquidityETH",
+                    "plugin": "QuickSwap"
+                },
+                "0xfb3bdb41": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapETHForExactTokens",
+                    "plugin": "QuickSwap"
+                }
+            }
+        }
+    ],
+    "name": "QuickSwap"
+}
