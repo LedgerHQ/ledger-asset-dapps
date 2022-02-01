@@ -1,4 +1,5 @@
 {
+    "blockchain_name": "ethereum",
     "chainId": 1,
     "contracts": [
         {
@@ -29,6 +30,50 @@
                     "name": "wrap",
                     "options": {},
                     "selector": "0xea598cb0"
+                }
+            ]
+        },
+        {
+            "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+            "name": "stETH",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "ETH amount",
+                            "name": "amountToStake",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "transaction": "__eth__.amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                                }
+                            },
+                            "valueType": "amount"
+                        },
+                        {
+                            "format": "address",
+                            "label": "Referral Address",
+                            "name": "referralAddress",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_referral"
+                                    }
+                                }
+                            },
+                            "valueType": "address"
+                        }
+                    ],
+                    "functionType": "stake",
+                    "label": "Stake ETH",
+                    "name": "submit",
+                    "options": {},
+                    "selector": "0xa1903eab"
                 }
             ]
         }
