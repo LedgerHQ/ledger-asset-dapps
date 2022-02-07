@@ -1,0 +1,59 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x397c315d64d74d82a731d656f9c4d586d200f90a",
+            "contractName": "AlkemiEarn",
+            "selectors": {
+                "0x4b8a3529": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "borrow",
+                    "plugin": "Alkemi"
+                },
+                "0xabdb5ea8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "repayBorrow",
+                    "plugin": "Alkemi"
+                },
+                "0xe61604cf": {
+                    "erc20OfInterest": [
+                        "assetBorrow",
+                        "assetCollateral"
+                    ],
+                    "method": "liquidateBorrow",
+                    "plugin": "Alkemi"
+                },
+                "0xf2b9fdb8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "Alkemi"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "Alkemi"
+                }
+            }
+        },
+        {
+            "address": "0x14716c982fd8b7f1e8f0b4dbb496dce438a29d93",
+            "contractName": "AlkemiDao",
+            "selectors": {
+                "0x71d6e892": {
+                    "erc20OfInterest": [],
+                    "method": "claimAlk",
+                    "plugin": "Alkemi"
+                }
+            }
+        }
+    ],
+    "name": "Alkemi"
+}

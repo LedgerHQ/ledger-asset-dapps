@@ -1,0 +1,1021 @@
+[
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "alkemiEarnVerified",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkAccrued",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkBorrowerIndex",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "alkemiEarnPublic",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "allMarketsIndex",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkSupplierIndex",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "allMarkets",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "MAXIMUM_NUMBER_OF_MARKETS",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkBorrowState",
+        "outputs": [
+            {
+                "name": "index",
+                "type": "uint224"
+            },
+            {
+                "name": "block",
+                "type": "uint32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "newOwner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "alkRate",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkSupplyState",
+        "outputs": [
+            {
+                "name": "index",
+                "type": "uint224"
+            },
+            {
+                "name": "block",
+                "type": "uint32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "alkAddress",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bool"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "alkSpeeds",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "initializationDone",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "newSpeed",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "AlkSpeedUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "supplier",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "supplierDelta",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "supplierAccruedAlk",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "supplyIndexMantissa",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "DistributedSupplierAlk",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "borrowerDelta",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "borrowerAccruedAlk",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "borrowIndexMantissa",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "DistributedBorrowerAlk",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "participant",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "participantAccrued",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "TransferredAlk",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnerUpdate",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "numberOfMarkets",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "MarketAdded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "numberOfMarkets",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "MarketRemoved",
+        "type": "event"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "name": "_alkemiEarnVerified",
+                "type": "address"
+            },
+            {
+                "name": "_alkemiEarnPublic",
+                "type": "address"
+            },
+            {
+                "name": "_alkAddress",
+                "type": "address"
+            }
+        ],
+        "name": "initializer",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "supplier",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "refreshAlkSupplyIndex",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "refreshAlkBorrowIndex",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "refreshAlkSpeeds",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "updateAlkSupplyIndex",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "updateAlkBorrowIndex",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "supplier",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "distributeSupplierAlk",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "distributeBorrowerAlk",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "holder",
+                "type": "address"
+            }
+        ],
+        "name": "claimAlk",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getBlockNumber",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "participant",
+                "type": "address"
+            }
+        ],
+        "name": "getAlkAccrued",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getAlkAddress",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "getAlkemiEarnAddress",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            },
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "getMarketStats",
+        "outputs": [
+            {
+                "name": "isSupported",
+                "type": "bool"
+            },
+            {
+                "name": "blockNumber",
+                "type": "uint256"
+            },
+            {
+                "name": "interestRateModel",
+                "type": "address"
+            },
+            {
+                "name": "totalSupply",
+                "type": "uint256"
+            },
+            {
+                "name": "supplyRateMantissa",
+                "type": "uint256"
+            },
+            {
+                "name": "supplyIndex",
+                "type": "uint256"
+            },
+            {
+                "name": "totalBorrows",
+                "type": "uint256"
+            },
+            {
+                "name": "borrowRateMantissa",
+                "type": "uint256"
+            },
+            {
+                "name": "borrowIndex",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "getMarketTotalSupply",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "getMarketTotalBorrows",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "supplier",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "getSupplyBalance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "getBorrowBalance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "addMarket",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "id",
+                "type": "uint256"
+            },
+            {
+                "name": "isVerified",
+                "type": "bool"
+            }
+        ],
+        "name": "removeMarket",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_alkAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setAlkAddress",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_alkemiEarnVerified",
+                "type": "address"
+            }
+        ],
+        "name": "setAlkemiEarnVerifiedAddress",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_alkemiEarnPublic",
+                "type": "address"
+            }
+        ],
+        "name": "setAlkemiEarnPublicAddress",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_alkRate",
+                "type": "uint256"
+            }
+        ],
+        "name": "setAlkRate",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "user",
+                "type": "address"
+            }
+        ],
+        "name": "getAlkRewards",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
