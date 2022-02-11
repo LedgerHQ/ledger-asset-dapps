@@ -44,6 +44,48 @@
             }
         },
         {
+            "address": "0x4822d9172e5b76b9db37b75f5552f9988f98a888",
+            "contractName": "AlkemiEarnOpen",
+            "selectors": {
+                "0x4b8a3529": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "borrow",
+                    "plugin": "Alkemi"
+                },
+                "0xabdb5ea8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "repayBorrow",
+                    "plugin": "Alkemi"
+                },
+                "0xe61604cf": {
+                    "erc20OfInterest": [
+                        "assetBorrow",
+                        "assetCollateral"
+                    ],
+                    "method": "liquidateBorrow",
+                    "plugin": "Alkemi"
+                },
+                "0xf2b9fdb8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "Alkemi"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "Alkemi"
+                }
+            }
+        },
+        {
             "address": "0x14716c982fd8b7f1e8f0b4dbb496dce438a29d93",
             "contractName": "AlkemiDao",
             "selectors": {
