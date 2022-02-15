@@ -1,19 +1,10 @@
 {
-    "blockchain_name": "ethereum",
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x33aef288c093bf7b36fbe15c3190e616a993b0ad",
+            "address": "0x9757f2d2b135150bbeb65308d4a91804107cd8d6",
             "contractName": "RaribleContract",
             "selectors": {
-                "0x450346e0": {
-                    "method": "mintAndTransfer",
-                    "plugin": "Rarible"
-                },
-                "0x832fbb29": {
-                    "method": "transferFromOrMint",
-                    "plugin": "Rarible"
-                },
                 "0xe2864fe3": {
                     "method": "cancel",
                     "plugin": "Rarible"
@@ -25,10 +16,10 @@
             }
         },
         {
-            "address": "0x9757f2d2b135150bbeb65308d4a91804107cd8d6",
+            "address": "0xf6793da657495ffeff9ee6350824910abc21356c",
             "contractName": "RaribleContract",
             "selectors": {
-                "0x450346e0": {
+                "0x22a775b6": {
                     "method": "mintAndTransfer",
                     "plugin": "Rarible"
                 },
@@ -36,12 +27,8 @@
                     "method": "transferFromOrMint",
                     "plugin": "Rarible"
                 },
-                "0xe2864fe3": {
-                    "method": "cancel",
-                    "plugin": "Rarible"
-                },
-                "0xe99a3f80": {
-                    "method": "matchOrders",
+                "0xa22cb465": {
+                    "method": "setApprovalForAll",
                     "plugin": "Rarible"
                 }
             }
