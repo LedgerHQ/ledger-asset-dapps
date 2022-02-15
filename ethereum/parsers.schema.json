@@ -3,10 +3,14 @@
     "additionalProperties": false,
     "properties": {
         "blockchain_name": {
-            "const": "ethereum"
+            "enum": [
+                "ethereum"
+            ]
         },
         "chainId": {
-            "const": 1
+            "enum": [
+                1
+            ]
         },
         "contracts": {
             "additionalProperties": false,
@@ -29,7 +33,8 @@
                                             "format": {
                                                 "enum": [
                                                     "amount",
-                                                    "address"
+                                                    "address",
+                                                    "percent"
                                                 ]
                                             },
                                             "label": {
@@ -44,7 +49,8 @@
                                             "valueType": {
                                                 "enum": [
                                                     "amount",
-                                                    "address"
+                                                    "address",
+                                                    "number"
                                                 ]
                                             }
                                         },
@@ -55,7 +61,8 @@
                                 "functionType": {
                                     "enum": [
                                         "wrap",
-                                        "stake"
+                                        "stake",
+                                        "swap"
                                     ]
                                 },
                                 "label": {
