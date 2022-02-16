@@ -20,9 +20,9 @@
                                 },
                                 "token": {
                                     "constant": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84"
-                                }
-                            },
-                            "valueType": "amount"
+                                },
+                                "type": "amount"
+                            }
                         }
                     ],
                     "functionType": "wrap",
@@ -51,12 +51,12 @@
                                 },
                                 "token": {
                                     "constant": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-                                }
-                            },
-                            "valueType": "amount"
+                                },
+                                "type": "amount"
+                            }
                         },
                         {
-                            "format": "address",
+                            "format": "eip55",
                             "label": "Referral Address",
                             "name": "referralAddress",
                             "value": {
@@ -64,9 +64,9 @@
                                     "path": {
                                         "default": "_referral"
                                     }
-                                }
-                            },
-                            "valueType": "address"
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionType": "stake",
