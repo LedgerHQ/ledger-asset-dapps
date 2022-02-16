@@ -1,0 +1,114 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+        "blockchain_name": {
+            "enum": [
+                "ethereum"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                1
+            ]
+        },
+        "contracts": {
+            "additionalProperties": false,
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "parsers": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "arguments": {
+                                    "items": {
+                                        "properties": {
+                                            "format": {
+                                                "enum": [
+                                                    "amount",
+                                                    "address",
+                                                    "percent"
+                                                ]
+                                            },
+                                            "label": {
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "type": "object"
+                                            },
+                                            "valueType": {
+                                                "enum": [
+                                                    "amount",
+                                                    "address",
+                                                    "number"
+                                                ]
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "functionType": {
+                                    "enum": [
+                                        "wrap",
+                                        "stake",
+                                        "swap"
+                                    ]
+                                },
+                                "label": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "options": {
+                                    "type": "object"
+                                },
+                                "selector": {
+                                    "pattern": "^0x[a-z0-9]{8}$",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "functionType",
+                                "label",
+                                "options",
+                                "selector",
+                                "arguments"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "required": [
+                "name",
+                "address",
+                "parsers"
+            ],
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchain_name",
+        "chainId",
+        "contracts",
+        "name"
+    ],
+    "type": "object"
+}
