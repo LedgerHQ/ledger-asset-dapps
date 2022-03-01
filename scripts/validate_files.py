@@ -11,15 +11,24 @@ from validation.validators import (
 
 logging.basicConfig(level="INFO")
 
+
 VALIDATIONS = {
     "json": ("./*/**/*.json", format_validator, endlines_validator),
-    "eth_contracts": (
+    "eth_b2c": (
         "./ethereum/*/b2c.json",
-        schema_validator("./ethereum/schema.json")
+        schema_validator("./ethereum/b2c.schema.json")
     ),
-    "bsc_contracts": (
+    "eth_parsers": (
+        "./ethereum/*/parsers.json",
+        schema_validator("./ethereum/parsers.schema.json")
+    ),
+    "bsc_b2c": (
         "./bsc/*/b2c.json",
-        schema_validator("./bsc/schema.json")
+        schema_validator("./bsc/b2c.schema.json")
+    ),
+    "polygon": (
+        "./polygon/*/b2c.json",
+        schema_validator("./polygon/b2c.schema.json")
     )
 }
 

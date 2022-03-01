@@ -2,16 +2,20 @@
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
         "blockchain_name": {
-            "type": "string"
+            "enum": [
+                "polygon"
+            ]
         },
         "chainId": {
-            "type": "integer"
+            "enum": [
+                137
+            ]
         },
         "contracts": {
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-z0-9]*$",
+                        "pattern": "^0x[a-z0-9]{40}$",
                         "type": "string"
                     },
                     "contractName": {
@@ -20,7 +24,7 @@
                     "selectors": {
                         "additionalProperties": false,
                         "patternProperties": {
-                            "^0x[a-z0-9]*$": {
+                            "^0x[a-z0-9]{8}$": {
                                 "properties": {
                                     "erc20OfInterest": {
                                         "items": [
@@ -60,6 +64,7 @@
         }
     },
     "required": [
+        "blockchain_name",
         "contracts",
         "name",
         "chainId"

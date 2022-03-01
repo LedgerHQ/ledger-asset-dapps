@@ -1,0 +1,246 @@
+{
+    "$defs": {
+        "argumentValue": {
+            "additionalProperties": false,
+            "properties": {
+                "constant": {
+                    "description": "A constant value, independant of the contract data to parse. Can be used to handle implicit tokens definitions.",
+                    "type": "string"
+                },
+                "oneOf": [
+                    {
+                        "required": [
+                            "path"
+                        ]
+                    },
+                    {
+                        "required": [
+                            "constant"
+                        ]
+                    }
+                ],
+                "path": {
+                    "additionalProperties": false,
+                    "anyOf": [
+                        {
+                            "required": [
+                                "default"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "transaction"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "default",
+                                "transaction"
+                            ]
+                        }
+                    ],
+                    "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
+                    "properties": {
+                        "default": {
+                            "type": "string"
+                        },
+                        "transaction": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "description": "Description of a DApp and all the contracts linked to it.",
+    "properties": {
+        "blockchain_name": {
+            "enum": [
+                "ethereum"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                1
+            ]
+        },
+        "contracts": {
+            "additionalProperties": false,
+            "description": "The different contracts linked to the over-arching DApp.",
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "parsers": {
+                        "description": "Description of contract's functions along with the arguments we want to parse and validate.",
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "arguments": {
+                                    "description": "Arguments that we want to display on the device for user validation.",
+                                    "items": {
+                                        "properties": {
+                                            "format": {
+                                                "description": "The format (different from the type) describes how the parsed argument should be displayed on the device.",
+                                                "enum": [
+                                                    "amount",
+                                                    "ascii",
+                                                    "boolean",
+                                                    "eip55",
+                                                    "percentage",
+                                                    "raw"
+                                                ]
+                                            },
+                                            "label": {
+                                                "description": "Key displayed on the device alongside the parsed value.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Internal name of the argument, can be different from the name in the ABI.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "additionalProperties": false,
+                                                "description": "Contains the paths to read in the data. The exact schema of this object depends on the content of `value.type`",
+                                                "oneOf": [
+                                                    {
+                                                        "name": "AmountValue",
+                                                        "properties": {
+                                                            "type": {
+                                                                "enum": [
+                                                                    "amount"
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "quantity",
+                                                            "token"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "AddressValue",
+                                                        "properties": {
+                                                            "type": {
+                                                                "enum": [
+                                                                    "address"
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "address"
+                                                        ]
+                                                    },
+                                                    {
+                                                        "name": "NumberValue",
+                                                        "properties": {
+                                                            "type": {
+                                                                "enum": [
+                                                                    "uint",
+                                                                    "int"
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "quantity"
+                                                        ]
+                                                    }
+                                                ],
+                                                "properties": {
+                                                    "address": {
+                                                        "$ref": "#/$defs/argumentValue"
+                                                    },
+                                                    "quantity": {
+                                                        "$ref": "#/$defs/argumentValue"
+                                                    },
+                                                    "token": {
+                                                        "$ref": "#/$defs/argumentValue"
+                                                    },
+                                                    "type": {
+                                                        "enum": [
+                                                            "amount",
+                                                            "address",
+                                                            "boolean",
+                                                            "bytes",
+                                                            "int",
+                                                            "string",
+                                                            "uint"
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "type"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "functionType": {
+                                    "enum": [
+                                        "stake",
+                                        "swap",
+                                        "wrap"
+                                    ]
+                                },
+                                "label": {
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
+                                    "type": "string"
+                                },
+                                "options": {
+                                    "description": "TBD",
+                                    "type": "object"
+                                },
+                                "selector": {
+                                    "description": "Unique identifier of the function in the contract.",
+                                    "pattern": "^0x[a-z0-9]{8}$",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "functionType",
+                                "label",
+                                "options",
+                                "selector",
+                                "arguments"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "required": [
+                "name",
+                "address",
+                "parsers"
+            ],
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchain_name",
+        "chainId",
+        "contracts",
+        "name"
+    ],
+    "type": "object"
+}
