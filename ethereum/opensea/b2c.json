@@ -1,9 +1,30 @@
 {
-    "blockchain_name": "ethereum",
     "chainId": 1,
     "contracts": [
         {
             "address": "0x7be8076f4ea4a4ad08075c2508e481d6c946d12b",
+            "contractName": "OpenSea",
+            "selectors": {
+                "0xa8a41c70": {
+                    "erc20OfInterest": [
+                        "addrs.6",
+                        "addrs.4"
+                    ],
+                    "method": "cancelOrder_",
+                    "plugin": "OpenSea"
+                },
+                "0xab834bab": {
+                    "erc20OfInterest": [
+                        "addrs.6",
+                        "addrs.4"
+                    ],
+                    "method": "atomicMatch_",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x7f268357a8c2552623316e2562d90e642bb538e5",
             "contractName": "OpenSea",
             "selectors": {
                 "0xa8a41c70": {
