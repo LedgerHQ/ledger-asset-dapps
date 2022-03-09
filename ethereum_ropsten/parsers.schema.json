@@ -58,7 +58,7 @@
     "additionalProperties": false,
     "description": "Description of a DApp and all the contracts linked to it.",
     "properties": {
-        "blockchain_name": {
+        "blockchainName": {
             "enum": [
                 "ethereum_ropsten"
             ]
@@ -237,7 +237,7 @@
         }
     },
     "required": [
-        "blockchain_name",
+        "blockchainName",
         "chainId",
         "contracts",
         "name"
