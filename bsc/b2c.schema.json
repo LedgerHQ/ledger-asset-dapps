@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
-        "blockchain_name": {
+        "blockchainName": {
             "enum": [
                 "bsc"
             ]
@@ -64,7 +64,7 @@
         }
     },
     "required": [
-        "blockchain_name",
+        "blockchainName",
         "contracts",
         "name",
         "chainId"
