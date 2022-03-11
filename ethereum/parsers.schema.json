@@ -233,7 +233,8 @@
             "type": "array"
         },
         "name": {
-            "type": "string"
+            "type": "string",
+            "pattern": "^[a-z]+$"
         }
     },
     "required": [
