@@ -10,11 +10,58 @@
                 "internalType": "address",
                 "name": "_validSigner",
                 "type": "address"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_feeReceiver",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_migrationFee",
+                "type": "uint256"
             }
         ],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousFeeReceiver",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newFeeReceiver",
+                "type": "address"
+            }
+        ],
+        "name": "FeeReceiverChange",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "previousFeeReceiver",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "newFeeReceiver",
+                "type": "uint256"
+            }
+        ],
+        "name": "MigrationFeeChange",
+        "type": "event"
     },
     {
         "anonymous": false,
@@ -52,32 +99,6 @@
         "anonymous": false,
         "inputs": [
             {
-                "indexed": true,
-                "internalType": "address",
-                "name": "account",
-                "type": "address"
-            }
-        ],
-        "name": "PauserAdded",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "internalType": "address",
-                "name": "account",
-                "type": "address"
-            }
-        ],
-        "name": "PauserRemoved",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
                 "indexed": false,
                 "internalType": "address",
                 "name": "account",
@@ -91,9 +112,28 @@
         "anonymous": false,
         "inputs": [
             {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousValidSigner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newValidSigner",
+                "type": "address"
+            }
+        ],
+        "name": "ValidSignerChange",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
                 "indexed": false,
                 "internalType": "bytes",
-                "name": "_signedMessage",
+                "name": "_signature",
                 "type": "bytes"
             }
         ],
@@ -101,58 +141,45 @@
         "type": "event"
     },
     {
-        "constant": false,
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "account",
-                "type": "address"
-            }
-        ],
-        "name": "addPauser",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
         "inputs": [],
-        "name": "isOwner",
+        "name": "NAME",
         "outputs": [
             {
-                "internalType": "bool",
+                "internalType": "string",
                 "name": "",
-                "type": "bool"
+                "type": "string"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
-        "inputs": [
+        "inputs": [],
+        "name": "feeReceiver",
+        "outputs": [
             {
-                "internalType": "address",
-                "name": "account",
+                "internalType": "address payable",
+                "name": "",
                 "type": "address"
             }
         ],
-        "name": "isPauser",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": false,
+        "inputs": [],
+        "name": "migrationFee",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -170,8 +197,13 @@
                 "type": "address"
             },
             {
+                "internalType": "uint256",
+                "name": "expirationTime",
+                "type": "uint256"
+            },
+            {
                 "internalType": "bytes",
-                "name": "signedMessage",
+                "name": "signature",
                 "type": "bytes"
             }
         ],
@@ -183,27 +215,10 @@
                 "type": "bool"
             }
         ],
-        "payable": false,
-        "stateMutability": "nonpayable",
+        "stateMutability": "payable",
         "type": "function"
     },
     {
-        "constant": true,
-        "inputs": [],
-        "name": "name",
-        "outputs": [
-            {
-                "internalType": "string",
-                "name": "",
-                "type": "string"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
         "inputs": [],
         "name": "owner",
         "outputs": [
@@ -213,21 +228,17 @@
                 "type": "address"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [],
         "name": "pause",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": true,
         "inputs": [],
         "name": "paused",
         "outputs": [
@@ -237,12 +248,10 @@
                 "type": "bool"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
         "inputs": [
             {
                 "internalType": "bytes",
@@ -258,60 +267,63 @@
                 "type": "bool"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "constant": true,
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "name": "processedTokens",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": false,
         "inputs": [],
         "name": "renounceOwnership",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
-        "inputs": [],
-        "name": "renouncePauser",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
         "inputs": [],
         "name": "renouncePoapAdmin",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
+        "inputs": [
+            {
+                "internalType": "address payable",
+                "name": "_feeReceiver",
+                "type": "address"
+            }
+        ],
+        "name": "setFeeReceiver",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_migrationFee",
+                "type": "uint256"
+            }
+        ],
+        "name": "setMigrationFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_validSigner",
+                "type": "address"
+            }
+        ],
+        "name": "setValidSigner",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "address",
@@ -321,21 +333,17 @@
         ],
         "name": "transferOwnership",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": false,
         "inputs": [],
         "name": "unpause",
         "outputs": [],
-        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "constant": true,
         "inputs": [],
         "name": "validSigner",
         "outputs": [
@@ -345,7 +353,6 @@
                 "type": "address"
             }
         ],
-        "payable": false,
         "stateMutability": "view",
         "type": "function"
     }
