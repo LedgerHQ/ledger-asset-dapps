@@ -30,6 +30,31 @@
                     "name": "wrap",
                     "options": {},
                     "selector": "0xea598cb0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "wstETH amount",
+                            "name": "unwrapAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_wstETHAmount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0"
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "unwrap",
+                    "label": "Unwrap stETH",
+                    "name": "unwrap",
+                    "options": {},
+                    "selector": "0xde0e9a3e"
                 }
             ]
         },
