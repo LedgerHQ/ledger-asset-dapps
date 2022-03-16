@@ -50,6 +50,51 @@
                     "name": "swapExactETHForTokens",
                     "options": {},
                     "selector": "0x7ff36ab5"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapExactTokensForTokens",
+                    "options": {},
+                    "selector": "0x38ed1739"
                 }
             ]
         }
