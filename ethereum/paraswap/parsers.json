@@ -130,6 +130,276 @@
                         "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
                     },
                     "selector": "0xec1d21dd"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "simpleSwap",
+                    "options": {},
+                    "selector": "0xcfc0afeb"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnUniswap",
+                    "options": {},
+                    "selector": "0x58b9d179"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.path.-1.to"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "multiSwap",
+                    "options": {},
+                    "selector": "0x8f00eccb"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "buyOnUniswap",
+                    "options": {},
+                    "selector": "0xf9355f72"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "buyOnUniswapFork",
+                    "options": {},
+                    "selector": "0x33635226"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "buy",
+                    "options": {},
+                    "selector": "0xf95a49eb"
                 }
             ]
         }
