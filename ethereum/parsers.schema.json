@@ -190,7 +190,8 @@
                                     "enum": [
                                         "stake",
                                         "swap",
-                                        "wrap"
+                                        "wrap",
+                                        "unwrap"
                                     ]
                                 },
                                 "label": {
@@ -233,8 +234,8 @@
             "type": "array"
         },
         "name": {
-            "type": "string",
-            "pattern": "^[a-z]+$"
+            "pattern": "^[a-z]+$",
+            "type": "string"
         }
     },
     "required": [
