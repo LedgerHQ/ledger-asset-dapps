@@ -15,8 +15,7 @@
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "amountIn",
-                                        "transaction": "amount"
+                                        "default": "amountIn"
                                     }
                                 },
                                 "token": {
@@ -64,14 +63,12 @@
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "data.fromAmount",
-                                        "transaction": "amount"
+                                        "default": "data.fromAmount"
                                     }
                                 },
                                 "token": {
                                     "path": {
-                                        "default": "data.fromToken",
-                                        "transaction": "amount"
+                                        "default": "data.fromToken"
                                     }
                                 },
                                 "type": "amount"
