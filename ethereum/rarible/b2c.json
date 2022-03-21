@@ -47,6 +47,28 @@
                     "plugin": "Rarible"
                 }
             }
+        },
+        {
+            "address": "0xc9154424b823b10579895ccbe442d41b9abd96ed",
+            "contractName": "RaribleContract",
+            "selectors": {
+                "0x22a775b6": {
+                    "method": "mintAndTransfer",
+                    "plugin": "Rarible"
+                },
+                "0x3db397c6": {
+                    "method": "__ERC721Rarible_init",
+                    "plugin": "Rarible"
+                },
+                "0x832fbb29": {
+                    "method": "transferFromOrMint",
+                    "plugin": "Rarible"
+                },
+                "0xa22cb465": {
+                    "method": "setApprovalForAll",
+                    "plugin": "Rarible"
+                }
+            }
         }
     ],
     "name": "Rarible"
