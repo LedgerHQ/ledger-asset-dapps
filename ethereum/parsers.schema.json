@@ -224,13 +224,13 @@
                         "type": "array"
                     },
                     "screens": {
-                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
                         "additionalProperties": false,
+                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
                         "patternProperties": {
                             "^0x[a-f0-9]{8}$": {
                                 "items": {
-                                    "description": "WIP - real properties to be defined",
                                     "additionalProperties": true,
+                                    "description": "WIP - real properties to be defined",
                                     "type": "object"
                                 },
                                 "type": "array"
