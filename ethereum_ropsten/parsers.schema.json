@@ -74,7 +74,7 @@
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-z0-9]{40}$",
+                        "pattern": "^0x[a-f0-9]{40}$",
                         "type": "string"
                     },
                     "name": {
@@ -207,7 +207,7 @@
                                 },
                                 "selector": {
                                     "description": "Unique identifier of the function in the contract.",
-                                    "pattern": "^0x[a-z0-9]{8}$",
+                                    "pattern": "^0x[a-f0-9]{8}$",
                                     "type": "string"
                                 }
                             },
@@ -221,6 +221,21 @@
                             "type": "object"
                         },
                         "type": "array"
+                    },
+                    "screens": {
+                        "additionalProperties": false,
+                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
+                        "patternProperties": {
+                            "^0x[a-f0-9]{8}$": {
+                                "items": {
+                                    "additionalProperties": true,
+                                    "description": "Same format as vault_common.json",
+                                    "type": "object"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
                     }
                 },
                 "type": "object"
