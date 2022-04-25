@@ -1,16 +1,17 @@
 {
+    "blockchainName": "polygon",
     "chainId": 137,
     "contracts": [
         {
             "address": "0xfd896db057f260adce7fd1fd48c6623e023406cd",
             "contractName": "NestedFactory",
             "selectors": {
-                "0xa378534b": {
+                "0x51227094": {
                     "erc20OfInterest": [
-                        "_batchedOrders.0.inputToken",
+                        "_batchedOrders.0.outputToken",
                         "_batchedOrders.0.orders.-1.token"
                     ],
-                    "method": "create",
+                    "method": "processOutputOrders",
                     "plugin": "Nested"
                 },
                 "0x90e1aa69": {
@@ -21,12 +22,12 @@
                     "method": "processInputOrders",
                     "plugin": "Nested"
                 },
-                "0x51227094": {
+                "0xa378534b": {
                     "erc20OfInterest": [
-                        "_batchedOrders.0.outputToken",
+                        "_batchedOrders.0.inputToken",
                         "_batchedOrders.0.orders.-1.token"
                     ],
-                    "method": "processOutputOrders",
+                    "method": "create",
                     "plugin": "Nested"
                 },
                 "0xbba9b10c": {
