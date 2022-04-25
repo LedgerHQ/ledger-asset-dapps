@@ -1,0 +1,70 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xe24c8123c8054fb9e8c53496948c34ea59914cdf",
+            "contractName": "NestedFactory",
+            "selectors": {
+                "0x51227094": {
+                    "erc20OfInterest": [
+                        "_batchedOrders.0.outputToken",
+                        "_batchedOrders.0.orders.-1.token"
+                    ],
+                    "method": "processOutputOrders",
+                    "plugin": "Nested"
+                },
+                "0x90e1aa69": {
+                    "erc20OfInterest": [
+                        "_batchedOrders.0.inputToken",
+                        "_batchedOrders.0.orders.-1.token"
+                    ],
+                    "method": "processInputOrders",
+                    "plugin": "Nested"
+                },
+                "0xa378534b": {
+                    "erc20OfInterest": [
+                        "_batchedOrders.0.inputToken",
+                        "_batchedOrders.0.orders.-1.token"
+                    ],
+                    "method": "create",
+                    "plugin": "Nested"
+                },
+                "0xbba9b10c": {
+                    "erc20OfInterest": [
+                        "_buyToken",
+                        "_orders.0.token"
+                    ],
+                    "method": "destroy",
+                    "plugin": "Nested"
+                }
+            }
+        },
+        {
+            "address": "0xb818de71b8acee27c17a40446012663d4c71b437",
+            "contractName": "FeeSplitter",
+            "selectors": {
+                "0x6d9634b7": {
+                    "erc20OfInterest": [
+                        "_tokens.0",
+                        "_tokens.-1"
+                    ],
+                    "method": "releaseTokens",
+                    "plugin": "Nested"
+                }
+            }
+        },
+        {
+            "address": "0x6cbe14812b9d537878b975994948aeb917339331",
+            "contractName": "NestedNFT",
+            "selectors": {
+                "0x23b872dd": {
+                    "erc20OfInterest": [],
+                    "method": "transferFrom",
+                    "plugin": "Nested"
+                }
+            }
+        }
+    ],
+    "name": "Nested"
+}
