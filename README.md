@@ -19,6 +19,10 @@ Only a quorum of Ledger employes is authorized to create new production signatur
 ### Test signature
 Not yet supported, coming soon.
 
+# Contributing
+
+If you want to contribute, please checkout the contributing guide [here](CONTRIBUTING.md).
+
 # Tips
 In case you need to update to lowercase all Ethereum addresses, you should be able to do this with something like
 ```
