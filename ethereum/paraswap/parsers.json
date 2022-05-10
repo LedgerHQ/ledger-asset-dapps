@@ -411,6 +411,485 @@
                     "selector": "0xf95a49eb"
                 }
             ]
+        },
+        {
+            "address": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
+            "name": "ParaSwap P5",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "simpleBuy",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x2298207a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.path.0.path.-1.to"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "megaSwap",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x46c67b6d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnUniswap",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x54840d1a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "data.toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "simpleSwap",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x54e3f31b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnZeroXv4",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x64466805"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnZeroXv2",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x81033120"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "buyOnUniswap",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0x935fb84b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "toAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.x.to"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "multiSwap",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0xa94e78ef"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "buyOnUniswapFork",
+                    "options": {
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0xc03786b0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "label": "Sent amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "label": "Received amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionType": "swap",
+                    "label": "Swap",
+                    "name": "swapOnUniswapFork",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                    },
+                    "selector": "0xf5661034"
+                }
+            ]
         }
     ],
     "name": "paraswap"
