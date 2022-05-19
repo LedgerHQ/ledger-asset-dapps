@@ -1,0 +1,31 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x835131b455778559cfddd358ea3fc762728f4e3e",
+            "contractName": "RaribleContract",
+            "selectors": {
+                "0xe2864fe3": {
+                    "method": "cancel",
+                    "plugin": "Rarible"
+                },
+                "0xe99a3f80": {
+                    "method": "matchOrders",
+                    "plugin": "Rarible"
+                }
+            }
+        },
+        {
+            "address": "0x16911a36a56f828f17632cd4915614dd5c7a45e0",
+            "contractName": "RaribleContract",
+            "selectors": {
+                "0x27050d1f": {
+                    "method": "createToken",
+                    "plugin": "Rarible"
+                }
+            }
+        }
+    ],
+    "name": "Rarible"
+}
