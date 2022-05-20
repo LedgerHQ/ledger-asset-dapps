@@ -3,7 +3,7 @@
     "chainId": 137,
     "contracts": [
         {
-            "address": "0x835131b455778559cfddd358ea3fc762728f4e3e",
+            "address": "0x12b3897a36fDB436ddE2788C06Eff0ffD997066e",
             "contractName": "RaribleContract",
             "selectors": {
                 "0xe2864fe3": {
@@ -22,6 +22,28 @@
             "selectors": {
                 "0x27050d1f": {
                     "method": "createToken",
+                    "plugin": "Rarible"
+                }
+            }
+        },
+        {
+            "address": "0x35f8aee672cdE8e5FD09C93D2BfE4FF5a9cF0756",
+            "contractName": "RaribleContract",
+            "selectors": {
+                "0x22a775b6": {
+                    "method": "mintAndTransfer",
+                    "plugin": "Rarible"
+                },
+                "0x3db397c6": {
+                    "method": "__ERC721Rarible_init",
+                    "plugin": "Rarible"
+                },
+                "0x832fbb29": {
+                    "method": "transferFromOrMint",
+                    "plugin": "Rarible"
+                },
+                "0xa22cb465": {
+                    "method": "setApprovalForAll",
                     "plugin": "Rarible"
                 }
             }
