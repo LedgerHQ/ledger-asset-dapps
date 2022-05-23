@@ -628,21 +628,16 @@
                             }
                         },
                         {
-                            "format": "amount",
-                            "label": "Received amount",
-                            "name": "toAmount",
+                            "format": "raw",
+                            "label": "Token-out's pool",
+                            "name": "pools",
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "amountOutMin"
+                                        "default": "pools.-1"
                                     }
                                 },
-                                "token": {
-                                    "path": {
-                                        "default": "weth"
-                                    }
-                                },
-                                "type": "amount"
+                                "type": "uint"
                             }
                         }
                     ],
@@ -911,21 +906,16 @@
                             }
                         },
                         {
-                            "format": "amount",
-                            "label": "Received amount",
-                            "name": "toAmount",
+                            "format": "raw",
+                            "label": "Token-out's pool",
+                            "name": "pools",
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "amountOut"
+                                        "default": "pools.-1"
                                     }
                                 },
-                                "token": {
-                                    "path": {
-                                        "default": "weth"
-                                    }
-                                },
-                                "type": "amount"
+                                "type": "uint"
                             }
                         }
                     ],
