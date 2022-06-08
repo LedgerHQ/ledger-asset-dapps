@@ -1,0 +1,138 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xe63151a0ed4e5fafdc951d877102cf0977abd365",
+            "contractName": "RibbonAaveThetaVault",
+            "selectors": {
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        },
+        {
+            "address": "0x65a833afdc250d9d38f8cd9bc2b1e3132db13b2f",
+            "contractName": "RibbonWBTCThetaVault",
+            "selectors": {
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        },
+        {
+            "address": "0xc0cf10dd710aefb209d9dc67bc746510ffd98a53",
+            "contractName": "RibbonAPEThetaVault",
+            "selectors": {
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        },
+        {
+            "address": "0xcc323557c71c0d1d20a1861dc69c06c5f3cc9624",
+            "contractName": "RibbonETHPutThetaVault",
+            "selectors": {
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        },
+        {
+            "address": "0x25751853eab4d0eb3652b5eb6ecb102a2789644b",
+            "contractName": "RibbonETHThetaVault",
+            "selectors": {
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xf6326fb3": {
+                    "erc20OfInterest": [],
+                    "method": "depositETH",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        },
+        {
+            "address": "0x53773e034d9784153471813dacaff53dbbb78e8c",
+            "contractName": "RibbonSTETHThetaVault",
+            "selectors": {
+                "0x31807e42": {
+                    "erc20OfInterest": [],
+                    "method": "depositYieldToken",
+                    "plugin": "Ribbon"
+                },
+                "0x7e108d52": {
+                    "erc20OfInterest": [],
+                    "method": "initiateWithdraw",
+                    "plugin": "Ribbon"
+                },
+                "0xf6326fb3": {
+                    "erc20OfInterest": [],
+                    "method": "depositETH",
+                    "plugin": "Ribbon"
+                },
+                "0xf756fa21": {
+                    "erc20OfInterest": [],
+                    "method": "completeWithdraw",
+                    "plugin": "Ribbon"
+                }
+            }
+        }
+    ],
+    "name": "Ribbon"
+}
