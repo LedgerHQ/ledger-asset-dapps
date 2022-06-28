@@ -6,6 +6,13 @@
             "address": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
             "contractName": "AugustusSwapper",
             "selectors": {
+                "0x0b86a4c1": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "swapOnUniswapV2Fork",
+                    "plugin": "Paraswap"
+                },
                 "0x2298207a": {
                     "erc20OfInterest": [
                         "data.fromToken",
@@ -28,13 +35,6 @@
                         "path.-1"
                     ],
                     "method": "swapOnUniswap",
-                    "plugin": "Paraswap"
-                },
-                "0x0b86a4c1": {
-                    "erc20OfInterest": [
-                        "tokenIn"
-                    ],
-                    "method": "swapOnUniswapV2Fork",
                     "plugin": "Paraswap"
                 },
                 "0x54e3f31b": {
