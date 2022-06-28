@@ -30,6 +30,13 @@
                     "method": "swapOnUniswap",
                     "plugin": "Paraswap"
                 },
+                "0x0b86a4c1": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "swapOnUniswapV2Fork",
+                    "plugin": "Paraswap"
+                },
                 "0x54e3f31b": {
                     "erc20OfInterest": [
                         "data.fromToken",
