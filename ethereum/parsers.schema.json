@@ -100,10 +100,6 @@
                                                     "raw"
                                                 ]
                                             },
-                                            "label": {
-                                                "description": "Key displayed on the device alongside the parsed value.",
-                                                "type": "string"
-                                            },
                                             "name": {
                                                 "description": "Internal name of the argument, can be different from the name in the ABI.",
                                                 "type": "string"
@@ -194,12 +190,8 @@
                                         "unwrap"
                                     ]
                                 },
-                                "label": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
-                                    "type": "string"
-                                },
-                                "name": {
-                                    "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
+                                "functionName": {
+                                    "description": "ABI name of the function",
                                     "type": "string"
                                 },
                                 "options": {
@@ -214,7 +206,7 @@
                             },
                             "required": [
                                 "functionType",
-                                "label",
+                                "functionName",
                                 "options",
                                 "selector",
                                 "arguments"

@@ -10,7 +10,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -26,7 +25,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -44,8 +42,7 @@
                         }
                     ],
                     "functionType": "swap",
-                    "label": "Swap",
-                    "name": "swapExactETHForTokens",
+                    "functionName": "swapExactETHForTokens",
                     "options": {},
                     "selector": "0x7ff36ab5"
                 },
@@ -53,7 +50,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -71,7 +67,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -89,8 +84,7 @@
                         }
                     ],
                     "functionType": "swap",
-                    "label": "Swap",
-                    "name": "swapExactTokensForTokens",
+                    "functionName": "swapExactTokensForTokens",
                     "options": {},
                     "selector": "0x38ed1739"
                 }
