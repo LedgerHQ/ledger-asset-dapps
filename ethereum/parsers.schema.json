@@ -182,6 +182,10 @@
                                     },
                                     "type": "array"
                                 },
+                                "functionName": {
+                                    "description": "ABI name of the function",
+                                    "type": "string"
+                                },
                                 "functionType": {
                                     "enum": [
                                         "stake",
@@ -189,10 +193,6 @@
                                         "wrap",
                                         "unwrap"
                                     ]
-                                },
-                                "functionName": {
-                                    "description": "ABI name of the function",
-                                    "type": "string"
                                 },
                                 "options": {
                                     "description": "TBD",
