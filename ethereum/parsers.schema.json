@@ -183,7 +183,7 @@
                                     "type": "array"
                                 },
                                 "functionName": {
-                                    "description": "ABI name of the function",
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
                                     "type": "string"
                                 },
                                 "functionType": {
@@ -193,6 +193,10 @@
                                         "wrap",
                                         "unwrap"
                                     ]
+                                },
+                                "name": {
+                                    "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
+                                    "type": "string"
                                 },
                                 "options": {
                                     "description": "TBD",
@@ -222,7 +226,7 @@
                             "^0x[a-f0-9]{8}$": {
                                 "items": {
                                     "properties": {
-                                        "label": {
+                                        "functionName": {
                                             "description": "Label displayed on the device to allow the user to identify the argument.",
                                             "type": "string"
                                         },
