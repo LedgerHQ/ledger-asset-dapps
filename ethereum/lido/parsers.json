@@ -10,7 +10,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "stETH amount",
                             "name": "wrapAmount",
                             "value": {
                                 "quantity": {
@@ -25,9 +24,9 @@
                             }
                         }
                     ],
-                    "name": "wrap",
-                    "functionType": "wrap",
                     "functionName": "Wrap stETH",
+                    "functionType": "wrap",
+                    "name": "wrap",
                     "options": {},
                     "selector": "0xea598cb0"
                 },
@@ -35,7 +34,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "wstETH amount",
                             "name": "unwrapAmount",
                             "value": {
                                 "quantity": {
@@ -50,9 +48,9 @@
                             }
                         }
                     ],
-                    "name": "unwrap",
-                    "functionType": "unwrap",
                     "functionName": "Unwrap stETH",
+                    "functionType": "unwrap",
+                    "name": "unwrap",
                     "options": {},
                     "selector": "0xde0e9a3e"
                 }
@@ -66,7 +64,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "ETH amount",
                             "name": "amountToStake",
                             "value": {
                                 "quantity": {
@@ -82,7 +79,6 @@
                         },
                         {
                             "format": "eip55",
-                            "label": "Referral Address",
                             "name": "referralAddress",
                             "value": {
                                 "address": {
@@ -94,9 +90,9 @@
                             }
                         }
                     ],
-                    "name": "submit",
-                    "functionType": "stake",
                     "functionName": "Stake ETH",
+                    "functionType": "stake",
+                    "name": "submit",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },

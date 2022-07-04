@@ -10,7 +10,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -28,7 +27,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -45,9 +43,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnUniswapFork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnUniswapFork",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -58,7 +56,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -76,7 +73,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -94,7 +90,6 @@
                         },
                         {
                             "format": "eip55",
-                            "label": "Received amount",
                             "name": "beneficiary",
                             "value": {
                                 "address": {
@@ -107,7 +102,6 @@
                         },
                         {
                             "format": "percentage",
-                            "label": "Percentage",
                             "name": "percent",
                             "value": {
                                 "quantity": {
@@ -119,9 +113,9 @@
                             }
                         }
                     ],
-                    "name": "megaSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "megaSwap",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -132,7 +126,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -150,7 +143,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -167,9 +159,9 @@
                             }
                         }
                     ],
-                    "name": "simpleSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "simpleSwap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -179,7 +171,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -197,7 +188,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -214,9 +204,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnUniswap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnUniswap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -226,7 +216,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -244,7 +233,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -261,9 +249,9 @@
                             }
                         }
                     ],
-                    "name": "multiSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "multiSwap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -273,7 +261,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -291,7 +278,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -308,9 +294,9 @@
                             }
                         }
                     ],
-                    "name": "buyOnUniswap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buyOnUniswap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -320,7 +306,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -338,7 +323,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -355,9 +339,9 @@
                             }
                         }
                     ],
-                    "name": "buyOnUniswapFork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buyOnUniswapFork",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -367,7 +351,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -385,7 +368,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -402,9 +384,9 @@
                             }
                         }
                     ],
-                    "name": "buy",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buy",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -420,7 +402,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -438,7 +419,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -455,9 +435,9 @@
                             }
                         }
                     ],
-                    "name": "simpleBuy",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "simpleBuy",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -468,7 +448,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -486,7 +465,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -503,9 +481,9 @@
                             }
                         }
                     ],
-                    "name": "megaSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "megaSwap",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -516,7 +494,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -534,7 +511,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -551,9 +527,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnUniswap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnUniswap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -563,7 +539,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -581,7 +556,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -598,9 +572,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnUniswapFork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnUniswapFork",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -611,7 +585,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -629,7 +602,6 @@
                         },
                         {
                             "format": "raw",
-                            "label": "Token-out's pool",
                             "name": "pools",
                             "value": {
                                 "quantity": {
@@ -641,9 +613,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnUniswapV2Fork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnUniswapV2Fork",
                     "options": {
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
@@ -654,7 +626,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -672,7 +643,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -689,9 +659,9 @@
                             }
                         }
                     ],
-                    "name": "simpleSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "simpleSwap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -701,7 +671,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -719,7 +688,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -736,9 +704,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnZeroXv4",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnZeroXv4",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -748,7 +716,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -766,7 +733,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -783,9 +749,9 @@
                             }
                         }
                     ],
-                    "name": "swapOnZeroXv2",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "swapOnZeroXv2",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -795,7 +761,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -813,7 +778,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -830,9 +794,9 @@
                             }
                         }
                     ],
-                    "name": "buyOnUniswap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buyOnUniswap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -842,7 +806,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -860,7 +823,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -877,9 +839,9 @@
                             }
                         }
                     ],
-                    "name": "buyOnUniswapFork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buyOnUniswapFork",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -889,7 +851,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -907,7 +868,6 @@
                         },
                         {
                             "format": "raw",
-                            "label": "Token-out's pool",
                             "name": "pools",
                             "value": {
                                 "quantity": {
@@ -919,9 +879,9 @@
                             }
                         }
                     ],
-                    "name": "buyOnUniswapV2Fork",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "buyOnUniswapV2Fork",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -931,7 +891,6 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
@@ -949,7 +908,6 @@
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
@@ -966,9 +924,9 @@
                             }
                         }
                     ],
-                    "name": "multiSwap",
-                    "functionType": "swap",
                     "functionName": "Swap",
+                    "functionType": "swap",
+                    "name": "multiSwap",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },

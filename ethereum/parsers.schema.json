@@ -100,10 +100,6 @@
                                                     "raw"
                                                 ]
                                             },
-                                            "label": {
-                                                "description": "Key displayed on the device alongside the parsed value.",
-                                                "type": "string"
-                                            },
                                             "name": {
                                                 "description": "Internal name of the argument, can be different from the name in the ABI.",
                                                 "type": "string"
@@ -186,6 +182,10 @@
                                     },
                                     "type": "array"
                                 },
+                                "functionName": {
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
+                                    "type": "string"
+                                },
                                 "functionType": {
                                     "enum": [
                                         "stake",
@@ -193,10 +193,6 @@
                                         "wrap",
                                         "unwrap"
                                     ]
-                                },
-                                "label": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
-                                    "type": "string"
                                 },
                                 "name": {
                                     "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
@@ -214,7 +210,7 @@
                             },
                             "required": [
                                 "functionType",
-                                "label",
+                                "functionName",
                                 "options",
                                 "selector",
                                 "arguments"
@@ -230,7 +226,7 @@
                             "^0x[a-f0-9]{8}$": {
                                 "items": {
                                     "properties": {
-                                        "label": {
+                                        "functionName": {
                                             "description": "Label displayed on the device to allow the user to identify the argument.",
                                             "type": "string"
                                         },
