@@ -186,20 +186,16 @@
                                     },
                                     "type": "array"
                                 },
+                                "functionName": {
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
+                                    "type": "string"
+                                },
                                 "functionType": {
                                     "enum": [
                                         "stake",
                                         "swap",
                                         "wrap"
                                     ]
-                                },
-                                "label": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
-                                    "type": "string"
-                                },
-                                "name": {
-                                    "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
-                                    "type": "string"
                                 },
                                 "options": {
                                     "description": "TBD",
@@ -213,7 +209,6 @@
                             },
                             "required": [
                                 "functionType",
-                                "label",
                                 "options",
                                 "selector",
                                 "arguments"
