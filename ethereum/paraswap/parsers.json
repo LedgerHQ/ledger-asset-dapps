@@ -911,6 +911,89 @@
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
                     "selector": "0xa94e78ef"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "fromAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "fromToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "toToken"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        }
+                    ],
+                    "functionName": "swapOnZeroXv4WithPermit",
+                    "functionType": "swap",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "selector": "0x6b4109d3"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "tokenIn"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "pools",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "pools.-1"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        }
+                    ],
+                    "functionName": "swapOnUniswapV2ForkWithPermit",
+                    "functionType": "swap",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "selector": "0x6e91538b"
                 }
             ]
         }
