@@ -542,11 +542,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         },
                         {
@@ -600,11 +600,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received minimum amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -667,11 +667,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received minimum amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -698,6 +698,18 @@
                         },
                         {
                             "format": "raw",
+                            "name": "amountOutMin",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
+                            "format": "raw",
                             "name": "pools",
                             "value": {
                                 "quantity": {
@@ -719,6 +731,10 @@
                         {
                             "label": "Sent amount",
                             "name": "fromAmount"
+                        },
+                        {
+                            "label": "Received minimum amount",
+                            "name": "amountOutMin"
                         },
                         {
                             "label": "Pools",
@@ -795,11 +811,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         },
                         {
@@ -865,11 +881,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Minimum received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -931,11 +947,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Minimum received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -985,11 +1001,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Max sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -1051,11 +1067,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Max sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -1168,11 +1184,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         },
                         {
@@ -1238,11 +1254,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Received Amount",
+                            "label": "Received minimum amount",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent Amount",
+                            "label": "Sent amount",
                             "name": "fromAmount"
                         }
                     ],
@@ -1269,6 +1285,18 @@
                         },
                         {
                             "format": "raw",
+                            "name": "amountOutMin",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
+                            "format": "raw",
                             "name": "pools",
                             "value": {
                                 "quantity": {
@@ -1287,12 +1315,16 @@
                     },
                     "screen": [
                         {
-                            "label": "Pool",
-                            "name": "pools"
+                            "label": "Sent amount",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent Amount",
-                            "name": "fromAmount"
+                            "label": "Received minimum amount",
+                            "name": "amountOutMin"
+                        },
+                        {
+                            "label": "Pool",
+                            "name": "pools"
                         }
                     ],
                     "selector": "0x6e91538b"
