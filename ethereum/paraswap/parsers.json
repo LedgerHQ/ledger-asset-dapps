@@ -425,6 +425,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "beneficiary",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "data.beneficiary"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "simpleBuy",
@@ -433,7 +445,21 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "selector": "0x2298207a"
+                    "selector": "0x2298207a",
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Received amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Beneficiary",
+                            "name": "beneficiary"
+                        }
+                    ]
                 },
                 {
                     "arguments": [
@@ -607,7 +633,17 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "selector": "0x0b86a4c1"
+                    "selector": "0x0b86a4c1",
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Pools",
+                            "name": "pools"
+                        }
+                    ]
                 },
                 {
                     "arguments": [
