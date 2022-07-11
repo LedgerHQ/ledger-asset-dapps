@@ -427,6 +427,18 @@
                             }
                         },
                         {
+                            "format": "amount",
+                            "name": "expectedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.expectedAmount"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
                             "format": "eip55",
                             "name": "beneficiary",
                             "value": {
@@ -445,7 +457,6 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "selector": "0x2298207a",
                     "screen": [
                         {
                             "label": "Sent amount",
@@ -459,7 +470,8 @@
                             "label": "Beneficiary",
                             "name": "beneficiary"
                         }
-                    ]
+                    ],
+                    "selector": "0x2298207a"
                 },
                 {
                     "arguments": [
@@ -496,6 +508,30 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "expectedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.expectedAmount"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "beneficiary",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "data.beneficiary"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "megaSwap",
@@ -504,6 +540,20 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Beneficiary",
+                            "name": "beneficiary"
+                        }
+                    ],
                     "selector": "0x46c67b6d"
                 },
                 {
@@ -548,6 +598,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x54840d1a"
                 },
                 {
@@ -585,6 +645,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "factory",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "factory"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "swapOnUniswapFork",
@@ -593,6 +665,16 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xf5661034"
                 },
                 {
@@ -633,7 +715,6 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "selector": "0x0b86a4c1",
                     "screen": [
                         {
                             "label": "Sent amount",
@@ -643,7 +724,8 @@
                             "label": "Pools",
                             "name": "pools"
                         }
-                    ]
+                    ],
+                    "selector": "0x0b86a4c1"
                 },
                 {
                     "arguments": [
@@ -680,6 +762,30 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "beneficiary",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "data.beneficiary"
+                                    }
+                                },
+                                "type": "address"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "expectedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.expectedAmount"
+                                    }
+                                },
+                                "type": "uint"
+                            }
                         }
                     ],
                     "functionName": "simpleSwap",
@@ -687,6 +793,20 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Beneficiary",
+                            "name": "beneficiary"
+                        }
+                    ],
                     "selector": "0x54e3f31b"
                 },
                 {
@@ -724,6 +844,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "exchange",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "exchange"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "swapOnZeroXv4",
@@ -731,6 +863,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x64466805"
                 },
                 {
@@ -768,6 +910,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "exchange",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "exchange"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "swapOnZeroXv2",
@@ -775,6 +929,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x81033120"
                 },
                 {
@@ -819,6 +983,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x935fb84b"
                 },
                 {
@@ -856,6 +1030,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "factory",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "factory"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "buyOnUniswapFork",
@@ -863,6 +1049,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xc03786b0"
                 },
                 {
@@ -939,6 +1135,30 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "beneficiary",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "data.beneficiary"
+                                    }
+                                },
+                                "type": "address"
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "expectedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "data.expectedAmount"
+                                    }
+                                },
+                                "type": "uint"
+                            }
                         }
                     ],
                     "functionName": "multiSwap",
@@ -946,6 +1166,20 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Beneiciary",
+                            "name": "beneficiary"
+                        }
+                    ],
                     "selector": "0xa94e78ef"
                 },
                 {
@@ -983,6 +1217,18 @@
                                 },
                                 "type": "amount"
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "exchange",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "exchange"
+                                    }
+                                },
+                                "type": "address"
+                            }
                         }
                     ],
                     "functionName": "swapOnZeroXv4WithPermit",
@@ -990,6 +1236,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Received Amount",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x6b4109d3"
                 },
                 {
@@ -1029,6 +1285,16 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Pool",
+                            "name": "pools"
+                        },
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x6e91538b"
                 }
             ]
