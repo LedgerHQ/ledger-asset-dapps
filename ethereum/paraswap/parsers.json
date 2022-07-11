@@ -3,390 +3,6 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x1bD435F3C054b6e901B7b108a0ab7617C808677b",
-            "name": "ParaSwap P4",
-            "parsers": [
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountIn"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "swapOnUniswapFork",
-                    "functionType": "swap",
-                    "options": {
-                        "assertEthAmountIsZero": false,
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0x0863b7ac"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.path.0.path.-1.to"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "eip55",
-                            "name": "beneficiary",
-                            "value": {
-                                "address": {
-                                    "path": {
-                                        "default": "data.beneficiary"
-                                    }
-                                },
-                                "type": "address"
-                            }
-                        },
-                        {
-                            "format": "percentage",
-                            "name": "percent",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.path.1.path.-2.routes.-1.percent"
-                                    }
-                                },
-                                "type": "uint"
-                            }
-                        }
-                    ],
-                    "functionName": "megaSwap",
-                    "functionType": "swap",
-                    "options": {
-                        "assertEthAmountIsZero": false,
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0xec1d21dd"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "fromToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "toToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "simpleSwap",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0xcfc0afeb"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountIn"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "swapOnUniswap",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0x58b9d179"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.path.-1.to"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "multiSwap",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0x8f00eccb"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountInMax"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOut"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "buyOnUniswap",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0xf9355f72"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountInMax"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOut"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "buyOnUniswapFork",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0x33635226"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "amount",
-                            "name": "fromAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        },
-                        {
-                            "format": "amount",
-                            "name": "toAmount",
-                            "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.toToken"
-                                    }
-                                },
-                                "type": "amount"
-                            }
-                        }
-                    ],
-                    "functionName": "buy",
-                    "functionType": "swap",
-                    "options": {
-                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                    },
-                    "selector": "0xf95a49eb"
-                }
-            ]
-        },
-        {
             "address": "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
             "name": "ParaSwap P5",
             "parsers": [
@@ -881,7 +497,7 @@
                     },
                     "screen": [
                         {
-                            "label": "Minimum received amount",
+                            "label": "Received minimum amount",
                             "name": "toAmount"
                         },
                         {
@@ -947,7 +563,7 @@
                     },
                     "screen": [
                         {
-                            "label": "Minimum received amount",
+                            "label": "Received minimum amount",
                             "name": "toAmount"
                         },
                         {
@@ -1098,6 +714,18 @@
                         },
                         {
                             "format": "raw",
+                            "name": "amountOut",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
+                            "format": "raw",
                             "name": "pools",
                             "value": {
                                 "quantity": {
@@ -1114,6 +742,85 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Max sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Received amount",
+                            "name": "amountOut"
+                        },
+                        {
+                            "label": "Pools",
+                            "name": "pools"
+                        }
+                    ],
+                    "selector": "0xb2f1e6db"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "tokenIn"
+                                    }
+                                },
+                                "type": "amount"
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amountOut",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "pools",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "pools.-1"
+                                    }
+                                },
+                                "type": "uint"
+                            }
+                        }
+                    ],
+                    "functionName": "buyOnUniswapV2ForkWithPermit",
+                    "functionType": "swap",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Max sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Received amount",
+                            "name": "amountOut"
+                        },
+                        {
+                            "label": "Pools",
+                            "name": "pools"
+                        }
+                    ],
                     "selector": "0xb2f1e6db"
                 },
                 {
