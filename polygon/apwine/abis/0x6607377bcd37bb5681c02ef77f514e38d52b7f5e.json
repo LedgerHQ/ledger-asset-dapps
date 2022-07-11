@@ -1,0 +1,551 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            }
+        ],
+        "name": "AllTokenApprovalUpdatedForAMM",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            }
+        ],
+        "name": "FYTApprovalUpdatedForAMM",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "contract IAMMRegistry",
+                "name": "_registry",
+                "type": "address"
+            }
+        ],
+        "name": "RegistrySet",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "contract IZapDepositor",
+                "name": "_zapDepositor",
+                "type": "address"
+            }
+        ],
+        "name": "UnderlyingApprovalUpdatedForDepositor",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_sender",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_initialUnderlyinValue",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_underlyingEarned",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "_sellAllFYTs",
+                "type": "bool"
+            }
+        ],
+        "name": "ZappedInScaledToUnderlying",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_sender",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "totalPTAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "ZappedInToPT",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "controller",
+        "outputs": [
+            {
+                "internalType": "contract IController",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "depositorRegistry",
+        "outputs": [
+            {
+                "internalType": "contract IDepositorRegistry",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ibtAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "getPTOutFromZapToPT",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ibtAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "getUnderlyingOutFromZapScaledToUnderlying",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IController",
+                "name": "_controller",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IAMMRouterV1",
+                "name": "_router",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IDepositorRegistry",
+                "name": "_depositorRegistry",
+                "type": "address"
+            },
+            {
+                "internalType": "contract ILPToken",
+                "name": "_lpToken",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lpToken",
+        "outputs": [
+            {
+                "internalType": "contract ILPToken",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "name": "onERC1155BatchReceived",
+        "outputs": [
+            {
+                "internalType": "bytes4",
+                "name": "",
+                "type": "bytes4"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "name": "onERC1155Received",
+        "outputs": [
+            {
+                "internalType": "bytes4",
+                "name": "",
+                "type": "bytes4"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "registry",
+        "outputs": [
+            {
+                "internalType": "contract IAMMRegistry",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "router",
+        "outputs": [
+            {
+                "internalType": "contract IAMMRouterV1",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "interfaceId",
+                "type": "bytes4"
+            }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            }
+        ],
+        "name": "updateAllTokensApprovalForAMM",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            }
+        ],
+        "name": "updateFYTApprovalForAMM",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            }
+        ],
+        "name": "updateUnderlyingApprovalForDepositor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_inputs",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_referralRecipient",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "_sellAllFYTs",
+                "type": "bool"
+            }
+        ],
+        "name": "zapInScaledToUnderlying",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_inputs",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_referralRecipient",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "_sellAllFYTs",
+                "type": "bool"
+            }
+        ],
+        "name": "zapInScaledToUnderlyingWithIBT",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_inputs",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_referralRecipient",
+                "type": "address"
+            }
+        ],
+        "name": "zapInToPT",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAMM",
+                "name": "_amm",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_inputs",
+                "type": "uint256[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_referralRecipient",
+                "type": "address"
+            }
+        ],
+        "name": "zapInToPTWithIBT",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
