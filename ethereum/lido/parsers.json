@@ -93,17 +93,15 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
+                    "screen": [
+                        {
+                            "label": "Amount to stake",
+                            "name": "amountToStake"
+                        }
+                    ],
                     "selector": "0xa1903eab"
                 }
-            ],
-            "screens": {
-                "0xa1903eab": [
-                    {
-                        "label": "Amount to stake",
-                        "name": "amountToStake"
-                    }
-                ]
-            }
+            ]
         }
     ],
     "name": "lido"
