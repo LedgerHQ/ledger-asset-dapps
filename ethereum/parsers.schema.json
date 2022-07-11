@@ -198,6 +198,23 @@
                                     "description": "TBD",
                                     "type": "object"
                                 },
+                                "screen": {
+                                    "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
+                                    "items": {
+                                        "properties": {
+                                            "label": {
+                                                "description": "Label displayed on the device to allow the user to identify the argument.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Name of the arguments, should match one existing arg from arguments.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
                                 "selector": {
                                     "description": "Unique identifier of the function in the contract.",
                                     "pattern": "^0x[a-f0-9]{8}$",
@@ -214,29 +231,6 @@
                             "type": "object"
                         },
                         "type": "array"
-                    },
-                    "screens": {
-                        "additionalProperties": false,
-                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
-                        "patternProperties": {
-                            "^0x[a-f0-9]{8}$": {
-                                "items": {
-                                    "properties": {
-                                        "functionName": {
-                                            "description": "Label displayed on the device to allow the user to identify the argument.",
-                                            "type": "string"
-                                        },
-                                        "name": {
-                                            "description": "Name of the arguments, should match one existing arg from arguments.",
-                                            "type": "string"
-                                        }
-                                    },
-                                    "type": "object"
-                                },
-                                "type": "array"
-                            }
-                        },
-                        "type": "object"
                     }
                 },
                 "type": "object"
