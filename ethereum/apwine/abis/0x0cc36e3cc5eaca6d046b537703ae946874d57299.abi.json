@@ -4,8 +4,21 @@
         "inputs": [
             {
                 "indexed": false,
-                "internalType": "contract IERC20",
-                "name": "_token",
+                "internalType": "enum AMM.AMMGlobalState",
+                "name": "_newState",
+                "type": "uint8"
+            }
+        ],
+        "name": "AMMStateChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_user",
                 "type": "address"
             },
             {
@@ -13,15 +26,109 @@
                 "internalType": "uint256",
                 "name": "_amount",
                 "type": "uint256"
+            }
+        ],
+        "name": "ExpiredTokensWithdrawn",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidityCreated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_to",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidityDecreased",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_from",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidityIncreased",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_recipient",
+                "name": "_token",
                 "type": "address"
             }
         ],
-        "name": "GovernanceFeeCollected",
+        "name": "PairCreated",
         "type": "event"
     },
     {
@@ -30,11 +137,11 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_fee",
+                "name": "_newPeriodIndex",
                 "type": "uint256"
             }
         ],
-        "name": "GovernanceFeeUpdated",
+        "name": "PeriodSwitched",
         "type": "event"
     },
     {
@@ -43,17 +150,23 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_recipient",
+                "name": "_user",
                 "type": "address"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_feeAmount",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_poolTokenAmount",
                 "type": "uint256"
             }
         ],
-        "name": "ReferralFeePaid",
+        "name": "PoolExited",
         "type": "event"
     },
     {
@@ -62,81 +175,23 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_recipient",
-                "type": "address"
-            }
-        ],
-        "name": "ReferralRecipientAdded",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "_recipient",
-                "type": "address"
-            }
-        ],
-        "name": "ReferralRecipientRemoved",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "_recipient",
+                "name": "_user",
                 "type": "address"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_fee",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_poolTokenAmount",
                 "type": "uint256"
             }
         ],
-        "name": "ReferralSet",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "contract IAMMRegistry",
-                "name": "_registry",
-                "type": "address"
-            }
-        ],
-        "name": "RegistrySet",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
-            },
-            {
-                "indexed": true,
-                "internalType": "bytes32",
-                "name": "previousAdminRole",
-                "type": "bytes32"
-            },
-            {
-                "indexed": true,
-                "internalType": "bytes32",
-                "name": "newAdminRole",
-                "type": "bytes32"
-            }
-        ],
-        "name": "RoleAdminChanged",
+        "name": "PoolJoined",
         "type": "event"
     },
     {
@@ -194,41 +249,90 @@
         "inputs": [
             {
                 "indexed": false,
-                "internalType": "contract IERC20",
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenInID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenOutID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenAmountIn",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_tokenAmountOut",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "Swapped",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_swapFee",
+                "type": "uint256"
+            }
+        ],
+        "name": "SwappingFeeSet",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
                 "name": "_token",
                 "type": "address"
             },
             {
                 "indexed": false,
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
+                "internalType": "uint256[2]",
+                "name": "_newWeights",
+                "type": "uint256[2]"
             }
         ],
-        "name": "TokenApproved",
+        "name": "WeightUpdated",
         "type": "event"
     },
     {
         "inputs": [],
-        "name": "DEFAULT_ADMIN_ROLE",
+        "name": "ERC1155_ERC165",
         "outputs": [
             {
-                "internalType": "bytes32",
+                "internalType": "bytes4",
                 "name": "",
-                "type": "bytes32"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "GOVERNANCE_FEE",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
+                "type": "bytes4"
             }
         ],
         "stateMutability": "view",
@@ -237,56 +341,60 @@
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "name": "REFERRAL_FEE",
-        "outputs": [
-            {
                 "internalType": "uint256",
-                "name": "",
+                "name": "_pairID",
                 "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "contract IERC20",
-                "name": "_token",
-                "type": "address"
             },
             {
-                "internalType": "address",
-                "name": "_recipient",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_poolAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[2]",
+                "name": "_maxAmountsIn",
+                "type": "uint256[2]"
             }
         ],
-        "name": "collectGovernanceFee",
+        "name": "addLiquidity",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "inputs": [],
+        "name": "ammId",
+        "outputs": [
+            {
+                "internalType": "uint64",
+                "name": "",
+                "type": "uint64"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_pairPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_tokenPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_maxAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
@@ -294,11 +402,16 @@
                 "type": "uint256"
             }
         ],
-        "name": "getAmountIn",
+        "name": "calcInAndSpotGivenOut",
         "outputs": [
             {
                 "internalType": "uint256",
                 "name": "tokenAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spotPriceAfter",
                 "type": "uint256"
             }
         ],
@@ -308,27 +421,136 @@
     {
         "inputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_pairPath",
-                "type": "uint256[]"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_tokenPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
                 "name": "_tokenAmountIn",
                 "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_minAmountOut",
+                "type": "uint256"
             }
         ],
-        "name": "getAmountOut",
+        "name": "calcOutAndSpotGivenIn",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spotPriceAfter",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[2]",
+                "name": "_tokenAmounts",
+                "type": "uint256[2]"
+            }
+        ],
+        "name": "createLiquidity",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "currentPeriodIndex",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_maxPoolAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "exitSwapExternAmountOut",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "poolAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_poolAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_minAmountOut",
+                "type": "uint256"
+            }
+        ],
+        "name": "exitSwapPoolAmountIn",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -336,23 +558,24 @@
                 "type": "uint256"
             }
         ],
-        "stateMutability": "view",
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
-            }
-        ],
-        "name": "getRoleAdmin",
+        "inputs": [],
+        "name": "finalize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getAMMState",
         "outputs": [
             {
-                "internalType": "bytes32",
+                "internalType": "enum AMM.AMMGlobalState",
                 "name": "",
-                "type": "bytes32"
+                "type": "uint8"
             }
         ],
         "stateMutability": "view",
@@ -361,17 +584,66 @@
     {
         "inputs": [
             {
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
+                "internalType": "address",
+                "name": "_user",
+                "type": "address"
             },
             {
                 "internalType": "uint256",
-                "name": "index",
+                "name": "_lpTokenId",
                 "type": "uint256"
             }
         ],
-        "name": "getRoleMember",
+        "name": "getExpiredTokensInfo",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getFYTAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getFutureAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getIBTAddress",
         "outputs": [
             {
                 "internalType": "address",
@@ -385,12 +657,48 @@
     {
         "inputs": [
             {
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
+                "internalType": "uint256",
+                "name": "_ammId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_periodIndex",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             }
         ],
-        "name": "getRoleMemberCount",
+        "name": "getLPTokenId",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getPTAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getPTWeightInPair",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -404,27 +712,132 @@
     {
         "inputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
+                "internalType": "address",
+                "name": "_tokenAddress",
                 "type": "address"
+            }
+        ],
+        "name": "getPairIDForToken",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getPairWithID",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "tokenAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256[2]",
+                        "name": "weights",
+                        "type": "uint256[2]"
+                    },
+                    {
+                        "internalType": "uint256[2]",
+                        "name": "balances",
+                        "type": "uint256[2]"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "liquidityIsInitialized",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct IAMM.Pair",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getPoolTokenAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_pairPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_tokenPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_tokenOut",
+                "type": "uint256"
             }
         ],
         "name": "getSpotPrice",
         "outputs": [
             {
                 "internalType": "uint256",
-                "name": "spotPrice",
+                "name": "",
                 "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getTotalSupplyWithTokenId",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getUnderlyingOfIBTAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
         "stateMutability": "view",
@@ -475,13 +888,38 @@
     {
         "inputs": [
             {
-                "internalType": "contract IAMMRegistry",
-                "name": "_registry",
+                "internalType": "uint64",
+                "name": "_ammId",
+                "type": "uint64"
+            },
+            {
+                "internalType": "address",
+                "name": "_underlyingOfIBTAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_futureVault",
+                "type": "address"
+            },
+            {
+                "internalType": "contract ILPToken",
+                "name": "_poolTokens",
                 "type": "address"
             },
             {
                 "internalType": "address",
                 "name": "_admin",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_feesRecipient",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_router",
                 "type": "address"
             }
         ],
@@ -491,13 +929,94 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "registry",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_minPoolAmountOut",
+                "type": "uint256"
+            }
+        ],
+        "name": "joinSwapExternAmountIn",
         "outputs": [
             {
-                "internalType": "contract IAMMRegistry",
+                "internalType": "uint256",
+                "name": "poolAmountOut",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_poolAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_maxAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "joinSwapPoolAmountOut",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenAmountIn",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lastBlockYieldRecorded",
+        "outputs": [
+            {
+                "internalType": "uint256",
                 "name": "",
-                "type": "address"
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lastYieldRecorded",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -506,17 +1025,40 @@
     {
         "inputs": [
             {
-                "internalType": "bytes32",
-                "name": "role",
-                "type": "bytes32"
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_poolAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[2]",
+                "name": "_minAmountsOut",
+                "type": "uint256[2]"
+            }
+        ],
+        "name": "removeLiquidity",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IERC20",
+                "name": "_token",
+                "type": "address"
             },
             {
                 "internalType": "address",
-                "name": "account",
+                "name": "_recipient",
                 "type": "address"
             }
         ],
-        "name": "renounceRole",
+        "name": "rescueFunds",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -543,11 +1085,11 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_fee",
+                "name": "_swapFee",
                 "type": "uint256"
             }
         ],
-        "name": "setGovernanceFee",
+        "name": "setSwappingFees",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -555,54 +1097,23 @@
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "_recipient",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
-                "name": "_fee",
+                "name": "_tokenIn",
                 "type": "uint256"
-            }
-        ],
-        "name": "setReferral",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "contract IAMMRegistry",
-                "name": "_registry",
-                "type": "address"
-            }
-        ],
-        "name": "setRegistry",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_pairPath",
-                "type": "uint256[]"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_tokenPath",
-                "type": "uint256[]"
             },
             {
                 "internalType": "uint256",
                 "name": "_tokenAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
                 "type": "uint256"
             },
             {
@@ -614,16 +1125,6 @@
                 "internalType": "address",
                 "name": "_to",
                 "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_deadline",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "_referralRecipient",
-                "type": "address"
             }
         ],
         "name": "swapExactAmountIn",
@@ -631,6 +1132,11 @@
             {
                 "internalType": "uint256",
                 "name": "tokenAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spotPriceAfter",
                 "type": "uint256"
             }
         ],
@@ -640,23 +1146,23 @@
     {
         "inputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_pairID",
+                "type": "uint256"
             },
             {
-                "internalType": "uint256[]",
-                "name": "_pairPath",
-                "type": "uint256[]"
-            },
-            {
-                "internalType": "uint256[]",
-                "name": "_tokenPath",
-                "type": "uint256[]"
+                "internalType": "uint256",
+                "name": "_tokenIn",
+                "type": "uint256"
             },
             {
                 "internalType": "uint256",
                 "name": "_maxAmountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_tokenOut",
                 "type": "uint256"
             },
             {
@@ -668,16 +1174,6 @@
                 "internalType": "address",
                 "name": "_to",
                 "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_deadline",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "_referralRecipient",
-                "type": "address"
             }
         ],
         "name": "swapExactAmountOut",
@@ -686,20 +1182,39 @@
                 "internalType": "uint256",
                 "name": "tokenAmountIn",
                 "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spotPriceAfter",
+                "type": "uint256"
             }
         ],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [
+        "inputs": [],
+        "name": "swapFee",
+        "outputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
-        "name": "updateAllTokenApprovalOf",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "switchPeriod",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "togglePauseAmm",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -707,12 +1222,17 @@
     {
         "inputs": [
             {
-                "internalType": "contract IAMM",
-                "name": "_amm",
+                "internalType": "address",
+                "name": "_user",
                 "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_lpTokenId",
+                "type": "uint256"
             }
         ],
-        "name": "updateFYTApprovalOf",
+        "name": "withdrawExpiredToken",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
