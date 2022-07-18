@@ -1,0 +1,39 @@
+{
+    "blockchainName": "ethereum_ropsten",
+    "chainId": 420,
+    "contracts": [
+        {
+            "address": "0x954fc0d01db3cf281b29bcbac12e29252cda5640",
+            "contractName": "[ L ] Market",
+            "selectors": {
+                "0x1249c58b": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xc111fb91": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0x813362a7551fc8899e4cb8138405d84bc592b9f6",
+            "contractName": "[ L ] Market",
+            "selectors": {
+                "0x1249c58b": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xc111fb91": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        }
+    ],
+    "name": "[ L ] Market"
+}
