@@ -21,8 +21,7 @@
                                     "path": {
                                         "default": "data.fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -38,8 +37,7 @@
                                     "path": {
                                         "default": "data.toToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -50,8 +48,7 @@
                                     "path": {
                                         "default": "data.beneficiary"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -92,8 +89,7 @@
                                     "path": {
                                         "default": "data.fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -109,8 +105,7 @@
                                     "path": {
                                         "default": "data.path.0.path.-1.to"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -121,8 +116,7 @@
                                     "path": {
                                         "default": "data.beneficiary"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -163,8 +157,7 @@
                                     "path": {
                                         "default": "path.0"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -180,8 +173,7 @@
                                     "path": {
                                         "default": "path.-1"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         }
                     ],
@@ -217,8 +209,7 @@
                                     "path": {
                                         "default": "path.0"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -234,8 +225,7 @@
                                     "path": {
                                         "default": "path.-1"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -246,8 +236,7 @@
                                     "path": {
                                         "default": "factory"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -284,32 +273,29 @@
                                     "path": {
                                         "default": "tokenIn"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "amountOutMin",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "amountOutMin"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "pools",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "pools.-1"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         }
                     ],
@@ -350,8 +336,7 @@
                                     "path": {
                                         "default": "data.fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -367,8 +352,7 @@
                                     "path": {
                                         "default": "data.toToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -379,8 +363,7 @@
                                     "path": {
                                         "default": "data.beneficiary"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -420,8 +403,7 @@
                                     "path": {
                                         "default": "fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -437,8 +419,7 @@
                                     "path": {
                                         "default": "toToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -449,8 +430,7 @@
                                     "path": {
                                         "default": "exchange"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -486,8 +466,7 @@
                                     "path": {
                                         "default": "fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -503,8 +482,7 @@
                                     "path": {
                                         "default": "toToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -515,8 +493,7 @@
                                     "path": {
                                         "default": "exchange"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -552,8 +529,7 @@
                                     "path": {
                                         "default": "path.0"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -569,8 +545,7 @@
                                     "path": {
                                         "default": "path.-1"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         }
                     ],
@@ -606,8 +581,7 @@
                                     "path": {
                                         "default": "path.0"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -623,8 +597,7 @@
                                     "path": {
                                         "default": "path.-1"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -635,8 +608,7 @@
                                     "path": {
                                         "default": "factory"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -672,32 +644,29 @@
                                     "path": {
                                         "default": "tokenIn"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "amountOut",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "amountOut"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "pools",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "pools.-1"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         }
                     ],
@@ -737,32 +706,29 @@
                                     "path": {
                                         "default": "tokenIn"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "amountOut",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "amountOut"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "pools",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "pools.-1"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         }
                     ],
@@ -802,8 +768,7 @@
                                     "path": {
                                         "default": "data.fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -819,8 +784,7 @@
                                     "path": {
                                         "default": "data.path.-1.to"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -831,8 +795,7 @@
                                     "path": {
                                         "default": "data.beneficiary"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -872,8 +835,7 @@
                                     "path": {
                                         "default": "fromToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -889,8 +851,7 @@
                                     "path": {
                                         "default": "toToken"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
@@ -901,8 +862,7 @@
                                     "path": {
                                         "default": "exchange"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
@@ -938,32 +898,29 @@
                                     "path": {
                                         "default": "tokenIn"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "amountOutMin",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "amountOutMin"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         },
                         {
                             "format": "raw",
                             "name": "pools",
                             "value": {
-                                "quantity": {
+                                "uint256": {
                                     "path": {
                                         "default": "pools.-1"
                                     }
-                                },
-                                "type": "uint"
+                                }
                             }
                         }
                     ],
