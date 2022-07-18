@@ -124,7 +124,7 @@
                                                     {
                                                         "name": "NumberValue",
                                                         "required": [
-                                                            "quantity"
+                                                            "uint256"
                                                         ]
                                                     }
                                                 ],
@@ -136,6 +136,9 @@
                                                         "$ref": "#/$defs/argumentValue"
                                                     },
                                                     "token": {
+                                                        "$ref": "#/$defs/argumentValue"
+                                                    },
+                                                    "uint256": {
                                                         "$ref": "#/$defs/argumentValue"
                                                     }
                                                 },
