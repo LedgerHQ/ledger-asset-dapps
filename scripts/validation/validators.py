@@ -57,8 +57,7 @@ def schema_validator(schema_path: str):
         try:
             validator.validate(json.loads(data))
             return True
-        except ValidationError as e:
-            breakpoint()
+        except ValidationError:
             logger.debug(
                 "\tinvalid: File %s doesn't match the schema", fname, exc_info=True
             )
