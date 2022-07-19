@@ -110,13 +110,6 @@
                                                 "oneOf": [
                                                     {
                                                         "name": "AmountValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "amount"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "quantity",
                                                             "token"
@@ -124,29 +117,14 @@
                                                     },
                                                     {
                                                         "name": "AddressValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "address"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "address"
                                                         ]
                                                     },
                                                     {
                                                         "name": "NumberValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "uint",
-                                                                    "int"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
-                                                            "quantity"
+                                                            "uint256"
                                                         ]
                                                     }
                                                 ],
@@ -160,21 +138,10 @@
                                                     "token": {
                                                         "$ref": "#/$defs/argumentValue"
                                                     },
-                                                    "type": {
-                                                        "enum": [
-                                                            "amount",
-                                                            "address",
-                                                            "boolean",
-                                                            "bytes",
-                                                            "int",
-                                                            "string",
-                                                            "uint"
-                                                        ]
+                                                    "uint256": {
+                                                        "$ref": "#/$defs/argumentValue"
                                                     }
                                                 },
-                                                "required": [
-                                                    "type"
-                                                ],
                                                 "type": "object"
                                             }
                                         },

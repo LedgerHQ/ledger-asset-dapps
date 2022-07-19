@@ -74,7 +74,7 @@
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-f0-9]{40}$",
+                        "pattern": "^0x[a-fA-F0-9]{40}$",
                         "type": "string"
                     },
                     "name": {
@@ -100,10 +100,6 @@
                                                     "raw"
                                                 ]
                                             },
-                                            "label": {
-                                                "description": "Key displayed on the device alongside the parsed value.",
-                                                "type": "string"
-                                            },
                                             "name": {
                                                 "description": "Internal name of the argument, can be different from the name in the ABI.",
                                                 "type": "string"
@@ -114,13 +110,6 @@
                                                 "oneOf": [
                                                     {
                                                         "name": "AmountValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "amount"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "quantity",
                                                             "token"
@@ -128,29 +117,14 @@
                                                     },
                                                     {
                                                         "name": "AddressValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "address"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "address"
                                                         ]
                                                     },
                                                     {
                                                         "name": "NumberValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "uint",
-                                                                    "int"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
-                                                            "quantity"
+                                                            "uint256"
                                                         ]
                                                     }
                                                 ],
@@ -164,21 +138,10 @@
                                                     "token": {
                                                         "$ref": "#/$defs/argumentValue"
                                                     },
-                                                    "type": {
-                                                        "enum": [
-                                                            "amount",
-                                                            "address",
-                                                            "boolean",
-                                                            "bytes",
-                                                            "int",
-                                                            "string",
-                                                            "uint"
-                                                        ]
+                                                    "uint256": {
+                                                        "$ref": "#/$defs/argumentValue"
                                                     }
                                                 },
-                                                "required": [
-                                                    "type"
-                                                ],
                                                 "type": "object"
                                             }
                                         },
@@ -194,16 +157,30 @@
                                     "enum": [
                                         "stake",
                                         "swap",
-                                        "wrap"
+                                        "wrap",
+                                        "unwrap"
                                     ]
-                                },
-                                "label": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
-                                    "type": "string"
                                 },
                                 "options": {
                                     "description": "TBD",
                                     "type": "object"
+                                },
+                                "screen": {
+                                    "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
+                                    "items": {
+                                        "properties": {
+                                            "label": {
+                                                "description": "Label displayed on the device to allow the user to identify the argument.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Name of the arguments, should match one existing arg from arguments.",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
                                 },
                                 "selector": {
                                     "description": "Unique identifier of the function in the contract.",
@@ -213,6 +190,7 @@
                             },
                             "required": [
                                 "functionType",
+                                "functionName",
                                 "options",
                                 "selector",
                                 "arguments"
@@ -220,21 +198,6 @@
                             "type": "object"
                         },
                         "type": "array"
-                    },
-                    "screens": {
-                        "additionalProperties": false,
-                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
-                        "patternProperties": {
-                            "^0x[a-f0-9]{8}$": {
-                                "items": {
-                                    "additionalProperties": true,
-                                    "description": "Same format as vault_common.json",
-                                    "type": "object"
-                                },
-                                "type": "array"
-                            }
-                        },
-                        "type": "object"
                     }
                 },
                 "type": "object"
