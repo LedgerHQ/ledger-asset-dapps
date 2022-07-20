@@ -1,0 +1,23 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x33c6eec1723b12c46732f7ab41398de45641fa42",
+            "contractName": "[ L ] Market",
+            "selectors": {
+                "0x1249c58b": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xc111fb91": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        }
+    ],
+    "name": "[ L ] Market"
+}
