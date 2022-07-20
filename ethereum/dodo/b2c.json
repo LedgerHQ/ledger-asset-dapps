@@ -1,0 +1,65 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xa356867fdcea8e71aeaf87805808803806231fdc",
+            "contractName": "DODOV2Proxy02",
+            "selectors": {
+                "0x1e6d24c2": {
+                    "erc20OfInterest": [
+                        "fromToken"
+                    ],
+                    "method": "dodoSwapV2TokenToETH",
+                    "plugin": "DODO"
+                },
+                "0x5028bb95": {
+                    "erc20OfInterest": [
+                        "toToken"
+                    ],
+                    "method": "dodoSwapV2ETHToToken",
+                    "plugin": "DODO"
+                },
+                "0x54bacd13": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "method": "externalSwap",
+                    "plugin": "DODO"
+                },
+                "0xf87dc1b7": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "method": "dodoSwapV2TokenToToken",
+                    "plugin": "DODO"
+                }
+            }
+        },
+        {
+            "address": "0xa2398842f37465f89540430bdc00219fa9e4d28a",
+            "contractName": "DODORouteProxy",
+            "selectors": {
+                "0x7617b389": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "method": "mixSwap",
+                    "plugin": "DODO"
+                },
+                "0x81791788": {
+                    "erc20OfInterest": [
+                        "midToken.0",
+                        "midToken.3"
+                    ],
+                    "method": "dodoMutliSwap",
+                    "plugin": "DODO"
+                }
+            }
+        }
+    ],
+    "name": "DODO"
+}
