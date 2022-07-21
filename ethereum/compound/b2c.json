@@ -3,47 +3,45 @@
     "chainId": 1,
     "contracts": [
         {
-            "address":"0xc0da01a04c3f3e0be433606045bb7017a7323e38",
+            "address": "0xc0da01a04c3f3e0be433606045bb7017a7323e38",
             "contractName": "Governor",
-            "selectors":{
+            "selectors": {
                 "0x15373e3d": {
                     "erc20OfInterest": [],
                     "method": "castVote",
                     "plugin": "Compound"
-		        }
-                
+                }
             }
         },
         {
-            "address":"0xc00e94cb662c3520282e6f5717214004a7f26888",
-            "contractName":"COMP",
-            "selectors":{
+            "address": "0xc00e94cb662c3520282e6f5717214004a7f26888",
+            "contractName": "COMP",
+            "selectors": {
                 "0x5c19a95c": {
                     "erc20OfInterest": [],
                     "method": "delegate",
                     "plugin": "Compound"
-		        }
+                }
             }
         },
-         {
+        {
             "address": "0x5d3a536e4d6dbd6114cc1ead35777bab948e3643",
             "contractName": "Compound DAI",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
-
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -52,19 +50,19 @@
             "contractName": "Compound ETH",
             "selectors": {
                 "0x1249c58b": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "mint"
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -73,19 +71,19 @@
             "contractName": "Compound USDC",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -94,19 +92,19 @@
             "contractName": "Compound ZRX",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -115,19 +113,19 @@
             "contractName": "Compound USDT",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -136,19 +134,19 @@
             "contractName": "Compound WBTC",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -157,19 +155,19 @@
             "contractName": "Compound BAT",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -178,19 +176,19 @@
             "contractName": "Compound REP",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -199,19 +197,19 @@
             "contractName": "Compound SAI",
             "selectors": {
                 "0x852a12e3": {
-                    "plugin": "Compound",
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying"
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
                 },
                 "0xa0712d68": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method":"mint"
+                    "method": "mint",
+                    "plugin": "Compound"
                 },
                 "0xdb006a75": {
-                    "plugin": "Compound",
                     "erc20OfInterest": [],
-                    "method": "redeem"
+                    "method": "redeem",
+                    "plugin": "Compound"
                 }
             }
         },
@@ -219,50 +217,48 @@
             "address": "0x70e36f6bf80a52b3b46b3af8e106cc0ed743e8e4",
             "contractName": "cCOMP",
             "selectors": {
-                "0x852a12e3": {
-                    "erc20OfInterest":[],
-                    "method": "redeemUnderlying",
-                    "plugin": "Compound"
-		        },
-                "0xdb006a75": {
-                    "erc20OfInterest": [],
-                    "method": "redeem",
-                    "plugin": "Compound"
-		        },
-                "0xa0712d68": {
-                    "erc20OfInterest": [],
-                    "method": "mint",
-                    "plugin": "Compound"
-		        },
-                "0xc5ebeaec": {
-                    "erc20OfInterest": [],
-                    "method": "borrow",
-                    "plugin": "Compound"
-		        },
                 "0x0e752702": {
                     "erc20OfInterest": [],
                     "method": "repayBorrow",
                     "plugin": "Compound"
-		        },
-                "0xa9059cbb": {
-                    "erc20OfInterest": [],
-                    "method": "transfer",
-                    "plugin": "Compound"
-		        },
+                },
                 "0x2608f818": {
                     "erc20OfInterest": [],
                     "method": "repayBorrowBehalf",
                     "plugin": "Compound"
-		        },
+                },
+                "0x852a12e3": {
+                    "erc20OfInterest": [],
+                    "method": "redeemUnderlying",
+                    "plugin": "Compound"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Compound"
+                },
+                "0xa9059cbb": {
+                    "erc20OfInterest": [],
+                    "method": "transfer",
+                    "plugin": "Compound"
+                },
+                "0xc5ebeaec": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Compound"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Compound"
+                },
                 "0xf5e3c462": {
                     "erc20OfInterest": [],
                     "method": "liquidateBorrow",
                     "plugin": "Compound"
-		        }
-	        }
-	    }
+                }
+            }
+        }
     ],
-    "name": "Compound" 
+    "name": "Compound"
 }
-
-
