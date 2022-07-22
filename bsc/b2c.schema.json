@@ -21,21 +21,6 @@
                     "contractName": {
                         "type": "string"
                     },
-                    "screens": {
-                        "additionalProperties": false,
-                        "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
-                        "patternProperties": {
-                            "^0x[a-f0-9]{8}$": {
-                                "items": {
-                                    "additionalProperties": true,
-                                    "description": "Same format as vault_common.json",
-                                    "type": "object"
-                                },
-                                "type": "array"
-                            }
-                        },
-                        "type": "object"
-                    },
                     "selectors": {
                         "additionalProperties": false,
                         "patternProperties": {
