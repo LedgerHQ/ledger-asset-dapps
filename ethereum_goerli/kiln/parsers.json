@@ -1,0 +1,32 @@
+{
+    "blockchainName": "ethereum_goerli",
+    "chainId": 420,
+    "contracts": [
+        {
+            "address": "0x1c27e1917dd883ef645f3bf563d1aadcd99d36b7",
+            "name": "Kiln V1",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "address",
+                            "name": "_withdraw",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Deposit",
+                    "functionType": "stake",
+                    "options": {},
+                    "selector": "0xf340fa01"
+                }
+            ]
+        }
+    ],
+    "name": "kiln"
+}

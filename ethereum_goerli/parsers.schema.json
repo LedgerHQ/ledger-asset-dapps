@@ -37,10 +37,18 @@
                                 "default",
                                 "transaction"
                             ]
+                        },
+                        {
+                            "required": [
+                                "binary"
+                            ]
                         }
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
                     "properties": {
+                        "binary": {
+                            "type": "string"
+                        },
                         "default": {
                             "type": "string"
                         },
@@ -65,7 +73,7 @@
         },
         "chainId": {
             "enum": [
-                5
+                420
             ]
         },
         "contracts": {
@@ -97,7 +105,8 @@
                                                     "boolean",
                                                     "eip55",
                                                     "percentage",
-                                                    "raw"
+                                                    "raw",
+                                                    "address"
                                                 ]
                                             },
                                             "name": {
