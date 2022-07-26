@@ -1,0 +1,67 @@
+{
+    "blockchainName": "ethereum_goerli",
+    "chainId": 5,
+    "contracts": [
+        {
+            "address": "0x9562b1515E32c13838CB3df27F967f5Fb6f80D3e",
+            "name": "kiln",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "amountToStake",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "label": "Withdrawal addr.",
+                            "name": "_withdraw",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_withdrawer"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "stake",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Amount to stake",
+                            "name": "amountToStake"
+                        },
+                        {
+                            "label": "Withdrawal addr.",
+                            "name": "_withdraw"
+                        }
+                    ],
+                    "selector": "0xf340fa01"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "deposit",
+                    "functionType": "stake",
+                    "options": {},
+                    "selector": "0xd0e30db0"
+                }
+            ]
+        }
+    ],
+    "id": "kiln",
+    "name": "kiln"
+}
