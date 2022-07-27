@@ -3,6 +3,7 @@ import glob
 import json
 import logging
 from json.decoder import JSONDecodeError
+from typing import Callable, Tuple
 
 from jsonschema import ValidationError
 from jsonschema.validators import validator_for
@@ -10,40 +11,52 @@ from jsonschema.validators import validator_for
 logger = logging.getLogger(__name__)
 
 
-def run_validations(glob_path: str, *validators):
-    result = {True: [], False: []}
-    for fname, is_valid in _validate_json_files(glob_path, *validators):
-        result[is_valid].append(fname)
-    logger.info("Result: %s valid, %s invalid", len(result[True]), len(result[False]))
-    if result[False]:
-        logger.error("Invalid files: %s", result[False])
-        raise ValidationError(f"Invalid files: {result[False]}")
+def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, str]]):
+    valid, invalid, errors = 0, 0, []
+    for filename in glob.iglob(glob_path, recursive=True):
+        logger.debug("Validating %s...", filename)
+        with open(filename, "r", newline="") as f:
+            data = f.read()
+        is_valid, error_message = validator(data, filename)
+        if is_valid:
+            valid += 1
+        else:
+            invalid += 1
+            errors.append({"file": filename, "message": error_message})
+
+    logger.info(f"Result: {valid} valid, {invalid} invalid")
+    if invalid:
+        for error in errors:
+            logger.error(f"Validation error: {error}")
+        raise ValidationError(f"Invalid files: {errors}")
 
 
-def format_validator(data: str, fname) -> bool:
+def format_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
         if formatted != data and (formatted + "\n") != data:
             logger.debug(
                 "\tinvalid: File %s is not formatted correctly ; expected: %s",
-                fname,
+                filename,
                 formatted,
             )
-            with open(fname, "w") as f:
+            with open(filename, "w") as f:
                 json.dump(loaded, f, indent=4, sort_keys=True, ensure_ascii=False)
-            return False
-    except JSONDecodeError:
-        logger.debug("\tinvalid: File %s is not a valid json", fname, exc_info=True)
-        return False
-    return True
+            return False, "Not formatted corrected"
+    except JSONDecodeError as err:
+        logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
+        return False, str(err)
+    return True, ""
 
 
-def endlines_validator(data: str, fname) -> bool:
+def endlines_validator(data: str, filename: str) -> Tuple[bool, str]:
     is_valid = "\\r\\n" not in data
+    error_message = ""
     if not is_valid:
-        logger.debug("Invalid: File %s has some endlines chars", fname)
-    return is_valid
+        error_message = "File has some endlines chars"
+        logger.debug("Invalid: File %s has some endlines chars", filename)
+    return is_valid, error_message
 
 
 def schema_validator(schema_path: str):
@@ -53,23 +66,14 @@ def schema_validator(schema_path: str):
     validator_class.check_schema(schema)
     validator = validator_class(schema)
 
-    def _inner_validator(data, fname) -> bool:
+    def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
         try:
             validator.validate(json.loads(data))
-            return True
-        except ValidationError:
+            return True, ""
+        except ValidationError as err:
             logger.debug(
-                "\tinvalid: File %s doesn't match the schema", fname, exc_info=True
+                "\tinvalid: File %s doesn't match the schema", filename, exc_info=True
             )
-            return False
+            return False, err.message
 
     return _inner_validator
-
-
-def _validate_json_files(glob_path: str, *validators):
-    for fname in glob.iglob(glob_path, recursive=True):
-        logger.debug("Validating %s...", fname)
-        with open(fname, "r", newline="") as f:
-            data = f.read()
-        is_valid = all([validator(data, fname) for validator in validators])
-        yield fname, is_valid

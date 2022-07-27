@@ -29,6 +29,11 @@
                         },
                         {
                             "required": [
+                                "binary"
+                            ]
+                        },
+                        {
+                            "required": [
                                 "transaction"
                             ]
                         },
@@ -41,6 +46,9 @@
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
                     "properties": {
+                        "binary": {
+                            "type": "string"
+                        },
                         "default": {
                             "type": "string"
                         },
@@ -158,7 +166,15 @@
                                         "stake",
                                         "swap",
                                         "wrap",
-                                        "unwrap"
+                                        "unwrap",
+                                        "borrow",
+                                        "repay",
+                                        "lend",
+                                        "withdraw",
+                                        "claim_reward",
+                                        "configure",
+                                        "buy",
+                                        "approval"
                                     ]
                                 },
                                 "options": {
