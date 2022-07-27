@@ -13,7 +13,8 @@ logging.basicConfig(level="INFO")
 
 
 VALIDATIONS = {
-    "json": ("./*/**/*.json", format_validator, endlines_validator),
+    "json": ("./*/**/*.json", format_validator),
+    "endlines": ("./*/**/*.json", endlines_validator),
     "eth_b2c": (
         "./ethereum/*/b2c.json",
         schema_validator("./ethereum/b2c.schema.json")
@@ -52,10 +53,10 @@ VALIDATIONS = {
 if __name__ == "__main__":
     failed = False
     logger = logging.getLogger(__name__)
-    for name, args in VALIDATIONS.items():
-        logger.info("Running validation for %s", name)
+    for validator_name, (path, validator) in VALIDATIONS.items():
+        logger.info("Running validation for %s", validator_name)
         try:
-            run_validations(*args)
+            run_validations(path, validator)
         except ValidationError:
             failed = True
     if failed:
