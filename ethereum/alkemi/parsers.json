@@ -1,0 +1,317 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x397c315d64d74d82a731d656f9c4d586d200f90a",
+            "name": "AlkemiEarn",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "borrow",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x4b8a3529"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "repayBorrow",
+                    "functionType": "repay",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xabdb5ea8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "Liquidate Borrow",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "requestedAmountClose"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "assetBorrow"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "Target Account",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "address"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "liquidateBorrow",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xe61604cf"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "supply",
+                    "functionType": "lend",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xf2b9fdb8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "requestedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "requestedAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xf3fef3a3"
+                }
+            ]
+        },
+        {
+            "address": "0x4822d9172e5b76b9db37b75f5552f9988f98a888",
+            "name": "AlkemiEarnOpen",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "borrow",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x4b8a3529"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "repayBorrow",
+                    "functionType": "repay",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xabdb5ea8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "Liquidate Borrow",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "requestedAmountClose"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "assetBorrow"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "Target Account",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "address"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "liquidateBorrow",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xe61604cf"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "supply",
+                    "functionType": "lend",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xf2b9fdb8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "requestedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "requestedAmount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xf3fef3a3"
+                }
+            ]
+        },
+        {
+            "address": "0x14716c982fd8b7f1e8f0b4dbb496dce438a29d93",
+            "contractName": "AlkemiDao",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "Holder",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "holder"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "claimAlk",
+                    "functionType": "claim_reward",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x71d6e892"
+                }
+            ]
+        }
+    ],
+    "name": "alkemi"
+}
