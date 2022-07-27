@@ -31,7 +31,7 @@ def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, 
         raise ValidationError(f"Invalid files: {errors}")
 
 
-def format_validator(data: str, filename :str) -> Tuple[bool, str]:
+def format_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
@@ -77,5 +77,3 @@ def schema_validator(schema_path: str):
             return False, err.message
 
     return _inner_validator
-
-
