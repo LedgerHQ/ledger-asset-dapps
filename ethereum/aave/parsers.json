@@ -1,0 +1,474 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7d2768de32b0b80b7a3454c06bdac94a69ddc7a9",
+            "name": "AaveV2MainMarket",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "repay",
+                    "functionType": "repay",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0x573ade81"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "asset",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setUserUseReserveAsCollateral",
+                    "functionType": "configure",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Asset address",
+                            "name": "asset"
+                        }
+                    ],
+                    "selector": "0x5a3b74b9"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "toAddress",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "toAddress"
+                        }
+                    ],
+                    "selector": "0x69328dec"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "Address",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "swapBorrowRateMode",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Address",
+                            "name": "Address"
+                        }
+                    ],
+                    "selector": "0x94ba89a2"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "borrow",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0xa415bcad"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "lend",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0xe8eda9df"
+                }
+            ]
+        },
+        {
+            "address": "0x7937d4799803fbbe595ed57278bc4ca21f3bffcb",
+            "name": "AaveV2AmmMarket",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "repay",
+                    "functionType": "repay",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0x573ade81"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "asset",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setUserUseReserveAsCollateral",
+                    "functionType": "configure",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Asset address",
+                            "name": "asset"
+                        }
+                    ],
+                    "selector": "0x5a3b74b9"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "toAddress",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "toAddress"
+                        }
+                    ],
+                    "selector": "0x69328dec"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "Address",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setUserUseReserveAsCollateral",
+                    "functionType": "configure",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x94ba89a2"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "borrow",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0xa415bcad"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "onBehalfOf",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "lend",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Sent amount",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "On Behalf Of",
+                            "name": "onBehalfOf"
+                        }
+                    ],
+                    "selector": "0xe8eda9df"
+                }
+            ]
+        }
+    ],
+    "name": "aave"
+}
