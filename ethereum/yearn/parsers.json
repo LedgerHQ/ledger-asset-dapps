@@ -913,6 +913,207 @@
                     "selector": "0x6e553f65"
                 }
             ]
+        },
+        {
+            "address": "0x67e019bfbd5a67207755D04467D6A70c0B75bF60",
+            "name": "Yearn Vault Curve ibEUR",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x2e1a7d4d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "withdrawn token",
+                            "value": {
+                                "address": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw all",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x3ccfd60b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "withdraw to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw to",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x00f714ce"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "withdraw to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "percentage",
+                            "name": "max slippage",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "maxLoss"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw to with slippage",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xe63697c8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "supplied amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xb6b55f25"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "supplied token",
+                            "value": {
+                                "address": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit all",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "supplied amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x19b080FE1ffA0553469D20Ca36219F17Fcf03859"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "recipient of the deposit",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit for",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x6e553f65"
+                }
+            ]
         }
     ],
     "name": "yearn"
