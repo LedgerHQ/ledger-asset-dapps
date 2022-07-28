@@ -15,7 +15,7 @@
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-z0-9]{40}$",
+                        "pattern": "^0x[a-fA-F0-9]{40}$",
                         "type": "string"
                     },
                     "contractName": {

@@ -40,7 +40,10 @@ def format_validator(data: str, fname) -> bool:
 
 
 def endlines_validator(data: str, fname) -> bool:
-    return "\\r\\n" not in data
+    is_valid = "\\r\\n" not in data
+    if not is_valid:
+        logger.debug("Invalid: File %s has some endlines chars", fname)
+    return is_valid
 
 
 def schema_validator(schema_path: str):
