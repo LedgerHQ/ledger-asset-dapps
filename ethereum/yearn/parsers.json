@@ -112,7 +112,7 @@
         },
         {
             "address": "0x2d5d4869381c4fce34789bc1d38acce747e295ae",
-            "name": "Yearn Vault Curve RAI",
+            "name": "Yearn Vault Curve OUSD",
             "parsers": [
                 {
                     "arguments": [
@@ -288,6 +288,207 @@
                                 },
                                 "token": {
                                     "constant": "0x6BA5b4e438FA0aAf7C1bD179285aF65d13bD3D90"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "recipient of the deposit",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit for",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x6e553f65"
+                }
+            ]
+        },
+        {
+            "address": "0xf59d66c1d593fb10e2f8c2a6fd2c958792434b9c",
+            "name": "Yearn Vault Curve RAI",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x2e1a7d4d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "withdrawn token",
+                            "value": {
+                                "address": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw all",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x3ccfd60b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "withdraw to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw to",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0x00f714ce"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "withdrawn amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "maxShares"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "withdraw to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "recipient"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "percentage",
+                            "name": "max slippage",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "maxLoss"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw to with slippage",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xe63697c8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "supplied amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xb6b55f25"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "supplied token",
+                            "value": {
+                                "address": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit all",
+                    "functionType": "supply",
+                    "options": {},
+                    "screen": [],
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "supplied amount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x87650D7bbfC3A9F10587d7778206671719d9910D"
                                 }
                             }
                         },
