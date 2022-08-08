@@ -1,0 +1,23 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x48742d38a0809135efd643c1150bfc13768c3907",
+            "contractName": "MinterSetPriceERC20V0",
+            "selectors": {
+                "0x891407c0": {
+                    "erc20OfInterest": [],
+                    "method": "purchaseTo",
+                    "plugin": "ArtBlocks"
+                },
+                "0xefef39a1": {
+                    "erc20OfInterest": [],
+                    "method": "purchase",
+                    "plugin": "ArtBlocks"
+                }
+            }
+        }
+    ],
+    "name": "ArtBlocks"
+}
