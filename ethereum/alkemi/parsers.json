@@ -60,7 +60,7 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "name": "Liquidate Borrow",
+                            "name": "liquidateBorrow",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -76,7 +76,7 @@
                         },
                         {
                             "format": "eip55",
-                            "name": "Target Account",
+                            "name": "targetAccount",
                             "value": {
                                 "address": {
                                     "path": {
@@ -202,7 +202,7 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "name": "Liquidate Borrow",
+                            "name": "liquidateBorrow",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -218,11 +218,11 @@
                         },
                         {
                             "format": "eip55",
-                            "name": "Target Account",
+                            "name": "targetAccount",
                             "value": {
                                 "address": {
                                     "path": {
-                                        "default": "address"
+                                        "default": "targetAccount"
                                     }
                                 }
                             }
