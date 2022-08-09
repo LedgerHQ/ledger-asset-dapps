@@ -63,6 +63,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "boolean",
+                            "name": "useAsCollateral",
+                            "value": {
+                                "bool": {
+                                    "path": {
+                                        "default": "useAsCollateral"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "setUserUseReserveAsCollateral",
