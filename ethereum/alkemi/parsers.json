@@ -28,7 +28,12 @@
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x4b8a3529"
                 },
                 {
@@ -53,7 +58,12 @@
                     "functionName": "repayBorrow",
                     "functionType": "repay",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xabdb5ea8"
                 },
                 {
@@ -89,7 +99,16 @@
                     "functionName": "liquidateBorrow",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Liquidate Amount",
+                            "name": "liquidateBorrow"
+                        },
+                        {
+                            "label": "Target Account",
+                            "name": "targetAccount"
+                        }
+                    ],
                     "selector": "0xe61604cf"
                 },
                 {
@@ -114,7 +133,12 @@
                     "functionName": "supply",
                     "functionType": "lend",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xf2b9fdb8"
                 },
                 {
@@ -139,7 +163,12 @@
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Withdraw Amount",
+                            "name": "requestedAmount"
+                        }
+                    ],
                     "selector": "0xf3fef3a3"
                 }
             ]
@@ -170,7 +199,12 @@
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0x4b8a3529"
                 },
                 {
@@ -195,7 +229,12 @@
                     "functionName": "repayBorrow",
                     "functionType": "repay",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xabdb5ea8"
                 },
                 {
@@ -231,7 +270,16 @@
                     "functionName": "liquidateBorrow",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Liquidate Amount",
+                            "name": "liquidateAmount"
+                        },
+                        {
+                            "label": "Target Account",
+                            "name": "targetAccount"
+                        }
+                    ],
                     "selector": "0xe61604cf"
                 },
                 {
@@ -256,7 +304,12 @@
                     "functionName": "supply",
                     "functionType": "lend",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Sent Amount",
+                            "name": "fromAmount"
+                        }
+                    ],
                     "selector": "0xf2b9fdb8"
                 },
                 {
@@ -281,7 +334,12 @@
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Withdraw Amount",
+                            "name": "requestedAmount"
+                        }
+                    ],
                     "selector": "0xf3fef3a3"
                 }
             ]
@@ -307,7 +365,12 @@
                     "functionName": "claimAlk",
                     "functionType": "claim_reward",
                     "options": {},
-                    "screen": [],
+                    "screen": [
+                        {
+                            "label": "Holder",
+                            "name": "Holder"
+                        }
+                    ],
                     "selector": "0x71d6e892"
                 }
             ]
