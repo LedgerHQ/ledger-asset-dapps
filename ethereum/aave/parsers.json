@@ -34,6 +34,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "rateMode"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "repay",
@@ -144,6 +155,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "rateMode"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "swapBorrowRateMode",
@@ -171,6 +193,17 @@
                                 "token": {
                                     "path": {
                                         "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "interestRateMode"
                                     }
                                 }
                             }
@@ -281,6 +314,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "rateMode"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "repay",
@@ -307,6 +351,17 @@
                                 "address": {
                                     "path": {
                                         "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "boolean",
+                            "name": "useAsCollateral",
+                            "value": {
+                                "bool": {
+                                    "path": {
+                                        "default": "useAsCollateral"
                                     }
                                 }
                             }
@@ -371,26 +426,6 @@
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
-                            "name": "Address",
-                            "value": {
-                                "address": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "functionName": "setUserUseReserveAsCollateral",
-                    "functionType": "configure",
-                    "options": {},
-                    "screen": [],
-                    "selector": "0x94ba89a2"
-                },
-                {
-                    "arguments": [
-                        {
                             "format": "amount",
                             "name": "fromAmount",
                             "value": {
@@ -413,6 +448,17 @@
                                 "address": {
                                     "path": {
                                         "default": "onBehalfOf"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "interestRateMode"
                                     }
                                 }
                             }
