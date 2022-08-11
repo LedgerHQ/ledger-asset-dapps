@@ -22,14 +22,14 @@
             "address": "0x1dec9e52f1320f7deb29cbcd7b7d67f3df785142",
             "contractName": "MinterSetPriceV0",
             "selectors": {
-                "0xefef39a1": {
-                    "erc20OfInterest": [],
-                    "method": "purchase",
-                    "plugin": "ArtBlocks"
-                },
                 "0x891407c0": {
                     "erc20OfInterest": [],
                     "method": "purchaseTo",
+                    "plugin": "ArtBlocks"
+                },
+                "0xefef39a1": {
+                    "erc20OfInterest": [],
+                    "method": "purchase",
                     "plugin": "ArtBlocks"
                 }
             }
