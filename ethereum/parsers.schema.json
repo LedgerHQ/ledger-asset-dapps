@@ -174,7 +174,7 @@
                                         "claim_reward",
                                         "configure",
                                         "buy",
-                                        "approval"
+                                        "approve"
                                     ]
                                 },
                                 "options": {
@@ -192,6 +192,10 @@
                                             "name": {
                                                 "description": "Name of the arguments, should match one existing arg from arguments.",
                                                 "type": "string"
+                                            },
+                                            "static": {
+                                                "description": "The screen entry should be defined as a static entry",
+                                                "type": "boolean"
                                             }
                                         },
                                         "type": "object"

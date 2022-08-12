@@ -28,6 +28,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Wrap ETH",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to wrap",
                             "name": "wrapAmount"
                         }
@@ -55,6 +60,11 @@
                     "functionType": "unwrap",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Unwrap wstETH",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Amount to unwrap",
                             "name": "unwrapAmount"
@@ -91,7 +101,7 @@
                         }
                     ],
                     "functionName": "approve",
-                    "functionType": "approval",
+                    "functionType": "approve",
                     "options": {},
                     "screen": [
                         {
@@ -181,7 +191,7 @@
                         }
                     ],
                     "functionName": "approve",
-                    "functionType": "approval",
+                    "functionType": "approve",
                     "options": {},
                     "screen": [
                         {
