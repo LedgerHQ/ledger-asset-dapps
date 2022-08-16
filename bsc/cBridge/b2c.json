@@ -1,0 +1,43 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "address": "0xdd90e5e87a2081dcf0391920868ebc2ffb81a1af",
+            "contractName": "Bridge",
+            "selectors": {
+                "0x3f2e5fc3": {
+                    "erc20OfInterest": [],
+                    "method": "sendNative",
+                    "plugin": "cBridge"
+                },
+                "0xa5977fbb": {
+                    "erc20OfInterest": [
+                        "_token"
+                    ],
+                    "method": "send",
+                    "plugin": "cBridge"
+                }
+            }
+        },
+        {
+            "address": "0xd443fe6bf23a4c9b78312391a30ff881a097580e",
+            "contractName": "PeggedTokenBridge",
+            "selectors": {
+                "0xa21a9280": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "cBridge"
+                },
+                "0xde790c7e": {
+                    "erc20OfInterest": [
+                        "_token"
+                    ],
+                    "method": "burn",
+                    "plugin": "cBridge"
+                }
+            }
+        }
+    ],
+    "name": "cBridge"
+}

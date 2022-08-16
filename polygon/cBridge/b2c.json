@@ -1,0 +1,48 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x88dcdc47d2f83a99cf0000fdf667a468bb958a78",
+            "contractName": "Bridge",
+            "selectors": {
+                "0x3f2e5fc3": {
+                    "erc20OfInterest": [],
+                    "method": "sendNative",
+                    "plugin": "cBridge"
+                },
+                "0xa21a9280": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "cBridge"
+                },
+                "0xa5977fbb": {
+                    "erc20OfInterest": [
+                        "_token"
+                    ],
+                    "method": "send",
+                    "plugin": "cBridge"
+                }
+            }
+        },
+        {
+            "address": "0xc1a2d967dfaa6a10f3461bc21864c23c1dd51eea",
+            "contractName": "OriginalTokenVault",
+            "selectors": {
+                "0x23463624": {
+                    "erc20OfInterest": [
+                        "_token"
+                    ],
+                    "method": "deposit",
+                    "plugin": "cBridge"
+                },
+                "0xa21a9280": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "cBridge"
+                }
+            }
+        }
+    ],
+    "name": "cBridge"
+}
