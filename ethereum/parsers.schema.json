@@ -29,6 +29,11 @@
                         },
                         {
                             "required": [
+                                "binary"
+                            ]
+                        },
+                        {
+                            "required": [
                                 "transaction"
                             ]
                         },
@@ -41,6 +46,9 @@
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
                     "properties": {
+                        "binary": {
+                            "type": "string"
+                        },
                         "default": {
                             "type": "string"
                         },
@@ -164,7 +172,10 @@
                                         "lend",
                                         "withdraw",
                                         "claim_reward",
-                                        "configure"
+                                        "configure",
+                                        "buy",
+                                        "approve",
+                                        "withdraw"
                                     ]
                                 },
                                 "options": {
@@ -182,6 +193,10 @@
                                             "name": {
                                                 "description": "Name of the arguments, should match one existing arg from arguments.",
                                                 "type": "string"
+                                            },
+                                            "static": {
+                                                "description": "The screen entry should be defined as a static entry",
+                                                "type": "boolean"
                                             }
                                         },
                                         "type": "object"
