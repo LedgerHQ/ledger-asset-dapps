@@ -52,6 +52,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Repay loan",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to repay",
                             "name": "fromAmount"
                         },
@@ -95,6 +100,11 @@
                     "functionType": "configure",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Set asset as collateral",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Asset to be set as collateral",
                             "name": "asset"
@@ -180,6 +190,11 @@
                     "functionType": "borrow",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Swap interest rate mode",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "For asset",
                             "name": "Address"
@@ -348,6 +363,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Repay loan",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to repay",
                             "name": "fromAmount"
                         },
@@ -392,6 +412,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Set asset as collateral",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Asset to be set as collateral",
                             "name": "asset"
                         },
@@ -401,6 +426,51 @@
                         }
                     ],
                     "selector": "0x5a3b74b9"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "Address",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "asset"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "rateMode",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "rateMode"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "swapBorrowRateMode",
+                    "functionType": "borrow",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Swap interest rate mode",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
+                            "label": "For asset",
+                            "name": "Address"
+                        },
+                        {
+                            "label": "Swap from",
+                            "name": "rateMode"
+                        }
+                    ],
+                    "selector": "0x94ba89a2"
                 },
                 {
                     "arguments": [
@@ -602,6 +672,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Supply ETH",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to supply",
                             "name": "supplyAmount"
                         },
@@ -650,6 +725,11 @@
                     "functionType": "withdraw",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Withdraw ETH",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Withdraw from",
                             "name": "lendingPool"
@@ -704,6 +784,11 @@
                     "functionType": "borrow",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Borrow ETH",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Borrow from",
                             "name": "lendingPool"
@@ -773,6 +858,11 @@
                     "functionType": "repay",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Repay ETH",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Repay to",
                             "name": "lendingPool"
