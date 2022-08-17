@@ -60,6 +60,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Repay loan",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to repay",
                             "name": "fromAmount"
                         }
@@ -111,6 +116,11 @@
                     "functionType": "withdraw",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Liquidate loan",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Amount to Repay",
                             "name": "liquidateBorrow"
@@ -190,7 +200,7 @@
         },
         {
             "address": "0x4822d9172e5b76b9db37b75f5552f9988f98a888",
-            "name": "AlkemiEarnOpen",
+            "name": "Alkemi Earn: Public",
             "parsers": [
                 {
                     "arguments": [
@@ -246,6 +256,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Repay loan",
+                            "name": "Function",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to repay",
                             "name": "fromAmount"
                         }
@@ -297,6 +312,11 @@
                     "functionType": "withdraw",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Liquidate loan",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Amount to Repay",
                             "name": "liquidateBorrow"
@@ -396,6 +416,11 @@
                     "functionType": "claim_reward",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Claim ALK rewards",
+                            "name": "Function",
+                            "static": true
+                        },
                         {
                             "label": "Addr. to claim ALK for",
                             "name": "Holder"
