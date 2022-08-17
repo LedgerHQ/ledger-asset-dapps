@@ -30,7 +30,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to borrow",
                             "name": "fromAmount"
                         }
                     ],
@@ -60,7 +60,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to repay",
                             "name": "fromAmount"
                         }
                     ],
@@ -94,6 +94,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "assetCollateral",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "assetCollateral"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "liquidateBorrow",
@@ -101,12 +112,16 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Liquidate Amount",
+                            "label": "Amount to Repay",
                             "name": "liquidateBorrow"
                         },
                         {
-                            "label": "Target Account",
+                            "label": "Addr. to liquidate",
                             "name": "targetAccount"
+                        },
+                        {
+                            "label": "Collateral asset to receive",
+                            "name": "assetCollateral"
                         }
                     ],
                     "selector": "0xe61604cf"
@@ -135,7 +150,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to deposit",
                             "name": "fromAmount"
                         }
                     ],
@@ -165,7 +180,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Withdraw Amount",
+                            "label": "Amount to withdraw",
                             "name": "requestedAmount"
                         }
                     ],
@@ -201,7 +216,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to borrow",
                             "name": "fromAmount"
                         }
                     ],
@@ -231,7 +246,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to repay",
                             "name": "fromAmount"
                         }
                     ],
@@ -265,6 +280,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "assetCollateral",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "assetCollateral"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "liquidateBorrow",
@@ -272,12 +298,16 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Liquidate Amount",
-                            "name": "liquidateAmount"
+                            "label": "Amount to Repay",
+                            "name": "liquidateBorrow"
                         },
                         {
-                            "label": "Target Account",
+                            "label": "Addr. to liquidate",
                             "name": "targetAccount"
+                        },
+                        {
+                            "label": "Collateral asset to receive",
+                            "name": "assetCollateral"
                         }
                     ],
                     "selector": "0xe61604cf"
@@ -306,7 +336,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Sent Amount",
+                            "label": "Amount to deposit",
                             "name": "fromAmount"
                         }
                     ],
@@ -336,7 +366,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Withdraw Amount",
+                            "label": "Amount to withdraw",
                             "name": "requestedAmount"
                         }
                     ],
@@ -367,7 +397,7 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Holder",
+                            "label": "Addr. to claim ALK for",
                             "name": "Holder"
                         }
                     ],
