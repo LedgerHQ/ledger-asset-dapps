@@ -441,12 +441,16 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
+                            "label": "Amount to send",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Minimum to receive",
                             "name": "toAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Recipient",
+                            "name": "exchange"
                         }
                     ],
                     "selector": "0x64466805"
@@ -556,12 +560,17 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Function",
+                            "name": "Buy",
+                            "static": true
                         },
                         {
                             "label": "Maximum to send",
                             "name": "fromAmount"
+                        },
+                        {
+                            "label": "Amount to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x935fb84b"
@@ -619,12 +628,17 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Function",
+                            "name": "Buy",
+                            "static": true
                         },
                         {
                             "label": "Maximum to send",
                             "name": "fromAmount"
+                        },
+                        {
+                            "label": "Amount to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0xc03786b0"
@@ -806,15 +820,15 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Sent amount",
+                            "label": "Amount to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Beneiciary",
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Recipient",
                             "name": "beneficiary"
                         }
                     ],

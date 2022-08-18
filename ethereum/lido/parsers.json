@@ -28,8 +28,8 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Wrap ETH",
-                            "name": "Function",
+                            "label": "Function",
+                            "name": "Wrap stETH",
                             "static": true
                         },
                         {
@@ -61,8 +61,8 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Unwrap wstETH",
-                            "name": "Function",
+                            "label": "Function",
+                            "name": "Unwrap wstETH",
                             "static": true
                         },
                         {
@@ -155,6 +155,11 @@
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Stake ETH",
+                            "static": true
+                        },
                         {
                             "label": "Amount to stake",
                             "name": "amountToStake"
