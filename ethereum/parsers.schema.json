@@ -229,6 +229,10 @@
             ],
             "type": "array"
         },
+        "id": {
+            "pattern": "^[a-z]+$",
+            "type": "string"
+        },
         "name": {
             "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
@@ -238,6 +242,7 @@
         "blockchainName",
         "chainId",
         "contracts",
+        "id",
         "name"
     ],
     "type": "object"
