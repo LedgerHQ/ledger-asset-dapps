@@ -177,7 +177,7 @@
                                         "wrap",
                                         "unwrap",
                                         "borrow",
-                                        "repay",
+                                        "repay_loan",
                                         "lend",
                                         "withdraw",
                                         "claim_reward",
@@ -239,7 +239,7 @@
             "type": "array"
         },
         "name": {
-            "pattern": "^[a-z]+$",
+            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },
