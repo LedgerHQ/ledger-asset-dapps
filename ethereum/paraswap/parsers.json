@@ -4,7 +4,7 @@
     "contracts": [
         {
             "address": "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
-            "name": "ParaSwap P5",
+            "name": "AugustusSwapper",
             "parsers": [
                 {
                     "arguments": [
@@ -60,11 +60,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Sent amount",
+                            "label": "Amount to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Received amount",
+                            "label": "Minimum to receive",
                             "name": "toAmount"
                         },
                         {
@@ -128,12 +128,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         },
                         {
                             "label": "Recipient",
@@ -184,12 +184,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x54840d1a"
@@ -248,12 +248,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
-                            "name": "toAmount"
+                            "label": "Amout to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0xf5661034"
@@ -307,11 +307,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Sent amount",
+                            "label": "Amount to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Received minimum amount",
+                            "label": "Minimum to receive",
                             "name": "amountOutMin"
                         },
                         {
@@ -374,12 +374,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         },
                         {
                             "label": "Recipient",
@@ -441,12 +441,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x64466805"
@@ -504,12 +504,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x81033120"
@@ -556,12 +556,17 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Function",
+                            "name": "Buy",
+                            "static": true
                         },
                         {
                             "label": "Maximum to send",
                             "name": "fromAmount"
+                        },
+                        {
+                            "label": "Amount to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x935fb84b"
@@ -619,12 +624,17 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
+                            "label": "Function",
+                            "name": "Buy",
+                            "static": true
                         },
                         {
                             "label": "Maximum to send",
                             "name": "fromAmount"
+                        },
+                        {
+                            "label": "Amount to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0xc03786b0"
@@ -681,7 +691,7 @@
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Received amount",
+                            "label": "Minimum to receive",
                             "name": "amountOut"
                         },
                         {
@@ -739,11 +749,16 @@
                     },
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Buy",
+                            "static": true
+                        },
+                        {
                             "label": "Maximum to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Received amount",
+                            "label": "Amount to receive",
                             "name": "amountOut"
                         },
                         {
@@ -806,15 +821,15 @@
                     },
                     "screen": [
                         {
-                            "label": "Received amount",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Sent amount",
+                            "label": "Amount to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Beneiciary",
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
+                        },
+                        {
+                            "label": "Recipient",
                             "name": "beneficiary"
                         }
                     ],
@@ -873,12 +888,12 @@
                     },
                     "screen": [
                         {
-                            "label": "Received minimum amount",
-                            "name": "toAmount"
+                            "label": "Amount to send",
+                            "name": "fromAmount"
                         },
                         {
-                            "label": "Sent amount",
-                            "name": "fromAmount"
+                            "label": "Minimum to receive",
+                            "name": "toAmount"
                         }
                     ],
                     "selector": "0x6b4109d3"
@@ -931,11 +946,11 @@
                     },
                     "screen": [
                         {
-                            "label": "Sent amount",
+                            "label": "Amount to send",
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Received minimum amount",
+                            "label": "Minimum to receive",
                             "name": "amountOutMin"
                         },
                         {
@@ -948,5 +963,5 @@
             ]
         }
     ],
-    "name": "paraswap"
+    "name": "Paraswap v5"
 }
