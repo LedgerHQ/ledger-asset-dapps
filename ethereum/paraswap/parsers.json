@@ -550,7 +550,7 @@
                         }
                     ],
                     "functionName": "buyOnUniswap",
-                    "functionType": "swap",
+                    "functionType": "buy",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -618,7 +618,7 @@
                         }
                     ],
                     "functionName": "buyOnUniswapFork",
-                    "functionType": "swap",
+                    "functionType": "buy",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -681,7 +681,7 @@
                         }
                     ],
                     "functionName": "buyOnUniswapV2Fork",
-                    "functionType": "swap",
+                    "functionType": "buy",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
@@ -691,7 +691,7 @@
                             "name": "fromAmount"
                         },
                         {
-                            "label": "Minimum to receive",
+                            "label": "Amount to receive",
                             "name": "amountOut"
                         },
                         {
@@ -743,7 +743,7 @@
                         }
                     ],
                     "functionName": "buyOnUniswapV2ForkWithPermit",
-                    "functionType": "swap",
+                    "functionType": "buy",
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
