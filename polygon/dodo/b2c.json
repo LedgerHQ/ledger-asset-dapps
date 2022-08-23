@@ -59,6 +59,22 @@
                     "plugin": "DODO"
                 }
             }
+        },
+        {
+            "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+            "contractName": "WETH9",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "DODO"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "DODO"
+                }
+            }
         }
     ],
     "name": "DODO"
