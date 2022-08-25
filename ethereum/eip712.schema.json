@@ -1,0 +1,119 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "blockchainName": {
+            "enum": [
+                "ethereum"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                1
+            ]
+        },
+        "contracts": {
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "contractName": {
+                        "type": "string"
+                    },
+                    "messages": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "patternProperties": {
+                                        "^.*$": {
+                                            "anyOf": [
+                                                {
+                                                    "items": {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "name": {
+                                                                "type": "string"
+                                                            },
+                                                            "type": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "name",
+                                                            "type"
+                                                        ],
+                                                        "type": "object"
+                                                    },
+                                                    "type": "array"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "mappers": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "label": {
+                                            "type": "string"
+                                        },
+                                        "fields": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "path": {
+                                                        "type": "string"
+                                                    },
+                                                    "label": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "path",
+                                                    "label"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        }
+                                    },
+                                    "required": [
+                                        "label",
+                                        "fields"
+                                    ],
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "schema",
+                                "mappers"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "address",
+                    "contractName",
+                    "messages"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchainName",
+        "contracts",
+        "name",
+        "chainId"
+    ],
+    "type": "object"
+}
