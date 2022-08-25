@@ -25,49 +25,17 @@
                         "items": {
                             "additionalProperties": false,
                             "properties": {
-                                "schema": {
-                                    "additionalProperties": false,
-                                    "patternProperties": {
-                                        "^.*$": {
-                                            "anyOf": [
-                                                {
-                                                    "items": {
-                                                        "additionalProperties": false,
-                                                        "properties": {
-                                                            "name": {
-                                                                "type": "string"
-                                                            },
-                                                            "type": {
-                                                                "type": "string"
-                                                            }
-                                                        },
-                                                        "required": [
-                                                            "name",
-                                                            "type"
-                                                        ],
-                                                        "type": "object"
-                                                    },
-                                                    "type": "array"
-                                                }
-                                            ]
-                                        }
-                                    },
-                                    "type": "object"
-                                },
                                 "mappers": {
                                     "additionalProperties": false,
                                     "properties": {
-                                        "label": {
-                                            "type": "string"
-                                        },
                                         "fields": {
                                             "items": {
                                                 "additionalProperties": false,
                                                 "properties": {
-                                                    "path": {
+                                                    "label": {
                                                         "type": "string"
                                                     },
-                                                    "label": {
+                                                    "path": {
                                                         "type": "string"
                                                     }
                                                 },
@@ -78,6 +46,9 @@
                                                 "type": "object"
                                             },
                                             "type": "array"
+                                        },
+                                        "label": {
+                                            "type": "string"
                                         }
                                     },
                                     "required": [
@@ -85,6 +56,9 @@
                                         "fields"
                                     ],
                                     "type": "object"
+                                },
+                                "schema": {
+                                    "type": "string"
                                 }
                             },
                             "required": [
