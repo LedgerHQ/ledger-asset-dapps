@@ -8,13 +8,11 @@ on:
       - "*"
     branches:
       - main
-      - master
       - release/*
   pull_request:
     # Trigger a build on PR against main, feature branches and release branches
     branches:
       - main
-      - master
       - feature/*
       - release/*
   # Manual trigger, allows reusage from other workflows (like release)
@@ -38,7 +36,7 @@ jobs:
         name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: '3.9'
       -
         name: Cache Python dependencies and virtualenv
         id: cache
@@ -47,9 +45,9 @@ jobs:
           path: |
             ~/.cache/pip
             ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-py-${{ hashFiles('Pipfile.lock') }}
+          key: ${{ runner.os }}-2-py-${{ hashFiles('Pipfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}-py-
+            ${{ runner.os }}-2-py-
       -
         name: Install python dependencies
         run: |
