@@ -25,7 +25,7 @@
                         "items": {
                             "additionalProperties": false,
                             "properties": {
-                                "mappers": {
+                                "mapper": {
                                     "additionalProperties": false,
                                     "properties": {
                                         "fields": {
@@ -63,7 +63,7 @@
                             },
                             "required": [
                                 "schema",
-                                "mappers"
+                                "mapper"
                             ],
                             "type": "object"
                         },
