@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 import logging
+import glob
+from pathlib import Path
 
 from jsonschema.exceptions import ValidationError
 from validation.validators import (
@@ -13,24 +15,16 @@ logging.basicConfig(level="INFO")
 
 
 VALIDATIONS = {
-    "json": ("./*/**/*.json", format_validator, endlines_validator),
-    "eth_b2c": (
-        "./ethereum/*/b2c.json",
-        schema_validator("./ethereum/b2c.schema.json")
-    ),
-    "eth_parsers": (
-        "./ethereum/*/parsers.json",
-        schema_validator("./ethereum/parsers.schema.json")
-    ),
-    "bsc_b2c": (
-        "./bsc/*/b2c.json",
-        schema_validator("./bsc/b2c.schema.json")
-    ),
-    "polygon": (
-        "./polygon/*/b2c.json",
-        schema_validator("./polygon/b2c.schema.json")
-    )
+    "json": ("./*/**/*.json", format_validator, endlines_validator)
 }
+for schema in glob.iglob("./*/*.schema.json", recursive=True):
+    schema = Path(schema)
+    coin_name = schema.parent.name
+    target_name = schema.name.removesuffix(".schema.json")
+    VALIDATIONS[f"{coin_name}_{target_name}"] = (
+        str(schema.parent / "*" / f"{target_name}.json"),
+        schema_validator(str(schema))
+    )
 
 
 if __name__ == "__main__":
