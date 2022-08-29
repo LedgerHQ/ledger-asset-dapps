@@ -1,0 +1,27 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xef794b989190a0667a6bf25bd603422f659a9aaa",
+            "contractName": "CapsaSwap",
+            "selectors": {
+                "0x1a674419": {
+                    "erc20OfInterest": [
+                        "0x2791bca1f2de4661ed88a30c99a7a9449aa84174"
+                    ],
+                    "method": "buyCAPSA",
+                    "plugin": "capsa"
+                },
+                "0xfe9d8323": {
+                    "erc20OfInterest": [
+                        "0x0db7bc3a99e0794befc8cdce68232a90df4a313b"
+                    ],
+                    "method": "sellCAPSA",
+                    "plugin": "capsa"
+                }
+            }
+        }
+    ],
+    "name": "capsa"
+}

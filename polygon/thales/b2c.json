@@ -1,0 +1,71 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x9b6d76b1c6140fbb0abc9c4a348bff4e4e8a1213",
+            "contractName": "ThalesAMM",
+            "selectors": {
+                "0x3ce1108d": {
+                    "erc20OfInterest": [],
+                    "method": "sellToAMM",
+                    "plugin": "Thales"
+                },
+                "0x8875eb84": {
+                    "erc20OfInterest": [],
+                    "method": "buyFromAMM",
+                    "plugin": "Thales"
+                },
+                "0x9f916c9f": {
+                    "erc20OfInterest": [],
+                    "method": "buyFromAMMWithReferrer",
+                    "plugin": "Thales"
+                }
+            }
+        },
+        {
+            "address": "0xe8e022405505a9f2b0b7452c844f1e64423849fc",
+            "contractName": "RangedMarketsAMM",
+            "selectors": {
+                "0x3ce1108d": {
+                    "erc20OfInterest": [],
+                    "method": "sellToAMM",
+                    "plugin": "Thales"
+                },
+                "0x8875eb84": {
+                    "erc20OfInterest": [],
+                    "method": "buyFromAMM",
+                    "plugin": "Thales"
+                },
+                "0x9f916c9f": {
+                    "erc20OfInterest": [],
+                    "method": "buyFromAMMWithReferrer",
+                    "plugin": "Thales"
+                }
+            }
+        },
+        {
+            "address": "0x7465c5d60d3d095443cf9991da03304a30d42eae",
+            "contractName": "PositionalMarketMastercopy",
+            "selectors": {
+                "0x85149258": {
+                    "erc20OfInterest": [],
+                    "method": "exerciseOptions",
+                    "plugin": "Thales"
+                }
+            }
+        },
+        {
+            "address": "0x75c7671d046268c11b5f55ba75df2b6d14774b1c",
+            "contractName": "RangedMarketMastercopy",
+            "selectors": {
+                "0xd06a750c": {
+                    "erc20OfInterest": [],
+                    "method": "exercisePositions",
+                    "plugin": "Thales"
+                }
+            }
+        }
+    ],
+    "name": "Thales"
+}

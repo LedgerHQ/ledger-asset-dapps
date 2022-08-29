@@ -33,6 +33,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0x6c304a1f99cecd3a9983001e943f3de00ed811d0",
+            "contractName": "MultiMintContractNFT",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "LedgerNFT"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "LedgerNFT"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
