@@ -29,6 +29,11 @@
                         },
                         {
                             "required": [
+                                "binary"
+                            ]
+                        },
+                        {
+                            "required": [
                                 "transaction"
                             ]
                         },
@@ -41,6 +46,9 @@
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
                     "properties": {
+                        "binary": {
+                            "type": "string"
+                        },
                         "default": {
                             "type": "string"
                         },
@@ -65,7 +73,7 @@
         },
         "chainId": {
             "enum": [
-                420
+                5
             ]
         },
         "contracts": {
@@ -74,7 +82,7 @@
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-z0-9]{40}$",
+                        "pattern": "^0x[a-fA-F0-9]{40}$",
                         "type": "string"
                     },
                     "name": {
@@ -100,10 +108,6 @@
                                                     "raw"
                                                 ]
                                             },
-                                            "label": {
-                                                "description": "Key displayed on the device alongside the parsed value.",
-                                                "type": "string"
-                                            },
                                             "name": {
                                                 "description": "Internal name of the argument, can be different from the name in the ABI.",
                                                 "type": "string"
@@ -114,13 +118,6 @@
                                                 "oneOf": [
                                                     {
                                                         "name": "AmountValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "amount"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "quantity",
                                                             "token"
@@ -128,29 +125,14 @@
                                                     },
                                                     {
                                                         "name": "AddressValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "address"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
                                                             "address"
                                                         ]
                                                     },
                                                     {
                                                         "name": "NumberValue",
-                                                        "properties": {
-                                                            "type": {
-                                                                "enum": [
-                                                                    "uint",
-                                                                    "int"
-                                                                ]
-                                                            }
-                                                        },
                                                         "required": [
-                                                            "quantity"
+                                                            "uint256"
                                                         ]
                                                     }
                                                 ],
@@ -164,21 +146,10 @@
                                                     "token": {
                                                         "$ref": "#/$defs/argumentValue"
                                                     },
-                                                    "type": {
-                                                        "enum": [
-                                                            "amount",
-                                                            "address",
-                                                            "boolean",
-                                                            "bytes",
-                                                            "int",
-                                                            "string",
-                                                            "uint"
-                                                        ]
+                                                    "uint256": {
+                                                        "$ref": "#/$defs/argumentValue"
                                                     }
                                                 },
-                                                "required": [
-                                                    "type"
-                                                ],
                                                 "type": "object"
                                             }
                                         },
@@ -186,34 +157,60 @@
                                     },
                                     "type": "array"
                                 },
+                                "functionName": {
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
+                                    "type": "string"
+                                },
                                 "functionType": {
                                     "enum": [
                                         "stake",
                                         "swap",
-                                        "wrap"
+                                        "wrap",
+                                        "unwrap",
+                                        "borrow",
+                                        "repay_loan",
+                                        "lend",
+                                        "withdraw",
+                                        "claim_reward",
+                                        "configure",
+                                        "buy",
+                                        "approve"
                                     ]
-                                },
-                                "label": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
-                                    "type": "string"
-                                },
-                                "name": {
-                                    "description": "ABI name of the function, only present to help find the corresponding definition in the ABI.",
-                                    "type": "string"
                                 },
                                 "options": {
                                     "description": "TBD",
                                     "type": "object"
                                 },
+                                "screen": {
+                                    "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
+                                    "items": {
+                                        "properties": {
+                                            "label": {
+                                                "description": "Label displayed on the device to allow the user to identify the argument.",
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "description": "Name of the arguments, should match one existing arg from arguments.",
+                                                "type": "string"
+                                            },
+                                            "static": {
+                                                "description": "The screen entry should be defined as a static entry",
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
                                 "selector": {
                                     "description": "Unique identifier of the function in the contract.",
-                                    "pattern": "^0x[a-z0-9]{8}$",
+                                    "pattern": "^0x[a-f0-9]{8}$",
                                     "type": "string"
                                 }
                             },
                             "required": [
                                 "functionType",
-                                "label",
+                                "functionName",
                                 "options",
                                 "selector",
                                 "arguments"
@@ -232,7 +229,12 @@
             ],
             "type": "array"
         },
+        "id": {
+            "pattern": "^[a-z]+$",
+            "type": "string"
+        },
         "name": {
+            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },
@@ -240,6 +242,7 @@
         "blockchainName",
         "chainId",
         "contracts",
+        "id",
         "name"
     ],
     "type": "object"

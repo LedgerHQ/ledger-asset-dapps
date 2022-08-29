@@ -31,29 +31,21 @@ jobs:
     steps:
       -
         name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       -
         name: Setup Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
+          cache: 'pipenv'
       -
-        name: Cache Python dependencies and virtualenv
-        id: cache
-        uses: actions/cache@v2
-        with:
-          path: |
-            ~/.cache/pip
-            ~/.local/share/virtualenvs
-          key: ${{ runner.os }}-2-py-${{ hashFiles('Pipfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-2-py-
+        name: Install pipenv
+        run: pip install -U pip pipenv wheel
       -
         name: Install python dependencies
-        run: |
-          mkdir -p ~/.cache/pip && chmod -R a+w ~/.cache/pip
-          pip install -U pip pipenv wheel
-          pipenv sync --dev
+        env:
+          PYPI_DEPLOY_TOKEN: ${{ secrets.PYPI_DEPLOY_TOKEN }}
+        run: pipenv sync --dev
       -
         name: Validate files and format
         run: pipenv run validate_files

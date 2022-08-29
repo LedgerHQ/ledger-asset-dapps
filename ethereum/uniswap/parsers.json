@@ -3,56 +3,90 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x7a250d5630b4cf539739df2c5dacb4c659f2488d",
+            "address": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
             "name": "Uniswap V2: Router 2",
             "parsers": [
                 {
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "Sent amount",
                             "name": "fromAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "amountOutMin",
                                         "transaction": "amount"
                                     }
                                 },
                                 "token": {
-                                    "constant": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-                                },
-                                "type": "amount"
+                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                }
                             }
                         },
                         {
                             "format": "amount",
-                            "label": "Received amount",
                             "name": "toAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
-                                        "default": "amountOutMin",
-                                        "transaction": "amount"
+                                        "default": "amountOutMin"
                                     }
                                 },
                                 "token": {
                                     "path": {
                                         "default": "path.-1"
                                     }
-                                },
-                                "type": "amount"
+                                }
                             }
                         }
                     ],
+                    "functionName": "swapExactETHForTokens",
                     "functionType": "swap",
-                    "label": "Swap",
-                    "name": "swapExactETHForTokens",
                     "options": {},
                     "selector": "0x7ff36ab5"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "toAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "path.-1"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "swapExactTokensForTokens",
+                    "functionType": "swap",
+                    "options": {},
+                    "selector": "0x38ed1739"
                 }
             ]
         }
     ],
-    "name": "Uniswap"
+    "id": "uniswap",
+    "name": "uniswap"
 }

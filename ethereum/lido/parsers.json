@@ -3,14 +3,13 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+            "address": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0",
             "name": "wstETH",
             "parsers": [
                 {
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "stETH amount",
                             "name": "wrapAmount",
                             "value": {
                                 "quantity": {
@@ -19,29 +18,113 @@
                                     }
                                 },
                                 "token": {
-                                    "constant": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84"
-                                },
-                                "type": "amount"
+                                    "constant": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+                                }
                             }
                         }
                     ],
+                    "functionName": "wrap",
                     "functionType": "wrap",
-                    "label": "Wrap stETH",
-                    "name": "wrap",
                     "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Wrap stETH",
+                            "static": true
+                        },
+                        {
+                            "label": "Amount to wrap",
+                            "name": "wrapAmount"
+                        }
+                    ],
                     "selector": "0xea598cb0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "unwrapAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "_wstETHAmount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "unwrap",
+                    "functionType": "unwrap",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Unwrap wstETH",
+                            "static": true
+                        },
+                        {
+                            "label": "Amount to unwrap",
+                            "name": "unwrapAmount"
+                        }
+                    ],
+                    "selector": "0xde0e9a3e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
                 }
             ]
         },
         {
-            "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+            "address": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84",
             "name": "stETH",
             "parsers": [
                 {
                     "arguments": [
                         {
                             "format": "amount",
-                            "label": "ETH amount",
                             "name": "amountToStake",
                             "value": {
                                 "quantity": {
@@ -50,33 +133,86 @@
                                     }
                                 },
                                 "token": {
-                                    "constant": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-                                },
-                                "type": "amount"
+                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                }
                             }
                         },
                         {
                             "format": "eip55",
-                            "label": "Referral Address",
                             "name": "referralAddress",
                             "value": {
                                 "address": {
                                     "path": {
                                         "default": "_referral"
                                     }
-                                },
-                                "type": "address"
+                                }
                             }
                         }
                     ],
+                    "functionName": "submit",
                     "functionType": "stake",
-                    "label": "Stake ETH",
-                    "name": "submit",
-                    "options": {},
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Stake ETH",
+                            "static": true
+                        },
+                        {
+                            "label": "Amount to stake",
+                            "name": "amountToStake"
+                        }
+                    ],
                     "selector": "0xa1903eab"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
                 }
             ]
         }
     ],
+    "id": "lido",
     "name": "Lido"
 }
