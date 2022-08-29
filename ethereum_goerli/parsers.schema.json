@@ -29,6 +29,11 @@
                         },
                         {
                             "required": [
+                                "binary"
+                            ]
+                        },
+                        {
+                            "required": [
                                 "transaction"
                             ]
                         },
@@ -41,6 +46,9 @@
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
                     "properties": {
+                        "binary": {
+                            "type": "string"
+                        },
                         "default": {
                             "type": "string"
                         },
@@ -158,7 +166,15 @@
                                         "stake",
                                         "swap",
                                         "wrap",
-                                        "unwrap"
+                                        "unwrap",
+                                        "borrow",
+                                        "repay_loan",
+                                        "lend",
+                                        "withdraw",
+                                        "claim_reward",
+                                        "configure",
+                                        "buy",
+                                        "approve"
                                     ]
                                 },
                                 "options": {
@@ -176,6 +192,10 @@
                                             "name": {
                                                 "description": "Name of the arguments, should match one existing arg from arguments.",
                                                 "type": "string"
+                                            },
+                                            "static": {
+                                                "description": "The screen entry should be defined as a static entry",
+                                                "type": "boolean"
                                             }
                                         },
                                         "type": "object"
@@ -214,7 +234,7 @@
             "type": "string"
         },
         "name": {
-            "pattern": "^[a-z]+$",
+            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },

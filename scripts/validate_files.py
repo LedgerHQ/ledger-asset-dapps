@@ -2,6 +2,7 @@
 import logging
 import glob
 from pathlib import Path
+from typing import Callable, Iterable, Tuple
 
 from jsonschema.exceptions import ValidationError
 from validation.validators import (
@@ -14,24 +15,34 @@ from validation.validators import (
 logging.basicConfig(level="INFO")
 
 
-VALIDATIONS = {
-    "json": ("./*/**/*.json", format_validator),
-    "endlines": ("./*/**/*.json", endlines_validator),
+def schema_validator_generator() -> Iterable[Tuple[str, Tuple[str, Callable]]]:
+    json_schema_paths = "./*/*.schema.json"
+    for json_schema in glob.iglob(json_schema_paths, recursive=True):
+        schema_path = Path(json_schema)
+        coin_name = schema_path.parent.name
+        target_name = schema_path.name.removesuffix(".schema.json")
+        yield f"{coin_name}_{target_name}", (
+            str(schema_path.parent / "*" / f"{target_name}.json"),
+            schema_validator(str(schema_path))
+        )
+
+
+SCHEMA_VALIDATORS = {
+    validator_name: validator for validator_name, validator in schema_validator_generator()
 }
 
-for schema in glob.iglob("./*/*.schema.json", recursive=True):
-    schema = Path(schema)
-    coin_name = schema.parent.name
-    target_name = schema.name.removesuffix(".schema.json")
-    VALIDATIONS[f"{coin_name}_{target_name}"] = (
-        str(schema.parent / "*" / f"{target_name}.json"),
-        schema_validator(str(schema))
-    )
+
+VALIDATORS = {
+    "json": ("./*/**/*.json", format_validator),
+    "endlines": ("./*/**/*.json", endlines_validator),
+    **SCHEMA_VALIDATORS
+}
+
 
 if __name__ == "__main__":
     failed = False
     logger = logging.getLogger(__name__)
-    for validator_name, (path, validator) in VALIDATIONS.items():
+    for validator_name, (path, validator) in VALIDATORS.items():
         logger.info("Running validation for %s", validator_name)
         try:
             run_validations(path, validator)
