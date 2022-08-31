@@ -5,11 +5,6 @@
                 "internalType": "address",
                 "name": "weth",
                 "type": "address"
-            },
-            {
-                "internalType": "contract IClipperExchangeInterface",
-                "name": "_clipperExchange",
-                "type": "address"
             }
         ],
         "stateMutability": "nonpayable",
@@ -54,6 +49,49 @@
         "type": "event"
     },
     {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "sender",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "contract IERC20",
+                "name": "srcToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "contract IERC20",
+                "name": "dstToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "dstReceiver",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "spentAmount",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "returnAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "Swapped",
+        "type": "event"
+    },
+    {
         "inputs": [],
         "name": "DOMAIN_SEPARATOR",
         "outputs": [
@@ -93,127 +131,91 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "contract IERC20",
-                "name": "srcToken",
-                "type": "address"
-            },
-            {
-                "internalType": "contract IERC20",
-                "name": "dstToken",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "minReturn",
-                "type": "uint256"
-            }
-        ],
-        "name": "clipperSwap",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "returnAmount",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address payable",
-                "name": "recipient",
-                "type": "address"
-            },
-            {
-                "internalType": "contract IERC20",
-                "name": "srcToken",
-                "type": "address"
-            },
-            {
-                "internalType": "contract IERC20",
-                "name": "dstToken",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "minReturn",
-                "type": "uint256"
-            }
-        ],
-        "name": "clipperSwapTo",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "returnAmount",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address payable",
-                "name": "recipient",
-                "type": "address"
-            },
-            {
-                "internalType": "contract IERC20",
-                "name": "srcToken",
-                "type": "address"
-            },
-            {
-                "internalType": "contract IERC20",
-                "name": "dstToken",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "minReturn",
-                "type": "uint256"
-            },
-            {
-                "internalType": "bytes",
-                "name": "permit",
-                "type": "bytes"
-            }
-        ],
-        "name": "clipperSwapToWithPermit",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "returnAmount",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "inputs": [],
         "name": "destroy",
         "outputs": [],
         "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IAggregationExecutor",
+                "name": "caller",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "contract IERC20",
+                        "name": "srcToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "contract IERC20",
+                        "name": "dstToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "srcReceiver",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "dstReceiver",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "amount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "minReturnAmount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "flags",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "permit",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct AggregationRouterV4.SwapDescription",
+                "name": "desc",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "name": "discountedSwap",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "returnAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "gasLeft",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "chiSpent",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
         "type": "function"
     },
     {
@@ -586,11 +588,6 @@
             {
                 "internalType": "uint256",
                 "name": "returnAmount",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "spentAmount",
                 "type": "uint256"
             },
             {
