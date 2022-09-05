@@ -17,6 +17,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0x880ed873dde83f533564903c8aebb6e9fa9f8c81",
+            "contractName": "BrickNFT",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
