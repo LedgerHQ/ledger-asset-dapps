@@ -1,0 +1,374 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7210000000000000000000000000000000000000",
+            "name": "ERC-721 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "owner",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_owner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "balanceOf",
+                    "functionType": "read",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Owner",
+                            "name": "ownwer"
+                        }
+                    ],
+                    "selector": "0x70a08231"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "ownerOf",
+                    "functionType": "read",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x6352211e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From address",
+                            "name": "from"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x42842e0e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "read",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From address",
+                            "name": "from"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0xb88d4fde"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "transferFrom",
+                    "functionType": "transfer",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From address",
+                            "name": "from"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x23b872dd"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "approved",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_approved"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Approver",
+                            "name": "approved"
+                        },
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "operator",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_operator"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "boolean",
+                            "name": "approved",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_approved"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setApprovalForAll",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Approved",
+                            "name": "approved"
+                        },
+                        {
+                            "label": "Operator",
+                            "name": "operator"
+                        }
+                    ],
+                    "selector": "0xa22cb465"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "getApproved",
+                    "functionType": "read",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x081812fc"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "owner",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_owner"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "operator",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_operator"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "isApprovedForAll",
+                    "functionType": "read",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Owner",
+                            "name": "owner"
+                        },
+                        {
+                            "label": "Operator",
+                            "name": "operator"
+                        }
+                    ],
+                    "selector": "0xe985e9c5"
+                }
+            ]
+        }
+    ],
+    "id": "nfttransfer",
+    "name": "NFT"
+}
