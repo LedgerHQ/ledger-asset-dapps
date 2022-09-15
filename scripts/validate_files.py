@@ -10,6 +10,7 @@ from validation.validators import (
     format_validator,
     run_validations,
     schema_validator,
+    eip712_schema_validator,
 )
 
 logging.basicConfig(level="INFO")
@@ -35,6 +36,7 @@ SCHEMA_VALIDATORS = {
 VALIDATORS = {
     "json": ("./*/**/*.json", format_validator),
     "endlines": ("./*/**/*.json", endlines_validator),
+    "eip712_schema": ("./*/**/eip712.json", eip712_schema_validator),
     **SCHEMA_VALIDATORS
 }
 
