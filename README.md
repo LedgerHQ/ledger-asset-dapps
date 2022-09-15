@@ -14,7 +14,7 @@ Currently, it is used by the Ethereum application and its plugins on Ledger Nano
 The signature takes into account the content of the `b2c.json` files and `abis` folder.
 
 ### Production signature
-Only a quorum of Ledger employes is authorized to create new production signatures. If you wish to add a token or a coin, create a branch targeting master, add a new directory for your dApp, create a PR, and we will sign it.
+Only a quorum of Ledger employes is authorized to create new production signatures.
 
 ### Test signature
 Not yet supported, coming soon.
