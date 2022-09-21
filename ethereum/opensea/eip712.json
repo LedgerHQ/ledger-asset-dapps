@@ -1,0 +1,150 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7f268357a8c2552623316e2562d90e642bb538e5",
+            "contractName": "Wyvern Exchange Contract",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Contract address",
+                                "path": "exchange"
+                            },
+                            {
+                                "label": "Price",
+                                "path": "basePrice"
+                            },
+                            {
+                                "label": "Offer expiration",
+                                "path": "expirationTime"
+                            }
+                        ],
+                        "label": "OpenSea Listing"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            }
+                        ],
+                        "Order": [
+                            {
+                                "name": "basePrice",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "calldata",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "exchange",
+                                "type": "address"
+                            },
+                            {
+                                "name": "expirationTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "extra",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "feeMethod",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "feeRecipient",
+                                "type": "address"
+                            },
+                            {
+                                "name": "howToCall",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "listingTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "maker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "makerProtocolFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "makerRelayerFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "paymentToken",
+                                "type": "address"
+                            },
+                            {
+                                "name": "replacementPattern",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "saleKind",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "salt",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "side",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "staticExtradata",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "staticTarget",
+                                "type": "address"
+                            },
+                            {
+                                "name": "taker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "takerProtocolFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerRelayerFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "target",
+                                "type": "address"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "OpenSea"
+}
