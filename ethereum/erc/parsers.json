@@ -367,6 +367,67 @@
                     "selector": "0xe985e9c5"
                 }
             ]
+        },
+        {
+            "address": "0x1155000000000000000000000000000000000000",
+            "name": "ERC-1155 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "_tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "From address",
+                            "name": "from"
+                        },
+                        {
+                            "label": "To address",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x42842e0e"
+                }
+            ]
         }
     ],
     "id": "nfttransfer",
