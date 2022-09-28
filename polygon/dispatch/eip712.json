@@ -49,20 +49,20 @@
                         ],
                         "FollowWithSig": [
                             {
-                                "name": "profileIds",
-                                "type": "uint256[]"
-                            },
-                            {
                                 "name": "datas",
                                 "type": "bytes[]"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
                             },
                             {
                                 "name": "nonce",
                                 "type": "uint256"
                             },
                             {
-                                "name": "deadline",
-                                "type": "uint256"
+                                "name": "profileIds",
+                                "type": "uint256[]"
                             }
                         ]
                     }
@@ -70,5 +70,5 @@
             ]
         }
     ],
-    "name": "Dispatch.xyz"
+    "name": "Dispatch"
 }
