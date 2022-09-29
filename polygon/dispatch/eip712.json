@@ -1,0 +1,74 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xDb46d1Dc155634FbC732f92E853b10B288AD5a1d",
+            "contractName": "Lens Protocol Profiles",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Profile Ids",
+                                "path": "profileIds"
+                            },
+                            {
+                                "label": "Data",
+                                "path": "datas"
+                            },
+                            {
+                                "label": "Nonce",
+                                "path": "nonce"
+                            },
+                            {
+                                "label": "Expiration Date",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Dispatch.xyz Follow Profile"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            }
+                        ],
+                        "FollowWithSig": [
+                            {
+                                "name": "datas",
+                                "type": "bytes[]"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "profileIds",
+                                "type": "uint256[]"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Dispatch"
+}
