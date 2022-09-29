@@ -1,0 +1,145 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7210000000000000000000000000000000000000",
+            "name": "ERC-721 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Token Sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token Recipient",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0x42842e0e"
+                }
+            ]
+        },
+        {
+            "address": "0x1155000000000000000000000000000000000000",
+            "name": "ERC-1155 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "id"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amount",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc1155",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Token Sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token Recipient",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Quantity",
+                            "name": "amount"
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        }
+                    ],
+                    "selector": "0xf242432a"
+                }
+            ]
+        }
+    ],
+    "id": "nfttransfer",
+    "name": "NFT"
+}
