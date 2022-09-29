@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 jsonschema = "*"
 
+[dev-packages]
+eth-hash = {version = "*", extras = ["pycryptodome"]}
+eth-utils = "*"
+
 [scripts]
 validate_files = "python ./scripts/validate_files.py"
 
