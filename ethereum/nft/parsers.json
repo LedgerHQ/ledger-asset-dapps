@@ -47,11 +47,16 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Token Sender",
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token sender",
                             "name": "from"
                         },
                         {
-                            "label": "Token Recipient",
+                            "label": "Token recipient",
                             "name": "to"
                         },
                         {
@@ -60,6 +65,81 @@
                         }
                     ],
                     "selector": "0x42842e0e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "tokenId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "data",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "data"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token recipient",
+                            "name": "to"
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Data",
+                            "name": "data"
+                        }
+                    ],
+                    "selector": "0xb88d4fde"
                 }
             ]
         },
@@ -119,11 +199,16 @@
                     "options": {},
                     "screen": [
                         {
-                            "label": "Token Sender",
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token sender",
                             "name": "from"
                         },
                         {
-                            "label": "Token Recipient",
+                            "label": "Token recipient",
                             "name": "to"
                         },
                         {
