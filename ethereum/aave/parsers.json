@@ -4,7 +4,7 @@
     "contracts": [
         {
             "address": "0x7d2768dE32b0b80b7a3454c06BdAc94A69DDc7A9",
-            "name": "Lending Pool V2",
+            "name": "Aave: Lending Pool V2",
             "parsers": [
                 {
                     "arguments": [
@@ -151,6 +151,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Withdraw",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to withdraw",
                             "name": "fromAmount"
                         },
@@ -165,7 +170,7 @@
                     "arguments": [
                         {
                             "format": "eip55",
-                            "name": "Address",
+                            "name": "address",
                             "value": {
                                 "address": {
                                     "path": {
@@ -196,12 +201,12 @@
                             "static": true
                         },
                         {
-                            "label": "For asset",
-                            "name": "Address"
+                            "label": "Set rate mode to",
+                            "name": "rateMode"
                         },
                         {
-                            "label": "Swap from",
-                            "name": "rateMode"
+                            "label": "For asset",
+                            "name": "address"
                         }
                     ],
                     "selector": "0x94ba89a2"
@@ -252,6 +257,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Borrow",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to borrow",
                             "name": "fromAmount"
                         },
@@ -300,6 +310,11 @@
                     "functionType": "lend",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Supply",
+                            "static": true
+                        },
                         {
                             "label": "Amount to supply",
                             "name": "fromAmount"
@@ -315,7 +330,7 @@
         },
         {
             "address": "0x7937D4799803FbBe595ed57278Bc4cA21f3bFfCB",
-            "name": "Lending Pool V2 AMM",
+            "name": "Aave: Lending Pool V2 AMM",
             "parsers": [
                 {
                     "arguments": [
@@ -462,12 +477,12 @@
                             "static": true
                         },
                         {
-                            "label": "For asset",
-                            "name": "Address"
+                            "label": "Set rate mode to",
+                            "name": "rateMode"
                         },
                         {
-                            "label": "Swap from",
-                            "name": "rateMode"
+                            "label": "For asset",
+                            "name": "Address"
                         }
                     ],
                     "selector": "0x94ba89a2"
@@ -506,6 +521,11 @@
                     "functionType": "withdraw",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Withdraw",
+                            "static": true
+                        },
                         {
                             "label": "Amount to withdraw",
                             "name": "fromAmount"
@@ -563,6 +583,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Borrow",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to borrow",
                             "name": "fromAmount"
                         },
@@ -612,6 +637,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Supply",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to supply",
                             "name": "fromAmount"
                         },
@@ -626,13 +656,13 @@
         },
         {
             "address": "0xcc9a0B7c43DC2a5F023Bb9b738E45B0Ef6B06E04",
-            "name": "WETH Gateway",
+            "name": "Aave: WETH Gateway",
             "parsers": [
                 {
                     "arguments": [
                         {
                             "format": "amount",
-                            "name": "supplyAmount",
+                            "name": "suppliedAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -669,7 +699,10 @@
                     ],
                     "functionName": "depositETH",
                     "functionType": "lend",
-                    "options": {},
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
                     "screen": [
                         {
                             "label": "Function",
@@ -678,15 +711,15 @@
                         },
                         {
                             "label": "Amount to supply",
-                            "name": "supplyAmount"
-                        },
-                        {
-                            "label": "Supply on",
-                            "name": "lendingPool"
+                            "name": "suppliedAmount"
                         },
                         {
                             "label": "Collateral recipient",
                             "name": "onBehalfOf"
+                        },
+                        {
+                            "label": "Supply on",
+                            "name": "lendingPool"
                         }
                     ],
                     "selector": "0x474cf53d"
@@ -705,8 +738,19 @@
                             }
                         },
                         {
+                            "format": "eip55",
+                            "name": "recipient",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
                             "format": "amount",
-                            "name": "toAmount",
+                            "name": "withdrawnAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -714,16 +758,17 @@
                                     }
                                 },
                                 "token": {
-                                    "path": {
-                                        "default": "to"
-                                    }
+                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                                 }
                             }
                         }
                     ],
                     "functionName": "withdrawETH",
                     "functionType": "withdraw",
-                    "options": {},
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
                     "screen": [
                         {
                             "label": "Function",
@@ -731,12 +776,16 @@
                             "static": true
                         },
                         {
-                            "label": "Withdraw from",
-                            "name": "lendingPool"
+                            "label": "Amount to withdraw",
+                            "name": "withdrawnAmount"
                         },
                         {
-                            "label": "Amount to withdraw",
-                            "name": "toAmount"
+                            "label": "Recipient",
+                            "name": "recipient"
+                        },
+                        {
+                            "label": "Withdraw from",
+                            "name": "lendingPool"
                         }
                     ],
                     "selector": "0x80500d20"
@@ -756,7 +805,7 @@
                         },
                         {
                             "format": "amount",
-                            "name": "fromAmount",
+                            "name": "borrowedAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -782,7 +831,10 @@
                     ],
                     "functionName": "borrowETH",
                     "functionType": "borrow",
-                    "options": {},
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
                     "screen": [
                         {
                             "label": "Function",
@@ -795,7 +847,7 @@
                         },
                         {
                             "label": "Amount to borrow",
-                            "name": "fromAmount"
+                            "name": "borrowedAmount"
                         },
                         {
                             "label": "Interest Rate Mode",
@@ -819,7 +871,7 @@
                         },
                         {
                             "format": "amount",
-                            "name": "fromAmount",
+                            "name": "repaidAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -856,7 +908,10 @@
                     ],
                     "functionName": "repayETH",
                     "functionType": "repay_loan",
-                    "options": {},
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
                     "screen": [
                         {
                             "label": "Function",
@@ -864,16 +919,16 @@
                             "static": true
                         },
                         {
-                            "label": "Repay to",
-                            "name": "lendingPool"
-                        },
-                        {
                             "label": "Amount to repay",
-                            "name": "fromAmount"
+                            "name": "repaidAmount"
                         },
                         {
                             "label": "Debt holder",
                             "name": "onBehalfOf"
+                        },
+                        {
+                            "label": "Repay to",
+                            "name": "lendingPool"
                         },
                         {
                             "label": "Interest Rate Mode",
