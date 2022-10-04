@@ -4,7 +4,7 @@
     "contracts": [
         {
             "address": "0x397c315d64D74d82A731d656f9C4D586D200F90A",
-            "name": "Public",
+            "name": "Alkemi Earn: Public",
             "parsers": [
                 {
                     "arguments": [
@@ -29,6 +29,11 @@
                     "functionType": "borrow",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Borrow",
+                            "static": true
+                        },
                         {
                             "label": "Amount to borrow",
                             "name": "fromAmount"
@@ -75,7 +80,7 @@
                     "arguments": [
                         {
                             "format": "amount",
-                            "name": "liquidateBorrow",
+                            "name": "liquidateAmount",
                             "value": {
                                 "quantity": {
                                     "path": {
@@ -123,7 +128,7 @@
                         },
                         {
                             "label": "Amount to Repay",
-                            "name": "liquidateBorrow"
+                            "name": "liquidateAmount"
                         },
                         {
                             "label": "Addr. to liquidate",
@@ -160,6 +165,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Deposit",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to deposit",
                             "name": "fromAmount"
                         }
@@ -190,6 +200,11 @@
                     "options": {},
                     "screen": [
                         {
+                            "label": "Function",
+                            "name": "Withdraw",
+                            "static": true
+                        },
+                        {
                             "label": "Amount to withdraw",
                             "name": "requestedAmount"
                         }
@@ -200,7 +215,7 @@
         },
         {
             "address": "0x4822D9172e5b76b9Db37B75f5552F9988F98a888",
-            "name": "Public",
+            "name": "Alkemi Earn: Public",
             "parsers": [
                 {
                     "arguments": [
@@ -225,6 +240,11 @@
                     "functionType": "borrow",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Borrow",
+                            "static": true
+                        },
                         {
                             "label": "Amount to borrow",
                             "name": "fromAmount"
@@ -396,13 +416,13 @@
         },
         {
             "address": "0x14716C982Fd8b7F1E8F0b4dbb496dCe438a29D93",
-            "name": "Public",
+            "name": "Alkemi Earn: Public",
             "parsers": [
                 {
                     "arguments": [
                         {
                             "format": "eip55",
-                            "name": "Holder",
+                            "name": "claimHolder",
                             "value": {
                                 "address": {
                                     "path": {
@@ -423,7 +443,7 @@
                         },
                         {
                             "label": "Addr. to claim ALK for",
-                            "name": "Holder"
+                            "name": "claimHolder"
                         }
                     ],
                     "selector": "0x71d6e892"
