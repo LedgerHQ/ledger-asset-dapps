@@ -1,0 +1,96 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xe29c9a493ede58028163ab04215e18a8acd0472c",
+            "contractName": "CraftHelper",
+            "selectors": {
+                "0xb60099b7": {
+                    "erc20OfInterest": [],
+                    "method": "craft",
+                    "plugin": "Cometh"
+                }
+            }
+        },
+        {
+            "address": "0x91197719be34440a3bd0415fe293f4c19653a277",
+            "contractName": "GrindHelper",
+            "selectors": {
+                "0x54506e92": {
+                    "erc20OfInterest": [],
+                    "method": "grind",
+                    "plugin": "Cometh"
+                }
+            }
+        },
+        {
+            "address": "0x9c25ee0f938122a504be82189536df74687858e4",
+            "contractName": "Items",
+            "selectors": {
+                "0x1e9a6950": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Cometh"
+                }
+            }
+        },
+        {
+            "address": "0xb44e1a7fee110f4af6c1b6d2c5ef324c5920f7d2",
+            "contractName": "BattleGameV2",
+            "selectors": {
+                "0x6363e882": {
+                    "erc20OfInterest": [],
+                    "method": "registerAndRewardGameWithSignature",
+                    "plugin": "Cometh"
+                }
+            }
+        },
+        {
+            "address": "0x5495bec6703adc6d395e50bb2c6a93bb4d2af56a",
+            "contractName": "IRentalProtocol",
+            "selectors": {
+                "0x03388b4e": {
+                    "erc20OfInterest": [],
+                    "method": "sublet",
+                    "plugin": "Cometh"
+                },
+                "0x1157decb": {
+                    "erc20OfInterest": [],
+                    "method": "endRental",
+                    "plugin": "Cometh"
+                },
+                "0x1ae50184": {
+                    "erc20OfInterest": [
+                        "offer.feeToken"
+                    ],
+                    "method": "preSignRentalOffer",
+                    "plugin": "Cometh"
+                },
+                "0x1beddfdd": {
+                    "erc20OfInterest": [],
+                    "method": "endSublet",
+                    "plugin": "Cometh"
+                },
+                "0x6e09f420": {
+                    "erc20OfInterest": [],
+                    "method": "cancelRentalOffer",
+                    "plugin": "Cometh"
+                },
+                "0x8d259eb1": {
+                    "erc20OfInterest": [
+                        "offer.feeToken"
+                    ],
+                    "method": "rent",
+                    "plugin": "Cometh"
+                },
+                "0xe1649e8d": {
+                    "erc20OfInterest": [],
+                    "method": "endRentalPrematurely",
+                    "plugin": "Cometh"
+                }
+            }
+        }
+    ],
+    "name": "Cometh"
+}
