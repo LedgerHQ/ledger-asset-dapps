@@ -7,6 +7,15 @@
             "contractName": "SMARTCREDIT",
             "messages": [
                 {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "",
+                                "path": ""
+                            }
+                        ],
+                        "label": "SmartCredit.io"
+                    },
                     "schema": {
                         "EIP712Domain": [
                             {
@@ -28,6 +37,18 @@
                         ],
                         "LoanRequest": [
                             {
+                                "name": "collateralAddress",
+                                "type": "address"
+                            },
+                            {
+                                "name": "initialCollateralAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "loanAmount",
+                                "type": "uint256"
+                            },
+                            {
                                 "name": "loanId",
                                 "type": "bytes32"
                             },
@@ -38,18 +59,6 @@
                             {
                                 "name": "loanTerm",
                                 "type": "uint64"
-                            },
-                            {
-                                "name": "loanAmount",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "initialCollateralAmount",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "collateralAddress",
-                                "type": "address"
                             },
                             {
                                 "name": "underlyingAddress",
