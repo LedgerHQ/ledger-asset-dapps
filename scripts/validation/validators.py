@@ -90,8 +90,8 @@ def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
                 formatted,
             )
             with open(filename, "w") as f:
-                json.dump(loaded, f, indent=4, sort_keys=True, ensure_ascii=False)
-            return False, "Not formatted corrected"
+                f.write(formatted)
+            return False, "Not formatted, corrected"
     except JSONDecodeError as err:
         logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
         return False, str(err)
