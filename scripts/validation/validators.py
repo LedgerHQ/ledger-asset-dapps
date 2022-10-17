@@ -82,9 +82,6 @@ def schema_validator(schema_path: str):
 def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
-        for contract in loaded["contracts"]:
-            for message in contract["messages"]:
-                message["schema"] = sort_eip712_schema_dict(schema=message["schema"])
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
         if formatted != data and (formatted + "\n") != data:
             logger.debug(
@@ -93,18 +90,9 @@ def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
                 formatted,
             )
             with open(filename, "w") as f:
-                json.dump(loaded, f, indent=4, sort_keys=True, ensure_ascii=False)
-            return False, "Not formatted corrected"
+                f.write(formatted)
+            return False, "Not formatted, corrected"
     except JSONDecodeError as err:
         logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
         return False, str(err)
     return True, ""
-
-
-def sort_eip712_schema_dict(schema: dict) -> dict:
-    """Order schema dict by name of attributes"""
-    schema_items = sorted(schema.items())
-    sorted_schema = {}
-    for key, attributes in schema_items:
-        sorted_schema[key] = sorted(attributes, key=lambda attr: attr["name"])
-    return sorted_schema

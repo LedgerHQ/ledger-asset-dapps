@@ -27,101 +27,29 @@
                     "schema": {
                         "EIP712Domain": [
                             {
-                                "name": "chainId",
-                                "type": "uint256"
-                            },
-                            {
                                 "name": "name",
                                 "type": "string"
                             },
                             {
-                                "name": "verifyingContract",
-                                "type": "address"
-                            },
-                            {
                                 "name": "version",
                                 "type": "string"
-                            }
-                        ],
-                        "Order": [
+                            },
                             {
-                                "name": "basePrice",
+                                "name": "chainId",
                                 "type": "uint256"
                             },
                             {
-                                "name": "calldata",
-                                "type": "bytes"
-                            },
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Order": [
                             {
                                 "name": "exchange",
                                 "type": "address"
                             },
                             {
-                                "name": "expirationTime",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "extra",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "feeMethod",
-                                "type": "uint8"
-                            },
-                            {
-                                "name": "feeRecipient",
-                                "type": "address"
-                            },
-                            {
-                                "name": "howToCall",
-                                "type": "uint8"
-                            },
-                            {
-                                "name": "listingTime",
-                                "type": "uint256"
-                            },
-                            {
                                 "name": "maker",
-                                "type": "address"
-                            },
-                            {
-                                "name": "makerProtocolFee",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "makerRelayerFee",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "nonce",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "paymentToken",
-                                "type": "address"
-                            },
-                            {
-                                "name": "replacementPattern",
-                                "type": "bytes"
-                            },
-                            {
-                                "name": "saleKind",
-                                "type": "uint8"
-                            },
-                            {
-                                "name": "salt",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "side",
-                                "type": "uint8"
-                            },
-                            {
-                                "name": "staticExtradata",
-                                "type": "bytes"
-                            },
-                            {
-                                "name": "staticTarget",
                                 "type": "address"
                             },
                             {
@@ -129,7 +57,7 @@
                                 "type": "address"
                             },
                             {
-                                "name": "takerProtocolFee",
+                                "name": "makerRelayerFee",
                                 "type": "uint256"
                             },
                             {
@@ -137,8 +65,80 @@
                                 "type": "uint256"
                             },
                             {
+                                "name": "makerProtocolFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerProtocolFee",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "feeRecipient",
+                                "type": "address"
+                            },
+                            {
+                                "name": "feeMethod",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "side",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "saleKind",
+                                "type": "uint8"
+                            },
+                            {
                                 "name": "target",
                                 "type": "address"
+                            },
+                            {
+                                "name": "howToCall",
+                                "type": "uint8"
+                            },
+                            {
+                                "name": "calldata",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "replacementPattern",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "staticTarget",
+                                "type": "address"
+                            },
+                            {
+                                "name": "staticExtradata",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "paymentToken",
+                                "type": "address"
+                            },
+                            {
+                                "name": "basePrice",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "extra",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "listingTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "expirationTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "salt",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
                             }
                         ]
                     }
