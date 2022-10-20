@@ -1,0 +1,456 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7210000000000000000000000000000000000000",
+            "name": "ERC-721 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Token sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token recipient",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0x42842e0e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Token sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token recipient",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0xb88d4fde"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Approve NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token to approve",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "operator",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "operator"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "boolean",
+                            "name": "_approved",
+                            "value": {
+                                "boolean": {
+                                    "path": {
+                                        "default": "_approved"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setApprovalForAll",
+                    "functionType": "approve_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Set approval for all",
+                            "static": true
+                        },
+                        {
+                            "label": "Operator",
+                            "name": "operator"
+                        },
+                        {
+                            "label": "Approved",
+                            "name": "_approved"
+                        }
+                    ],
+                    "selector": "0xa22cb465"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "mint",
+                    "functionType": "mint_erc721",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Mint NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Receiver",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0x6a627842"
+                }
+            ]
+        },
+        {
+            "address": "0x1155000000000000000000000000000000000000",
+            "name": "ERC-1155 Transfer",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "id"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amount",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc1155",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Quantity",
+                            "name": "amount"
+                        },
+                        {
+                            "label": "Token sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token recipient",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0xf242432a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "from",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "eip55",
+                            "name": "to",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "tokenID",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "id"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amount",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeTransferFrom",
+                    "functionType": "transfer_erc1155",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Transfer NFT",
+                            "static": true
+                        },
+                        {
+                            "label": "Token ID",
+                            "name": "tokenID"
+                        },
+                        {
+                            "label": "Quantity",
+                            "name": "amount"
+                        },
+                        {
+                            "label": "Token sender",
+                            "name": "from"
+                        },
+                        {
+                            "label": "Token recipient",
+                            "name": "to"
+                        }
+                    ],
+                    "selector": "0x0febdd49"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "operator",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "operator"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "boolean",
+                            "name": "approved",
+                            "value": {
+                                "boolean": {
+                                    "path": {
+                                        "default": "approved"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setApprovalForAll",
+                    "functionType": "approve_erc1155",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Set approval for all",
+                            "static": true
+                        },
+                        {
+                            "label": "Operator",
+                            "name": "operator"
+                        },
+                        {
+                            "label": "Approved",
+                            "name": "approved"
+                        }
+                    ],
+                    "selector": "0xa22cb465"
+                }
+            ]
+        }
+    ],
+    "external_requirement": "nftmetadata",
+    "id": "nfttransfer",
+    "name": "NFT"
+}
