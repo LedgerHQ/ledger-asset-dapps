@@ -1,0 +1,28 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "address": "0x7276241a669489e4bbb76f63d2a43bfe63080f2f",
+            "contractName": "StakeManager",
+            "selectors": {
+                "0x745400c9": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdraw",
+                    "plugin": "StaderBSC"
+                },
+                "0xb13acedd": {
+                    "erc20OfInterest": [],
+                    "method": "claimWithdraw",
+                    "plugin": "StaderBSC"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StaderBSC"
+                }
+            }
+        }
+    ],
+    "name": "StaderBSC"
+}

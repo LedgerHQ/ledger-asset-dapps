@@ -1,0 +1,28 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xfd225c9e6601c9d38d8f98d8731bf59efcf8c0e3",
+            "contractName": "ChildPool",
+            "selectors": {
+                "0x48eaf6d6": {
+                    "erc20OfInterest": [],
+                    "method": "requestMaticXSwap",
+                    "plugin": "StaderPolygon"
+                },
+                "0x77baf209": {
+                    "erc20OfInterest": [],
+                    "method": "claimMaticXSwap",
+                    "plugin": "StaderPolygon"
+                },
+                "0xc78cf1a0": {
+                    "erc20OfInterest": [],
+                    "method": "swapMaticForMaticXViaInstantPool",
+                    "plugin": "StaderPolygon"
+                }
+            }
+        }
+    ],
+    "name": "StaderPolygon"
+}
