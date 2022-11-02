@@ -1,0 +1,30 @@
+{
+    "chainId": 1,
+    "contracts": [{
+        "address": "0x1e68238cE926DEC62b3FBC99AB06eB1D85CE0270",
+        "contractName": "KilnStaking",
+        "selectors": {
+            "0xd0e30db0": {
+                "method": "deposit",
+                "plugin": "kiln"
+            },
+            "0xe99454f5": {
+                "method": "setWithdrawal",
+                "plugin": "kiln"
+            },
+            "0x0968f264": {
+                "method": "withdraw",
+                "plugin": "kiln"
+            },
+            "0x2ba03a79": {
+                "method": "withdrawCLFee",
+                "plugin": "kiln"
+            },
+            "0xbf509bd4": {
+                "method": "withdrawELFee",
+                "plugin": "kiln"
+            }
+        }
+    }],
+    "name": "kiln"
+}
