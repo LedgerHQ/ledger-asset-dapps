@@ -134,10 +134,19 @@
                                                         "required": [
                                                             "uint256"
                                                         ]
+                                                    },
+                                                    {
+                                                        "name": "BooleanValue",
+                                                        "required": [
+                                                            "boolean"
+                                                        ]
                                                     }
                                                 ],
                                                 "properties": {
                                                     "address": {
+                                                        "$ref": "#/$defs/argumentValue"
+                                                    },
+                                                    "boolean": {
                                                         "$ref": "#/$defs/argumentValue"
                                                     },
                                                     "quantity": {
