@@ -43,7 +43,7 @@ def format_validator(data: str, filename: str) -> Tuple[bool, str]:
             )
             with open(filename, "w") as f:
                 json.dump(loaded, f, indent=4, sort_keys=True, ensure_ascii=False)
-            return False, "Not formatted corrected"
+            return False, "Not formatted correctly. Fixed."
     except JSONDecodeError as err:
         logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
         return False, str(err)
