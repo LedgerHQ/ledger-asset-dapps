@@ -25,34 +25,144 @@
             }
         },
         {
-            "address": "0x7f268357a8c2552623316e2562d90e642bb538e5",
-            "contractName": "OpenSea",
-            "selectors": {
-                "0xa8a41c70": {
-                    "erc20OfInterest": [
-                        "addrs.6",
-                        "addrs.4"
-                    ],
-                    "method": "cancelOrder_",
-                    "plugin": "OpenSea"
-                },
-                "0xab834bab": {
-                    "erc20OfInterest": [
-                        "addrs.6",
-                        "addrs.4"
-                    ],
-                    "method": "atomicMatch_",
-                    "plugin": "OpenSea"
-                }
-            }
-        },
-        {
             "address": "0xa5409ec958c83c3f309868babaca7c86dcb077c1",
             "contractName": "OpenSeaRegistry",
             "selectors": {
                 "0xddd81f82": {
                     "erc20OfInterest": [],
                     "method": "registerProxy",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x00000000006c3852cbef3e08e8df289169ede581",
+            "contractName": "Seaport",
+            "selectors": {
+                "0x5b34b966": {
+                    "erc20OfInterest": [],
+                    "method": "incrementCounter",
+                    "plugin": "OpenSea"
+                },
+                "0x87201b41": {
+                    "erc20OfInterest": [
+                        "advancedOrders.0.parameters.consideration.0.token",
+                        "advancedOrders.0.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAvailableAdvancedOrders",
+                    "plugin": "OpenSea"
+                },
+                "0xb3a34c4c": {
+                    "erc20OfInterest": [
+                        "order.parameters.consideration.0.token",
+                        "order.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xe7acab24": {
+                    "erc20OfInterest": [
+                        "advancedOrder.parameters.consideration.0.token",
+                        "advancedOrder.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAdvancedOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xed98a574": {
+                    "erc20OfInterest": [
+                        "orders.0.parameters.consideration.0.token",
+                        "orders.0.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAvailableOrders",
+                    "plugin": "OpenSea"
+                },
+                "0xfb0f3ee1": {
+                    "erc20OfInterest": [
+                        "parameters.considerationToken",
+                        "parameters.offerToken"
+                    ],
+                    "method": "fulfillBasicOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xfd9f1e10": {
+                    "erc20OfInterest": [],
+                    "method": "cancel",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x7f268357a8c2552623316e2562d90e642bb538e5",
+            "contractName": "WyvernExchangeWithBulkCancellations",
+            "selectors": {
+                "0x627cdcb9": {
+                    "erc20OfInterest": [],
+                    "method": "incrementNonce",
+                    "plugin": "OpenSea"
+                },
+                "0xa8a41c70": {
+                    "erc20OfInterest": [],
+                    "method": "cancelOrder_",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+            "contractName": "WETH9",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "OpenSea"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0xa0c68c638235ee32657e8f720a23cec1bfc77c77",
+            "contractName": "RootChainManager",
+            "selectors": {
+                "0x4faa8a26": {
+                    "erc20OfInterest": [],
+                    "method": "depositEtherFor",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x4dbd4fc535ac27206064b68ffcf827b0a60bab3f",
+            "contractName": "Inbox",
+            "selectors": {
+                "0x439370b1": {
+                    "erc20OfInterest": [],
+                    "method": "depositEth",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x99c9fc46f92e8a1c0dec1b1747d010903e884be1",
+            "contractName": "L1StandardBridge",
+            "selectors": {
+                "0xb1a1a882": {
+                    "erc20OfInterest": [],
+                    "method": "depositETH",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45",
+            "contractName": "SwapRouter02",
+            "selectors": {
+                "0x5ae401dc": {
+                    "erc20OfInterest": [],
+                    "method": "multicall",
                     "plugin": "OpenSea"
                 }
             }

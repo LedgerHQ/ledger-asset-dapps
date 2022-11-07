@@ -1,0 +1,79 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x00000000006c3852cbef3e08e8df289169ede581",
+            "contractName": "Seaport",
+            "selectors": {
+                "0x5b34b966": {
+                    "erc20OfInterest": [],
+                    "method": "incrementCounter",
+                    "plugin": "OpenSea"
+                },
+                "0x87201b41": {
+                    "erc20OfInterest": [
+                        "advancedOrders.0.parameters.consideration.0.token",
+                        "advancedOrders.0.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAvailableAdvancedOrders",
+                    "plugin": "OpenSea"
+                },
+                "0xb3a34c4c": {
+                    "erc20OfInterest": [
+                        "order.parameters.consideration.0.token",
+                        "order.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xe7acab24": {
+                    "erc20OfInterest": [
+                        "advancedOrder.parameters.consideration.0.token",
+                        "advancedOrder.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAdvancedOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xed98a574": {
+                    "erc20OfInterest": [
+                        "orders.0.parameters.consideration.0.token",
+                        "orders.0.parameters.offer.0.token"
+                    ],
+                    "method": "fulfillAvailableOrders",
+                    "plugin": "OpenSea"
+                },
+                "0xfb0f3ee1": {
+                    "erc20OfInterest": [
+                        "parameters.considerationToken",
+                        "parameters.offerToken"
+                    ],
+                    "method": "fulfillBasicOrder",
+                    "plugin": "OpenSea"
+                },
+                "0xfd9f1e10": {
+                    "erc20OfInterest": [],
+                    "method": "cancel",
+                    "plugin": "OpenSea"
+                }
+            }
+        },
+        {
+            "address": "0x7f268357a8c2552623316e2562d90e642bb538e5",
+            "contractName": "WyvernExchangeWithBulkCancellations",
+            "selectors": {
+                "0x627cdcb9": {
+                    "erc20OfInterest": [],
+                    "method": "incrementNonce",
+                    "plugin": "OpenSea"
+                },
+                "0xa8a41c70": {
+                    "erc20OfInterest": [],
+                    "method": "cancelOrder_",
+                    "plugin": "OpenSea"
+                }
+            }
+        }
+    ],
+    "name": "opensea"
+}
