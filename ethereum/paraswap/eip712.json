@@ -1,0 +1,215 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xe92b586627cca7a83dc919cc7127196d70f55a06",
+            "contractName": "AugustusRFQ",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Nonce and metadata",
+                                "path": "nonceAndMeta"
+                            },
+                            {
+                                "label": "Expiration time",
+                                "path": "expiry"
+                            },
+                            {
+                                "label": "Maker asset address",
+                                "path": "makerAsset"
+                            },
+                            {
+                                "label": "Taker asset address",
+                                "path": "takerAsset"
+                            },
+                            {
+                                "label": "Maker address",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Taker address",
+                                "path": "taker"
+                            },
+                            {
+                                "label": "Maker amount",
+                                "path": "makerAmount"
+                            },
+                            {
+                                "label": "Taker amount",
+                                "path": "takerAmount"
+                            }
+                        ],
+                        "label": "AugustusRFQ ERC20 order"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Order": [
+                            {
+                                "name": "nonceAndMeta",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "expiry",
+                                "type": "uint128"
+                            },
+                            {
+                                "name": "makerAsset",
+                                "type": "address"
+                            },
+                            {
+                                "name": "takerAsset",
+                                "type": "address"
+                            },
+                            {
+                                "name": "maker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "taker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "makerAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerAmount",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Nonce and metadata",
+                                "path": "nonceAndMeta"
+                            },
+                            {
+                                "label": "Expiration time",
+                                "path": "expiry"
+                            },
+                            {
+                                "label": "Maker asset encoded",
+                                "path": "makerAsset"
+                            },
+                            {
+                                "label": "Maker asset NFT ID",
+                                "path": "makerAssetId"
+                            },
+                            {
+                                "label": "Taker asset encoded",
+                                "path": "takerAsset"
+                            },
+                            {
+                                "label": "Taker asset NFT ID",
+                                "path": "takerAssetId"
+                            },
+                            {
+                                "label": "Maker address",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Taker address",
+                                "path": "taker"
+                            },
+                            {
+                                "label": "Maker amount",
+                                "path": "makerAmount"
+                            },
+                            {
+                                "label": "Taker amount",
+                                "path": "takerAmount"
+                            }
+                        ],
+                        "label": "AugustusRFQ NFT order"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "OrderNFT": [
+                            {
+                                "name": "nonceAndMeta",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "expiry",
+                                "type": "uint128"
+                            },
+                            {
+                                "name": "makerAsset",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "makerAssetId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerAsset",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerAssetId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "maker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "taker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "makerAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "takerAmount",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "ParaSwap"
+}
