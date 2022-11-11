@@ -26,10 +26,6 @@
                 "path": "takeAsset.value"
               },
               {
-                "label": "Order salt",
-                "path": "salt"
-              },
-              {
                 "label": "Order start time",
                 "path": "start"
               },
@@ -145,10 +141,6 @@
                 "path": "takeAsset.value"
               },
               {
-                "label": "Order salt",
-                "path": "salt"
-              },
-              {
                 "label": "Order start time",
                 "path": "start"
               },
@@ -234,6 +226,148 @@
               {
                 "name": "data",
                 "type": "bytes"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "address": "0xc9154424B823b10579895cCBE442d41b9Abd96Ed",
+      "contractName": "Rarible ERC-721 Collection",
+      "messages": [
+        {
+          "mapper": {
+            "fields": [
+              {
+                "label": "Token ID",
+                "path": "tokenId"
+              },
+              {
+                "label": "Token URI",
+                "path": "tokenURI"
+              },
+              {
+                "label": "Creator account address",
+                "path": "creators.[].account"
+              },
+              {
+                "label": "Creator value (10000 = 100%)",
+                "path": "creators.[].value"
+              },
+              {
+                "label": "Royalties account address",
+                "path": "royalties.[].account"
+              },
+              {
+                "label": "Royalties value (10000 = 100%)",
+                "path": "royalties.[].value"
+              }
+            ],
+            "label": "Lazy Mint ERC-721"
+          },
+          "schema": {
+            "Part": [
+              {
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "name": "value",
+                "type": "uint96"
+              }
+            ],
+            "Mint721": [
+              {
+                "name": "tokenId",
+                "type": "uint256"
+              },
+              {
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "name": "creators",
+                "type": "Part[]"
+              },
+              {
+                "name": "royalties",
+                "type": "Part[]"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "address": "0xB66a603f4cFe17e3D27B87a8BfCaD319856518B8",
+      "contractName": "Rarible ERC-1155 Collection",
+      "messages": [
+        {
+          "mapper": {
+            "fields": [
+              {
+                "label": "Token ID",
+                "path": "tokenId"
+              },
+              {
+                "label": "Token URI",
+                "path": "tokenURI"
+              },
+              {
+                "label": "Token Supply",
+                "path": "supply"
+              },
+              {
+                "label": "Creator account address",
+                "path": "creators.[].account"
+              },
+              {
+                "label": "Creator value (10000 = 100%)",
+                "path": "creators.[].value"
+              },
+              {
+                "label": "Royalties account address",
+                "path": "royalties.[].account"
+              },
+              {
+                "label": "Royalties value (10000 = 100%)",
+                "path": "royalties.[].value"
+              }
+            ],
+            "label": "Lazy Mint ERC-1155"
+          },
+          "schema": {
+            "Part": [
+              {
+                "name": "account",
+                "type": "address"
+              },
+              {
+                "name": "value",
+                "type": "uint96"
+              }
+            ],
+            "Mint1155": [
+              {
+                "name": "tokenId",
+                "type": "uint256"
+              },
+              {
+                "name": "supply",
+                "type": "uint256"
+              },
+              {
+                "name": "tokenURI",
+                "type": "string"
+              },
+              {
+                "name": "creators",
+                "type": "Part[]"
+              },
+              {
+                "name": "royalties",
+                "type": "Part[]"
               }
             ]
           }
