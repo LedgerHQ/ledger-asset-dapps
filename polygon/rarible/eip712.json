@@ -1,0 +1,126 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+      {
+        "address": "0x7f19564C35c681099c0c857a7141836Cf7EDaa53",
+        "contractName": "Rarible ExchangeV2",
+        "messages": [
+          {
+            "mapper": {
+              "fields": [
+                {
+                  "label": "Order maker address",
+                  "path": "maker"
+                },
+                {
+                  "label": "Order make asset value",
+                  "path": "makeAsset.value"
+                },
+                {
+                  "label": "Order taker address",
+                  "path": "taker"
+                },
+                {
+                  "label": "Order take asset value",
+                  "path": "takeAsset.value"
+                },
+                {
+                  "label": "Order salt",
+                  "path": "salt"
+                },
+                {
+                  "label": "Order start time",
+                  "path": "start"
+                },
+                {
+                  "label": "Order end time",
+                  "path": "end"
+                }
+              ],
+              "label": "List Order"
+            },
+            "schema": {
+              "EIP712Domain": [
+                {
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "name": "version",
+                  "type": "string"
+                },
+                {
+                  "name": "chainId",
+                  "type": "uint256"
+                },
+                {
+                  "name": "verifyingContract",
+                  "type": "address"
+                }
+              ],
+              "AssetType": [
+                {
+                  "name": "assetClass",
+                  "type": "bytes4"
+                },
+                {
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ],
+              "Asset": [
+                {
+                  "name": "assetType",
+                  "type": "AssetType"
+                },
+                {
+                  "name": "value",
+                  "type": "uint256"
+                }
+              ],
+              "Order": [
+                {
+                  "name": "maker",
+                  "type": "address"
+                },
+                {
+                  "name": "makeAsset",
+                  "type": "Asset"
+                },
+                {
+                  "name": "taker",
+                  "type": "address"
+                },
+                {
+                  "name": "takeAsset",
+                  "type": "Asset"
+                },
+                {
+                  "name": "salt",
+                  "type": "uint256"
+                },
+                {
+                  "name": "start",
+                  "type": "uint256"
+                },
+                {
+                  "name": "end",
+                  "type": "uint256"
+                },
+                {
+                  "name": "dataType",
+                  "type": "bytes4"
+                },
+                {
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "name": "Rarible"
+}
