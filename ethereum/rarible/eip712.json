@@ -1,0 +1,379 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x9757f2d2b135150bbeb65308d4a91804107cd8d6",
+            "contractName": "Rarible ExchangeV2",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Order maker address",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Order make asset value",
+                                "path": "makeAsset.value"
+                            },
+                            {
+                                "label": "Order taker address",
+                                "path": "taker"
+                            },
+                            {
+                                "label": "Order take asset value",
+                                "path": "takeAsset.value"
+                            },
+                            {
+                                "label": "Order start time",
+                                "path": "start"
+                            },
+                            {
+                                "label": "Order end time",
+                                "path": "end"
+                            }
+                        ],
+                        "label": "List Order"
+                    },
+                    "schema": {
+                        "Asset": [
+                            {
+                                "name": "assetType",
+                                "type": "AssetType"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            }
+                        ],
+                        "AssetType": [
+                            {
+                                "name": "assetClass",
+                                "type": "bytes4"
+                            },
+                            {
+                                "name": "data",
+                                "type": "bytes"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Order": [
+                            {
+                                "name": "maker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "makeAsset",
+                                "type": "Asset"
+                            },
+                            {
+                                "name": "taker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "takeAsset",
+                                "type": "Asset"
+                            },
+                            {
+                                "name": "salt",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "start",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "end",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "dataType",
+                                "type": "bytes4"
+                            },
+                            {
+                                "name": "data",
+                                "type": "bytes"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0x7f19564c35c681099c0c857a7141836cf7edaa53",
+            "contractName": "RaribleExchangeWrapper",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Order maker address",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Order make asset value",
+                                "path": "makeAsset.value"
+                            },
+                            {
+                                "label": "Order taker address",
+                                "path": "taker"
+                            },
+                            {
+                                "label": "Order take asset value",
+                                "path": "takeAsset.value"
+                            },
+                            {
+                                "label": "Order start time",
+                                "path": "start"
+                            },
+                            {
+                                "label": "Order end time",
+                                "path": "end"
+                            }
+                        ],
+                        "label": "List Order"
+                    },
+                    "schema": {
+                        "Asset": [
+                            {
+                                "name": "assetType",
+                                "type": "AssetType"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            }
+                        ],
+                        "AssetType": [
+                            {
+                                "name": "assetClass",
+                                "type": "bytes4"
+                            },
+                            {
+                                "name": "data",
+                                "type": "bytes"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Order": [
+                            {
+                                "name": "maker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "makeAsset",
+                                "type": "Asset"
+                            },
+                            {
+                                "name": "taker",
+                                "type": "address"
+                            },
+                            {
+                                "name": "takeAsset",
+                                "type": "Asset"
+                            },
+                            {
+                                "name": "salt",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "start",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "end",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "dataType",
+                                "type": "bytes4"
+                            },
+                            {
+                                "name": "data",
+                                "type": "bytes"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0xc9154424b823b10579895ccbe442d41b9abd96ed",
+            "contractName": "Rarible ERC-721 Collection",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Token ID",
+                                "path": "tokenId"
+                            },
+                            {
+                                "label": "Token URI",
+                                "path": "tokenURI"
+                            },
+                            {
+                                "label": "Creator account address",
+                                "path": "creators.[].account"
+                            },
+                            {
+                                "label": "Creator value (10000 = 100%)",
+                                "path": "creators.[].value"
+                            },
+                            {
+                                "label": "Royalties account address",
+                                "path": "royalties.[].account"
+                            },
+                            {
+                                "label": "Royalties value (10000 = 100%)",
+                                "path": "royalties.[].value"
+                            }
+                        ],
+                        "label": "Lazy Mint ERC-721"
+                    },
+                    "schema": {
+                        "Mint721": [
+                            {
+                                "name": "tokenId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "tokenURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "creators",
+                                "type": "Part[]"
+                            },
+                            {
+                                "name": "royalties",
+                                "type": "Part[]"
+                            }
+                        ],
+                        "Part": [
+                            {
+                                "name": "account",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint96"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0xb66a603f4cfe17e3d27b87a8bfcad319856518b8",
+            "contractName": "Rarible ERC-1155 Collection",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Token ID",
+                                "path": "tokenId"
+                            },
+                            {
+                                "label": "Token URI",
+                                "path": "tokenURI"
+                            },
+                            {
+                                "label": "Token Supply",
+                                "path": "supply"
+                            },
+                            {
+                                "label": "Creator account address",
+                                "path": "creators.[].account"
+                            },
+                            {
+                                "label": "Creator value (10000 = 100%)",
+                                "path": "creators.[].value"
+                            },
+                            {
+                                "label": "Royalties account address",
+                                "path": "royalties.[].account"
+                            },
+                            {
+                                "label": "Royalties value (10000 = 100%)",
+                                "path": "royalties.[].value"
+                            }
+                        ],
+                        "label": "Lazy Mint ERC-1155"
+                    },
+                    "schema": {
+                        "Mint1155": [
+                            {
+                                "name": "tokenId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "supply",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "tokenURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "creators",
+                                "type": "Part[]"
+                            },
+                            {
+                                "name": "royalties",
+                                "type": "Part[]"
+                            }
+                        ],
+                        "Part": [
+                            {
+                                "name": "account",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint96"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Rarible"
+}
