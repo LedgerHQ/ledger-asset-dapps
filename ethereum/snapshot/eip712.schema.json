@@ -1,0 +1,98 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x0000000000000000000000000000000000000000",
+            "contractName": "Snapshot Vote",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Vote from",
+                                "path": "from"
+                            },
+                            {
+                                "label": "The space",
+                                "path": "space"
+                            },
+                            {
+                                "label": "Vote timestamp",
+                                "path": "timestamp"
+                            },
+                            {
+                                "label": "The proposal",
+                                "path": "proposal"
+                            },
+                            {
+                                "label": "Your vote",
+                                "path": "choice"
+                            },
+                            {
+                                "label": "The Reason",
+                                "path": "reason"
+                            },
+                            {
+                                "label": "The App",
+                                "path": "app"
+                            },
+                            {
+                                "label": "The metadata",
+                                "path": "metadata"
+                            }
+                        ],
+                        "label": "Vote Details"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            }
+                        ],
+                        "Vote": [
+                            {
+                                "name": "from",
+                                "type": "address"
+                            },
+                            {
+                                "name": "space",
+                                "type": "string"
+                            },
+                            {
+                                "name": "timestamp",
+                                "type": "uint64"
+                            },
+                            {
+                                "name": "proposal",
+                                "type": "string"
+                            },
+                            {
+                                "name": "choice",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "reason",
+                                "type": "string"
+                            },
+                            {
+                                "name": "app",
+                                "type": "string"
+                            },
+                            {
+                                "name": "metadata",
+                                "type": "string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Snapshot"
+}
