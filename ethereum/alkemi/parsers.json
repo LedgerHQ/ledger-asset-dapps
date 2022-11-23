@@ -127,7 +127,7 @@
                             "static": true
                         },
                         {
-                            "label": "Amount to Repay",
+                            "label": "Amount to repay",
                             "name": "liquidateAmount"
                         },
                         {
@@ -338,7 +338,7 @@
                             "static": true
                         },
                         {
-                            "label": "Amount to Repay",
+                            "label": "Amount to repay",
                             "name": "liquidateBorrow"
                         },
                         {
@@ -375,6 +375,11 @@
                     "functionType": "lend",
                     "options": {},
                     "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Deposit",
+                            "static": true
+                        },
                         {
                             "label": "Amount to deposit",
                             "name": "fromAmount"
