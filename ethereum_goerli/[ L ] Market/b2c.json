@@ -97,6 +97,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0xc02c6e8aa859ec56005568c9b1fc58e435c8bc52",
+            "contractName": "Ledger Fts",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
