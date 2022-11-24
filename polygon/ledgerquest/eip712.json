@@ -1,0 +1,66 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x33c6eec1723b12c46732f7ab41398de45641fa42",
+            "contractName": "LedgerQuest",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Receiver",
+                                "path": "receiver"
+                            },
+                            {
+                                "label": "Quest Type",
+                                "path": "categoryId"
+                            },
+                            {
+                                "label": "Collection",
+                                "path": "collectionId"
+                            }
+                        ],
+                        "label": "Mint"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Mint": [
+                            {
+                                "name": "receiver",
+                                "type": "address"
+                            },
+                            {
+                                "name": "categoryId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "collectionId",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "LedgerQuest"
+}
