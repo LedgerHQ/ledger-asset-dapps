@@ -139,6 +139,68 @@
                             "value": {
                                 "quantity": {
                                     "path": {
+                                        "default": "amountInMax"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "tokenIn"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amountOut",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "amountOut"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "pools",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "pools.-1"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "buyOnUniswapV2Fork",
+                    "functionType": "buy",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Maximum to send",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Amount to receive",
+                            "name": "amountOut"
+                        },
+                        {
+                            "label": "Pools",
+                            "name": "pools"
+                        }
+                    ],
+                    "selector": "0xb2f1e6db"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
                                         "default": "data.fromAmount"
                                     }
                                 },
@@ -516,6 +578,69 @@
                         }
                     ],
                     "selector": "0xf5661034"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "fromAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "default": "amountIn"
+                                    }
+                                },
+                                "token": {
+                                    "path": {
+                                        "default": "tokenIn"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "amountOutMin",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "amountOutMin"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "raw",
+                            "name": "pools",
+                            "value": {
+                                "uint256": {
+                                    "path": {
+                                        "default": "pools.-1"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "swapOnUniswapV2Fork",
+                    "functionType": "swap",
+                    "options": {
+                        "assertEthAmountIsZero": false,
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Amount to send",
+                            "name": "fromAmount"
+                        },
+                        {
+                            "label": "Minimum to receive",
+                            "name": "amountOutMin"
+                        },
+                        {
+                            "label": "Pools",
+                            "name": "pools"
+                        }
+                    ],
+                    "selector": "0x0b86a4c1"
                 },
                 {
                     "arguments": [
