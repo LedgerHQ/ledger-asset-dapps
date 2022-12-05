@@ -49,6 +49,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0xd3214ef2ae5327468521be8d567e587b38e8ad79",
+            "contractName": "Ledger Stax",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
