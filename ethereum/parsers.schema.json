@@ -185,7 +185,10 @@
                                         "buy",
                                         "approve",
                                         "transfer_erc721",
-                                        "transfer_erc1155"
+                                        "transfer_erc1155",
+                                        "approve_erc721",
+                                        "approve_erc1155",
+                                        "mint_erc721"
                                     ]
                                 },
                                 "options": {
@@ -239,6 +242,10 @@
                 "parsers"
             ],
             "type": "array"
+        },
+        "external_requirement": {
+            "pattern": "^[a-z]+$",
+            "type": "string"
         },
         "id": {
             "pattern": "^[a-z]+$",
