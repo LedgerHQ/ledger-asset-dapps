@@ -1,0 +1,27 @@
+{
+    "blockchainName": "ethereum_goerli",
+    "chainId": 5,
+    "contracts": [
+        {
+            "address": "0xa0ef1f0bdb6c17bdf6be66a23e610885e7a25a88",
+            "contractName": "ExchangeV3",
+            "selectors": {
+                "0x09824a80": {
+                    "erc20OfInterest": [
+                        "tokenAddress"
+                    ],
+                    "method": "registerToken",
+                    "plugin": "DeGate"
+                },
+                "0x8070f2ca": {
+                    "erc20OfInterest": [
+                        "tokenAddress"
+                    ],
+                    "method": "deposit",
+                    "plugin": "DeGate"
+                }
+            }
+        }
+    ],
+    "name": "DeGate"
+}
