@@ -11,6 +11,7 @@ from validation.validators import (
     run_validations,
     schema_validator,
     eip712_schema_validator,
+    missing_abi_validator
 )
 
 logging.basicConfig(level="INFO")
@@ -37,6 +38,8 @@ VALIDATORS = {
     "json": ("./*/**/*.json", format_validator),
     "endlines": ("./*/**/*.json", endlines_validator),
     "eip712_schema": ("./*/**/eip712.json", eip712_schema_validator),
+    "parsers_abi_not_missing": ("./*/**/parsers.json", missing_abi_validator),
+    "b2c_abi_not_missing": ("./*/**/b2c.json", missing_abi_validator),
     **SCHEMA_VALIDATORS
 }
 

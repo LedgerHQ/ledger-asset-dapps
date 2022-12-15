@@ -3,6 +3,7 @@ import glob
 import json
 import logging
 from json.decoder import JSONDecodeError
+from pathlib import Path
 from typing import Callable, Tuple
 
 from jsonschema import ValidationError
@@ -94,5 +95,16 @@ def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
             return False, "Not formatted, corrected"
     except JSONDecodeError as err:
         logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
+        return False, str(err)
+    return True, ""
+
+
+def missing_abi_validator(data: str, filename: str) -> Tuple[bool, str]:
+    try:
+        dapp_addresses = set(contract.get("address", "").lower() for contract in json.loads(data).get("contracts", []))
+        abi_addresses = set(p.name.split(".")[0].lower() for p in Path(filename).parent.glob("abis/*.abi.json"))
+        if not dapp_addresses.issubset(abi_addresses):
+            return False, f"Missing ABI for contract {dapp_addresses.difference(abi_addresses)}"
+    except Exception as err:
         return False, str(err)
     return True, ""
