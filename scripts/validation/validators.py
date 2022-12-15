@@ -2,6 +2,7 @@
 import glob
 import json
 import logging
+import re
 from json.decoder import JSONDecodeError
 from pathlib import Path
 from typing import Callable, Tuple
@@ -108,3 +109,12 @@ def missing_abi_validator(data: str, filename: str) -> Tuple[bool, str]:
     except Exception as err:
         return False, str(err)
     return True, ""
+
+
+def abi_filename_validator(data: str, filename: str) -> Tuple[bool, str]:
+    lowercase_address_regex = r"^0x[a-f0-9]{40}\.abi\.json$"
+    if re.match(lowercase_address_regex, Path(filename).name):
+        return True, ""
+    else:
+        return False, f"ABI filename is not matching {lowercase_address_regex}"
+
