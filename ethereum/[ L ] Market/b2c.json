@@ -65,6 +65,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0xb7cd561bcfa998700eba50b18f765bb92553426f",
+            "contractName": "Forgotten Runes",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
