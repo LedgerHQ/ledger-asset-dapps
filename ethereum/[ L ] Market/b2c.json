@@ -1,71 +1,87 @@
 {
-    "blockchainName": "ethereum",
-    "chainId": 1,
-    "contracts": [
-        {
-            "address": "0x33c6eec1723b12c46732f7ab41398de45641fa42",
-            "contractName": "[ L ] Market",
-            "selectors": {
-                "0x1249c58b": {
-                    "erc20OfInterest": [],
-                    "method": "mint",
-                    "plugin": "[ L ] Market"
-                },
-                "0xc111fb91": {
-                    "erc20OfInterest": [],
-                    "method": "preSaleMint",
-                    "plugin": "[ L ] Market"
-                }
-            }
+  "blockchainName": "ethereum",
+  "chainId": 1,
+  "contracts": [
+    {
+      "address": "0x33c6eec1723b12c46732f7ab41398de45641fa42",
+      "contractName": "[ L ] Market",
+      "selectors": {
+        "0x1249c58b": {
+          "erc20OfInterest": [],
+          "method": "mint",
+          "plugin": "[ L ] Market"
         },
-        {
-            "address": "0x880ed873dde83f533564903c8aebb6e9fa9f8c81",
-            "contractName": "BrickNFT",
-            "selectors": {
-                "0x827481ea": {
-                    "erc20OfInterest": [],
-                    "method": "preSaleMint",
-                    "plugin": "[ L ] Market"
-                },
-                "0xa0712d68": {
-                    "erc20OfInterest": [],
-                    "method": "mint",
-                    "plugin": "[ L ] Market"
-                }
-            }
-        },
-        {
-            "address": "0x20ecda43fdd84290c50dec35fe03b35f9bf2c6dc",
-            "contractName": "[ Ledger ] Market – Deadfellaz Nano X",
-            "selectors": {
-                "0x827481ea": {
-                    "erc20OfInterest": [],
-                    "method": "preSaleMint",
-                    "plugin": "[ L ] Market"
-                },
-                "0xa0712d68": {
-                    "erc20OfInterest": [],
-                    "method": "mint",
-                    "plugin": "[ L ] Market"
-                }
-            }
-        },
-        {
-            "address": "0xd3214ef2ae5327468521be8d567e587b38e8ad79",
-            "contractName": "Ledger Stax",
-            "selectors": {
-                "0x827481ea": {
-                    "erc20OfInterest": [],
-                    "method": "preSaleMint",
-                    "plugin": "[ L ] Market"
-                },
-                "0xa0712d68": {
-                    "erc20OfInterest": [],
-                    "method": "mint",
-                    "plugin": "[ L ] Market"
-                }
-            }
+        "0xc111fb91": {
+          "erc20OfInterest": [],
+          "method": "preSaleMint",
+          "plugin": "[ L ] Market"
         }
-    ],
-    "name": "[ L ] Market"
+      }
+    },
+    {
+      "address": "0x880ed873dde83f533564903c8aebb6e9fa9f8c81",
+      "contractName": "BrickNFT",
+      "selectors": {
+        "0x827481ea": {
+          "erc20OfInterest": [],
+          "method": "preSaleMint",
+          "plugin": "[ L ] Market"
+        },
+        "0xa0712d68": {
+          "erc20OfInterest": [],
+          "method": "mint",
+          "plugin": "[ L ] Market"
+        }
+      }
+    },
+    {
+      "address": "0x20ecda43fdd84290c50dec35fe03b35f9bf2c6dc",
+      "contractName": "[ Ledger ] Market – Deadfellaz Nano X",
+      "selectors": {
+        "0x827481ea": {
+          "erc20OfInterest": [],
+          "method": "preSaleMint",
+          "plugin": "[ L ] Market"
+        },
+        "0xa0712d68": {
+          "erc20OfInterest": [],
+          "method": "mint",
+          "plugin": "[ L ] Market"
+        }
+      }
+    },
+    {
+      "address": "0xd3214ef2ae5327468521be8d567e587b38e8ad79",
+      "contractName": "Ledger Stax",
+      "selectors": {
+        "0x827481ea": {
+          "erc20OfInterest": [],
+          "method": "preSaleMint",
+          "plugin": "[ L ] Market"
+        },
+        "0xa0712d68": {
+          "erc20OfInterest": [],
+          "method": "mint",
+          "plugin": "[ L ] Market"
+        }
+      }
+    },
+    {
+      "address": "0xb7cd561bcfa998700eba50b18f765bb92553426f",
+      "contractName": "Forgotten Runes",
+      "selectors": {
+        "0x827481ea": {
+          "erc20OfInterest": [],
+          "method": "preSaleMint",
+          "plugin": "[ L ] Market"
+        },
+        "0xa0712d68": {
+          "erc20OfInterest": [],
+          "method": "mint",
+          "plugin": "[ L ] Market"
+        }
+      }
+    }
+  ],
+  "name": "[ L ] Market"
 }
