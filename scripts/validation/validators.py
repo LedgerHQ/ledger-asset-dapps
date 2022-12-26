@@ -125,4 +125,6 @@ def abi_filename_validator(data: str, filename: str) -> Tuple[bool, str]:
     if re.match(lowercase_address_regex, Path(filename).name):
         return True, ""
     else:
+        # import os
+        # os.rename(filename, filename.lower())
         return False, f"ABI filename is not matching {lowercase_address_regex}"

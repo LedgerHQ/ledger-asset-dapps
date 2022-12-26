@@ -42,11 +42,6 @@
                                 "default",
                                 "transaction"
                             ]
-                        },
-                        {
-                            "required": [
-                                "binary"
-                            ]
                         }
                     ],
                     "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
@@ -110,8 +105,7 @@
                                                     "boolean",
                                                     "eip55",
                                                     "percentage",
-                                                    "raw",
-                                                    "address"
+                                                    "raw"
                                                 ]
                                             },
                                             "name": {
