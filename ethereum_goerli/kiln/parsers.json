@@ -3,8 +3,8 @@
     "chainId": 5,
     "contracts": [
         {
-            "address": "0x9562b1515E32c13838CB3df27F967f5Fb6f80D3e",
-            "name": "kiln",
+            "address": "0x9c1D4220cA82115167A5da4c00c062C78Fd3D3F8",
+            "name": "Kiln Staking Contract",
             "parsers": [
                 {
                     "arguments": [
@@ -22,18 +22,6 @@
                                 }
                             }
                         },
-                        {
-                            "format": "eip55",
-                            "label": "Withdrawal addr.",
-                            "name": "_withdraw",
-                            "value": {
-                                "address": {
-                                    "path": {
-                                        "default": "_withdrawer"
-                                    }
-                                }
-                            }
-                        }
                     ],
                     "functionName": "deposit",
                     "functionType": "stake",
@@ -45,20 +33,90 @@
                             "label": "Amount to stake",
                             "name": "amountToStake"
                         },
+                    ],
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                       
                         {
-                            "label": "Withdrawal addr.",
-                            "name": "_withdraw"
+                            "format": "eip55",
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
                         }
+                    ],
+                    "functionName": "Withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Validator adddr.",
+                            "name": "_validatorAddr"
+                        },
                     ],
                     "selector": "0xf340fa01"
                 },
                 {
-                    "arguments": [],
-                    "functionName": "deposit",
-                    "functionType": "stake",
+                    "arguments": [
+                       
+                        {
+                            "format": "eip55",
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Withdraw CL rewards",
+                    "functionType": "withdraw",
                     "options": {},
-                    "selector": "0xd0e30db0"
-                }
+                    "screen": [
+                        {
+                            "label": "Validator adddr.",
+                            "name": "_validatorAddr"
+                        },
+                    ],
+                    "selector": "0x2ba03a79"
+                },
+                {
+                    "arguments": [
+                       
+                        {
+                            "format": "eip55",
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Withdraw EL rewards",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Validator adddr.",
+                            "name": "_validatorAddr"
+                        },
+                    ],
+                    "selector": "0xbf509bd4"
+                },  
             ]
         }
     ],
