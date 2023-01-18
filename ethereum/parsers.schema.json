@@ -1,173 +1,135 @@
 {
-    "$defs": {
-        "argumentValue": {
-            "additionalProperties": false,
-            "properties": {
-                "constant": {
-                    "description": "A constant value, independant of the contract data to parse. Can be used to handle implicit tokens definitions.",
-                    "type": "string"
-                },
-                "oneOf": [
-                    {
-                        "required": [
-                            "path"
-                        ]
-                    },
-                    {
-                        "required": [
-                            "constant"
-                        ]
-                    }
-                ],
-                "path": {
-                    "additionalProperties": false,
-                    "anyOf": [
-                        {
-                            "required": [
-                                "default"
-                            ]
-                        },
-                        {
-                            "required": [
-                                "binary"
-                            ]
-                        },
-                        {
-                            "required": [
-                                "transaction"
-                            ]
-                        },
-                        {
-                            "required": [
-                                "default",
-                                "transaction"
-                            ]
-                        }
-                    ],
-                    "description": "Defines the paths to use to extract the argument's value, either in the contract data or in the transaction data.",
-                    "properties": {
-                        "binary": {
-                            "type": "string"
-                        },
-                        "default": {
-                            "type": "string"
-                        },
-                        "transaction": {
-                            "type": "string"
-                        }
-                    },
-                    "type": "object"
-                }
-            },
-            "type": "object"
-        }
-    },
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "additionalProperties": false,
-    "description": "Description of a DApp and all the contracts linked to it.",
+    "$schema": "http://json-schema.org/draft-07/schema#",
     "properties": {
         "blockchainName": {
-            "enum": [
-                "ethereum"
-            ]
+            "type": "string"
         },
         "chainId": {
-            "enum": [
-                1
-            ]
+            "type": "number"
         },
         "contracts": {
-            "additionalProperties": false,
-            "description": "The different contracts linked to the over-arching DApp.",
             "items": {
                 "properties": {
                     "address": {
-                        "pattern": "^0x[a-fA-F0-9]{40}$",
                         "type": "string"
                     },
                     "name": {
                         "type": "string"
                     },
                     "parsers": {
-                        "description": "Description of contract's functions along with the arguments we want to parse and validate.",
                         "items": {
-                            "additionalProperties": false,
                             "properties": {
                                 "arguments": {
-                                    "description": "Arguments that we want to display on the device for user validation.",
                                     "items": {
                                         "properties": {
                                             "format": {
-                                                "description": "The format (different from the type) describes how the parsed argument should be displayed on the device.",
-                                                "enum": [
-                                                    "amount",
-                                                    "ascii",
-                                                    "boolean",
-                                                    "eip55",
-                                                    "percentage",
-                                                    "raw"
-                                                ]
+                                                "type": "string"
                                             },
                                             "name": {
-                                                "description": "Internal name of the argument, can be different from the name in the ABI.",
                                                 "type": "string"
                                             },
                                             "value": {
-                                                "additionalProperties": false,
-                                                "description": "Contains the paths to read in the data. The exact schema of this object depends on the content of `value.type`",
-                                                "oneOf": [
-                                                    {
-                                                        "name": "AmountValue",
-                                                        "required": [
-                                                            "quantity",
-                                                            "token"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "name": "AddressValue",
-                                                        "required": [
-                                                            "address"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "name": "NumberValue",
-                                                        "required": [
-                                                            "uint256"
-                                                        ]
-                                                    },
-                                                    {
-                                                        "name": "BooleanValue",
-                                                        "required": [
-                                                            "boolean"
-                                                        ]
-                                                    }
-                                                ],
                                                 "properties": {
-                                                    "address": {
-                                                        "$ref": "#/$defs/argumentValue"
+                                                    "amount": {
+                                                        "properties": {
+                                                            "tokenId": {
+                                                                "properties": {
+                                                                    "literal": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "literal"
+                                                                ],
+                                                                "type": "object"
+                                                            },
+                                                            "value": {
+                                                                "properties": {
+                                                                    "atpPropertyReference": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "path": {
+                                                                        "properties": {
+                                                                            "abi_path": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "binary_path": {
+                                                                                "properties": {
+                                                                                    "binary": {
+                                                                                        "type": "string"
+                                                                                    },
+                                                                                    "type": {
+                                                                                        "type": "string"
+                                                                                    }
+                                                                                },
+                                                                                "required": [
+                                                                                    "binary",
+                                                                                    "type"
+                                                                                ],
+                                                                                "type": "object"
+                                                                            }
+                                                                        },
+                                                                        "required": [],
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "required": [],
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "tokenId",
+                                                            "value"
+                                                        ],
+                                                        "type": "object"
                                                     },
-                                                    "boolean": {
-                                                        "$ref": "#/$defs/argumentValue"
-                                                    },
-                                                    "quantity": {
-                                                        "$ref": "#/$defs/argumentValue"
-                                                    },
-                                                    "token": {
-                                                        "$ref": "#/$defs/argumentValue"
-                                                    },
-                                                    "uint256": {
-                                                        "$ref": "#/$defs/argumentValue"
+                                                    "terminalValue": {
+                                                        "properties": {
+                                                            "path": {
+                                                                "properties": {
+                                                                    "abi_path": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "binary_path": {
+                                                                        "properties": {
+                                                                            "binary": {
+                                                                                "type": "string"
+                                                                            },
+                                                                            "type": {
+                                                                                "type": "string"
+                                                                            }
+                                                                        },
+                                                                        "required": [
+                                                                            "binary",
+                                                                            "type"
+                                                                        ],
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "required": [],
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "path"
+                                                        ],
+                                                        "type": "object"
                                                     }
                                                 },
+                                                "required": [],
                                                 "type": "object"
                                             }
                                         },
+                                        "required": [
+                                            "format",
+                                            "name",
+                                            "value"
+                                        ],
                                         "type": "object"
                                     },
                                     "type": "array"
                                 },
                                 "functionName": {
-                                    "description": "Name displayed on the device to allow the user to identify the function called.",
                                     "type": "string"
                                 },
                                 "functionType": {
@@ -197,55 +159,116 @@
                                     ]
                                 },
                                 "options": {
-                                    "description": "TBD",
+                                    "properties": {
+                                        "ethContractAddress": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [],
                                     "type": "object"
                                 },
-                                "screen": {
-                                    "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
-                                    "items": {
-                                        "properties": {
-                                            "label": {
-                                                "description": "Label displayed on the device to allow the user to identify the argument.",
-                                                "type": "string"
+                                "screens": {
+                                    "properties": {
+                                        "blue_screens": {
+                                            "items": {
+                                                "properties": {
+                                                    "key_value_screen": {
+                                                        "properties": {
+                                                            "properties": {
+                                                                "items": {
+                                                                    "properties": {
+                                                                        "property_ref": {
+                                                                            "properties": {
+                                                                                "key": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "label": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "key",
+                                                                                "label"
+                                                                            ],
+                                                                            "type": "object"
+                                                                        },
+                                                                        "static_entry": {
+                                                                            "properties": {
+                                                                                "label": {
+                                                                                    "type": "string"
+                                                                                },
+                                                                                "value": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            },
+                                                                            "required": [
+                                                                                "label",
+                                                                                "value"
+                                                                            ],
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "required": [],
+                                                                    "type": "object"
+                                                                },
+                                                                "type": "array"
+                                                            },
+                                                            "skip_subheader": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "subtitle": {
+                                                                "type": "string"
+                                                            },
+                                                            "title": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "properties",
+                                                            "skip_subheader",
+                                                            "subtitle",
+                                                            "title"
+                                                        ],
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "key_value_screen"
+                                                ],
+                                                "type": "object"
                                             },
-                                            "name": {
-                                                "description": "Name of the arguments, should match one existing arg from arguments.",
-                                                "type": "string"
-                                            },
-                                            "static": {
-                                                "description": "The screen entry should be defined as a static entry",
-                                                "type": "boolean"
-                                            }
-                                        },
-                                        "type": "object"
+                                            "type": "array"
+                                        }
                                     },
-                                    "type": "array"
+                                    "required": [
+                                        "blue_screens"
+                                    ],
+                                    "type": "object"
                                 },
                                 "selector": {
-                                    "description": "Unique identifier of the function in the contract.",
-                                    "pattern": "^0x[a-f0-9]{8}$",
                                     "type": "string"
                                 }
                             },
                             "required": [
-                                "functionType",
+                                "arguments",
                                 "functionName",
+                                "functionType",
                                 "options",
-                                "selector",
-                                "arguments"
+                                "screens",
+                                "selector"
                             ],
                             "type": "object"
                         },
                         "type": "array"
                     }
                 },
+                "required": [
+                    "address",
+                    "name",
+                    "parsers"
+                ],
                 "type": "object"
             },
-            "required": [
-                "name",
-                "address",
-                "parsers"
-            ],
             "type": "array"
         },
         "external_requirement": {
@@ -257,7 +280,6 @@
             "type": "string"
         },
         "name": {
-            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },
@@ -268,5 +290,6 @@
         "id",
         "name"
     ],
+    "title": "Generated schema for Root",
     "type": "object"
 }
