@@ -1,6 +1,4 @@
 {
-    "id": "lido",
-    "name": "Lido",
     "blockchainName": "ethereum",
     "chainId": 1,
     "contracts": [
@@ -14,10 +12,18 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "wrapAmount",
                             "value": {
-				"amount": {
-				    "tokenId": { "literal": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84" },
-				    "value": { "path": { "abi_path": "_stETHAmount" } }
-				}
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_stETHAmount"
+                                        }
+                                    }
+                                }
                             }
                         }
                     ],
@@ -25,31 +31,49 @@
                     "functionType": "wrap",
                     "options": {},
                     "screens": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "title": "APPROVE CONTRACT DATA",
-				    "subtitle": " ",
-				    "skip_subheader": false,
-				    "properties": [
-					{ "static_entry": { "label": "Function", "value": "Wrap stETH"} },
-					{ "property_ref": { "label": "Amount to wrap", "key": "sci.eth.arg.wrapAmount" } }
-				    ]
-				}
-			    }
-			]
-		    },
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Wrap stETH"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.wrapAmount",
+                                                "label": "Amount to wrap"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xea598cb0"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "unwrapAmount",
-			    "value": {
+                            "value": {
                                 "amount": {
-                                    "tokenId": { "literal": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" },
-                                    "value": { "path": { "abi_path": "_wstETHAmount"} }
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_wstETHAmount"
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -58,61 +82,104 @@
                     "functionType": "unwrap",
                     "options": {},
                     "screens": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "title": "APPROVE CONTRACT DATA",
-				    "subtitle": " ",
-				    "skip_subheader": false,
-				    "properties": [
-					{ "static_entry": { "label": "Function", "value": "Unwrap wstETH"} },
-					{ "property_ref": { "label": "Amount to unwrap", "key": "sci.eth.arg.unwrapAmount" } }
-				    ]
-				}
-			    }
-			]
-		    },
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Unwrap wstETH"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.unwrapAmount",
+                                                "label": "Amount to unwrap"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xde0e9a3e"
                 },
                 {
                     "arguments": [
                         {
-                            "name": "addressToApprove",
                             "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "addressToApprove",
                             "value": {
-				"terminalValue": { "path": { "binary_path": { "type": "SOLIDITYTYPE_ADDRESS", "binary": "(0)" } } }
+                                "terminalValue": {
+                                    "path": {
+                                        "binary_path": {
+                                            "binary": "(0)",
+                                            "type": "SOLIDITYTYPE_ADDRESS"
+                                        }
+                                    }
+                                }
                             }
                         },
                         {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "approvedAmount",
-                            "format": "amount",
                             "value": {
-				"amount": {
-				    "tokenId": { "literal": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0" },
-				    "value": { "path": { "binary_path": { "type": "SOLIDITYTYPE_UINT256", "binary": "(1)"} } }
-				}
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0x7f39C581F595B53c5cb19bD0b3f8dA6c935E2Ca0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "binary_path": {
+                                                "binary": "(1)",
+                                                "type": "SOLIDITYTYPE_UINT256"
+                                            }
+                                        }
+                                    }
+                                }
                             }
-			}
+                        }
                     ],
                     "functionName": "approve",
                     "functionType": "approve",
                     "options": {},
                     "screens": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "title": "APPROVE CONTRACT DATA",
-				    "subtitle": " ",
-				    "skip_subheader": false,
-				    "properties": [
-					{ "static_entry": { "label": "Function", "value": "Approve"} },
-					{ "property_ref": { "label": "Amount to approve", "key": "sci.eth.arg.approvedAmount" } },
-					{ "property_ref": { "label": "Address to approve", "key": "sci.eth.arg.addressToApprove" } }
-				    ]
-				}
-			    }
-			]
-		    },
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approvedAmount",
+                                                "label": "Amount to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.addressToApprove",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x095ea7b3"
                 }
             ]
@@ -124,20 +191,30 @@
                 {
                     "arguments": [
                         {
-                            "name": "amountToStake",
                             "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "amountToStake",
                             "value": {
                                 "amount": {
-				    "tokenId": { "literal": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE" },
-				    "value": { "atpPropertyReference": "amount" }
-				}
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                        }
+                                    },
+                                    "value": {
+                                        "atpPropertyReference": "amount"
+                                    }
+                                }
                             }
                         },
                         {
-                            "name": "referralAddress",
                             "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "referralAddress",
                             "value": {
-                                "terminalValue": { "path": { "abi_path": "_referral"} }
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_referral"
+                                    }
+                                }
                             }
                         }
                     ],
@@ -147,39 +224,67 @@
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
                     "screens": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "title": "APPROVE CONTRACT DATA",
-				    "subtitle": " ",
-				    "skip_subheader": false,
-				    "properties": [
-					{ "static_entry": { "label": "Function", "value": "Stake ETH"} },
-					{ "property_ref": { "label": "Amount to stake", "key": "sci.eth.arg.amountToStake" } }
-				    ]
-				}
-			    }
-			]
-		    },
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Stake ETH"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amountToStake",
+                                                "label": "Amount to stake"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa1903eab"
                 },
                 {
                     "arguments": [
                         {
-                            "name": "addressToApprove",
                             "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "addressToApprove",
                             "value": {
-				"terminalValue": { "path": { "binary_path": { "type": "SOLIDITYTYPE_ADDRESS", "binary": "(0)" } } }
+                                "terminalValue": {
+                                    "path": {
+                                        "binary_path": {
+                                            "binary": "(0)",
+                                            "type": "SOLIDITYTYPE_ADDRESS"
+                                        }
+                                    }
+                                }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "approvedAmount",
                             "value": {
-				"amount": {
-				    "tokenId": { "literal": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84" },
-				    "value": { "path": { "binary_path": { "type": "SOLIDITYTYPE_UINT256", "binary": "(1)"} } }
-				}
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0xae7ab96520DE3A18E5e111B5EaAb095312D7fE84"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "binary_path": {
+                                                "binary": "(1)",
+                                                "type": "SOLIDITYTYPE_UINT256"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     ],
@@ -187,24 +292,41 @@
                     "functionType": "approve",
                     "options": {},
                     "screens": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "title": "APPROVE CONTRACT DATA",
-				    "subtitle": " ",
-				    "skip_subheader": false,
-				    "properties": [
-					{ "static_entry": { "label": "Function", "value": "Approve"} },
-					{ "property_ref": { "label": "Amount to approve", "key": "sci.eth.arg.approvedAmount" } },
-					{ "property_ref": { "label": "Address to approve", "key": "sci.eth.arg.addressToApprove" } }
-				    ]
-				}
-			    }
-			]
-		    },
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approvedAmount",
+                                                "label": "Amount to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.addressToApprove",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x095ea7b3"
                 }
             ]
         }
-    ]
+    ],
+    "id": "lido",
+    "name": "Lido"
 }
