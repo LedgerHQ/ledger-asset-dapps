@@ -9,39 +9,41 @@
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "rateMode"
+                                        "abi_path": "rateMode"
                                     }
                                 }
                             }
@@ -50,42 +52,60 @@
                     "functionName": "repay",
                     "functionType": "repay_loan",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Repay loan",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to repay",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Debt holder",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Repay loan"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to repay",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Debt holder",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x573ade81"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "asset",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "asset"
+                                        "abi_path": "asset"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "boolean",
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "useAsCollateral",
                             "value": {
                                 "boolean": {
@@ -99,48 +119,66 @@
                     "functionName": "setUserUseReserveAsCollateral",
                     "functionType": "configure",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Set asset as collateral",
-                            "static": true
-                        },
-                        {
-                            "label": "Asset to be set as collateral",
-                            "name": "asset"
-                        },
-                        {
-                            "label": "Use as collateral",
-                            "name": "useAsCollateral"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Set asset as collateral"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Asset to be set as collateral",
+						"key": "sci.eth.arg.asset"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Use as collateral",
+						"key": "sci.eth.arg.useAsCollateral"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x5a3b74b9"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "toAddress",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
@@ -149,43 +187,59 @@
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Withdraw",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to withdraw",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "toAddress"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Withdraw"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to withdraw",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Recipient",
+						"key": "sci.eth.arg.toAddress"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x69328dec"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "address",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "asset"
+                                        "abi_path": "asset"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "rateMode"
+                                        "abi_path": "rateMode"
                                     }
                                 }
                             }
@@ -194,59 +248,77 @@
                     "functionName": "swapBorrowRateMode",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Swap interest rate mode",
-                            "static": true
-                        },
-                        {
-                            "label": "Set rate mode to",
-                            "name": "rateMode"
-                        },
-                        {
-                            "label": "For asset",
-                            "name": "address"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Swap interest rate mode"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Set rate mode to",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "For asset",
+						"key": "sci.eth.arg.address"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x94ba89a2"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "interestRateMode"
+                                        "abi_path": "interestRateMode"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
@@ -255,52 +327,72 @@
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Borrow",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to borrow",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Debtor",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Borrow"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to borrow",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Debtor",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0xa415bcad"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
@@ -309,21 +401,37 @@
                     "functionName": "deposit",
                     "functionType": "lend",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Supply",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to supply",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Collateral recipient",
-                            "name": "onBehalfOf"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Supply"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to supply",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Collateral recipient",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0xe8eda9df"
                 }
             ]
@@ -335,39 +443,41 @@
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "rateMode"
+                                        "abi_path": "rateMode"
                                     }
                                 }
                             }
@@ -376,42 +486,60 @@
                     "functionName": "repay",
                     "functionType": "repay_loan",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Repay loan",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to repay",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Debt holder",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Repay loan"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to repay",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Debt holder",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x573ade81"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "asset",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "asset"
+                                        "abi_path": "asset"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "boolean",
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "useAsCollateral",
                             "value": {
                                 "boolean": {
@@ -425,43 +553,59 @@
                     "functionName": "setUserUseReserveAsCollateral",
                     "functionType": "configure",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Set asset as collateral",
-                            "static": true
-                        },
-                        {
-                            "label": "Asset to be set as collateral",
-                            "name": "asset"
-                        },
-                        {
-                            "label": "Use as collateral",
-                            "name": "useAsCollateral"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Set asset as collateral"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Asset to be set as collateral",
+						"key": "sci.eth.arg.asset"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Use as collateral",
+						"key": "sci.eth.arg.useAsCollateral"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x5a3b74b9"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "Address",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "asset"
+                                        "abi_path": "asset"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "rateMode"
+                                        "abi_path": "rateMode"
                                     }
                                 }
                             }
@@ -470,48 +614,66 @@
                     "functionName": "swapBorrowRateMode",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Swap interest rate mode",
-                            "static": true
-                        },
-                        {
-                            "label": "Set rate mode to",
-                            "name": "rateMode"
-                        },
-                        {
-                            "label": "For asset",
-                            "name": "Address"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Swap interest rate mode"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Set rate mode to",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "For asset",
+						"key": "sci.eth.arg.Address"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x94ba89a2"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "toAddress",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
@@ -520,59 +682,77 @@
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Withdraw",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to withdraw",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "toAddress"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Withdraw"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to withdraw",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Recipient",
+						"key": "sci.eth.arg.toAddress"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x69328dec"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "interestRateMode"
+                                        "abi_path": "interestRateMode"
                                     }
                                 }
                             }
@@ -581,52 +761,72 @@
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Borrow",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to borrow",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Debtor",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Borrow"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to borrow",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Debtor",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0xa415bcad"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+                                    "value": {
+					"path": {
+                                            "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"path": {
+                                            "abi_path": "asset"
+					}
                                     }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "asset"
-                                    }
-                                }
+				}
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
@@ -635,21 +835,37 @@
                     "functionName": "deposit",
                     "functionType": "lend",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Supply",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to supply",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Collateral recipient",
-                            "name": "onBehalfOf"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Supply"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to supply",
+						"key": "sci.eth.arg.fromAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Collateral recipient",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0xe8eda9df"
                 }
             ]
@@ -661,37 +877,25 @@
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "suppliedAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "transaction": "amount"
-                                    }
-                                },
-                                "token": {
-                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                                }
-                            }
-                        },
-                        {
-                            "format": "eip55",
-                            "name": "lendingPool",
-                            "value": {
-                                "address": {
-                                    "path": {
-                                        "default": "lendingPool"
+				"amount": {
+				    "value": {
+					"path": {
+					    "abi_path": "lendingPool"
+					}
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
@@ -703,64 +907,84 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Supply ETH",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to supply",
-                            "name": "suppliedAmount"
-                        },
-                        {
-                            "label": "Collateral recipient",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Supply on",
-                            "name": "lendingPool"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Supply ETH"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to supply",
+						"key": "sci.eth.arg.suppliedAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Collateral recipient",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Supply on",
+						"key": "sci.eth.arg.lendingPool"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x474cf53d"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "lendingPool",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "lendingPool"
+                                        "abi_path": "lendingPool"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "recipient",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "withdrawnAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+				    "value": {
+					"path": {
+					    "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"literal": { "string": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE" }
                                     }
-                                },
-                                "token": {
-                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                                }
-                            }
+				}
+			    }
                         }
                     ],
                     "functionName": "withdrawETH",
@@ -769,61 +993,81 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Withdraw ETH",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to withdraw",
-                            "name": "withdrawnAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "recipient"
-                        },
-                        {
-                            "label": "Withdraw from",
-                            "name": "lendingPool"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Withdraw ETH"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to withdraw",
+						"key": "sci.eth.arg.withdrawnAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Recipient",
+						"key": "sci.eth.arg.recipient"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Withdraw from",
+						"key": "sci.eth.arg.lendingPool"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x80500d20"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "lendingPool",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "lendingPool"
+                                        "abi_path": "lendingPool"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "borrowedAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+				    "value": {
+					"path": {
+					    "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"literal": { "string": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE" }
                                     }
-                                },
-                                "token": {
-                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                                }
-                            }
+				}
+			    }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "interesRateMode"
+                                        "abi_path": "interesRateMode"
                                     }
                                 }
                             }
@@ -835,72 +1079,92 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Borrow ETH",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to borrow",
-                            "name": "borrowedAmount"
-                        },
-                        {
-                            "label": "Borrow from",
-                            "name": "lendingPool"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Borrow ETH"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to borrow",
+						"key": "sci.eth.arg.borrowedAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Borrow from",
+						"key": "sci.eth.arg.lendingPool"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x66514c97"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "lendingPool",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "lendingPool"
+                                        "abi_path": "lendingPool"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "repaidAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amount"
+				"amount": {
+				    "value": {
+					"path": {
+					    "abi_path": "amount"
+					}
+                                    },
+                                    "tokenId": {
+					"literal": { "string": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE" }
                                     }
-                                },
-                                "token": {
-                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
-                                }
-                            }
+				}
+			    }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "onBehalfOf",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "onBehalfOf"
+                                        "abi_path": "onBehalfOf"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "rateMode",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "rateMode"
+                                        "abi_path": "rateMode"
                                     }
                                 }
                             }
@@ -912,29 +1176,49 @@
                         "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Repay ETH loan",
-                            "static": true
-                        },
-                        {
-                            "label": "Amount to repay",
-                            "name": "repaidAmount"
-                        },
-                        {
-                            "label": "Debt holder",
-                            "name": "onBehalfOf"
-                        },
-                        {
-                            "label": "Repay to",
-                            "name": "lendingPool"
-                        },
-                        {
-                            "label": "Interest Rate Mode",
-                            "name": "rateMode"
-                        }
-                    ],
+                    "screen": {
+			"blue_screens": [
+			    {
+				"key_value_screen": {
+				    "properties": [
+					{
+					    "static_entry": {
+						"label": "Function",
+						"value": "Repay ETH loan"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Amount to repay",
+						"key": "sci.eth.arg.repaidAmount"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Debt holder",
+						"key": "sci.eth.arg.onBehalfOf"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Repay to",
+						"key": "sci.eth.arg.lendingPool"
+					    }
+					},
+					{
+					    "property_ref": {
+						"label": "Interest Rate Mode",
+						"key": "sci.eth.arg.rateMode"
+					    }
+					}
+				    ],
+				    "skip_subheader": false,
+				    "subtitle": " ",
+				    "title": "APPROVE CONTRACT DATA"
+				}
+			    }
+			]
+		    },
                     "selector": "0x02c5fcf8"
                 }
             ]
