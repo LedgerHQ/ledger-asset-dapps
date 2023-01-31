@@ -18,7 +18,7 @@
                                     }
                                 },
                                 "token": {
-                                    "constant":"0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                    "constant": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
                                 }
                             }
                         },
@@ -32,7 +32,6 @@
                                     }
                                 }
                             }
-
                         }
                     ],
                     "functionName": "delegateAmount",
@@ -42,7 +41,7 @@
                         {
                             "label": "Function",
                             "name": "Delegate MATIC",
-                            "static": true 
+                            "static": true
                         },
                         {
                             "label": "Amount to delegate",
@@ -56,7 +55,7 @@
                         {
                             "format": "eip55",
                             "name": "withdrawn rewards",
-                            "value":{
+                            "value": {
                                 "address": {
                                     "constant": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
                                 }
@@ -65,8 +64,8 @@
                     ],
                     "functionName": "withdrawRewards",
                     "functionType": "withdraw rewards",
-                    "options":{},
-                    "screens":[
+                    "options": {},
+                    "screens": [
                         {
                             "label": "Function",
                             "name": "Withdraw MATIC rewards",
@@ -74,14 +73,13 @@
                         }
                     ],
                     "selector": "0xc7b8981c"
-
                 },
                 {
-                    "arguments":[
+                    "arguments": [
                         {
                             "format": "eip55",
                             "name": "restaked rewards",
-                            "value":{
+                            "value": {
                                 "address": {
                                     "constant": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
                                 }
@@ -90,8 +88,8 @@
                     ],
                     "functionName": "restakeRewards",
                     "functionType": "restake rewards",
-                    "options":{},
-                    "screens":[
+                    "options": {},
+                    "screens": [
                         {
                             "label": "Function",
                             "name": "Restake MATIC rewards",
@@ -111,7 +109,7 @@
                                     }
                                 },
                                 "token": {
-                                    "constant":"0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                    "constant": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
                                 }
                             }
                         },
@@ -125,7 +123,6 @@
                                     }
                                 }
                             }
-
                         }
                     ],
                     "functionName": "unbondStake",
@@ -135,7 +132,7 @@
                         {
                             "label": "Function",
                             "name": "Unbond MATIC",
-                            "static": true 
+                            "static": true
                         },
                         {
                             "label": "Amount to unbond",
@@ -156,7 +153,6 @@
                                     }
                                 }
                             }
-
                         }
                     ],
                     "functionName": "claimUnstakedMatic",
@@ -166,7 +162,7 @@
                         {
                             "label": "Function",
                             "name": "Claim MATIC",
-                            "static": true 
+                            "static": true
                         },
                         {
                             "label": "Unbond nonce",
@@ -193,7 +189,7 @@
                                     }
                                 },
                                 "token": {
-                                    "constant":"0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                    "constant": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
                                 }
                             }
                         },
@@ -204,10 +200,9 @@
                                 "uint256": {
                                     "path": {
                                         "default": "fromValidatorId"
-                                    },
+                                    }
                                 }
                             }
-    
                         },
                         {
                             "format": "raw",
@@ -216,10 +211,9 @@
                                 "uint256": {
                                     "path": {
                                         "default": "toValidatorId"
-                                    },
+                                    }
                                 }
                             }
-    
                         }
                     ],
                     "functionName": "migrateStake",
@@ -229,7 +223,7 @@
                         {
                             "label": "Function",
                             "name": "Move MATIC stake",
-                            "static": true 
+                            "static": true
                         },
                         {
                             "label": "Amount to move",
@@ -246,12 +240,9 @@
                     ],
                     "selector": "0xfb1ef52c"
                 }
-
             ]
         }
     ],
     "id": "figment",
     "name": "Figment"
 }
-
-
