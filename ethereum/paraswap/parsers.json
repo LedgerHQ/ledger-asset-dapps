@@ -1066,8 +1066,10 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "label": "Amount to send",
-                                            "name": "fromAmount"
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to send"
+                                            }
                                         },
                                         {
                                             "property_ref": {

@@ -108,9 +108,9 @@
                             "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "useAsCollateral",
                             "value": {
-                                "boolean": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "useAsCollateral"
+                                        "abi_path": "useAsCollateral"
                                     }
                                 }
                             }
@@ -542,9 +542,9 @@
                             "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "useAsCollateral",
                             "value": {
-                                "boolean": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "useAsCollateral"
+                                        "abi_path": "useAsCollateral"
                                     }
                                 }
                             }
@@ -881,10 +881,24 @@
                             "name": "suppliedAmount",
                             "value": {
                                 "amount": {
-                                    "value": {
-                                        "path": {
-                                            "abi_path": "lendingPool"
+                                    "tokenId": {
+                                        "literal": {
+                                            "string": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                                         }
+                                    },
+                                    "value": {
+                                        "atpPropertyReference": "amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "lendingPool",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "lendingPool"
                                     }
                                 }
                             }
