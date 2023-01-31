@@ -37,7 +37,7 @@
                     "functionName": "delegateAmount",
                     "functionType": "delegate",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Delegate MATIC",
@@ -63,9 +63,9 @@
                         }
                     ],
                     "functionName": "withdrawRewards",
-                    "functionType": "withdraw rewards",
+                    "functionType": "claim_reward",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Withdraw MATIC rewards",
@@ -87,15 +87,16 @@
                         }
                     ],
                     "functionName": "restakeRewards",
-                    "functionType": "restake rewards",
+                    "functionType": "stake_reward",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Restake MATIC rewards",
                             "static": true
                         }
-                    ]
+                    ],
+                    "selector": "0x4f91440d"
                 },
                 {
                     "arguments": [
@@ -126,9 +127,9 @@
                         }
                     ],
                     "functionName": "unbondStake",
-                    "functionType": "unbond stake",
+                    "functionType": "unstake",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Unbond MATIC",
@@ -136,7 +137,7 @@
                         },
                         {
                             "label": "Amount to unbond",
-                            "name": "withdrawAmount"
+                            "name": "unboundedAmount"
                         }
                     ],
                     "selector": "0xc83ec04d"
@@ -156,9 +157,9 @@
                         }
                     ],
                     "functionName": "claimUnstakedMatic",
-                    "functionType": "claim stake",
+                    "functionType": "claim_stake",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Claim MATIC",
@@ -217,9 +218,9 @@
                         }
                     ],
                     "functionName": "migrateStake",
-                    "functionType": "move stake",
+                    "functionType": "move_stake",
                     "options": {},
-                    "screens": [
+                    "screen": [
                         {
                             "label": "Function",
                             "name": "Move MATIC stake",
