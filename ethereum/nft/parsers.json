@@ -12,76 +12,76 @@
                             "format": "ARGUMENTFORMAT_EIP55",
                             "name": "from",
                             "value": {
-				"terminalValue": {
-				    "path": {
-					"abi_path": "from"
-				    }
-				}
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "from"
+                                    }
+                                }
                             }
                         },
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-				"terminalValue": {
-				    "path": {
-					"abi_path": "to"
-				    }
-				}
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "to"
+                                    }
+                                }
                             }
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-				"terminalValue": {
-				    "path": {
-					"abi_path": "tokenId"
-				    }
-				}
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "tokenId"
+                                    }
+                                }
                             }
                         }
                     ],
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Transfer NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token ID",
-						"key": "sci.eth.arg.tokenID"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token sender",
-						"key": "sci.eth.arg.from"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token recipient",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x42842e0e"
                 },
                 {
@@ -123,43 +123,43 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Transfer NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token ID",
-						"key": "sci.eth.arg.tokenID"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token sender",
-						"key": "sci.eth.arg.from"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token recipient",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xb88d4fde"
                 },
                 {
@@ -190,37 +190,37 @@
                     "functionName": "approve",
                     "functionType": "approve_erc721",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Approve NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token to approve",
-						"key": "sci.eth.arg.tokenID"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Address to approve",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x095ea7b3"
                 },
                 {
@@ -251,37 +251,37 @@
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc721",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Set approval for all"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Operator",
-						"key": "sci.eth.arg.operator"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Approved",
-						"key": "sci.eth.arg._approved"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa22cb465"
                 },
                 {
@@ -301,31 +301,31 @@
                     "functionName": "mint",
                     "functionType": "mint_erc721",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Mint NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Receiver",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Mint NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Receiver"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x6a627842"
                 }
             ]
@@ -384,49 +384,49 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc1155",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Transfer NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token ID",
-						"key": "sci.eth.arg.tokenID"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Quantity",
-						"key": "sci.eth.arg.amount"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token sender",
-						"key": "sci.eth.arg.from"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token recipient",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf242432a"
                 },
                 {
@@ -479,49 +479,49 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc1155",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Transfer NFT"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token ID",
-						"key": "sci.eth.arg.tokenID"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Quantity",
-						"key": "sci.eth.arg.amount"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token sender",
-						"key": "sci.eth.arg.from"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Token recipient",
-						"key": "sci.eth.arg.to"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x0febdd49"
                 },
                 {
@@ -552,37 +552,37 @@
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc1155",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Set approval for all"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Operator",
-						"key": "sci.eth.arg.operator"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Approved",
-						"key": "sci.eth.arg.approved"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa22cb465"
                 }
             ]

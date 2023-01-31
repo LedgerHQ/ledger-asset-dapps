@@ -12,49 +12,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Borrow"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to borrow",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Borrow"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to borrow"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x4b8a3529"
                 },
                 {
@@ -63,49 +63,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "repayBorrow",
                     "functionType": "repay_loan",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Repay loan"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to repay",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Repay loan"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to repay"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xabdb5ea8"
                 },
                 {
@@ -114,18 +114,18 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "liquidateAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "requestedAmountClose"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "assetBorrow"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "requestedAmountClose"
+                                        }
                                     }
-				}
+                                }
                             }
                         },
                         {
@@ -154,43 +154,43 @@
                     "functionName": "liquidateBorrow",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Liquidate loan"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to repay",
-						"key": "sci.eth.arg.liquidateAmount"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Addr. to liquidate",
-						"key": "sci.eth.arg.targetAccount"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Collateral asset to receive",
-						"key": "sci.eth.arg.assetCollateral"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Liquidate loan"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.liquidateAmount",
+                                                "label": "Amount to repay"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.targetAccount",
+                                                "label": "Addr. to liquidate"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.assetCollateral",
+                                                "label": "Collateral asset to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xe61604cf"
                 },
                 {
@@ -199,49 +199,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "supply",
                     "functionType": "lend",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Deposit"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to deposit",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Deposit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to deposit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf2b9fdb8"
                 },
                 {
@@ -250,49 +250,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "requestedAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "requestedAmount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "requestedAmount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Withdraw"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to withdraw",
-						"key": "sci.eth.arg.requestedAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Withdraw"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.requestedAmount",
+                                                "label": "Amount to withdraw"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf3fef3a3"
                 }
             ]
@@ -307,49 +307,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "borrow",
                     "functionType": "borrow",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Borrow"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to borrow",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Borrow"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to borrow"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x4b8a3529"
                 },
                 {
@@ -358,49 +358,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "repayBorrow",
                     "functionType": "repay_loan",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Repay loan"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to repay",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Repay loan"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to repay"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xabdb5ea8"
                 },
                 {
@@ -409,18 +409,18 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "liquidateBorrow",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "requestedAmountClose"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "assetBorrow"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "requestedAmountClose"
+                                        }
                                     }
-				}
+                                }
                             }
                         },
                         {
@@ -449,43 +449,43 @@
                     "functionName": "liquidateBorrow",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Liquidate loan"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to repay",
-						"key": "sci.eth.arg.liquidateBorrow"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Addr. to liquidate",
-						"key": "sci.eth.arg.targetAccount"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Collateral asset to receive",
-						"key": "sci.eth.arg.assetCollateral"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Liquidate loan"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.liquidateBorrow",
+                                                "label": "Amount to repay"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.targetAccount",
+                                                "label": "Addr. to liquidate"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.assetCollateral",
+                                                "label": "Collateral asset to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xe61604cf"
                 },
                 {
@@ -494,49 +494,49 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "amount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "supply",
                     "functionType": "lend",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Deposit"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Amount to deposit",
-						"key": "sci.eth.arg.fromAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Deposit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromAmount",
+                                                "label": "Amount to deposit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf2b9fdb8"
                 },
                 {
@@ -545,43 +545,43 @@
                             "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "requestedAmount",
                             "value": {
-				"amount": {
-                                    "value": {
-					"path": {
-                                            "abi_path": "requestedAmount"
-					}
-                                    },
+                                "amount": {
                                     "tokenId": {
-					"path": {
+                                        "path": {
                                             "abi_path": "asset"
-					}
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "requestedAmount"
+                                        }
                                     }
-				}
+                                }
                             }
                         }
                     ],
                     "functionName": "withdraw",
                     "functionType": "withdraw",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "property_ref": {
-						"label": "Amount to withdraw",
-						"key": "sci.eth.arg.requestedAmount"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.requestedAmount",
+                                                "label": "Amount to withdraw"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf3fef3a3"
                 }
             ]
@@ -607,31 +607,31 @@
                     "functionName": "claimAlk",
                     "functionType": "claim_reward",
                     "options": {},
-                    "screen": {
-			"blue_screens": [
-			    {
-				"key_value_screen": {
-				    "properties": [
-					{
-					    "static_entry": {
-						"label": "Function",
-						"value": "Claim ALK rewards"
-					    }
-					},
-					{
-					    "property_ref": {
-						"label": "Addr. to claim ALK for",
-						"key": "sci.eth.arg.claimHolder"
-					    }
-					}
-				    ],
-				    "skip_subheader": false,
-				    "subtitle": " ",
-				    "title": "APPROVE CONTRACT DATA"
-				}
-			    }
-			]
-		    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Claim ALK rewards"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.claimHolder",
+                                                "label": "Addr. to claim ALK for"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x71d6e892"
                 }
             ]
