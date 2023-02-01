@@ -3,7 +3,7 @@
     "chainId": 1,
     "contracts": [
         {
-            "address": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
+            "address": "0xb929b89153fc2eed442e81e5a1add4e2fa39028f",
             "name": "MATIC Staking (Figment)",
             "parsers": [
                 {
@@ -34,7 +34,7 @@
                             }
                         }
                     ],
-                    "functionName": "delegateAmount",
+                    "functionName": "buyVoucher",
                     "functionType": "delegate",
                     "options": {},
                     "screen": [
@@ -86,7 +86,7 @@
                             }
                         }
                     ],
-                    "functionName": "restakeRewards",
+                    "functionName": "restake",
                     "functionType": "stake_reward",
                     "options": {},
                     "screen": [
@@ -126,7 +126,7 @@
                             }
                         }
                     ],
-                    "functionName": "unbondStake",
+                    "functionName": "sellVoucher_new",
                     "functionType": "unstake",
                     "options": {},
                     "screen": [
@@ -156,7 +156,7 @@
                             }
                         }
                     ],
-                    "functionName": "claimUnstakedMatic",
+                    "functionName": "unstakeClaimTokens_new",
                     "functionType": "claim_stake",
                     "options": {},
                     "screen": [
@@ -217,7 +217,7 @@
                             }
                         }
                     ],
-                    "functionName": "migrateStake",
+                    "functionName": "migrateDelegation",
                     "functionType": "move_stake",
                     "options": {},
                     "screen": [
