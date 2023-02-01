@@ -5,7 +5,7 @@ import logging
 import re
 from json.decoder import JSONDecodeError
 from pathlib import Path
-from typing import Callable, Tuple
+from typing import Callable, Tuple, List
 
 from jsonschema import ValidationError
 from jsonschema.validators import validator_for
@@ -57,8 +57,42 @@ def endlines_validator(data: str, filename: str) -> Tuple[bool, str]:
     error_message = ""
     if not is_valid:
         error_message = "File has some endlines chars"
-        logger.debug("Invalid: File %s has some endlines chars", filename)
+        logger.debug("\tinvalid: File %s has some endlines chars", filename)
     return is_valid, error_message
+
+
+def unique_field_validator(
+    field_names: List[str]
+):
+    unique = dict()
+
+    def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
+        try:
+            json_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
+            return False, str(err)
+        field_value = next(
+            json_data[field_name]
+            for field_name in field_names
+            if field_name in json_data
+        )
+        blockchain = Path(filename).parts[0]
+        identifier = f"{blockchain}/{field_value}".lower()
+
+        if identifier in unique:
+            logger.info(
+                "\tinvalid: File %s has the same %s as %s",
+                filename,
+                field_names,
+                unique[identifier],
+            )
+            return False, f"{field_names} is not unique."
+        else:
+            unique[identifier] = filename
+            return True, ""
+
+    return _inner_validator
 
 
 def schema_validator(schema_path: str):
