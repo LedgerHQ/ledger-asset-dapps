@@ -12,7 +12,7 @@ from validation.validators import (
     format_validator,
     missing_abi_validator,
     run_validations,
-    schema_validator,
+    schema_validator, unique_field_validator,
 )
 
 logging.basicConfig(level="INFO")
@@ -41,6 +41,7 @@ VALIDATORS = {
     "endlines": ("./*/**/*.json", endlines_validator),
     "eip712_schema": ("./*/**/eip712.json", eip712_schema_validator),
     "abis_format": ("./*/**/abis/*.json", abi_filename_validator),
+    "unique_id": ("./*/**/parsers.json", unique_field_validator(["id"])),
     "parsers_abi_not_missing": ("./*/**/parsers.json", missing_abi_validator),
     "b2c_abi_not_missing": ("./*/**/b2c.json", missing_abi_validator),
     **SCHEMA_VALIDATORS,

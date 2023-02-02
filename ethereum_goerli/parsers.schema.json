@@ -173,6 +173,9 @@
                                 "functionType": {
                                     "enum": [
                                         "stake",
+                                        "unstake",
+                                        "claim_stake",
+                                        "move_stake",
                                         "swap",
                                         "wrap",
                                         "unwrap",
@@ -180,6 +183,8 @@
                                         "repay_loan",
                                         "lend",
                                         "withdraw",
+                                        "delegate",
+                                        "stake_reward",
                                         "claim_reward",
                                         "configure",
                                         "buy",
@@ -244,11 +249,11 @@
             "type": "array"
         },
         "external_requirement": {
-            "pattern": "^[a-z]+$",
+            "pattern": "^[a-z_]+$",
             "type": "string"
         },
         "id": {
-            "pattern": "^[a-z]+$",
+            "pattern": "^[a-z_]+$",
             "type": "string"
         },
         "name": {
