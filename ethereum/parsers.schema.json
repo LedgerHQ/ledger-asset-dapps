@@ -421,7 +421,13 @@
                                     ]
                                 },
                                 "options": {
+                                    "additionalProperties": false,
                                     "description": "Various additionnal info for to parse the contract",
+                                    "properties": {
+                                        "ethContractAddress": {
+                                            "type": "string"
+                                        }
+                                    },
                                     "type": "object"
                                 },
                                 "screens": {
