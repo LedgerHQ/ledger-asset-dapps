@@ -12,7 +12,8 @@ from validation.validators import (
     format_validator,
     missing_abi_validator,
     run_validations,
-    schema_validator, unique_field_validator,
+    schema_validator, unique_field_validator, contract_matching_validator, missing_schema_validator,
+    eip55_address_validator,
 )
 
 logging.basicConfig(level="INFO")
@@ -44,6 +45,10 @@ VALIDATORS = {
     "unique_id": ("./*/**/parsers.json", unique_field_validator(["id"])),
     "parsers_abi_not_missing": ("./*/**/parsers.json", missing_abi_validator),
     "b2c_abi_not_missing": ("./*/**/b2c.json", missing_abi_validator),
+    "parsers_schema_not_missing": ("./*/**/parsers.json", missing_schema_validator()),
+    "b2c_schema_not_missing": ("./*/**/b2c.json", missing_schema_validator()),
+    "eip55_parser": ("./*/**/parsers.json", eip55_address_validator),
+    "contract_matching": ("./*/**/parsers.json", contract_matching_validator),
     **SCHEMA_VALIDATORS,
 }
 
