@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Callable, Iterable, Tuple
 
 from jsonschema.exceptions import ValidationError
+
 from validation.validators import (
     abi_filename_validator,
     eip712_schema_validator,
@@ -12,7 +13,10 @@ from validation.validators import (
     format_validator,
     missing_abi_validator,
     run_validations,
-    schema_validator, unique_field_validator, contract_matching_validator, missing_schema_validator,
+    schema_validator,
+    unique_field_validator,
+    contract_matching_validator,
+    missing_schema_validator,
     eip55_address_validator,
 )
 
@@ -36,7 +40,6 @@ SCHEMA_VALIDATORS = {
     for validator_name, validator in schema_validator_generator()
 }
 
-
 VALIDATORS = {
     "json": ("./*/**/*.json", format_validator),
     "endlines": ("./*/**/*.json", endlines_validator),
@@ -51,7 +54,6 @@ VALIDATORS = {
     "contract_matching": ("./*/**/parsers.json", contract_matching_validator),
     **SCHEMA_VALIDATORS,
 }
-
 
 if __name__ == "__main__":
     failed = False
