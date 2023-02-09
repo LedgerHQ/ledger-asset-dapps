@@ -49,6 +49,22 @@
                     "plugin": "ArtBlocks"
                 }
             }
+        },
+        {
+            "address": "0x706d6c6ef700a3c1c3a727f0c46492492e0a72b5",
+            "contractName": "MinterDAExpV2",
+            "selectors": {
+                "0x891407c0": {
+                    "erc20OfInterest": [],
+                    "method": "purchaseTo",
+                    "plugin": "ArtBlocks"
+                },
+                "0xefef39a1": {
+                    "erc20OfInterest": [],
+                    "method": "purchase",
+                    "plugin": "ArtBlocks"
+                }
+            }
         }
     ],
     "name": "ArtBlocks"
