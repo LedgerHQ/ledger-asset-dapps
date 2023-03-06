@@ -8242,22 +8242,8 @@
                 {
                     "arguments": [
                         {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "addressToApprove",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "binary_path": {
-                                            "binary": "(0)",
-                                            "type": "SOLIDITYTYPE_ADDRESS"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
                             "format": "ARGUMENTFORMAT_AMOUNT",
-                            "name": "approvedAmount",
+                            "name": "withdrawnAmount",
                             "value": {
                                 "amount": {
                                     "tokenId": {

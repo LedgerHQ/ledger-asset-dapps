@@ -72,7 +72,7 @@
                     "arguments": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "withdrawnRewards",
+                            "name": "withdrawn rewards",
                             "value": {
                                 "terminalValue": {
                                     "literal": {
@@ -110,7 +110,7 @@
                     "arguments": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "restakedRewards",
+                            "name": "restaked rewards",
                             "value": {
                                 "terminalValue": {
                                     "literal": {
@@ -269,7 +269,9 @@
                                         }
                                     },
                                     "value": {
-                                        "atpPropertyReference": "amount"
+					"path": {
+                                            "abi_path": "amount"
+					}
                                     }
                                 }
                             }
@@ -326,7 +328,7 @@
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg.toValidator",
-                                                "label": "ToValidator ID"
+                                                "label": "To Validator ID"
                                             }
                                         }
                                     ],
