@@ -9,34 +9,34 @@
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "from",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "from"
+                                        "abi_path": "from"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "tokenId"
+                                        "abi_path": "tokenId"
                                     }
                                 }
                             }
@@ -45,58 +45,76 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Transfer NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Token ID",
-                            "name": "tokenID"
-                        },
-                        {
-                            "label": "Token sender",
-                            "name": "from"
-                        },
-                        {
-                            "label": "Token recipient",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x42842e0e"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "from",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "from"
+                                        "abi_path": "from"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "tokenId"
+                                        "abi_path": "tokenId"
                                     }
                                 }
                             }
@@ -105,47 +123,65 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Transfer NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Token ID",
-                            "name": "tokenID"
-                        },
-                        {
-                            "label": "Token sender",
-                            "name": "from"
-                        },
-                        {
-                            "label": "Token recipient",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xb88d4fde"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "tokenId"
+                                        "abi_path": "tokenId"
                                     }
                                 }
                             }
@@ -154,43 +190,59 @@
                     "functionName": "approve",
                     "functionType": "approve_erc721",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Approve NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Token to approve",
-                            "name": "tokenID"
-                        },
-                        {
-                            "label": "Address to approve",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x095ea7b3"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "operator",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "operator"
+                                        "abi_path": "operator"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "boolean",
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "_approved",
                             "value": {
-                                "boolean": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "_approved"
+                                        "abi_path": "_approved"
                                     }
                                 }
                             }
@@ -199,32 +251,48 @@
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc721",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Set approval for all",
-                            "static": true
-                        },
-                        {
-                            "label": "Operator",
-                            "name": "operator"
-                        },
-                        {
-                            "label": "Approved",
-                            "name": "_approved"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa22cb465"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
@@ -233,17 +301,31 @@
                     "functionName": "mint",
                     "functionType": "mint_erc721",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Mint NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Receiver",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Mint NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Receiver"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x6a627842"
                 }
             ]
@@ -255,45 +337,45 @@
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "from",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "from"
+                                        "abi_path": "from"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "id"
+                                        "abi_path": "id"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "amount",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "amount"
+                                        "abi_path": "amount"
                                     }
                                 }
                             }
@@ -302,73 +384,93 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc1155",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Transfer NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Token ID",
-                            "name": "tokenID"
-                        },
-                        {
-                            "label": "Quantity",
-                            "name": "amount"
-                        },
-                        {
-                            "label": "Token sender",
-                            "name": "from"
-                        },
-                        {
-                            "label": "Token recipient",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf242432a"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "from",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "from"
+                                        "abi_path": "from"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "to",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "to"
+                                        "abi_path": "to"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "tokenID",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "id"
+                                        "abi_path": "id"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "amount",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "amount"
+                                        "abi_path": "amount"
                                     }
                                 }
                             }
@@ -377,51 +479,71 @@
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc1155",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Transfer NFT",
-                            "static": true
-                        },
-                        {
-                            "label": "Token ID",
-                            "name": "tokenID"
-                        },
-                        {
-                            "label": "Quantity",
-                            "name": "amount"
-                        },
-                        {
-                            "label": "Token sender",
-                            "name": "from"
-                        },
-                        {
-                            "label": "Token recipient",
-                            "name": "to"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x0febdd49"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "operator",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "operator"
+                                        "abi_path": "operator"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "boolean",
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
                             "name": "approved",
                             "value": {
-                                "boolean": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "approved"
+                                        "abi_path": "approved"
                                     }
                                 }
                             }
@@ -430,21 +552,37 @@
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc1155",
                     "options": {},
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Set approval for all",
-                            "static": true
-                        },
-                        {
-                            "label": "Operator",
-                            "name": "operator"
-                        },
-                        {
-                            "label": "Approved",
-                            "name": "approved"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa22cb465"
                 }
             ]
