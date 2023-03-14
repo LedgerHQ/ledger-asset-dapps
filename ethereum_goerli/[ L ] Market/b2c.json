@@ -145,6 +145,22 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0xe506ed52bdb3cff38772ebef8340621f5147eaad",
+            "contractName": "Inspired by Ledger",
+            "selectors": {
+                "0x08dc9f42": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0x657bb113": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
