@@ -161,6 +161,32 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0xe506ed52bdb3cff38772ebef8340621f5147eaad",
+            "contractName": "Stable MultiMint NFT",
+            "selectors": {
+                "0x11413601": {
+                    "erc20OfInterest": [],
+                    "method": "stableMintSign",
+                    "plugin": "[ L ] Market"
+                },
+                "0x804b936f": {
+                    "erc20OfInterest": [],
+                    "method": "stableMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xf39247a9": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
