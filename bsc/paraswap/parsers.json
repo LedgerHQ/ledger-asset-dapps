@@ -9,33 +9,37 @@
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountInMax"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountInMax"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOut"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOut"
+                                        }
                                     }
                                 }
                             }
@@ -46,64 +50,84 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Buy",
-                            "static": true
-                        },
-                        {
-                            "label": "Maximum to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Amount to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Buy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Maximum to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Amount to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x935fb84b"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountInMax"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountInMax"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOut"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOut"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "factory",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "factory"
+                                        "abi_path": "factory"
                                     }
                                 }
                             }
@@ -114,59 +138,77 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Function",
-                            "name": "Buy",
-                            "static": true
-                        },
-                        {
-                            "label": "Maximum to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Amount to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Buy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Maximum to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Amount to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xc03786b0"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountInMax"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "tokenIn"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "tokenIn"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountInMax"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "amountOut",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "amountOut"
+                                        "abi_path": "amountOut"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "pools",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "pools.-1"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -177,63 +219,90 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Maximum to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Amount to receive",
-                            "name": "amountOut"
-                        },
-                        {
-                            "label": "Pools",
-                            "name": "pools"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Buy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Maximum to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "amountOut",
+                                                "label": "Amount to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "pools",
+                                                "label": "Pools"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xb2f1e6db"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.path.0.path.-1.to"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.path.0.path.-1.to"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.toAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "beneficiary",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "data.beneficiary"
+                                        "abi_path": "data.beneficiary"
                                     }
                                 }
                             }
@@ -242,66 +311,92 @@
                     "functionName": "megaSwap",
                     "functionType": "swap",
                     "options": {
-                        "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "beneficiary"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "beneficiary",
+                                                "label": "Recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x46c67b6d"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.path.-1.to"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.path.-1.to"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.toAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "beneficiary",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "data.beneficiary"
+                                        "abi_path": "data.beneficiary"
                                     }
                                 }
                             }
@@ -312,63 +407,90 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "beneficiary"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "beneficiary",
+                                                "label": "Recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xa94e78ef"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.toToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.toToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.toAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "beneficiary",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "data.beneficiary"
+                                        "abi_path": "data.beneficiary"
                                     }
                                 }
                             }
@@ -377,66 +499,92 @@
                     "functionName": "simpleBuy",
                     "functionType": "swap",
                     "options": {
-                        "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "beneficiary"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "beneficiary",
+                                                "label": "Recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x2298207a"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "data.toAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "data.toToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "data.toToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "data.toAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "beneficiary",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "data.beneficiary"
+                                        "abi_path": "data.beneficiary"
                                     }
                                 }
                             }
@@ -447,52 +595,79 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        },
-                        {
-                            "label": "Recipient",
-                            "name": "beneficiary"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "beneficiary",
+                                                "label": "Recipient"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x54e3f31b"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountIn"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountIn"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOutMin"
+                                        }
                                     }
                                 }
                             }
@@ -503,59 +678,84 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x54840d1a"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountIn"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.0"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountIn"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "path.-1"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOutMin"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "factory",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "factory"
+                                        "abi_path": "factory"
                                     }
                                 }
                             }
@@ -564,57 +764,79 @@
                     "functionName": "swapOnUniswapFork",
                     "functionType": "swap",
                     "options": {
-                        "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0xf5661034"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountIn"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "tokenIn"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "tokenIn"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountIn"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "amountOutMin",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "amountOutMin"
+                                        "abi_path": "amountOutMin"
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "raw",
+                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "pools",
                             "value": {
-                                "uint256": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "pools.-1"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -623,66 +845,92 @@
                     "functionName": "swapOnUniswapV2Fork",
                     "functionType": "swap",
                     "options": {
-                        "assertEthAmountIsZero": false,
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "amountOutMin"
-                        },
-                        {
-                            "label": "Pools",
-                            "name": "pools"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "amountOutMin",
+                                                "label": "Minimum to receive"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "pools",
+                                                "label": "Pools"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x0b86a4c1"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "toToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "toToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOutMin"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "exchange",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "exchange"
+                                        "abi_path": "exchange"
                                     }
                                 }
                             }
@@ -693,59 +941,84 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x81033120"
                 },
                 {
                     "arguments": [
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "fromAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "fromAmount"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "fromToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "fromToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "fromAmount"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "amount",
+                            "format": "ARGUMENTFORMAT_AMOUNT",
                             "name": "toAmount",
                             "value": {
-                                "quantity": {
-                                    "path": {
-                                        "default": "amountOutMin"
-                                    }
-                                },
-                                "token": {
-                                    "path": {
-                                        "default": "toToken"
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "toToken"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amountOutMin"
+                                        }
                                     }
                                 }
                             }
                         },
                         {
-                            "format": "eip55",
+                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "exchange",
                             "value": {
-                                "address": {
+                                "terminalValue": {
                                     "path": {
-                                        "default": "exchange"
+                                        "abi_path": "exchange"
                                     }
                                 }
                             }
@@ -756,16 +1029,37 @@
                     "options": {
                         "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
                     },
-                    "screen": [
-                        {
-                            "label": "Amount to send",
-                            "name": "fromAmount"
-                        },
-                        {
-                            "label": "Minimum to receive",
-                            "name": "toAmount"
-                        }
-                    ],
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "fromAmount",
+                                                "label": "Amount to send"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "toAmount",
+                                                "label": "Minimum to receive"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
                     "selector": "0x64466805"
                 }
             ]
