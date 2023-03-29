@@ -187,6 +187,142 @@
                     "plugin": "[ L ] Market"
                 }
             }
+        },
+        {
+            "address": "0x7553bfc9ac407b3587d8f22a297d34f59a5e7e55",
+            "contractName": "ETH_IN_USD_WITH_SIGN",
+            "selectors": {
+                "0x11413601": {
+                    "erc20OfInterest": [],
+                    "method": "stableMintSign",
+                    "plugin": "[ L ] Market"
+                },
+                "0x804b936f": {
+                    "erc20OfInterest": [],
+                    "method": "stableMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xf39247a9": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0x66af1b839ab0f5d4e736686b68ed8b6a13b8a5dd",
+            "contractName": "ETH_IN_USD_PUBLIC",
+            "selectors": {
+                "0x11413601": {
+                    "erc20OfInterest": [],
+                    "method": "stableMintSign",
+                    "plugin": "[ L ] Market"
+                },
+                "0x804b936f": {
+                    "erc20OfInterest": [],
+                    "method": "stableMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xf39247a9": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0xa31009b828ab858d2be20f5659d8f1ffd1df397b",
+            "contractName": "USDC_WITH_SIGN",
+            "selectors": {
+                "0x11413601": {
+                    "erc20OfInterest": [],
+                    "method": "stableMintSign",
+                    "plugin": "[ L ] Market"
+                },
+                "0x804b936f": {
+                    "erc20OfInterest": [],
+                    "method": "stableMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xf39247a9": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0x33f43513c45059a782c7d51fb3b4becdf2d3438c",
+            "contractName": "USDC_PUBLIC",
+            "selectors": {
+                "0x11413601": {
+                    "erc20OfInterest": [],
+                    "method": "stableMintSign",
+                    "plugin": "[ L ] Market"
+                },
+                "0x804b936f": {
+                    "erc20OfInterest": [],
+                    "method": "stableMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xf39247a9": {
+                    "erc20OfInterest": [],
+                    "method": "mintSign",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0xbcae845df109d0e8ce7a8d68729efeea0379ccc2",
+            "contractName": "Legacy presale",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
+        },
+        {
+            "address": "0x4f6b23fa3e802fe569f0baa9f75ba7965eb63cf8",
+            "contractName": "Legacy Public",
+            "selectors": {
+                "0x827481ea": {
+                    "erc20OfInterest": [],
+                    "method": "preSaleMint",
+                    "plugin": "[ L ] Market"
+                },
+                "0xa0712d68": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "[ L ] Market"
+                }
+            }
         }
     ],
     "name": "[ L ] Market"
