@@ -1,0 +1,43 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xce16f69375520ab01377ce7b88f5ba8c48f8d666",
+            "contractName": "SquidRouterProxy",
+            "selectors": {
+                "0x3c659741": {
+                    "erc20OfInterest": [],
+                    "method": "bridgeCall",
+                    "plugin": "squid"
+                },
+                "0x8ca3bf68": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "callBridgeCall",
+                    "plugin": "squid"
+                },
+                "0xf35af1f8": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "callBridge",
+                    "plugin": "squid"
+                }
+            }
+        },
+        {
+            "address": "0x6f015f16de9fc8791b234ef68d486d2bf203fba8",
+            "contractName": "AxelarGatewayProxyMultisig",
+            "selectors": {
+                "0x26ef699d": {
+                    "erc20OfInterest": [],
+                    "method": "sendToken",
+                    "plugin": "squid"
+                }
+            }
+        }
+    ],
+    "name": "squid"
+}
