@@ -1,0 +1,58 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x410a56541bD912F9B60943fcB344f1E3D6F09567",
+            "name": "BTCMT",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x410a56541bD912F9B60943fcB344f1E3D6F09567"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "BTCMT",
+    "name": "Minto Bitcoin Hashrate Token"
+}

@@ -1,0 +1,58 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0xfEbe8C1eD424DbF688551D4E2267e7A53698F0aa",
+            "name": "VINU",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xfEbe8C1eD424DbF688551D4E2267e7A53698F0aa"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "VINU",
+    "name": "Vita Inu"
+}

@@ -1,0 +1,58 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0xcAE3d82D63e2b0094bc959752993D3D3743B5D08",
+            "name": "BTAF",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xcAE3d82D63e2b0094bc959752993D3D3743B5D08"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "BTAF",
+    "name": "BTAF"
+}

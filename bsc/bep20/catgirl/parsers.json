@@ -1,0 +1,58 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x79eBC9A2ce02277A4b5b3A768b1C0A4ed75Bd936",
+            "name": "CATGIRL",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x79eBC9A2ce02277A4b5b3A768b1C0A4ed75Bd936"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "CATGIRL",
+    "name": "CatGirl"
+}

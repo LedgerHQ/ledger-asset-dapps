@@ -1,0 +1,59 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x988F7c894e4001EEB7B570CDE80dffE21CF7B6B9",
+            "name": "LCR",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "binary": "(0)"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "amount",
+                            "name": "approvedAmount",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "binary": "(1)"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0x988F7c894e4001EEB7B570CDE80dffE21CF7B6B9"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Amount to approve",
+                            "name": "approvedAmount"
+                        },
+                        {
+                            "label": "Address to approve",
+                            "name": "addressToApprove"
+                        }
+                    ],
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "external_requirement": "none",
+    "id": "LCR",
+    "name": "LUCRO"
+}

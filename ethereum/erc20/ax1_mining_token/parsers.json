@@ -1,0 +1,88 @@
+{
+    "blockchainName": "Ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xCd4b4b0F3284a33AC49C67961EC6e111708318Cf",
+            "name": "AX1",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "binary_path": {
+                                            "binary": "(0)",
+                                            "type": "SOLIDITYTYPE_ADDRESS"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "approvedAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0xCd4b4b0F3284a33AC49C67961EC6e111708318Cf"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "binary_path": {
+                                                "binary": "(1)",
+                                                "type": "SOLIDITYTYPE_UINT256"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approvedAmount",
+                                                "label": "Amount to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.addressToApprove",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "AX1",
+    "name": "AX1 Mining Token"
+}

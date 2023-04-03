@@ -1,0 +1,88 @@
+{
+    "blockchainName": "Cronos",
+    "chainId": 25,
+    "contracts": [
+        {
+            "address": "0xa58e3AeAeA3292c3E260378e55E9684C59E7A27a",
+            "name": "RADAR",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "addressToApprove",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "binary_path": {
+                                            "binary": "(0)",
+                                            "type": "SOLIDITYTYPE_ADDRESS"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "approvedAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0xa58e3AeAeA3292c3E260378e55E9684C59E7A27a"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "binary_path": {
+                                                "binary": "(1)",
+                                                "type": "SOLIDITYTYPE_UINT256"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approve",
+                    "functionType": "approve",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approvedAmount",
+                                                "label": "Amount to approve"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.addressToApprove",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x095ea7b3"
+                }
+            ]
+        }
+    ],
+    "id": "RADAR",
+    "name": "DappRadar"
+}
