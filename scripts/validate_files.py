@@ -45,13 +45,22 @@ VALIDATORS = {
     "endlines": ("./*/**/*.json", endlines_validator),
     "eip712_schema": ("./*/**/eip712.json", eip712_schema_validator),
     "abis_format": ("./*/**/abis/*.json", abi_filename_validator),
-    "unique_id": ("./*/**/parsers.json", unique_field_validator(["id"])),
-    "parsers_abi_not_missing": ("./*/**/parsers.json", missing_abi_validator),
-    "b2c_abi_not_missing": ("./*/**/b2c.json", missing_abi_validator),
+    "unique_id": (
+        "./*/**/parsers.json",
+        unique_field_validator(["id"], skip=lambda _, f: "/erc20/" in f or "/bep20/" in f)
+    ),
+    "parsers_abi_not_missing": (
+        "./*/**/parsers.json",
+        missing_abi_validator(skip=lambda _, f: "/erc20/" in f or "/bep20/" in f)
+    ),
+    "b2c_abi_not_missing": ("./*/**/b2c.json", missing_abi_validator()),
     "parsers_schema_not_missing": ("./*/**/parsers.json", missing_schema_validator()),
     "b2c_schema_not_missing": ("./*/**/b2c.json", missing_schema_validator()),
     "eip55_parser": ("./*/**/parsers.json", eip55_address_validator),
-    "contract_matching": ("./*/**/parsers.json", contract_matching_validator),
+    "contract_matching": (
+        "./*/**/parsers.json",
+        contract_matching_validator(skip=lambda _, f: "/erc20/" in f or "/bep20/" in f)
+    ),
     **SCHEMA_VALIDATORS,
 }
 

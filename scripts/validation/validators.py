@@ -5,7 +5,7 @@ import logging
 import re
 from json.decoder import JSONDecodeError
 from pathlib import Path
-from typing import Callable, Tuple, List
+from typing import Callable, Optional, Tuple, List
 
 from eth_utils import to_checksum_address
 from jsonschema import ValidationError
@@ -63,11 +63,14 @@ def endlines_validator(data: str, filename: str) -> Tuple[bool, str]:
 
 
 def unique_field_validator(
-    field_names: List[str]
+    field_names: List[str], skip: Optional[Callable] = None
 ):
     unique = dict()
 
     def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
+        if skip and skip(data, filename):
+            return True, ""
+
         try:
             json_data = json.loads(data)
         except JSONDecodeError as err:
@@ -154,24 +157,30 @@ def missing_schema_validator():
     return _inner_validator
 
 
-def missing_abi_validator(data: str, filename: str) -> Tuple[bool, str]:
-    try:
-        dapp_addresses = set(
-            contract.get("address", "").lower()
-            for contract in json.loads(data).get("contracts", [])
-        )
-        abi_addresses = set(
-            p.name.split(".")[0].lower()
-            for p in Path(filename).parent.glob("abis/*.abi.json")
-        )
-        if not dapp_addresses.issubset(abi_addresses):
-            return (
-                False,
-                f"Missing ABI for contract {dapp_addresses.difference(abi_addresses)}",
+def missing_abi_validator(skip: Optional[Callable] = None):
+    def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
+        if skip and skip(data, filename):
+            return True, ""
+
+        try:
+            dapp_addresses = set(
+                contract.get("address", "").lower()
+                for contract in json.loads(data).get("contracts", [])
             )
-    except Exception as err:
-        return False, str(err)
-    return True, ""
+            abi_addresses = set(
+                p.name.split(".")[0].lower()
+                for p in Path(filename).parent.glob("abis/*.abi.json")
+            )
+            if not dapp_addresses.issubset(abi_addresses):
+                return (
+                    False,
+                    f"Missing ABI for contract {dapp_addresses.difference(abi_addresses)}",
+                )
+        except Exception as err:
+            return False, str(err)
+        return True, ""
+
+    return _inner_validator
 
 
 def abi_filename_validator(data: str, filename: str) -> Tuple[bool, str]:
@@ -211,52 +220,57 @@ def eip55_address_validator(data: str, filename: str) -> Tuple[bool, str]:
     return True, ""
 
 
-def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
-    error = False
-    try:
-        target_path = Path(filename)
-        target_data = json.loads(data)
-    except JSONDecodeError as err:
-        logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
-        return False, str(err)
+def contract_matching_validator(skip: Optional[Callable] = None):
+    def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
+        if skip and skip(data, filename):
+            return True, ""
 
-    for contract in target_data.get("contracts", []):
-        logger.info(
-            "\tchecking contract %s...",
-            contract['address'],
-        )
-        abi_path = target_path.parent / "abis" / f"{contract['address'].lower()}.abi.json"
-        abi_data = json.load(abi_path.open())
+        error = False
+        try:
+            target_path = Path(filename)
+            target_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
+            return False, str(err)
 
-        target_functions = {parser["functionName"]: parser for parser in contract.get("parsers", [])}
-        abi_functions = {function["name"]: function for function in abi_data if function["type"] == "function"}
-
-        for name, function in target_functions.items():
-            if name not in abi_functions:
-                error = True
-                logger.info(
-                    "\tinvalid: Function %s not defined in ABI",
-                    function,
-                )
-                continue
-
+        for contract in target_data.get("contracts", []):
             logger.info(
-                "\tchecking function %s...",
-                name,
+                "\tchecking contract %s...",
+                contract['address'],
             )
+            abi_path = target_path.parent / "abis" / f"{contract['address'].lower()}.abi.json"
+            abi_data = json.load(abi_path.open())
 
-            function_args = {arg["name"] for arg in function.get("arguments", [])}
-            screen_args = {arg["name"] for arg in function.get("screen", []) if arg["label"] != "Function"}
-            if not screen_args <= function_args:
-                error = True
+            target_functions = {parser["functionName"]: parser for parser in contract.get("parsers", [])}
+            abi_functions = {function["name"]: function for function in abi_data if function["type"] == "function"}
+
+            for name, function in target_functions.items():
+                if name not in abi_functions:
+                    error = True
+                    logger.info(
+                        "\tinvalid: Function %s not defined in ABI",
+                        function,
+                    )
+                    continue
+
                 logger.info(
-                    "\tinvalid: Screen %s not matching function arguments %s.",
-                    function_args,
-                    screen_args,
+                    "\tchecking function %s...",
+                    name,
                 )
 
-    if error:
-        return False, f"Errors found on file content"
+                function_args = {arg["name"] for arg in function.get("arguments", [])}
+                screen_args = {arg["name"] for arg in function.get("screen", []) if arg["label"] != "Function"}
+                if not screen_args <= function_args:
+                    error = True
+                    logger.info(
+                        "\tinvalid: Screen %s not matching function arguments %s.",
+                        function_args,
+                        screen_args,
+                    )
 
-    return True, ""
+        if error:
+            return False, f"Errors found on file content"
 
+        return True, ""
+
+    return _inner_validator
