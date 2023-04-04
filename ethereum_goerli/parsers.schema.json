@@ -467,11 +467,10 @@
             ]
         },
         "id": {
-            "pattern": "^[a-z_]+$",
+            "pattern": "^[a-z0-9_]+$",
             "type": "string"
         },
         "name": {
-            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },
