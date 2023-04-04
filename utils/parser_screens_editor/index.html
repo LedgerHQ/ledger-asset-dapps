@@ -1,0 +1,279 @@
+<html>
+
+<head>
+  <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>The Tool</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3063/3063382.png">
+  <style>
+    body {
+      background-color: #eee;
+    }
+    input {
+      border: none;
+      background: transparent;
+      color: var(--bs-dark) !important;
+    }
+    a {
+      text-decoration: none;
+      color: #3498db;
+    }
+    .the-device {
+      border-radius: 30px;
+      overflow: hidden;
+      display: inline-block;
+    }
+    .the-device > table {
+      border: 50px solid;
+      max-width: 100%;
+      letter-spacing: -0.8px;
+    }
+    .the-device input {
+      width: 100%;
+    }
+    .the-device .screen-title {
+      width: 100%;
+      text-align: center;
+      font-size: xx-large;
+
+    }
+    .the-device .screen-subtitle {
+      width: 100%;
+      text-align: center;
+      font-size: small;
+    
+    }
+    .the-device .screen-static-value {
+      text-align: right;
+      font-weight: 600;
+    }
+    .the-device .screen-ref-value {
+      text-align: right;
+    }
+    form.file-upload {
+      max-width: 400px;
+      margin: auto;
+      border: 2px gray dashed;
+      border-radius: 40px;
+      padding: 100px;
+      text-align: center;
+      cursor: pointer
+    }
+    form.file-upload.dragging-over {
+      background-color: #eaeaea;
+    }
+    input.invalid-input {
+      background-color: #ff7979;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <template v-if="!data.contracts">
+        <form class="file-upload mt-5"
+              enctype="multipart/form-data"
+              @click="openFileChooseDialog()"
+              ref="file-upload-form">
+          <input style="display: none" type="file" ref="file-upload-input" />
+          <b>Click here</b> to choose a <code>parsers.json</code> file<span v-if="dragDropSupported"> or drag and drop it in dashed area</span>
+        </form>
+      </template>
+      <button v-if="data.contracts" @click="download()" type="button" class="btn btn-success m-1">Download</button>
+      <a id="downloadAnchor" style="display: none"></a>
+      <template v-for="contract in data.contracts">
+        <h3 class="mt-4">Contract "{{contract.name}}"</h3>
+        <h6>Address <a :href="'https://etherscan.io/address/' + contract.address" target="_blank">{{contract.address}}</a></h6>
+        <div class="card mb-1 mt-1 shadow p-1" v-for="parser in contract.parsers">
+          <div class="card-body container">
+            <div class="row">
+              <div class="col-4">
+                Name: <a :href="functionLinkEtherscan(contract, parser)" target="_blank">{{parser.functionName}}</a><br>
+                Selector: {{parser.selector}}<br>
+                Type:
+                <select v-model="parser.functionType">
+                  <option v-for="functionType in functionTypes" :value="functionType">
+                    {{ functionType }}
+                  </option>
+                </select>
+              </div>
+              <div class="col-8" style="text-align: right;">
+                <template v-for="screen in parser.screens.blue_screens">
+                  <div>
+                    <div class="the-device">
+                      <table>
+                        <tr style="background-color: #eee;">
+                          <td class="pl-3 pt-3 pr-3" colspan="2" title="Screen title">
+                            <input type="text" class="screen-title" v-model="screen.key_value_screen.title">
+                          </td>
+                        </tr>
+                        <tr style="background-color: #eee;">
+                          <td class="p-3" colspan="2" title="Screen subtitle">
+                            <input type="text" class="screen-subtitle" v-model="screen.key_value_screen.subtitle">
+                          </td>
+                        </tr>
+                        <tr v-for="property in screen.key_value_screen.properties">
+                          <template v-if="property.static_entry">
+                            <td class="p-3" title="Static entry label">
+                              <input type="text" v-model="property.static_entry.label">
+                            </td>
+                            <td class="p-3" title="Static entry value">
+                              <b>
+                                <input type="text" class="screen-static-value" v-model="property.static_entry.value">
+                              </b>
+                            </td>
+                          </template>
+                          <template v-if="property.property_ref">
+                            <td class="p-3" title="Property reference label">
+                              <input type="text" v-model="property.property_ref.label">
+                            </td>
+                            <td class="p-3" title="Property reference">
+                              <input
+                                type="text"
+                                class="screen-ref-value"
+                                :class="{ 'invalid-input': !checkPropertyReference(parser.arguments, property) }"
+                                v-model="property.property_ref.key">
+                            </td>
+                          </template>
+                        </tr>
+                      </table>
+                    </div>
+                    <br>
+                    <span style="font-size: 8px; color:red">This is not a Blue device</span>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </div>
+
+  </div>
+
+  <script>
+    const { createApp } = Vue
+
+    createApp({
+      data() {
+        return {
+          data: {},
+          dragDropSupported: false,
+        }
+      },
+      computed: {
+        functionTypes: function() {
+          return [
+              "unknown",
+              "swap",
+              "stake",
+              "unstake",
+              "claim_stake",
+              "move_stake",
+              "wrap",
+              "unwrap",
+              "approve",
+              "buy",
+              "borrow",
+              "repay_loan",
+              "lend",
+              "withdraw",
+              "delegate",
+              "stake_reward",
+              "claim_reward",
+              "configure",
+              "transfer_erc721",
+              "transfer_erc1155",
+              "mint_erc721",
+              "mint_erc1155",
+              "burn_erc721",
+              "burn_erc1155",
+              "approve_erc721",
+              "approve_erc1155"
+          ].sort();
+        }
+      },
+      mounted() {
+        this.prepareFileUploadForm();
+      },
+      methods: {
+        download: function() {
+          const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.data, null, 4));
+          const dlAnchorElem = document.getElementById('downloadAnchor');
+          dlAnchorElem.setAttribute("href",     dataStr     );
+          dlAnchorElem.setAttribute("download", "parsers.json");
+          dlAnchorElem.click();
+        },
+        functionLinkEtherscan: function(contract, func) {
+          return 'https://etherscan.io/address/' + contract.address + "?method=" +func.selector;
+        },
+        openFileChooseDialog: function() {
+          let formInput = this.$refs['file-upload-input'];
+          formInput.click()
+        },
+        parseFile: function(file) {
+          const self = this;
+          const reader = new FileReader();
+          reader.readAsText(file, "UTF-8");
+          reader.onload = function (evt) {
+            self.data = JSON.parse(evt.target.result);
+          }
+          reader.onerror = function (evt) {
+            console.error(evt);
+            alert(evt);
+          }
+        },
+        prepareFileUploadForm: function() {
+          let divElement = document.createElement('div');
+          this.dragDropSupported = (
+              ('draggable' in divElement) ||
+              ('ondragstart' in divElement && 'ondrop' in divElement)
+            ) && 'FormData' in window && 'FileReader' in window;
+          const self = this;
+          if (this.dragDropSupported) {
+            let form = this.$refs['file-upload-form'];
+            const stopPropagation = function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+            }
+            const draggingOver = function(e) {
+              stopPropagation(e);
+              form.classList.add('dragging-over');
+            }
+            const notDragingOver = function(e) {
+              stopPropagation(e);
+              form.classList.remove('dragging-over');
+            }
+            const drop = function(e) {
+              notDragingOver(e);
+              self.parseFile(e.dataTransfer.files[0]);
+            }
+            form.ondrag = stopPropagation;
+            form.ondragstart = stopPropagation;
+            form.ondragenter = notDragingOver;
+            form.ondragover = draggingOver;
+            form.ondragend = notDragingOver;
+            form.ondragleave = notDragingOver;
+            form.ondrop = drop;
+          }
+          const uploadInput = this.$refs['file-upload-input'];
+          uploadInput.onchange = function () {
+            self.parseFile(uploadInput.files[0]);
+          }
+        },
+        checkPropertyReference: function(args, property) {
+          const zeroIndex = function(path) {
+            return path.split(".").map(part => isNaN(parseInt(part)) ? part : "0").join(".");
+          }
+          const key = zeroIndex(property.property_ref.key);
+          const terminalValues = args.map(arg => zeroIndex("sci.eth.arg." + arg.name));
+          return terminalValues.includes(key);
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>
