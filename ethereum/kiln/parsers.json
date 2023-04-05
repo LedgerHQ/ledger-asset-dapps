@@ -1,0 +1,173 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x1e68238cE926DEC62b3FBC99AB06eB1D85CE0270",
+            "name": "0x1e68238cE926DEC62b3FBC99AB06eB1D85CE0270",
+            "parsers": [
+                {
+                    "arguments": [],
+                    "functionName": "deposit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "deposit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "withdraw"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "_publicKey"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0968f264"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdrawCLFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "withdrawCLFee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "_publicKey"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x2ba03a79"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdrawELFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "withdrawELFee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "_publicKey"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xbf509bd4"
+                }
+            ]
+        }
+    ],
+    "id": "kiln",
+    "name": "kiln"
+}
