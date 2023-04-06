@@ -5,13 +5,32 @@
         {
             "abi": [],
             "address": "0x1e68238cE926DEC62b3FBC99AB06eB1D85CE0270",
-            "name": "0x1e68238cE926DEC62b3FBC99AB06eB1D85CE0270",
+            "name": "Native Staking",
             "parsers": [
                 {
-                    "arguments": [],
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "amountToStake",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                        }
+                                    },
+                                    "value": {
+                                        "atpPropertyReference": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
                     "functionName": "deposit",
-                    "functionType": "unknown",
-                    "options": {},
+                    "functionType": "stake",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
                     "screens": {
                         "blue_screens": [
                             {
@@ -20,7 +39,13 @@
                                         {
                                             "static_entry": {
                                                 "label": "Function",
-                                                "value": "deposit"
+                                                "value": "Stake ETH"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amountToStake",
+                                                "label": "Amount to stake"
                                             }
                                         }
                                     ],
@@ -48,7 +73,7 @@
                         }
                     ],
                     "functionName": "withdraw",
-                    "functionType": "unknown",
+                    "functionType": "withdraw",
                     "options": {},
                     "screens": {
                         "blue_screens": [
@@ -58,13 +83,13 @@
                                         {
                                             "static_entry": {
                                                 "label": "Function",
-                                                "value": "withdraw"
+                                                "value": "Withrdaw stake"
                                             }
                                         },
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._publicKey",
-                                                "label": "_publicKey"
+                                                "label": "Validator addr."
                                             }
                                         }
                                     ],
@@ -102,13 +127,13 @@
                                         {
                                             "static_entry": {
                                                 "label": "Function",
-                                                "value": "withdrawCLFee"
+                                                "value": "Withdraw consensus rewards"
                                             }
                                         },
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._publicKey",
-                                                "label": "_publicKey"
+                                                "label": "Validator addr."
                                             }
                                         }
                                     ],
@@ -146,13 +171,13 @@
                                         {
                                             "static_entry": {
                                                 "label": "Function",
-                                                "value": "withdrawELFee"
+                                                "value": "Withdraw execution rewards"
                                             }
                                         },
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._publicKey",
-                                                "label": "_publicKey"
+                                                "label": "Validator addr."
                                             }
                                         }
                                     ],
@@ -169,5 +194,5 @@
         }
     ],
     "id": "kiln",
-    "name": "kiln"
+    "name": "Kiln"
 }
