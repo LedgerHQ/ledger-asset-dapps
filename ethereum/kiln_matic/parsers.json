@@ -57,6 +57,12 @@
                                                 "key": "sci.eth.arg.delegateAmount",
                                                 "label": "Amount to delegate"
                                             }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.minSharesToMint",
+                                                "label": "Minimum shares to mint"
+                                            }
                                         }
                                     ],
                                     "skip_subheader": false,
@@ -194,6 +200,12 @@
                                             "property_ref": {
                                                 "key": "sci.eth.arg.withdrawAmount",
                                                 "label": "Amount to unbond"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.maxSharesToBurn",
+                                                "label": "Maximum shares to burn"
                                             }
                                         }
                                     ],
