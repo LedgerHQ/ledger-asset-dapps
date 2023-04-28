@@ -4,7 +4,7 @@
     "contracts": [
         {
             "address": "0xb929B89153fC2eEd442e81E5A1add4e2fa39028f",
-            "name": "MATIC Staking (Figment)",
+            "name": "Figment Validator",
             "parsers": [
                 {
                     "arguments": [
@@ -57,7 +57,13 @@
                                                 "key": "sci.eth.arg.delegateAmount",
                                                 "label": "Amount to delegate"
                                             }
-                                        }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.minSharesToMint",
+                                                "label": "Minimum shares to mint"
+                                            }
+                                        }                                        
                                     ],
                                     "skip_subheader": false,
                                     "subtitle": " ",
@@ -195,6 +201,12 @@
                                                 "key": "sci.eth.arg.withdrawAmount",
                                                 "label": "Amount to unbond"
                                             }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.maxSharesToBurn",
+                                                "label": "Maximum shares to burn"
+                                            }
                                         }
                                     ],
                                     "skip_subheader": false,
@@ -254,7 +266,7 @@
         },
         {
             "address": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
-            "name": "PoS Staking Contract",
+            "name": "Polygon PoS Staking Contract",
             "parsers": [
                 {
                     "arguments": [
@@ -345,5 +357,5 @@
         }
     ],
     "id": "figment_matic",
-    "name": "Figment for MATIC"
+    "name": "MATIC Staking"
 }
