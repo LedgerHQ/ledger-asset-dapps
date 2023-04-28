@@ -1,0 +1,349 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xD14a87025109013B0a2354a775cB335F926Af65A",
+            "name": "Kiln Validator",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "delegateAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_amount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "minSharesToMint",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_minSharesToMint"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "buyVoucher",
+                    "functionType": "delegate",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Delegate MATIC"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.delegateAmount",
+                                                "label": "Amount to delegate"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x6ab15071"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "withdrawn rewards",
+                            "value": {
+                                "terminalValue": {
+                                    "literal": {
+                                        "bytes": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdrawRewards",
+                    "functionType": "claim_reward",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Withdraw MATIC rewards"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc7b8981c"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "restaked rewards",
+                            "value": {
+                                "terminalValue": {
+                                    "literal": {
+                                        "bytes": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "restake",
+                    "functionType": "stake_reward",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Restake MATIC rewards"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4f91440d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "withdrawAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "claimAmount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "maxSharesToBurn",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "maximumSharesToBurn"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "sellVoucher_new",
+                    "functionType": "unstake",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Unbond MATIC"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.withdrawAmount",
+                                                "label": "Amount to unbond"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc83ec04d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "unbondedNonce",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "unbondNonce"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "unstakeClaimTokens_new",
+                    "functionType": "claim_stake",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Claim MATIC"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.unbondedNonce",
+                                                "label": "Unbond nonce"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xe97fddc2"
+                }
+            ]
+        },
+        {
+            "address": "0x5e3Ef299fDDf15eAa0432E6e66473ace8c13D908",
+            "name": "Polygon PoS Staking Contract",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "migratedAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "amount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "fromValidator",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "fromValidatorId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "toValidator",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "toValidatorId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "migrateDelegation",
+                    "functionType": "move_stake",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Move MATIC stake"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.migratedAmount",
+                                                "label": "Amount to move"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.fromValidator",
+                                                "label": "From Validator ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.toValidator",
+                                                "label": "To Validator ID"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xfb1ef52c"
+                }
+            ]
+        }
+    ],
+    "id": "Kiln_matic",
+    "name": "MATIC Staking"
+}
