@@ -390,9 +390,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1112,9 +1112,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1399,9 +1399,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.desc.permit",
-                                                "label": "desc.permit"
+                                            "static_entry": {
+                                                "label": "desc.permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1414,9 +1414,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1499,11 +1499,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -1537,8 +1537,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -1614,9 +1614,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1666,11 +1666,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -1710,8 +1710,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -1772,11 +1772,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -1842,14 +1842,14 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -1899,11 +1899,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -1943,8 +1943,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -1994,11 +1994,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -2049,8 +2049,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -2063,9 +2063,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -3010,9 +3010,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4196,9 +4196,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4865,9 +4865,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5039,9 +5039,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5239,9 +5239,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5254,9 +5254,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5339,11 +5339,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -5377,8 +5377,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pools"
                                             }
                                         }
                                     ],
@@ -5454,9 +5454,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5506,11 +5506,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -5550,8 +5550,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -5612,11 +5612,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -5682,14 +5682,14 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -5739,11 +5739,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -5783,8 +5783,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -5845,11 +5845,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -5904,8 +5904,8 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -5966,11 +5966,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -6036,14 +6036,14 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -6274,9 +6274,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.desc.permit",
-                                                "label": "desc.permit"
+                                            "static_entry": {
+                                                "label": "desc.permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -6289,9 +6289,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -6576,9 +6576,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.desc.permit",
-                                                "label": "desc.permit"
+                                            "static_entry": {
+                                                "label": "desc.permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -6591,9 +6591,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.data",
-                                                "label": "data"
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -6687,11 +6687,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -6731,8 +6731,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -6782,11 +6782,11 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "pools.0",
+                            "name": "pools.last",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "pools.0"
+                                        "abi_path": "pools.-1"
                                     }
                                 }
                             }
@@ -6837,8 +6837,8 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.pools.0",
-                                                "label": "pools.0"
+                                                "key": "sci.eth.arg.pools.last",
+                                                "label": "out pool"
                                             }
                                         }
                                     ],
@@ -6851,9 +6851,9 @@
                                 "key_value_screen": {
                                     "properties": [
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.permit",
-                                                "label": "permit"
+                                            "static_entry": {
+                                                "label": "permit",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
