@@ -3436,6 +3436,17 @@
                                     }
                                 }
                             }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "deadlines_.1",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "deadlines_.1"
+                                    }
+                                }
+                            }
                         }
                     ],
                     "functionName": "initializeToken",
@@ -3508,11 +3519,26 @@
                                                 "key": "sci.eth.arg.tokenURI_",
                                                 "label": "tokenURI_"
                                             }
-                                        },
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg.deadlines_.0",
                                                 "label": "deadlines_.0"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.deadlines_.0",
+                                                "label": "deadlines_.1"
                                             }
                                         }
                                     ],
@@ -4754,30 +4780,7 @@
                     "selector": "0x83d398c3"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "tokenIds_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "tokenIds_.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "deadlines_.0.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "deadlines_.0.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setTokenDeadlines",
                     "functionType": "unknown",
                     "options": {},
