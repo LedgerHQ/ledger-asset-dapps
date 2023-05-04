@@ -3537,7 +3537,7 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.deadlines_.0",
+                                                "key": "sci.eth.arg.deadlines_.1",
                                                 "label": "deadlines_.1"
                                             }
                                         }
@@ -3872,28 +3872,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "ids.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "ids.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "amounts.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "amounts.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "data",
                             "value": {
                                 "terminalValue": {
@@ -3931,15 +3909,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.ids.0",
-                                                "label": "ids.0"
+                                            "static_entry": {
+                                                "label": "ids",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.amounts.0",
-                                                "label": "amounts.0"
+                                            "static_entry": {
+                                                "label": "amounts",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4370,30 +4348,7 @@
                     "selector": "0xd928b8b9"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "tokenIds_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "tokenIds_.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "mintPrices_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "mintPrices_.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setETHMintPricePerToken",
                     "functionType": "unknown",
                     "options": {},
@@ -4409,15 +4364,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.tokenIds_.0",
-                                                "label": "tokenIds_.0"
+                                            "static_entry": {
+                                                "label": "tokenIds_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.mintPrices_.0",
-                                                "label": "mintPrices_.0"
+                                            "static_entry": {
+                                                "label": "mintPrices_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4431,19 +4386,7 @@
                     "selector": "0xbd36b6b8"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "features.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "features.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setEnabledFeatures",
                     "functionType": "unknown",
                     "options": {},
@@ -4459,9 +4402,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.features.0",
-                                                "label": "features.0"
+                                            "static_entry": {
+                                                "label": "features",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4536,30 +4479,7 @@
                     "selector": "0x9872f948"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "tokenIds_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "tokenIds_.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "maxMints_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "maxMints_.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setMaxMintPerToken",
                     "functionType": "unknown",
                     "options": {},
@@ -4575,15 +4495,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.tokenIds_.0",
-                                                "label": "tokenIds_.0"
+                                            "static_entry": {
+                                                "label": "tokenIds_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.maxMints_.0",
-                                                "label": "maxMints_.0"
+                                            "static_entry": {
+                                                "label": "maxMints_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4597,30 +4517,7 @@
                     "selector": "0x656191f1"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "tokenIds_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "tokenIds_.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "maxSupplies_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "maxSupplies_.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setMaxSupplyPerToken",
                     "functionType": "unknown",
                     "options": {},
@@ -4636,15 +4533,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.tokenIds_.0",
-                                                "label": "tokenIds_.0"
+                                            "static_entry": {
+                                                "label": "tokenIds_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.maxSupplies_.0",
-                                                "label": "maxSupplies_.0"
+                                            "static_entry": {
+                                                "label": "maxSupplies_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4796,15 +4693,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.tokenIds_.0",
-                                                "label": "tokenIds_.0"
+                                            "static_entry": {
+                                                "label": "tokenIds_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.deadlines_.0.0",
-                                                "label": "deadlines_.0.0"
+                                            "static_entry": {
+                                                "label": "deadlines_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
@@ -4818,30 +4715,7 @@
                     "selector": "0x09812b68"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "addresses_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "addresses_.0"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "types_.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "types_.0"
-                                    }
-                                }
-                            }
-                        }
-                    ],
+                    "arguments": [],
                     "functionName": "setTokenTypes",
                     "functionType": "unknown",
                     "options": {},
@@ -4857,15 +4731,15 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.addresses_.0",
-                                                "label": "addresses_.0"
+                                            "static_entry": {
+                                                "label": "addresses_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.types_.0",
-                                                "label": "types_.0"
+                                            "static_entry": {
+                                                "label": "types_",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
