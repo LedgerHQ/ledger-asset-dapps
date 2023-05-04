@@ -327,6 +327,84 @@
                         ]
                     },
                     "selector": "0x6a627842"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "from",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "tokenId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "tokenId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "transferFrom",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferFrom"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "from"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenId",
+                                                "label": "tokenId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x23b872dd"
                 }
             ]
         },
@@ -584,6 +662,118 @@
                         ]
                     },
                     "selector": "0xa22cb465"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "from",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "from"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "ids.0",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "ids.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amounts.0",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amounts.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "data"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "safeBatchTransferFrom",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "safeBatchTransferFrom"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "from"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.ids.0",
+                                                "label": "ids.0"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amounts.0",
+                                                "label": "amounts.0"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.data",
+                                                "label": "data"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x2eb2c2d6"
                 }
             ]
         }

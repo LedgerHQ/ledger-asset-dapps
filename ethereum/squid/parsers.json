@@ -1,0 +1,2421 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0xce16F69375520ab01377ce7B88f5BA8C48F8D666",
+            "name": "0xce16F69375520ab01377ce7B88f5BA8C48F8D666",
+            "parsers": [
+                {
+                    "arguments": [],
+                    "functionName": "acceptPauser",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "acceptPauser"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x167a6f90"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "bridgedTokenSymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "bridgedTokenSymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "calls.0.target",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.target"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.value",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.value"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "refundRecipient",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "refundRecipient"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
+                            "name": "enableForecall",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "enableForecall"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "bridgeCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "bridgeCall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.bridgedTokenSymbol",
+                                                "label": "bridgedTokenSymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callType",
+                                                "label": "calls.0.callType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.target",
+                                                "label": "calls.0.target"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.value",
+                                                "label": "calls.0.value"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callData",
+                                                "label": "calls.0.callData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.payload",
+                                                "label": "calls.0.payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.refundRecipient",
+                                                "label": "refundRecipient"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.enableForecall",
+                                                "label": "enableForecall"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x3c659741"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "token",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "token"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "bridgedTokenSymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "bridgedTokenSymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "calls.0.target",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.target"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.value",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.value"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.payload"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "callBridge",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "callBridge"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.token",
+                                                "label": "token"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationAddress",
+                                                "label": "destinationAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.bridgedTokenSymbol",
+                                                "label": "bridgedTokenSymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callType",
+                                                "label": "calls.0.callType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.target",
+                                                "label": "calls.0.target"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.value",
+                                                "label": "calls.0.value"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callData",
+                                                "label": "calls.0.callData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.payload",
+                                                "label": "calls.0.payload"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf35af1f8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "token",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "token"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "bridgedTokenSymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "bridgedTokenSymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "sourceCalls.0.callType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceCalls.0.callType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "sourceCalls.0.target",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceCalls.0.target"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "sourceCalls.0.value",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceCalls.0.value"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "sourceCalls.0.callData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceCalls.0.callData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "sourceCalls.0.payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceCalls.0.payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "destinationCalls.0.callType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationCalls.0.callType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "destinationCalls.0.target",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationCalls.0.target"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "destinationCalls.0.value",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationCalls.0.value"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "destinationCalls.0.callData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationCalls.0.callData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "destinationCalls.0.payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationCalls.0.payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "refundRecipient",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "refundRecipient"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
+                            "name": "enableForecall",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "enableForecall"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "callBridgeCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "callBridgeCall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.token",
+                                                "label": "token"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.bridgedTokenSymbol",
+                                                "label": "bridgedTokenSymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceCalls.0.callType",
+                                                "label": "sourceCalls.0.callType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceCalls.0.target",
+                                                "label": "sourceCalls.0.target"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceCalls.0.value",
+                                                "label": "sourceCalls.0.value"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceCalls.0.callData",
+                                                "label": "sourceCalls.0.callData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceCalls.0.payload",
+                                                "label": "sourceCalls.0.payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationCalls.0.callType",
+                                                "label": "destinationCalls.0.callType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationCalls.0.target",
+                                                "label": "destinationCalls.0.target"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationCalls.0.value",
+                                                "label": "destinationCalls.0.value"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationCalls.0.callData",
+                                                "label": "destinationCalls.0.callData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationCalls.0.payload",
+                                                "label": "destinationCalls.0.payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.refundRecipient",
+                                                "label": "refundRecipient"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.enableForecall",
+                                                "label": "enableForecall"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8ca3bf68"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "execute",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "execute"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x49160658"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "tokenSymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "tokenSymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "executeWithToken",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "executeWithToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenSymbol",
+                                                "label": "tokenSymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x1a98b2e0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "forecall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "forecall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd0224434"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "tokenSymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "tokenSymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "forecallWithToken",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "forecallWithToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenSymbol",
+                                                "label": "tokenSymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xe888e86c"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "token",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "token"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "calls.0.target",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.target"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.value",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.value"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.callData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.callData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "calls.0.payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "calls.0.payload"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "fundAndRunMulticall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "fundAndRunMulticall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.token",
+                                                "label": "token"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callType",
+                                                "label": "calls.0.callType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.target",
+                                                "label": "calls.0.target"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.value",
+                                                "label": "calls.0.value"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.callData",
+                                                "label": "calls.0.callData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.calls.0.payload",
+                                                "label": "calls.0.payload"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x58181a80"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "pause",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "pause"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8456cb59"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "data"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setup",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setup"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.data",
+                                                "label": "data"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x9ded06df"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferOwnership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "newOwner"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "unpause",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "unpause"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x3f4ba83a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newPauser",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newPauser"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "updatePauser",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updatePauser"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newPauser",
+                                                "label": "newPauser"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x554bab3c"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newImplementation",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementation"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "newImplementationCodeHash",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementationCodeHash"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "params",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "params"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "upgrade",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "upgrade"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementation",
+                                                "label": "newImplementation"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementationCodeHash",
+                                                "label": "newImplementationCodeHash"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.params",
+                                                "label": "params"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xa3499c73"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+            "name": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "params",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "params"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approveContractCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approveContractCall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.params",
+                                                "label": "params"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xfbe0a31b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "params",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "params"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "approveContractCallWithMint",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approveContractCallWithMint"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.params",
+                                                "label": "params"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x585a9fd4"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationContractAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationContractAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "callContract",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "callContract"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationContractAddress",
+                                                "label": "destinationContractAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x1c92115f"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationContractAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationContractAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payload",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payload"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "symbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "symbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "callContractWithToken",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "callContractWithToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationContractAddress",
+                                                "label": "destinationContractAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payload",
+                                                "label": "payload"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.symbol",
+                                                "label": "symbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xb5417084"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "input",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "input"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "execute",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "execute"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.input",
+                                                "label": "input"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x09c5eabe"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "destinationAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "destinationAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "symbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "symbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "sendToken",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "sendToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationChain",
+                                                "label": "destinationChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.destinationAddress",
+                                                "label": "destinationAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.symbol",
+                                                "label": "symbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x26ef699d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "symbols.0",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "symbols.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "limits.0",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "limits.0"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setTokenMintLimits",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setTokenMintLimits"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.symbols.0",
+                                                "label": "symbols.0"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.limits.0",
+                                                "label": "limits.0"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x67ace8eb"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "params",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "params"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setup",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setup"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.params",
+                                                "label": "params"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x9ded06df"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newImplementation",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementation"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "newImplementationCodeHash",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementationCodeHash"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "setupParams",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "setupParams"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "upgrade",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "upgrade"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementation",
+                                                "label": "newImplementation"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementationCodeHash",
+                                                "label": "newImplementationCodeHash"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.setupParams",
+                                                "label": "setupParams"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xa3499c73"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payloadHash",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payloadHash"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "validateContractCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "validateContractCall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payloadHash",
+                                                "label": "payloadHash"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x5f6970c3"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commandId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commandId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceChain",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceChain"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "sourceAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "sourceAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "payloadHash",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "payloadHash"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "symbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "symbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "validateContractCallAndMint",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "validateContractCallAndMint"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commandId",
+                                                "label": "commandId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceChain",
+                                                "label": "sourceChain"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.sourceAddress",
+                                                "label": "sourceAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.payloadHash",
+                                                "label": "payloadHash"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.symbol",
+                                                "label": "symbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "amount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x1876eed9"
+                }
+            ]
+        }
+    ],
+    "id": "squid",
+    "name": "squid"
+}

@@ -1,0 +1,1669 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0xD94C7060808f3c876824E57e685702f3834D2e13",
+            "name": "0xD94C7060808f3c876824E57e685702f3834D2e13",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchase",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchase"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xefef39a1"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchaseTo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchaseTo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x891407c0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "resetAuctionDetails",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "resetAuctionDetails"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x2aedc28e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_minimumPriceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_minimumPriceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_maximumPriceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_maximumPriceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setAllowablePriceDecayHalfLifeRangeSeconds",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setAllowablePriceDecayHalfLifeRangeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._minimumPriceDecayHalfLifeSeconds",
+                                                "label": "_minimumPriceDecayHalfLifeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._maximumPriceDecayHalfLifeSeconds",
+                                                "label": "_maximumPriceDecayHalfLifeSeconds"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc0ad212e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_auctionTimestampStart",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_auctionTimestampStart"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_priceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_priceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_startPrice",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_startPrice"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_basePrice",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_basePrice"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setAuctionDetails",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setAuctionDetails"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._auctionTimestampStart",
+                                                "label": "_auctionTimestampStart"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._priceDecayHalfLifeSeconds",
+                                                "label": "_priceDecayHalfLifeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._startPrice",
+                                                "label": "_startPrice"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._basePrice",
+                                                "label": "_basePrice"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xcd379f6e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMaxInvocations",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMaxInvocations"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf7bd4b88"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x48742D38a0809135EFd643c1150BfC13768C3907",
+            "name": "0x48742D38a0809135EFd643c1150BfC13768C3907",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchase",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchase"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xefef39a1"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchaseTo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchaseTo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x891407c0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMaxInvocations",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMaxInvocations"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf7bd4b88"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_limit",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_limit"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMintLimit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMintLimit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._limit",
+                                                "label": "_limit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x231c2281"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "toggleContractMintable",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "toggleContractMintable"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xacffea05"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "togglePurchaseToDisabled",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "togglePurchaseToDisabled"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x40d1397e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_pricePerTokenInWei",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_pricePerTokenInWei"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "updatePricePerTokenInWei",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updatePricePerTokenInWei"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._pricePerTokenInWei",
+                                                "label": "_pricePerTokenInWei"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x6cb9b7ff"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_ASCII",
+                            "name": "_currencySymbol",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_currencySymbol"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_currencyAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_currencyAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "updateProjectCurrencyInfo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateProjectCurrencyInfo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._currencySymbol",
+                                                "label": "_currencySymbol"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._currencyAddress",
+                                                "label": "_currencyAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd195b365"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x706d6C6ef700a3c1C3a727f0c46492492E0A72b5",
+            "name": "0x706d6C6ef700a3c1C3a727f0c46492492E0A72b5",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchase",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchase"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xefef39a1"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchaseTo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchaseTo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x891407c0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchaseTo_do6",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchaseTo_do6"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x00009987"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchase_H4M",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchase_H4M"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0000b460"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "resetAuctionDetails",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "resetAuctionDetails"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x2aedc28e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_minimumPriceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_minimumPriceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_maximumPriceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_maximumPriceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setAllowablePriceDecayHalfLifeRangeSeconds",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setAllowablePriceDecayHalfLifeRangeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._minimumPriceDecayHalfLifeSeconds",
+                                                "label": "_minimumPriceDecayHalfLifeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._maximumPriceDecayHalfLifeSeconds",
+                                                "label": "_maximumPriceDecayHalfLifeSeconds"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc0ad212e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_auctionTimestampStart",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_auctionTimestampStart"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_priceDecayHalfLifeSeconds",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_priceDecayHalfLifeSeconds"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_startPrice",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_startPrice"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_basePrice",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_basePrice"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setAuctionDetails",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setAuctionDetails"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._auctionTimestampStart",
+                                                "label": "_auctionTimestampStart"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._priceDecayHalfLifeSeconds",
+                                                "label": "_priceDecayHalfLifeSeconds"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._startPrice",
+                                                "label": "_startPrice"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._basePrice",
+                                                "label": "_basePrice"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xcd379f6e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMaxInvocations",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMaxInvocations"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf7bd4b88"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x1DEC9E52f1320F7Deb29cBCd7B7d67f3dF785142",
+            "name": "0x1DEC9E52f1320F7Deb29cBCd7B7d67f3dF785142",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchase",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchase"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xefef39a1"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "purchaseTo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "purchaseTo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x891407c0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMaxInvocations",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMaxInvocations"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf7bd4b88"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_limit",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_limit"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "setProjectMintLimit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setProjectMintLimit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._limit",
+                                                "label": "_limit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x231c2281"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "toggleContractMintable",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "toggleContractMintable"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xacffea05"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "togglePurchaseToDisabled",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "togglePurchaseToDisabled"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x40d1397e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_projectId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_projectId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_pricePerTokenInWei",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_pricePerTokenInWei"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "updatePricePerTokenInWei",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updatePricePerTokenInWei"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._projectId",
+                                                "label": "_projectId"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._pricePerTokenInWei",
+                                                "label": "_pricePerTokenInWei"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x6cb9b7ff"
+                }
+            ]
+        }
+    ],
+    "id": "artblocks",
+    "name": "artblocks"
+}
