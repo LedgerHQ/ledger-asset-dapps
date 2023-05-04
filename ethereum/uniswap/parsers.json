@@ -795,17 +795,6 @@
                 },
                 {
                     "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "data.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "data.0"
-                                    }
-                                }
-                            }
-                        }
                     ],
                     "functionName": "multicall",
                     "functionType": "unknown",
@@ -3175,17 +3164,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "data.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "data.0"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "functionName": "multicall",
@@ -3236,17 +3214,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "data.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "data.0"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "functionName": "multicall",
@@ -3287,17 +3254,6 @@
                 },
                 {
                     "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "data.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "data.0"
-                                    }
-                                }
-                            }
-                        }
                     ],
                     "functionName": "multicall",
                     "functionType": "unknown",
@@ -3994,11 +3950,22 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "path.0",
+                            "name": "path.first",
                             "value": {
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "path.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "path.last",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "path.-1"
                                     }
                                 }
                             }
@@ -4043,10 +4010,25 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.path.0",
-                                                "label": "path.0"
+                                                "key": "sci.eth.arg.path.first",
+                                                "label": "Token in"
                                             }
                                         },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.path.last",
+                                                "label": "Token out"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg.to",
@@ -4089,11 +4071,22 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "path.0",
+                            "name": "path.first",
                             "value": {
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "path.0"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "path.last",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "path.-1"
                                     }
                                 }
                             }
@@ -4138,10 +4131,25 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.path.0",
+                                                "key": "sci.eth.arg.path.first",
                                                 "label": "path.0"
                                             }
                                         },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.path.last",
+                                                "label": "path.0"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg.to",
@@ -4976,17 +4984,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "inputs.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "inputs.0"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "functionName": "execute",
@@ -5034,17 +5031,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "commands"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "inputs.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "inputs.0"
                                     }
                                 }
                             }
@@ -5776,17 +5762,6 @@
                 },
                 {
                     "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "data.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "data.0"
-                                    }
-                                }
-                            }
-                        }
                     ],
                     "functionName": "multicall",
                     "functionType": "unknown",
@@ -6892,17 +6867,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "inputs.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "inputs.0"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "functionName": "execute",
@@ -6950,17 +6914,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "commands"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "inputs.0",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "inputs.0"
                                     }
                                 }
                             }
