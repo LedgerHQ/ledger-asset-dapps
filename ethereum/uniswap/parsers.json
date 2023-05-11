@@ -32,6 +32,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approve",
                     "functionType": "approve_erc721",
                     "options": {},
@@ -82,6 +83,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "burn",
                     "functionType": "burn_erc721",
                     "options": {},
@@ -159,6 +161,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "collect",
                     "functionType": "unknown",
                     "options": {},
@@ -254,6 +257,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "createAndInitializePoolIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -360,6 +364,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "decreaseLiquidity",
                     "functionType": "unknown",
                     "options": {},
@@ -492,6 +497,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "increaseLiquidity",
                     "functionType": "unknown",
                     "options": {},
@@ -685,6 +691,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "mint",
                     "functionType": "mint_erc1155",
                     "options": {},
@@ -795,6 +802,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "multicall",
                     "functionType": "unknown",
                     "options": {},
@@ -894,6 +902,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "permit",
                     "functionType": "unknown",
                     "options": {},
@@ -965,6 +974,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "refundETH",
                     "functionType": "unknown",
                     "options": {},
@@ -1025,6 +1035,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -1101,7 +1112,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_data",
@@ -1231,6 +1244,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermit",
                     "functionType": "unknown",
                     "options": {},
@@ -1369,6 +1383,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowed",
                     "functionType": "unknown",
                     "options": {},
@@ -1507,6 +1522,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowedIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -1645,6 +1661,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -1739,6 +1756,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc721",
                     "options": {},
@@ -1811,6 +1829,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepToken",
                     "functionType": "unknown",
                     "options": {},
@@ -1889,6 +1908,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -1954,7 +1974,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "data",
@@ -2034,6 +2056,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9",
                     "functionType": "unknown",
                     "options": {},
@@ -2091,6 +2114,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approveMax",
                     "functionType": "approve",
                     "options": {},
@@ -2135,6 +2159,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approveMaxMinusOne",
                     "functionType": "approve",
                     "options": {},
@@ -2179,6 +2204,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approveZeroThenMax",
                     "functionType": "approve",
                     "options": {},
@@ -2223,6 +2249,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approveZeroThenMaxMinusOne",
                     "functionType": "approve",
                     "options": {},
@@ -2254,7 +2281,8 @@
                     "selector": "0xab3fdd50"
                 },
                 {
-                    "arguments": [
+                    "arguments": [],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "data",
@@ -2344,6 +2372,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactInput",
                     "functionType": "swap",
                     "options": {},
@@ -2472,6 +2501,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactInputSingle",
                     "functionType": "swap",
                     "options": {},
@@ -2594,6 +2624,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactOutput",
                     "functionType": "swap",
                     "options": {},
@@ -2722,6 +2753,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactOutputSingle",
                     "functionType": "swap",
                     "options": {},
@@ -2822,6 +2854,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "getApprovalType",
                     "functionType": "unknown",
                     "options": {},
@@ -2916,6 +2949,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "increaseLiquidity",
                     "functionType": "unknown",
                     "options": {},
@@ -3070,6 +3104,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "mint",
                     "functionType": "mint_erc721",
                     "options": {},
@@ -3165,6 +3200,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "multicall",
                     "functionType": "unknown",
                     "options": {},
@@ -3215,6 +3251,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "multicall",
                     "functionType": "unknown",
                     "options": {},
@@ -3253,6 +3290,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "multicall",
                     "functionType": "unknown",
                     "options": {},
@@ -3308,6 +3346,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "pull",
                     "functionType": "unknown",
                     "options": {},
@@ -3346,6 +3385,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "refundETH",
                     "functionType": "unknown",
                     "options": {},
@@ -3439,6 +3479,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermit",
                     "functionType": "unknown",
                     "options": {},
@@ -3577,6 +3618,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowed",
                     "functionType": "unknown",
                     "options": {},
@@ -3715,6 +3757,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowedIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -3853,6 +3896,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -3980,6 +4024,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "swapExactTokensForTokens",
                     "functionType": "swap",
                     "options": {},
@@ -4101,6 +4146,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "swapTokensForExactTokens",
                     "functionType": "swap",
                     "options": {},
@@ -4200,6 +4246,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepToken",
                     "functionType": "unknown",
                     "options": {},
@@ -4267,6 +4314,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepToken",
                     "functionType": "unknown",
                     "options": {},
@@ -4350,6 +4398,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepTokenWithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -4456,6 +4505,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepTokenWithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -4542,7 +4592,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_data",
@@ -4622,6 +4674,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9",
                     "functionType": "unknown",
                     "options": {},
@@ -4672,6 +4725,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9",
                     "functionType": "unknown",
                     "options": {},
@@ -4749,6 +4803,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9WithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -4833,6 +4888,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9WithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -4889,6 +4945,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "wrapETH",
                     "functionType": "unknown",
                     "options": {},
@@ -4927,7 +4984,8 @@
             "name": "UniversalRouter",
             "parsers": [
                 {
-                    "arguments": [
+                    "arguments": [],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "looksRareClaim",
@@ -4984,6 +5042,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "execute",
                     "functionType": "unknown",
                     "options": {},
@@ -5045,6 +5104,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "execute",
                     "functionType": "unknown",
                     "options": {},
@@ -5110,7 +5170,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "data",
@@ -5230,6 +5292,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactInput",
                     "functionType": "swap",
                     "options": {},
@@ -5384,6 +5447,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactInputSingle",
                     "functionType": "swap",
                     "options": {},
@@ -5523,6 +5587,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactOutput",
                     "functionType": "swap",
                     "options": {},
@@ -5677,6 +5742,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "exactOutputSingle",
                     "functionType": "swap",
                     "options": {},
@@ -5760,6 +5826,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "multicall",
                     "functionType": "unknown",
                     "options": {},
@@ -5792,6 +5859,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "refundETH",
                     "functionType": "unknown",
                     "options": {},
@@ -5885,6 +5953,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermit",
                     "functionType": "unknown",
                     "options": {},
@@ -6023,6 +6092,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowed",
                     "functionType": "unknown",
                     "options": {},
@@ -6161,6 +6231,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitAllowedIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -6299,6 +6370,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "selfPermitIfNecessary",
                     "functionType": "unknown",
                     "options": {},
@@ -6404,6 +6476,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepToken",
                     "functionType": "unknown",
                     "options": {},
@@ -6504,6 +6577,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "sweepTokenWithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -6590,7 +6664,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_data",
@@ -6670,6 +6746,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9",
                     "functionType": "unknown",
                     "options": {},
@@ -6753,6 +6830,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "unwrapWETH9WithFee",
                     "functionType": "unknown",
                     "options": {},
@@ -6822,6 +6900,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "collectRewards",
                     "functionType": "unknown",
                     "options": {},
@@ -6866,6 +6945,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "execute",
                     "functionType": "unknown",
                     "options": {},
@@ -6927,6 +7007,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "execute",
                     "functionType": "unknown",
                     "options": {},
@@ -6992,7 +7073,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "data",

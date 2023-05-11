@@ -76,6 +76,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "__ERC721RaribleUser_init",
                     "functionType": "unknown",
                     "options": {},
@@ -220,6 +221,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "__ERC721Rarible_init",
                     "functionType": "unknown",
                     "options": {},
@@ -314,6 +316,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approve",
                     "functionType": "burn_erc721",
                     "options": {},
@@ -364,6 +367,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "burn",
                     "functionType": "burn_erc721",
                     "options": {},
@@ -396,6 +400,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "renounceOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -456,6 +461,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -532,7 +538,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_data",
@@ -618,6 +626,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc721",
                     "options": {},
@@ -690,6 +699,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -746,6 +756,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -812,6 +823,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "updateAccount",
                     "functionType": "unknown",
                     "options": {},
@@ -919,6 +931,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "__ExchangeV2_init",
                     "functionType": "unknown",
                     "options": {},
@@ -1008,17 +1021,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "order.makeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "order.makeAsset.assetType.data"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "order.makeAsset.value",
                             "value": {
                                 "terminalValue": {
@@ -1046,17 +1048,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "order.takeAsset.assetType.assetClass"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "order.takeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "order.takeAsset.assetType.data"
                                     }
                                 }
                             }
@@ -1112,6 +1103,30 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "order.dataType"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "order.makeAsset.assetType.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "order.makeAsset.assetType.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "order.takeAsset.assetType.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "order.takeAsset.assetType.data"
                                     }
                                 }
                             }
@@ -1274,17 +1289,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderLeft.makeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "orderLeft.makeAsset.assetType.data"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "orderLeft.makeAsset.value",
                             "value": {
                                 "terminalValue": {
@@ -1312,17 +1316,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "orderLeft.takeAsset.assetType.assetClass"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderLeft.takeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "orderLeft.takeAsset.assetType.data"
                                     }
                                 }
                             }
@@ -1384,17 +1377,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderLeft.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "orderLeft.data"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "signatureLeft",
                             "value": {
                                 "terminalValue": {
@@ -1428,17 +1410,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderRight.makeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "orderRight.makeAsset.assetType.data"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "orderRight.makeAsset.value",
                             "value": {
                                 "terminalValue": {
@@ -1466,17 +1437,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "orderRight.takeAsset.assetType.assetClass"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderRight.takeAsset.assetType.data",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "orderRight.takeAsset.assetType.data"
                                     }
                                 }
                             }
@@ -1538,22 +1498,79 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "orderRight.data",
+                            "name": "signatureRight",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "orderRight.data"
+                                        "abi_path": "signatureRight"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "orderLeft.makeAsset.assetType.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "orderLeft.makeAsset.assetType.data"
                                     }
                                 }
                             }
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "signatureRight",
+                            "name": "orderLeft.takeAsset.assetType.data",
                             "value": {
                                 "terminalValue": {
                                     "path": {
-                                        "abi_path": "signatureRight"
+                                        "abi_path": "orderLeft.takeAsset.assetType.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "orderLeft.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "orderLeft.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "orderRight.makeAsset.assetType.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "orderRight.makeAsset.assetType.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "orderRight.takeAsset.assetType.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "orderRight.takeAsset.assetType.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "orderRight.data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "orderRight.data"
                                     }
                                 }
                             }
@@ -1798,6 +1815,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "renounceOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -1847,6 +1865,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setAssetMatcher",
                     "functionType": "unknown",
                     "options": {},
@@ -1897,6 +1916,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setDefaultFeeReceiver",
                     "functionType": "unknown",
                     "options": {},
@@ -1952,6 +1972,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setFeeReceiver",
                     "functionType": "unknown",
                     "options": {},
@@ -2002,6 +2023,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setProtocolFee",
                     "functionType": "unknown",
                     "options": {},
@@ -2046,6 +2068,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setRoyaltiesRegistry",
                     "functionType": "unknown",
                     "options": {},
@@ -2101,6 +2124,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setTransferProxy",
                     "functionType": "unknown",
                     "options": {},
@@ -2151,6 +2175,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -2246,6 +2271,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "createToken",
                     "functionType": "unknown",
                     "options": {},
@@ -2373,6 +2399,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "createToken",
                     "functionType": "unknown",
                     "options": {},
@@ -2438,6 +2465,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "renounceOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -2476,6 +2504,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -2582,6 +2611,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "__ERC721Rarible_init",
                     "functionType": "unknown",
                     "options": {},
@@ -2676,6 +2706,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "approve",
                     "functionType": "approve_erc721",
                     "options": {},
@@ -2726,6 +2757,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "burn",
                     "functionType": "burn_erc721",
                     "options": {},
@@ -2758,6 +2790,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "renounceOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -2818,6 +2851,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "safeTransferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -2894,7 +2928,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_data",
@@ -2980,6 +3016,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "setApprovalForAll",
                     "functionType": "approve_erc721",
                     "options": {},
@@ -3052,6 +3089,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferFrom",
                     "functionType": "transfer_erc721",
                     "options": {},
@@ -3108,6 +3146,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "transferOwnership",
                     "functionType": "unknown",
                     "options": {},
@@ -3174,6 +3213,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "updateAccount",
                     "functionType": "unknown",
                     "options": {},
