@@ -44,5 +44,57 @@
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_publicKeys",
+                "type": "bytes"
+            }
+        ],
+        "name": "batchWithdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_publicKeys",
+                "type": "bytes"
+            }
+        ],
+        "name": "batchWithdrawCLFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_publicKeys",
+                "type": "bytes"
+            }
+        ],
+        "name": "batchWithdrawELFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_publicKeys",
+                "type": "bytes"
+            }
+        ],
+        "name": "requestValidatorsExit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
     }
 ]

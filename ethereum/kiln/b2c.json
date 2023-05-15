@@ -8,23 +8,39 @@
             "selectors": {
                 "0x0968f264": {
                     "method": "withdraw",
-                    "plugin": "Kiln"
+                    "plugin": "kiln"
+                },
+                "0x0ffab6c2": {
+                    "method": "batchWithdrawCLFee",
+                    "plugin": "kiln"
                 },
                 "0x2ba03a79": {
                     "method": "withdrawCLFee",
-                    "plugin": "Kiln"
+                    "plugin": "kiln"
+                },
+                "0xb6b06dec": {
+                    "method": "requestValidatorsExit",
+                    "plugin": "kiln"
                 },
                 "0xbf509bd4": {
                     "method": "withdrawELFee",
-                    "plugin": "Kiln"
+                    "plugin": "kiln"
                 },
                 "0xd0e30db0": {
                     "method": "deposit",
-                    "plugin": "Kiln"
+                    "plugin": "kiln"
+                },
+                "0xe8a0c121": {
+                    "method": "batchWithdraw",
+                    "plugin": "kiln"
                 },
                 "0xe99454f5": {
                     "method": "setWithdrawal",
-                    "plugin": "Kiln"
+                    "plugin": "kiln"
+                },
+                "0xef5e4682": {
+                    "method": "batchWithdrawELFee",
+                    "plugin": "kiln"
                 }
             }
         }
