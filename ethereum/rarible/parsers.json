@@ -1495,17 +1495,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "signatureRight",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "signatureRight"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "arguments_skipped": [
@@ -1571,6 +1560,18 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "orderRight.data"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "scripts_compatibility": "8.2.0",
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "signatureRight",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "signatureRight"
                                     }
                                 }
                             }
@@ -1798,9 +1799,9 @@
                                             }
                                         },
                                         {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.signatureRight",
-                                                "label": "signatureRight"
+                                            "static_entry": {
+                                                "label": "signatureRight",
+                                                "value": "(Cannot be displayed)"
                                             }
                                         }
                                     ],
