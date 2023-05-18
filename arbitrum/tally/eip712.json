@@ -1,0 +1,168 @@
+{
+  "blockchainName": "arbitrum",
+  "chainId": 421611,
+  "contracts": [
+    {
+      "address": "0xf07ded9dc292157749b6fd268e37df6ea38395b9",
+      "contractName": "L2ArbitrumGovernor",
+      "messages": [
+        {
+          "mapper": {
+            "fields": [
+              {
+                "label": "Proposal id",
+                "path": "proposalId"
+              },
+              {
+                "label": "Support",
+                "path": "support"
+              }
+            ],
+            "label": "Arbitrum Foundation: Core Governor"
+          },
+          "schema": {
+            "Ballot": [
+              {
+                "name": "proposalId",
+                "type": "uint256"
+              },
+              {
+                "name": "support",
+                "type": "uint8"
+              }
+            ],
+            "EIP712Domain": [
+              {
+                "name": "chainId",
+                "type": "uint256"
+              },
+              {
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "name": "verifyingContract",
+                "type": "address"
+              },
+              {
+                "name": "version",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "address": "0x789fc99093b09ad01c34dc7251d0c89ce743e5a4",
+      "contractName": "L2ArbitrumGovernor",
+      "messages": [
+        {
+          "mapper": {
+            "fields": [
+              {
+                "label": "Proposal id",
+                "path": "proposalId"
+              },
+              {
+                "label": "Support",
+                "path": "support"
+              }
+            ],
+            "label": "Arbitrum Foundation: Treasury Governor"
+          },
+          "schema": {
+            "Ballot": [
+              {
+                "name": "proposalId",
+                "type": "uint256"
+              },
+              {
+                "name": "support",
+                "type": "uint8"
+              }
+            ],
+            "EIP712Domain": [
+              {
+                "name": "chainId",
+                "type": "uint256"
+              },
+              {
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "name": "verifyingContract",
+                "type": "address"
+              },
+              {
+                "name": "version",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
+      "contractName": "Arbitrum",
+      "messages": [
+        {
+          "mapper": {
+            "fields": [
+              {
+                "label": "Delegatee",
+                "path": "delegatee"
+              },
+              {
+                "label": "Nonce",
+                "path": "nonce"
+              },
+              {
+                "label": "Expiry",
+                "path": "expiry"
+              }
+            ],
+            "label": "ARB token"
+          },
+          "schema": {
+            "Delegation": [
+              {
+                "name": "delegatee",
+                "type": "address"
+              },
+              {
+                "name": "nonce",
+                "type": "uint256"
+              },
+              {
+                "name": "expiry",
+                "type": "uint256"
+              }
+            ],
+            "EIP712Domain": [
+              {
+                "name": "chainId",
+                "type": "uint256"
+              },
+              {
+                "name": "name",
+                "type": "string"
+              },
+              {
+                "name": "verifyingContract",
+                "type": "address"
+              },
+              {
+                "name": "version",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "name": "Tally"
+}

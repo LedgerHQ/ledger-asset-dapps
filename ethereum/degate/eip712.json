@@ -1,0 +1,308 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xe63602a9b3dfe983187525ac985fec4f57b24ed5",
+            "contractName": "DeGate Exchange Contract",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Owner",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "AccountID",
+                                "path": "accountID"
+                            },
+                            {
+                                "label": "FeeTokenID",
+                                "path": "feeTokenID"
+                            },
+                            {
+                                "label": "MaxFee",
+                                "path": "maxFee"
+                            },
+                            {
+                                "label": "PublicKey",
+                                "path": "publicKey"
+                            },
+                            {
+                                "label": "ValidUntil",
+                                "path": "validUntil"
+                            },
+                            {
+                                "label": "Nonce",
+                                "path": "nonce"
+                            }
+                        ],
+                        "label": "DeGate AccountUpdate"
+                    },
+                    "schema": {
+                        "AccountUpdate": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "accountID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "feeTokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "maxFee",
+                                "type": "uint96"
+                            },
+                            {
+                                "name": "publicKey",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "validUntil",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint32"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Owner",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "AccountID",
+                                "path": "accountID"
+                            },
+                            {
+                                "label": "TokenID",
+                                "path": "tokenID"
+                            },
+                            {
+                                "label": "Amount",
+                                "path": "amount"
+                            },
+                            {
+                                "label": "FeeTokenID",
+                                "path": "feeTokenID"
+                            },
+                            {
+                                "label": "MaxFee",
+                                "path": "maxFee"
+                            },
+                            {
+                                "label": "To",
+                                "path": "to"
+                            },
+                            {
+                                "label": "MinGas",
+                                "path": "minGas"
+                            },
+                            {
+                                "label": "ValidUntil",
+                                "path": "validUntil"
+                            },
+                            {
+                                "label": "StorageID",
+                                "path": "storageID"
+                            }
+                        ],
+                        "label": "DeGate Withdrawal"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Withdrawal": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "accountID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "tokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint248"
+                            },
+                            {
+                                "name": "feeTokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "maxFee",
+                                "type": "uint96"
+                            },
+                            {
+                                "name": "to",
+                                "type": "address"
+                            },
+                            {
+                                "name": "minGas",
+                                "type": "uint248"
+                            },
+                            {
+                                "name": "validUntil",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "storageID",
+                                "type": "uint32"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Owner",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "AccountID",
+                                "path": "accountID"
+                            },
+                            {
+                                "label": "TokenID",
+                                "path": "tokenID"
+                            },
+                            {
+                                "label": "Amount",
+                                "path": "amount"
+                            },
+                            {
+                                "label": "FeeTokenID",
+                                "path": "feeTokenID"
+                            },
+                            {
+                                "label": "MaxFee",
+                                "path": "maxFee"
+                            },
+                            {
+                                "label": "To",
+                                "path": "to"
+                            },
+                            {
+                                "label": "ValidUntil",
+                                "path": "validUntil"
+                            },
+                            {
+                                "label": "StorageID",
+                                "path": "storageID"
+                            }
+                        ],
+                        "label": "DeGate Transfer"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Transfer": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "accountID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "tokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint248"
+                            },
+                            {
+                                "name": "feeTokenID",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "maxFee",
+                                "type": "uint96"
+                            },
+                            {
+                                "name": "to",
+                                "type": "address"
+                            },
+                            {
+                                "name": "validUntil",
+                                "type": "uint32"
+                            },
+                            {
+                                "name": "storageID",
+                                "type": "uint32"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "DeGate"
+}
