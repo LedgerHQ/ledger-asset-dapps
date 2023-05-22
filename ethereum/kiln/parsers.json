@@ -1,0 +1,350 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x746d8A8FCAB7f829Fa500504f60D89C5CC1EA973",
+            "name": "Native Staking",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "amountToStake",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "literal": {
+                                            "bytes": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                        }
+                                    },
+                                    "value": {
+                                        "atpPropertyReference": "amount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "stake",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Stake ETH"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amountToStake",
+                                                "label": "Amount to stake"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Withrdaw available balance"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "Validator addr."
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0968f264"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKeys",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKeys"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "batchWithdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Batch withrdaw available balances"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xe8a0c121"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdrawCLFee",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Withdraw consensus balance"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "Validator addr."
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x2ba03a79"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKeys",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKeys"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "batchWithdrawCLFee",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Batch withdraw consensus balance"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0ffab6c2"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKey",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "withdrawELFee",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Withdraw execution balance"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._publicKey",
+                                                "label": "Validator addr."
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xbf509bd4"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKeys",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKeys"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "batchWithdrawELFee",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Batch withdraw execution balance"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xef5e4682"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_publicKeys",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_publicKeys"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "requestValidatorsExit",
+                    "functionType": "unstake",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Exit validator(s)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xb6b06dec"
+                }
+            ]
+        }
+    ],
+    "id": "kiln",
+    "name": "Kiln"
+}

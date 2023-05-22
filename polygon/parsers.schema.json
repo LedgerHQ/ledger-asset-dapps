@@ -396,23 +396,32 @@
                                 },
                                 "functionType": {
                                     "enum": [
-                                        "stake",
-                                        "swap",
-                                        "wrap",
-                                        "unwrap",
-                                        "borrow",
-                                        "repay_loan",
-                                        "lend",
-                                        "withdraw",
-                                        "claim_reward",
-                                        "configure",
-                                        "buy",
                                         "approve",
-                                        "transfer_erc721",
-                                        "transfer_erc1155",
-                                        "approve_erc721",
                                         "approve_erc1155",
-                                        "mint_erc721"
+                                        "approve_erc721",
+                                        "borrow",
+                                        "burn_erc1155",
+                                        "burn_erc721",
+                                        "buy",
+                                        "claim_reward",
+                                        "claim_stake",
+                                        "configure",
+                                        "delegate",
+                                        "lend",
+                                        "mint_erc1155",
+                                        "mint_erc721",
+                                        "move_stake",
+                                        "repay_loan",
+                                        "stake",
+                                        "stake_reward",
+                                        "swap",
+                                        "transfer_erc1155",
+                                        "transfer_erc721",
+                                        "unknown",
+                                        "unstake",
+                                        "unwrap",
+                                        "withdraw",
+                                        "wrap"
                                     ]
                                 },
                                 "options": {
@@ -462,11 +471,10 @@
             ]
         },
         "id": {
-            "pattern": "^[a-z_]+$",
+            "pattern": "^[a-z0-9_]+$",
             "type": "string"
         },
         "name": {
-            "pattern": "^[a-zA-Z0-9_ ]+$",
             "type": "string"
         }
     },
