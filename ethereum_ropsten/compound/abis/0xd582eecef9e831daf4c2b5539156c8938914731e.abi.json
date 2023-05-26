@@ -1,0 +1,164 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "signature": "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract TransparentUpgradeableProxy",
+                "name": "proxy",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "newAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "changeProxyAdmin",
+        "outputs": [],
+        "signature": "0x7eff275e",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "contract TransparentUpgradeableProxy",
+                "name": "proxy",
+                "type": "address"
+            }
+        ],
+        "name": "getProxyAdmin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "signature": "0xf3b7dead",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "contract TransparentUpgradeableProxy",
+                "name": "proxy",
+                "type": "address"
+            }
+        ],
+        "name": "getProxyImplementation",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "signature": "0x204e1c7a",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "signature": "0x8da5cb5b",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "signature": "0x715018a6",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "signature": "0xf2fde38b",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract TransparentUpgradeableProxy",
+                "name": "proxy",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            }
+        ],
+        "name": "upgrade",
+        "outputs": [],
+        "signature": "0x99a88ec4",
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract TransparentUpgradeableProxy",
+                "name": "proxy",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "name": "upgradeAndCall",
+        "outputs": [],
+        "payable": true,
+        "signature": "0x9623609d",
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]
