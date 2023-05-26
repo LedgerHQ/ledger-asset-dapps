@@ -1,0 +1,63 @@
+[
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "cEther",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "signature": "0x19b68c00",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "name": "cEther_",
+                "type": "address"
+            }
+        ],
+        "name": "repayBehalfExplicit",
+        "outputs": [],
+        "payable": true,
+        "signature": "0x367b7f05",
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "borrower",
+                "type": "address"
+            }
+        ],
+        "name": "repayBehalf",
+        "outputs": [],
+        "payable": true,
+        "signature": "0x9f35c3d5",
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "cEther_",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "signature": "constructor",
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    }
+]

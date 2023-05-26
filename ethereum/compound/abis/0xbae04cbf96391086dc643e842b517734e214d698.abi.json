@@ -1,0 +1,110 @@
+[
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "cash",
+                "type": "uint256"
+            },
+            {
+                "name": "borrows",
+                "type": "uint256"
+            },
+            {
+                "name": "_reserves",
+                "type": "uint256"
+            }
+        ],
+        "name": "getBorrowRate",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "signature": "0x15f24053",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "multiplier",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "signature": "0x1b3ed722",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "baseRate",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "signature": "0x1f68f20a",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "isInterestRateModel",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "signature": "0x2191f92a",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "blocksPerYear",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "signature": "0xa385fb96",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "baseRate_",
+                "type": "uint256"
+            },
+            {
+                "name": "multiplier_",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "signature": "constructor",
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    }
+]
