@@ -1,8 +1,14 @@
 
+import argparse
 import json
 import requests
 import time
 from pathlib import Path
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-w', '--web3-handler', action="store_true", help="use web3-handler to get the abis files", default=True)
+parser.add_argument('-l', '--local-web3-handler', action="store_true", help="use web3-handler to get the abis files", default=False)
+
 
 COMPOUND_REPO_PATH = "external_ressources/compound-config/"
 DAL_HOME_PATH = "../../"
@@ -28,6 +34,32 @@ def get_etherscan_abi(contract_address):
         abi_json = json.loads(response_json['result'])
         return abi_json
 
+# Web3handler return contract abi + the implementation ABI behind the proxy
+PROD_WEB3_HANDLER_ABI_FSTRING = 'https://web3-handler-api-prd2.aws.prd.ldg-tech.com/%s/%s/abi'
+LOCAL_WEB3_HANDLER_ABI_FSTRING = 'http://localhost:9003/%s/%s/abi'
+def get_web3handler_abi(blockchain, contract_address, use_local_web3_handler):
+    time.sleep(0.3)
+    print(contract_address)
+    endpoint_fstring = LOCAL_WEB3_HANDLER_ABI_FSTRING if use_local_web3_handler else PROD_WEB3_HANDLER_ABI_FSTRING
+    response = requests.get(endpoint_fstring%(blockchain, contract_address)).json()
+    if (type(response) is dict and "detail" in response.keys()):
+        if ("detail" not in response.keys()):
+            raise Exception("Unexpected web3_handler response: " + str(response))
+
+        if response['detail'].startswith("ABI was not found for address"):
+            print("WEB3 HANDLER:" + str(response['detail']))
+            return None
+        elif response['detail'].startswith("Invalid address format:"):
+            raise Exception("Unexpected web3_handler response: " + str(response))
+        else:
+            raise Exception("Unexpected web3_handler response: " + str(response))
+
+    if (type(response) is not list):
+        raise Exception("Unexpected web3_handler response: " + str(response))
+
+    # return ABI
+    return response
+
 
 
 class ConfigFile:
@@ -47,7 +79,7 @@ class ConfigFile:
         assert(self.abi_list_file.exists())
 
 
-    def fill_abi_files(self):
+    def fill_abi_files(self, use_web3_handler, use_local_web3_handler):
         with self.contract_list_file.open() as contracts_fd, \
              self.abi_list_file.open() as abis_fd:
             contracts_json = json.load(contracts_fd)
@@ -58,12 +90,19 @@ class ConfigFile:
             # Get ABI for each contracts
             triplets = []
             for contract_name, contract_address in contracts_json["Contracts"].items():
-                if (contract_name not in abis_json.keys()):
-                    print("/!\\ Warning: " + contract_name + "(" + contract_address + ") ABI not found in listed compound repository. Fetching Etherscan ABI")
-                    abi = get_etherscan_abi(contract_address)
-                else:
-                    print("ABI found in compound repository for " + contract_name + "(" + contract_address + ")")
-                    abi = abis_json[contract_name]
+                abi = None
+                if (use_web3_handler):
+                    print("Fetching : " + contract_name + "(" + contract_address + ") from web3_handler: ", end='')
+                    abi = get_web3handler_abi(self.network_name, contract_address, use_local_web3_handler)
+
+                # if ABI is not found on web3_handler search official abi then on etherscan
+                if abi is None:
+                    if contract_name not in abis_json.keys():
+                        print("/!\\ Warning: " + contract_name + "(" + contract_address + ") ABI not found in listed compound repository. Fetching Etherscan ABI")
+                        abi = get_etherscan_abi(contract_address)
+                    else:
+                        print("ABI found in compound repository for " + contract_name + "(" + contract_address + ")")
+                        abi = abis_json[contract_name]
 
                 if (abi is not None):
                     triplets.append((contract_name, contract_address, abi))
@@ -89,13 +128,17 @@ class ConfigFile:
             print("===================================================================================================================")
 
 
-networks = [ConfigFile(cal_network_name='ethereum', compound_contract_file='mainnet.json', compound_abi_file='mainnet-abi.json'),
-            ConfigFile(cal_network_name='ethereum_goerli', compound_contract_file='goerli.json', compound_abi_file='goerli-abi.json'),
-            ConfigFile(cal_network_name='ethereum_ropsten', compound_contract_file='ropsten.json', compound_abi_file='ropsten-abi.json')]
+networks = [
+    ConfigFile(cal_network_name='ethereum', compound_contract_file='mainnet.json', compound_abi_file='mainnet-abi.json'),
+    ConfigFile(cal_network_name='ethereum_goerli', compound_contract_file='goerli.json', compound_abi_file='goerli-abi.json'),
+    # ConfigFile(cal_network_name='ethereum_ropsten', compound_contract_file='ropsten.json', compound_abi_file='ropsten-abi.json'),
+]
 
 def main():
+    args = parser.parse_args()
+
     for network in networks:
-        network.fill_abi_files()
+        network.fill_abi_files(args.web3_handler or args.local_web3_handler, args.local_web3_handler)
 
 if __name__ == "__main__":
     main()
