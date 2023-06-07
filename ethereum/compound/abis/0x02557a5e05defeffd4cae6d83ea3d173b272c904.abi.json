@@ -1,5 +1,28 @@
 [
     {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "name": "requestedPriceMantissa",
+                "type": "uint256"
+            }
+        ],
+        "name": "setPrice",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "constant": true,
         "inputs": [],
         "name": "anchorAdmin",
@@ -44,6 +67,67 @@
         ],
         "payable": false,
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "requestedState",
+                "type": "bool"
+            }
+        ],
+        "name": "_setPaused",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "address"
+            }
+        ],
+        "name": "getPrice",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "assets",
+                "type": "address[]"
+            },
+            {
+                "name": "requestedPriceMantissas",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "setPrices",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -111,6 +195,25 @@
         "constant": true,
         "inputs": [
             {
+                "name": "asset",
+                "type": "address"
+            }
+        ],
+        "name": "assetPrices",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
                 "name": "",
                 "type": "address"
             }
@@ -145,6 +248,25 @@
         "type": "function"
     },
     {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "newPendingAnchorAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "_setPendingAnchorAdmin",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "constant": true,
         "inputs": [
             {
@@ -175,6 +297,43 @@
         ],
         "payable": false,
         "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "_acceptAnchorAdmin",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "name": "newScaledPrice",
+                "type": "uint256"
+            }
+        ],
+        "name": "_setPendingAnchor",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -389,164 +548,5 @@
         ],
         "name": "Failure",
         "type": "event"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "asset",
-                "type": "address"
-            },
-            {
-                "name": "newScaledPrice",
-                "type": "uint256"
-            }
-        ],
-        "name": "_setPendingAnchor",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "requestedState",
-                "type": "bool"
-            }
-        ],
-        "name": "_setPaused",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "newPendingAnchorAdmin",
-                "type": "address"
-            }
-        ],
-        "name": "_setPendingAnchorAdmin",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [],
-        "name": "_acceptAnchorAdmin",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "asset",
-                "type": "address"
-            }
-        ],
-        "name": "assetPrices",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [
-            {
-                "name": "asset",
-                "type": "address"
-            }
-        ],
-        "name": "getPrice",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "asset",
-                "type": "address"
-            },
-            {
-                "name": "requestedPriceMantissa",
-                "type": "uint256"
-            }
-        ],
-        "name": "setPrice",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "constant": false,
-        "inputs": [
-            {
-                "name": "assets",
-                "type": "address[]"
-            },
-            {
-                "name": "requestedPriceMantissas",
-                "type": "uint256[]"
-            }
-        ],
-        "name": "setPrices",
-        "outputs": [
-            {
-                "name": "",
-                "type": "uint256[]"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
     }
 ]
