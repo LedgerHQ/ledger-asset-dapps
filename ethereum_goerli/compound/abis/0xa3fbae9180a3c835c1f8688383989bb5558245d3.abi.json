@@ -336,34 +336,8 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "BALLOT_TYPEHASH",
-        "outputs": [
-            {
-                "internalType": "bytes32",
-                "name": "",
-                "type": "bytes32"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
         "stateMutability": "payable",
         "type": "fallback"
-    },
-    {
-        "inputs": [],
-        "name": "DOMAIN_TYPEHASH",
-        "outputs": [
-            {
-                "internalType": "bytes32",
-                "name": "",
-                "type": "bytes32"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
     },
     {
         "inputs": [
@@ -380,38 +354,12 @@
     },
     {
         "inputs": [],
-        "name": "MAX_PROPOSAL_THRESHOLD",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
         "name": "admin",
         "outputs": [
             {
                 "internalType": "address",
                 "name": "",
                 "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "MAX_VOTING_DELAY",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -432,19 +380,6 @@
     },
     {
         "inputs": [],
-        "name": "MAX_VOTING_PERIOD",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
         "name": "pendingAdmin",
         "outputs": [
             {
@@ -457,6 +392,82 @@
         "type": "function"
     },
     {
+        "constant": true,
+        "inputs": [],
+        "name": "BALLOT_TYPEHASH",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "DOMAIN_TYPEHASH",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "MAX_PROPOSAL_THRESHOLD",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "MAX_VOTING_DELAY",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "MAX_VOTING_PERIOD",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
         "inputs": [],
         "name": "MIN_PROPOSAL_THRESHOLD",
         "outputs": [
@@ -466,10 +477,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "MIN_VOTING_DELAY",
         "outputs": [
@@ -479,10 +492,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "MIN_VOTING_PERIOD",
         "outputs": [
@@ -492,24 +507,36 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [],
         "name": "_acceptAdmin",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [],
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "governorAlpha",
+                "type": "address"
+            }
+        ],
         "name": "_initiate",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "address",
@@ -519,10 +546,12 @@
         ],
         "name": "_setPendingAdmin",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -532,10 +561,12 @@
         ],
         "name": "_setProposalThreshold",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -545,10 +576,12 @@
         ],
         "name": "_setVotingDelay",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -558,10 +591,12 @@
         ],
         "name": "_setVotingPeriod",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "address",
@@ -576,10 +611,12 @@
         ],
         "name": "_setWhitelistAccountExpiration",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "address",
@@ -589,10 +626,27 @@
         ],
         "name": "_setWhitelistGuardian",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": true,
+        "inputs": [],
+        "name": "admin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -602,10 +656,12 @@
         ],
         "name": "cancel",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -620,10 +676,12 @@
         ],
         "name": "castVote",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -653,10 +711,12 @@
         ],
         "name": "castVoteBySig",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -676,10 +736,12 @@
         ],
         "name": "castVoteWithReason",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "comp",
         "outputs": [
@@ -689,10 +751,12 @@
                 "type": "address"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -702,10 +766,12 @@
         ],
         "name": "execute",
         "outputs": [],
-        "stateMutability": "payable",
+        "payable": false,
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -736,10 +802,12 @@
                 "type": "bytes[]"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -777,10 +845,27 @@
                 "type": "tuple"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
+        "inputs": [],
+        "name": "implementation",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
         "inputs": [],
         "name": "initialProposalId",
         "outputs": [
@@ -790,10 +875,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "address",
@@ -823,10 +910,12 @@
         ],
         "name": "initialize",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "address",
@@ -842,10 +931,12 @@
                 "type": "bool"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "address",
@@ -861,10 +952,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "name",
         "outputs": [
@@ -874,10 +967,27 @@
                 "type": "string"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
+        "inputs": [],
+        "name": "pendingAdmin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
         "inputs": [],
         "name": "proposalCount",
         "outputs": [
@@ -887,10 +997,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "proposalMaxOperations",
         "outputs": [
@@ -900,10 +1012,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "proposalThreshold",
         "outputs": [
@@ -913,10 +1027,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -977,10 +1093,12 @@
                 "type": "bool"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "address[]",
@@ -1016,10 +1134,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": false,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -1029,10 +1149,12 @@
         ],
         "name": "queue",
         "outputs": [],
+        "payable": false,
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "quorumVotes",
         "outputs": [
@@ -1042,10 +1164,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "uint256",
@@ -1061,10 +1185,12 @@
                 "type": "uint8"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "timelock",
         "outputs": [
@@ -1074,10 +1200,12 @@
                 "type": "address"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "votingDelay",
         "outputs": [
@@ -1087,10 +1215,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "votingPeriod",
         "outputs": [
@@ -1100,10 +1230,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [
             {
                 "internalType": "address",
@@ -1119,10 +1251,12 @@
                 "type": "uint256"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     },
     {
+        "constant": true,
         "inputs": [],
         "name": "whitelistGuardian",
         "outputs": [
@@ -1132,6 +1266,7 @@
                 "type": "address"
             }
         ],
+        "payable": false,
         "stateMutability": "view",
         "type": "function"
     }
