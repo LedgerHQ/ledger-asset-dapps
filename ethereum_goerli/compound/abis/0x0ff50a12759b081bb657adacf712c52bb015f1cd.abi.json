@@ -87,11 +87,6 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "AcceptAdminPendingAdminCheck",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -115,17 +110,6 @@
         ],
         "name": "Approval",
         "type": "event"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "actualAddAmount",
-                "type": "uint256"
-            }
-        ],
-        "name": "AddReservesFactorFreshCheck",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -157,11 +141,6 @@
         ],
         "name": "Borrow",
         "type": "event"
-    },
-    {
-        "inputs": [],
-        "name": "BorrowCashNotAvailable",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -201,17 +180,6 @@
         "type": "event"
     },
     {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "BorrowComptrollerRejection",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -237,11 +205,6 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "BorrowFreshnessCheck",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -259,17 +222,6 @@
         ],
         "name": "NewAdmin",
         "type": "event"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "LiquidateAccrueBorrowInterestFailed",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -291,17 +243,6 @@
         "type": "event"
     },
     {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "LiquidateAccrueCollateralInterestFailed",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -319,11 +260,6 @@
         ],
         "name": "NewImplementation",
         "type": "event"
-    },
-    {
-        "inputs": [],
-        "name": "LiquidateCloseAmountIsUintMax",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -345,11 +281,6 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "LiquidateCloseAmountIsZero",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -369,11 +300,6 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "LiquidateCollateralFreshnessCheck",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -391,17 +317,6 @@
         ],
         "name": "NewReserveFactor",
         "type": "event"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "LiquidateComptrollerRejection",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -427,11 +342,6 @@
         ],
         "name": "Redeem",
         "type": "event"
-    },
-    {
-        "inputs": [],
-        "name": "LiquidateFreshnessCheck",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -471,11 +381,6 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "LiquidateLiquidatorIsBorrower",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -499,17 +404,6 @@
         ],
         "name": "ReservesAdded",
         "type": "event"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "LiquidateRepayBorrowFreshFailed",
-        "type": "error"
     },
     {
         "anonymous": false,
@@ -537,17 +431,6 @@
         "type": "event"
     },
     {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "LiquidateSeizeComptrollerRejection",
-        "type": "error"
-    },
-    {
         "anonymous": false,
         "inputs": [
             {
@@ -573,24 +456,8 @@
         "type": "event"
     },
     {
-        "inputs": [],
-        "name": "LiquidateSeizeLiquidatorIsBorrower",
-        "type": "error"
-    },
-    {
         "stateMutability": "payable",
         "type": "fallback"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "MintComptrollerRejection",
-        "type": "error"
     },
     {
         "inputs": [],
@@ -604,11 +471,6 @@
         ],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "MintFreshnessCheck",
-        "type": "error"
     },
     {
         "inputs": [
@@ -633,17 +495,6 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "RedeemComptrollerRejection",
-        "type": "error"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
                 "name": "reduceAmount",
                 "type": "uint256"
             }
@@ -658,11 +509,6 @@
         ],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "RedeemFreshnessCheck",
-        "type": "error"
     },
     {
         "inputs": [
@@ -682,11 +528,6 @@
         ],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "RedeemTransferOutNotPossible",
-        "type": "error"
     },
     {
         "inputs": [
@@ -712,11 +553,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "ReduceReservesAdminCheck",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "contract InterestRateModel",
@@ -736,11 +572,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "ReduceReservesCashNotAvailable",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "address payable",
@@ -758,11 +589,6 @@
         ],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "ReduceReservesCashValidation",
-        "type": "error"
     },
     {
         "inputs": [
@@ -785,11 +611,6 @@
     },
     {
         "inputs": [],
-        "name": "ReduceReservesFreshCheck",
-        "type": "error"
-    },
-    {
-        "inputs": [],
         "name": "accrualBlockNumber",
         "outputs": [
             {
@@ -800,17 +621,6 @@
         ],
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "RepayBorrowComptrollerRejection",
-        "type": "error"
     },
     {
         "inputs": [],
@@ -827,11 +637,6 @@
     },
     {
         "inputs": [],
-        "name": "RepayBorrowFreshnessCheck",
-        "type": "error"
-    },
-    {
-        "inputs": [],
         "name": "admin",
         "outputs": [
             {
@@ -842,11 +647,6 @@
         ],
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "SetComptrollerOwnerCheck",
-        "type": "error"
     },
     {
         "inputs": [
@@ -873,11 +673,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "SetInterestRateModelFreshCheck",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "address",
@@ -902,11 +697,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "SetInterestRateModelOwnerCheck",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "address",
@@ -924,11 +714,6 @@
         ],
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "SetPendingAdminOwnerCheck",
-        "type": "error"
     },
     {
         "inputs": [
@@ -950,11 +735,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "SetReserveFactorAdminCheck",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -972,11 +752,6 @@
         ],
         "stateMutability": "nonpayable",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "SetReserveFactorBoundsCheck",
-        "type": "error"
     },
     {
         "inputs": [
@@ -998,11 +773,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "SetReserveFactorFreshCheck",
-        "type": "error"
-    },
-    {
         "inputs": [
             {
                 "internalType": "address",
@@ -1022,17 +792,6 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "errorCode",
-                "type": "uint256"
-            }
-        ],
-        "name": "TransferComptrollerRejection",
-        "type": "error"
-    },
-    {
         "inputs": [],
         "name": "borrowIndex",
         "outputs": [
@@ -1044,11 +803,6 @@
         ],
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "TransferNotAllowed",
-        "type": "error"
     },
     {
         "inputs": [],
@@ -1065,11 +819,6 @@
     },
     {
         "inputs": [],
-        "name": "TransferNotEnough",
-        "type": "error"
-    },
-    {
-        "inputs": [],
         "name": "comptroller",
         "outputs": [
             {
@@ -1080,11 +829,6 @@
         ],
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "TransferTooMuch",
-        "type": "error"
     },
     {
         "inputs": [],
@@ -1356,19 +1100,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "NO_ERROR",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -1431,19 +1162,6 @@
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "bytes",
-                "name": "data",
-                "type": "bytes"
-            }
-        ],
-        "name": "_becomeImplementation",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "inputs": [],
         "name": "reserveFactorMantissa",
         "outputs": [
@@ -1454,19 +1172,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "compLikeDelegatee",
-                "type": "address"
-            }
-        ],
-        "name": "_delegateCompLikeTo",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -1509,13 +1214,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "_resignImplementation",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -1663,12 +1361,357 @@
         "type": "function"
     },
     {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "AcceptAdminPendingAdminCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "actualAddAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "AddReservesFactorFreshCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BorrowCashNotAvailable",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "BorrowComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BorrowFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidateAccrueBorrowInterestFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidateAccrueCollateralInterestFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateCloseAmountIsUintMax",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateCloseAmountIsZero",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateCollateralFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidateComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateLiquidatorIsBorrower",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidateRepayBorrowFreshFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidateSeizeComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "LiquidateSeizeLiquidatorIsBorrower",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "MintComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "MintFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedeemComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "RedeemFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "RedeemTransferOutNotPossible",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ReduceReservesAdminCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ReduceReservesCashNotAvailable",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ReduceReservesCashValidation",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ReduceReservesFreshCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "RepayBorrowComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "RepayBorrowFreshnessCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetComptrollerOwnerCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetInterestRateModelFreshCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetInterestRateModelOwnerCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetPendingAdminOwnerCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetReserveFactorAdminCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetReserveFactorBoundsCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SetReserveFactorFreshCheck",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "errorCode",
+                "type": "uint256"
+            }
+        ],
+        "name": "TransferComptrollerRejection",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "TransferNotAllowed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "TransferNotEnough",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "TransferTooMuch",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NO_ERROR",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+            }
+        ],
+        "name": "_becomeImplementation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "compLikeDelegatee",
+                "type": "address"
+            }
+        ],
+        "name": "_delegateCompLikeTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "_resignImplementation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
         "inputs": [
             {
                 "internalType": "address",
                 "name": "underlying_",
                 "type": "address"
             },
+            {
+                "internalType": "contract ComptrollerInterface",
+                "name": "comptroller_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract InterestRateModel",
+                "name": "interestRateModel_",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "initialExchangeRateMantissa_",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "name_",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "symbol_",
+                "type": "string"
+            },
+            {
+                "internalType": "uint8",
+                "name": "decimals_",
+                "type": "uint8"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
             {
                 "internalType": "contract ComptrollerInterface",
                 "name": "comptroller_",
