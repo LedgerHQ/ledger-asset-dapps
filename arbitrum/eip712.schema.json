@@ -1,0 +1,93 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "blockchainName": {
+            "enum": [
+                "arbitrum"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                421611
+            ]
+        },
+        "contracts": {
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "contractName": {
+                        "type": "string"
+                    },
+                    "messages": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "mapper": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "fields": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "label": {
+                                                        "type": "string"
+                                                    },
+                                                    "path": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "path",
+                                                    "label"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "label": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "label",
+                                        "fields"
+                                    ],
+                                    "type": "object"
+                                },
+                                "schema": {
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "schema",
+                                "mapper"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "address",
+                    "contractName",
+                    "messages"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchainName",
+        "contracts",
+        "name",
+        "chainId"
+    ],
+    "type": "object"
+}
