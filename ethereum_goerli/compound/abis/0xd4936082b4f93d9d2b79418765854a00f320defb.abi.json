@@ -1,0 +1,57 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract CEther",
+                "name": "cEther_",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "cEther",
+        "outputs": [
+            {
+                "internalType": "contract CEther",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "borrower",
+                "type": "address"
+            }
+        ],
+        "name": "repayBehalf",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "borrower",
+                "type": "address"
+            },
+            {
+                "internalType": "contract CEther",
+                "name": "cEther_",
+                "type": "address"
+            }
+        ],
+        "name": "repayBehalfExplicit",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    }
+]

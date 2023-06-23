@@ -28,6 +28,37 @@
                     "plugin": "Lido"
                 }
             }
+        },
+        {
+            "address": "0x889edc2edab5f40e902b864ad4d7ade8e412f9b1",
+            "contractName": "OssifiableProxy",
+            "selectors": {
+                "0x19aa6257": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdrawalsWstETH",
+                    "plugin": "Lido"
+                },
+                "0x7951b76f": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdrawalsWstETHWithPermit",
+                    "plugin": "Lido"
+                },
+                "0xacf41e4d": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdrawalsWithPermit",
+                    "plugin": "Lido"
+                },
+                "0xd6681042": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdrawals",
+                    "plugin": "Lido"
+                },
+                "0xe3afe0a3": {
+                    "erc20OfInterest": [],
+                    "method": "claimWithdrawals",
+                    "plugin": "Lido"
+                }
+            }
         }
     ],
     "name": "Lido"

@@ -1,0 +1,173 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint112",
+                "name": "reserve0_",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint112",
+                "name": "reserve1_",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint32",
+                "name": "blockTimestampLast_",
+                "type": "uint32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price0CumulativeLast_",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price1CumulativeLast_",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "blockTimestampLast",
+        "outputs": [
+            {
+                "internalType": "uint32",
+                "name": "",
+                "type": "uint32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getReserves",
+        "outputs": [
+            {
+                "internalType": "uint112",
+                "name": "",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint112",
+                "name": "",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint32",
+                "name": "",
+                "type": "uint32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "reversedMarket",
+                "type": "bool"
+            }
+        ],
+        "name": "getReservesFraction",
+        "outputs": [
+            {
+                "internalType": "uint224",
+                "name": "",
+                "type": "uint224"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "price0CumulativeLast",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "price1CumulativeLast",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reserve0",
+        "outputs": [
+            {
+                "internalType": "uint112",
+                "name": "",
+                "type": "uint112"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reserve1",
+        "outputs": [
+            {
+                "internalType": "uint112",
+                "name": "",
+                "type": "uint112"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint112",
+                "name": "reserve0_",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint112",
+                "name": "reserve1_",
+                "type": "uint112"
+            },
+            {
+                "internalType": "uint32",
+                "name": "blockTimestampLast_",
+                "type": "uint32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price0CumulativeLast_",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "price1CumulativeLast_",
+                "type": "uint256"
+            }
+        ],
+        "name": "update",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
