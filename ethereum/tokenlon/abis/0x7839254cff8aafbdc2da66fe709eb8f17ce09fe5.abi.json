@@ -1,0 +1,273 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IPermanentStorage",
+                "name": "_permStorage",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_weth",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "makerAddress",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "assetAddress",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "int128",
+                "name": "index",
+                "type": "int128"
+            }
+        ],
+        "name": "CurveTokenAdded",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "SUSHISWAP_ROUTER_ADDRESS",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "UNISWAP_V2_ROUTER_02_ADDRESS",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "_makerAddresses",
+                "type": "address[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_takerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_makerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_makerAssetAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "getBestInAmount",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "bestMaker",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "bestAmount",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "_makerAddresses",
+                "type": "address[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_takerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_makerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_takerAssetAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "getBestOutAmount",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "bestMaker",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "bestAmount",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_makerAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_takerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_makerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_takerAssetAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "getMakerOutAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_makerAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_takerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_makerAssetAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_makerAssetAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "getTakerInAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "assetAddress",
+                "type": "address"
+            }
+        ],
+        "name": "isETH",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "permStorage",
+        "outputs": [
+            {
+                "internalType": "contract IPermanentStorage",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "version",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "weth",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -1,0 +1,224 @@
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_coins",
+                "type": "address[4]"
+            },
+            {
+                "name": "_underlying_coins",
+                "type": "address[4]"
+            },
+            {
+                "name": "_curve",
+                "type": "address"
+            },
+            {
+                "name": "_token",
+                "type": "address"
+            }
+        ],
+        "outputs": [],
+        "payable": false,
+        "type": "constructor"
+    },
+    {
+        "constant": false,
+        "gas": 164560,
+        "inputs": [
+            {
+                "name": "uamounts",
+                "type": "uint256[4]"
+            },
+            {
+                "name": "min_mint_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "add_liquidity",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "gas": 99521,
+        "inputs": [
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "min_uamounts",
+                "type": "uint256[4]"
+            }
+        ],
+        "name": "remove_liquidity",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "gas": 120148,
+        "inputs": [
+            {
+                "name": "uamounts",
+                "type": "uint256[4]"
+            },
+            {
+                "name": "max_burn_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "remove_liquidity_imbalance",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "gas": 3881601,
+        "inputs": [
+            {
+                "name": "_token_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "i",
+                "type": "int128"
+            }
+        ],
+        "name": "calc_withdraw_one_coin",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_token_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "i",
+                "type": "int128"
+            },
+            {
+                "name": "min_uamount",
+                "type": "uint256"
+            }
+        ],
+        "name": "remove_liquidity_one_coin",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_token_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "i",
+                "type": "int128"
+            },
+            {
+                "name": "min_uamount",
+                "type": "uint256"
+            },
+            {
+                "name": "donate_dust",
+                "type": "bool"
+            }
+        ],
+        "name": "remove_liquidity_one_coin",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "gas": 63973,
+        "inputs": [],
+        "name": "withdraw_donated_dust",
+        "outputs": [],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "gas": 1680,
+        "inputs": [
+            {
+                "name": "arg0",
+                "type": "int128"
+            }
+        ],
+        "name": "coins",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "gas": 1710,
+        "inputs": [
+            {
+                "name": "arg0",
+                "type": "int128"
+            }
+        ],
+        "name": "underlying_coins",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "gas": 1541,
+        "inputs": [],
+        "name": "curve",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "gas": 1571,
+        "inputs": [],
+        "name": "token",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "type": "function"
+    }
+]
