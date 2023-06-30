@@ -58,7 +58,12 @@
             },
             {
                 "indexed": false,
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -86,6 +91,11 @@
             {
                 "indexed": false,
                 "name": "loss",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "debtPaid",
                 "type": "uint256"
             },
             {
@@ -264,11 +274,28 @@
             },
             {
                 "indexed": false,
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
                 "type": "uint256"
             }
         ],
-        "name": "StrategyUpdateRateLimit",
+        "name": "StrategyUpdateMinDebtPerHarvest",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "strategy",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "maxDebtPerHarvest",
+                "type": "uint256"
+            }
+        ],
+        "name": "StrategyUpdateMaxDebtPerHarvest",
         "type": "event"
     },
     {
@@ -501,7 +528,20 @@
         "type": "function"
     },
     {
-        "gas": 37738,
+        "gas": 36516,
+        "inputs": [
+            {
+                "name": "degration",
+                "type": "uint256"
+            }
+        ],
+        "name": "setLockedProfitDegration",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 37768,
         "inputs": [
             {
                 "name": "limit",
@@ -514,7 +554,7 @@
         "type": "function"
     },
     {
-        "gas": 37872,
+        "gas": 37902,
         "inputs": [
             {
                 "name": "fee",
@@ -527,7 +567,7 @@
         "type": "function"
     },
     {
-        "gas": 37902,
+        "gas": 37932,
         "inputs": [
             {
                 "name": "fee",
@@ -540,7 +580,7 @@
         "type": "function"
     },
     {
-        "gas": 39146,
+        "gas": 39176,
         "inputs": [
             {
                 "name": "guardian",
@@ -553,7 +593,7 @@
         "type": "function"
     },
     {
-        "gas": 39217,
+        "gas": 39247,
         "inputs": [
             {
                 "name": "active",
@@ -566,7 +606,7 @@
         "type": "function"
     },
     {
-        "gas": 763893,
+        "gas": 763923,
         "inputs": [
             {
                 "name": "queue",
@@ -579,7 +619,7 @@
         "type": "function"
     },
     {
-        "gas": 76733,
+        "gas": 76913,
         "inputs": [
             {
                 "name": "receiver",
@@ -601,7 +641,7 @@
         "type": "function"
     },
     {
-        "gas": 116496,
+        "gas": 116676,
         "inputs": [
             {
                 "name": "sender",
@@ -627,7 +667,7 @@
         "type": "function"
     },
     {
-        "gas": 38244,
+        "gas": 38334,
         "inputs": [
             {
                 "name": "spender",
@@ -649,7 +689,7 @@
         "type": "function"
     },
     {
-        "gas": 40285,
+        "gas": 40375,
         "inputs": [
             {
                 "name": "spender",
@@ -671,7 +711,7 @@
         "type": "function"
     },
     {
-        "gas": 40309,
+        "gas": 40399,
         "inputs": [
             {
                 "name": "spender",
@@ -693,7 +733,7 @@
         "type": "function"
     },
     {
-        "gas": 81237,
+        "gas": 81327,
         "inputs": [
             {
                 "name": "owner",
@@ -727,7 +767,7 @@
         "type": "function"
     },
     {
-        "gas": 4123,
+        "gas": 4303,
         "inputs": [],
         "name": "totalAssets",
         "outputs": [
@@ -790,7 +830,7 @@
         "type": "function"
     },
     {
-        "gas": 364171,
+        "gas": 379843,
         "inputs": [],
         "name": "maxAvailableShares",
         "outputs": [
@@ -878,7 +918,7 @@
         "type": "function"
     },
     {
-        "gas": 12412,
+        "gas": 17509,
         "inputs": [],
         "name": "pricePerShare",
         "outputs": [
@@ -891,7 +931,7 @@
         "type": "function"
     },
     {
-        "gas": 1450351,
+        "gas": 1486241,
         "inputs": [
             {
                 "name": "strategy",
@@ -902,7 +942,11 @@
                 "type": "uint256"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -916,7 +960,7 @@
         "type": "function"
     },
     {
-        "gas": 115316,
+        "gas": 115406,
         "inputs": [
             {
                 "name": "strategy",
@@ -933,24 +977,41 @@
         "type": "function"
     },
     {
-        "gas": 41467,
+        "gas": 42654,
         "inputs": [
             {
                 "name": "strategy",
                 "type": "address"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
                 "type": "uint256"
             }
         ],
-        "name": "updateStrategyRateLimit",
+        "name": "updateStrategyMinDebtPerHarvest",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "gas": 41344,
+        "gas": 42684,
+        "inputs": [
+            {
+                "name": "strategy",
+                "type": "address"
+            },
+            {
+                "name": "maxDebtPerHarvest",
+                "type": "uint256"
+            }
+        ],
+        "name": "updateStrategyMaxDebtPerHarvest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 41464,
         "inputs": [
             {
                 "name": "strategy",
@@ -967,7 +1028,7 @@
         "type": "function"
     },
     {
-        "gas": 1105801,
+        "gas": 1141973,
         "inputs": [
             {
                 "name": "oldVersion",
@@ -1003,7 +1064,7 @@
         "type": "function"
     },
     {
-        "gas": 1196920,
+        "gas": 1197130,
         "inputs": [
             {
                 "name": "strategy",
@@ -1016,7 +1077,7 @@
         "type": "function"
     },
     {
-        "gas": 23091666,
+        "gas": 23093586,
         "inputs": [
             {
                 "name": "strategy",
@@ -1087,7 +1148,7 @@
         "type": "function"
     },
     {
-        "gas": 9808,
+        "gas": 10108,
         "inputs": [],
         "name": "availableDepositLimit",
         "outputs": [
@@ -1129,7 +1190,7 @@
         "type": "function"
     },
     {
-        "gas": 937520,
+        "gas": 1009335,
         "inputs": [
             {
                 "name": "gain",
@@ -1183,7 +1244,7 @@
         "type": "function"
     },
     {
-        "gas": 9053,
+        "gas": 9143,
         "inputs": [],
         "name": "name",
         "outputs": [
@@ -1196,7 +1257,7 @@
         "type": "function"
     },
     {
-        "gas": 8106,
+        "gas": 8196,
         "inputs": [],
         "name": "symbol",
         "outputs": [
@@ -1209,7 +1270,7 @@
         "type": "function"
     },
     {
-        "gas": 2711,
+        "gas": 2801,
         "inputs": [],
         "name": "decimals",
         "outputs": [
@@ -1222,7 +1283,7 @@
         "type": "function"
     },
     {
-        "gas": 2956,
+        "gas": 3046,
         "inputs": [
             {
                 "name": "arg0",
@@ -1240,7 +1301,7 @@
         "type": "function"
     },
     {
-        "gas": 3201,
+        "gas": 3291,
         "inputs": [
             {
                 "name": "arg0",
@@ -1262,7 +1323,7 @@
         "type": "function"
     },
     {
-        "gas": 2801,
+        "gas": 2891,
         "inputs": [],
         "name": "totalSupply",
         "outputs": [
@@ -1275,7 +1336,7 @@
         "type": "function"
     },
     {
-        "gas": 2831,
+        "gas": 2921,
         "inputs": [],
         "name": "token",
         "outputs": [
@@ -1288,7 +1349,7 @@
         "type": "function"
     },
     {
-        "gas": 2861,
+        "gas": 2951,
         "inputs": [],
         "name": "governance",
         "outputs": [
@@ -1301,7 +1362,7 @@
         "type": "function"
     },
     {
-        "gas": 2891,
+        "gas": 2981,
         "inputs": [],
         "name": "management",
         "outputs": [
@@ -1314,7 +1375,7 @@
         "type": "function"
     },
     {
-        "gas": 2921,
+        "gas": 3011,
         "inputs": [],
         "name": "guardian",
         "outputs": [
@@ -1327,7 +1388,7 @@
         "type": "function"
     },
     {
-        "gas": 2951,
+        "gas": 3041,
         "inputs": [],
         "name": "guestList",
         "outputs": [
@@ -1340,7 +1401,7 @@
         "type": "function"
     },
     {
-        "gas": 10322,
+        "gas": 11394,
         "inputs": [
             {
                 "name": "arg0",
@@ -1362,7 +1423,11 @@
                 "type": "uint256"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -1386,7 +1451,7 @@
         "type": "function"
     },
     {
-        "gas": 3120,
+        "gas": 3210,
         "inputs": [
             {
                 "name": "arg0",
@@ -1404,7 +1469,7 @@
         "type": "function"
     },
     {
-        "gas": 3041,
+        "gas": 3131,
         "inputs": [],
         "name": "emergencyShutdown",
         "outputs": [
@@ -1417,7 +1482,7 @@
         "type": "function"
     },
     {
-        "gas": 3071,
+        "gas": 3161,
         "inputs": [],
         "name": "depositLimit",
         "outputs": [
@@ -1430,7 +1495,7 @@
         "type": "function"
     },
     {
-        "gas": 3101,
+        "gas": 3191,
         "inputs": [],
         "name": "debtRatio",
         "outputs": [
@@ -1443,7 +1508,7 @@
         "type": "function"
     },
     {
-        "gas": 3131,
+        "gas": 3221,
         "inputs": [],
         "name": "totalDebt",
         "outputs": [
@@ -1456,7 +1521,7 @@
         "type": "function"
     },
     {
-        "gas": 3161,
+        "gas": 3251,
         "inputs": [],
         "name": "lastReport",
         "outputs": [
@@ -1469,7 +1534,7 @@
         "type": "function"
     },
     {
-        "gas": 3191,
+        "gas": 3281,
         "inputs": [],
         "name": "activation",
         "outputs": [
@@ -1482,7 +1547,33 @@
         "type": "function"
     },
     {
-        "gas": 3221,
+        "gas": 3311,
+        "inputs": [],
+        "name": "lockedProfit",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3341,
+        "inputs": [],
+        "name": "lockedProfitDegration",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3371,
         "inputs": [],
         "name": "rewards",
         "outputs": [
@@ -1495,7 +1586,7 @@
         "type": "function"
     },
     {
-        "gas": 3251,
+        "gas": 3401,
         "inputs": [],
         "name": "managementFee",
         "outputs": [
@@ -1508,7 +1599,7 @@
         "type": "function"
     },
     {
-        "gas": 3281,
+        "gas": 3431,
         "inputs": [],
         "name": "performanceFee",
         "outputs": [
@@ -1521,7 +1612,7 @@
         "type": "function"
     },
     {
-        "gas": 3526,
+        "gas": 3676,
         "inputs": [
             {
                 "name": "arg0",
@@ -1539,7 +1630,7 @@
         "type": "function"
     },
     {
-        "gas": 3341,
+        "gas": 3491,
         "inputs": [],
         "name": "DOMAIN_SEPARATOR",
         "outputs": [

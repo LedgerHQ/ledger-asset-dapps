@@ -90,6 +90,11 @@
             },
             {
                 "indexed": false,
+                "name": "debtPaid",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
                 "name": "totalGain",
                 "type": "uint256"
             },
@@ -790,7 +795,7 @@
         "type": "function"
     },
     {
-        "gas": 364171,
+        "gas": 370303,
         "inputs": [],
         "name": "maxAvailableShares",
         "outputs": [
@@ -878,7 +883,7 @@
         "type": "function"
     },
     {
-        "gas": 12412,
+        "gas": 12704,
         "inputs": [],
         "name": "pricePerShare",
         "outputs": [
@@ -967,7 +972,7 @@
         "type": "function"
     },
     {
-        "gas": 1105801,
+        "gas": 1105809,
         "inputs": [
             {
                 "name": "oldVersion",
@@ -1129,7 +1134,7 @@
         "type": "function"
     },
     {
-        "gas": 937520,
+        "gas": 932578,
         "inputs": [
             {
                 "name": "gain",
