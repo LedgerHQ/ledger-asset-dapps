@@ -1,0 +1,203 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "previous_owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "new_owner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "rewards_contract",
+                "type": "address"
+            }
+        ],
+        "name": "RewardsContractSet",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "recipient",
+                "type": "address"
+            }
+        ],
+        "name": "ERC20TokenRecovered",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_rewards_contract",
+                "type": "address"
+            },
+            {
+                "name": "_rewards_initializer",
+                "type": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "gas": 39110,
+        "inputs": [
+            {
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "transfer_ownership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 11098,
+        "inputs": [],
+        "name": "is_rewards_period_finished",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 6587,
+        "inputs": [],
+        "name": "period_finish",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 27708,
+        "inputs": [],
+        "name": "start_next_rewards_period",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 11738,
+        "inputs": [
+            {
+                "name": "_duration",
+                "type": "uint256"
+            }
+        ],
+        "name": "set_rewards_period_duration",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "_recipient",
+                "type": "address"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 2568,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2598,
+        "inputs": [],
+        "name": "rewards_contract",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2628,
+        "inputs": [],
+        "name": "rewards_initializer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

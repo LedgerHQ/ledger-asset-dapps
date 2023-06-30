@@ -1,0 +1,399 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "new_owner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnerChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "new_allocator",
+                "type": "address"
+            }
+        ],
+        "name": "AllocatorChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "Allocation",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "new_limit",
+                "type": "uint256"
+            }
+        ],
+        "name": "RewardsLimitChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "recipient",
+                "type": "address"
+            }
+        ],
+        "name": "ERC20TokenRecovered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "actor",
+                "type": "address"
+            }
+        ],
+        "name": "Paused",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "actor",
+                "type": "address"
+            }
+        ],
+        "name": "Unpaused",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "new_limit",
+                "type": "uint256"
+            }
+        ],
+        "name": "AllocationsLimitChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "new_owner",
+                "type": "address"
+            }
+        ],
+        "name": "RewardContractOwnershipTransfered",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_allocator",
+                "type": "address"
+            },
+            {
+                "name": "_start_date",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "gas": 19530,
+        "inputs": [],
+        "name": "available_allocations",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 134693,
+        "inputs": [
+            {
+                "name": "_new_allocations_limit",
+                "type": "uint256"
+            }
+        ],
+        "name": "set_allocations_limit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 344058,
+        "inputs": [
+            {
+                "name": "_new_limit",
+                "type": "uint256"
+            }
+        ],
+        "name": "set_rewards_limit_per_period",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 167723,
+        "inputs": [
+            {
+                "name": "_week",
+                "type": "uint256"
+            },
+            {
+                "name": "_merkle_root",
+                "type": "bytes32"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "seed_allocations",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 341807,
+        "inputs": [],
+        "name": "pause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 191131,
+        "inputs": [
+            {
+                "name": "_start_date",
+                "type": "uint256"
+            },
+            {
+                "name": "_new_allocations_limit",
+                "type": "uint256"
+            }
+        ],
+        "name": "unpause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 15980,
+        "inputs": [],
+        "name": "out_of_funding_date",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 16010,
+        "inputs": [],
+        "name": "period_finish",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 41051,
+        "inputs": [
+            {
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "transfer_ownership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 41081,
+        "inputs": [
+            {
+                "name": "_new_allocator",
+                "type": "address"
+            }
+        ],
+        "name": "set_allocator",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 8949,
+        "inputs": [
+            {
+                "name": "_new_owner",
+                "type": "address"
+            }
+        ],
+        "name": "transfer_rewards_contract_ownership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "_recipient",
+                "type": "address"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 2748,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2778,
+        "inputs": [],
+        "name": "allocator",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2808,
+        "inputs": [],
+        "name": "allocations_limit",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2838,
+        "inputs": [],
+        "name": "rewards_limit_per_period",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2868,
+        "inputs": [],
+        "name": "last_accounted_period_start_date",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2898,
+        "inputs": [],
+        "name": "is_paused",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

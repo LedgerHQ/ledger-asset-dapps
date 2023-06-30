@@ -1,0 +1,516 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "previous_owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "new_owner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnerChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "previous_balancer_distributor",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "new_balancer_distributor",
+                "type": "address"
+            }
+        ],
+        "name": "BalancerDistributorChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "previous_rewards_manager",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "new_rewards_manager",
+                "type": "address"
+            }
+        ],
+        "name": "RewardsManagerChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "RewardsDistributed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "recipient",
+                "type": "address"
+            }
+        ],
+        "name": "ERC20TokenRecovered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "new_allowance",
+                "type": "uint256"
+            }
+        ],
+        "name": "AccountedAllowanceUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "accounted_iteration_start_date",
+                "type": "uint256"
+            }
+        ],
+        "name": "AccountedIterationStartDateUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "remaining_iterations",
+                "type": "uint256"
+            }
+        ],
+        "name": "RemainingIterationsUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "rewards_rate_per_iteration",
+                "type": "uint256"
+            }
+        ],
+        "name": "RewardsRateUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "iterations",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "start_date",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "rewards_rate_per_iteration",
+                "type": "uint256"
+            }
+        ],
+        "name": "PeriodStarted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "actor",
+                "type": "address"
+            }
+        ],
+        "name": "Paused",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "actor",
+                "type": "address"
+            }
+        ],
+        "name": "Unpaused",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_balancer_distributor",
+                "type": "address"
+            },
+            {
+                "name": "_rewards_manager",
+                "type": "address"
+            },
+            {
+                "name": "_start_date",
+                "type": "uint256"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "gas": 150125,
+        "inputs": [
+            {
+                "name": "_new_allowance",
+                "type": "uint256"
+            },
+            {
+                "name": "_remaining_iterations",
+                "type": "uint256"
+            },
+            {
+                "name": "_rewards_rate_per_iteration",
+                "type": "uint256"
+            },
+            {
+                "name": "_new_start_date",
+                "type": "uint256"
+            }
+        ],
+        "name": "set_state",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 227025,
+        "inputs": [
+            {
+                "name": "amount",
+                "type": "uint256"
+            },
+            {
+                "name": "holder",
+                "type": "address"
+            }
+        ],
+        "name": "notifyRewardAmount",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 152526,
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "name": "_merkle_root",
+                "type": "bytes32"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "_distribution_id",
+                "type": "uint256"
+            }
+        ],
+        "name": "createDistribution",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 177348,
+        "inputs": [],
+        "name": "pause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 111073,
+        "inputs": [],
+        "name": "unpause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 41100,
+        "inputs": [
+            {
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "transfer_ownership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 43277,
+        "inputs": [
+            {
+                "name": "_new_balancer_distributor",
+                "type": "address"
+            }
+        ],
+        "name": "set_balancer_distributor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 43254,
+        "inputs": [
+            {
+                "name": "_new_rewards_manager",
+                "type": "address"
+            }
+        ],
+        "name": "set_rewards_manager",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 9135,
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 9135,
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "_recipient",
+                "type": "address"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 5628,
+        "inputs": [],
+        "name": "periodFinish",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 5975,
+        "inputs": [],
+        "name": "is_rewards_period_finished",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 14957,
+        "inputs": [],
+        "name": "available_allowance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2886,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2916,
+        "inputs": [],
+        "name": "balancer_distributor",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2946,
+        "inputs": [],
+        "name": "rewards_manager",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2976,
+        "inputs": [],
+        "name": "accounted_iteration_start_date",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3006,
+        "inputs": [],
+        "name": "accounted_allowance",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3036,
+        "inputs": [],
+        "name": "remaining_iterations",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3066,
+        "inputs": [],
+        "name": "rewards_rate_per_iteration",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3096,
+        "inputs": [],
+        "name": "is_paused",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 3126,
+        "inputs": [],
+        "name": "is_initialized",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

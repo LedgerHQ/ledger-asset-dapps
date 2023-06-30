@@ -1,0 +1,130 @@
+[
+    {
+        "inputs": [],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "gas": 37574,
+        "inputs": [
+            {
+                "name": "_to",
+                "type": "address"
+            }
+        ],
+        "name": "transfer_ownership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 37604,
+        "inputs": [
+            {
+                "name": "_rewards_contract",
+                "type": "address"
+            }
+        ],
+        "name": "set_rewards_contract",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 8664,
+        "inputs": [],
+        "name": "is_rewards_period_finished",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 5370,
+        "inputs": [],
+        "name": "period_finish",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 18699,
+        "inputs": [],
+        "name": "start_next_rewards_period",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "name": "_recipient",
+                "type": "address"
+            }
+        ],
+        "name": "recover_erc20",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 2568,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 2598,
+        "inputs": [],
+        "name": "rewards_contract",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
