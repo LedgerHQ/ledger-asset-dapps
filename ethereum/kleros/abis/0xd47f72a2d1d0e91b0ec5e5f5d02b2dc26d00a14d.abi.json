@@ -1,0 +1,366 @@
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_metaEvidence",
+                "type": "string"
+            }
+        ],
+        "name": "setMetaEvidence",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "arbitratorExtraData",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "questionIDToDisputer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "rule",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_questionID",
+                "type": "bytes32"
+            },
+            {
+                "name": "_lastHistoryHash",
+                "type": "bytes32"
+            },
+            {
+                "name": "_lastAnswerOrCommitmentID",
+                "type": "bytes32"
+            },
+            {
+                "name": "_lastBond",
+                "type": "uint256"
+            },
+            {
+                "name": "_lastAnswerer",
+                "type": "address"
+            },
+            {
+                "name": "_isCommitment",
+                "type": "bool"
+            }
+        ],
+        "name": "reportAnswer",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "arbitrator",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "questionIDToAnswer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "_questionID",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getDisputeFee",
+        "outputs": [
+            {
+                "name": "fee",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_questionID",
+                "type": "bytes32"
+            },
+            {
+                "name": "_maxPrevious",
+                "type": "uint256"
+            }
+        ],
+        "name": "requestArbitration",
+        "outputs": [],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "realitio",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "questionIDToRuled",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "disputeIDToQuestionID",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "deployer",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "name": "_arbitratorExtraData",
+                "type": "bytes"
+            },
+            {
+                "name": "_realitio",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "_questionID",
+                "type": "bytes32"
+            }
+        ],
+        "name": "DisputeIDToQuestionID",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "MetaEvidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            }
+        ],
+        "name": "Dispute",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "name": "_party",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "Evidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "Ruling",
+        "type": "event"
+    }
+]

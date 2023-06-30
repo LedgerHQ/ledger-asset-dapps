@@ -1,0 +1,90 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IERC20",
+                "name": "_lon",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "vester",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "recipient",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "vestingAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "VesterCreated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "recipient",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingBegin",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingCliff",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "vestingEnd",
+                "type": "uint256"
+            }
+        ],
+        "name": "createVester",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lon",
+        "outputs": [
+            {
+                "internalType": "contract IERC20",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

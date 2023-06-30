@@ -1,0 +1,1093 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_arbitratorExtraData",
+                "type": "bytes"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_reviewTimeout",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_arbitrationCostMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_translationMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_challengeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_sharedStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_winnerStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_loserStakeMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "enum Linguo.Party",
+                "name": "_party",
+                "type": "uint8"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_contributor",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "AppealContribution",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            }
+        ],
+        "name": "Dispute",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_party",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "Evidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "enum Linguo.Party",
+                "name": "_party",
+                "type": "uint8"
+            }
+        ],
+        "name": "HasPaidAppealFee",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "MetaEvidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "Ruling",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_translator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_price",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "TaskAssigned",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_requester",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "TaskCreated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "TaskResolved",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_challenger",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "TranslationChallenged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_translator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_translatedText",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "TranslationSubmitted",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "MULTIPLIER_DIVISOR",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "VERSION_ID",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "acceptTranslation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_beneficiary",
+                "type": "address"
+            }
+        ],
+        "name": "amountWithdrawable",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "total",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "arbitrationCostMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "arbitrator",
+        "outputs": [
+            {
+                "internalType": "contract IArbitrator",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "arbitratorExtraData",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "assignTask",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address payable",
+                "name": "_beneficiary",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_cursor",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_count",
+                "type": "uint256"
+            }
+        ],
+        "name": "batchRoundWithdraw",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "challengeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "challengeTranslation",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_arbitrationCostMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeArbitrationCostMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_challengeMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeChallengeMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_governor",
+                "type": "address"
+            }
+        ],
+        "name": "changeGovernor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_loserStakeMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeLoserStakeMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_reviewTimeout",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeReviewTimeout",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_sharedStakeMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeSharedStakeMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_translationMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeTranslationMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_winnerStakeMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeWinnerStakeMultiplier",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_minPrice",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_metaEvidence",
+                "type": "string"
+            }
+        ],
+        "name": "createTask",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "taskID",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "disputeIDtoTaskID",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "enum Linguo.Party",
+                "name": "_side",
+                "type": "uint8"
+            }
+        ],
+        "name": "fundAppeal",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getChallengeValue",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "deposit",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_round",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_contributor",
+                "type": "address"
+            }
+        ],
+        "name": "getContributions",
+        "outputs": [
+            {
+                "internalType": "uint256[3]",
+                "name": "contributions",
+                "type": "uint256[3]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getDepositValue",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "deposit",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getNumberOfRounds",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_round",
+                "type": "uint256"
+            }
+        ],
+        "name": "getRoundInfo",
+        "outputs": [
+            {
+                "internalType": "uint256[3]",
+                "name": "paidFees",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "bool[3]",
+                "name": "hasPaid",
+                "type": "bool[3]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "feeRewards",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getTaskCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getTaskParties",
+        "outputs": [
+            {
+                "internalType": "address payable[3]",
+                "name": "parties",
+                "type": "address[3]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "getTaskPrice",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "price",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "governor",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "loserStakeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            }
+        ],
+        "name": "reimburseRequester",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "reviewTimeout",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "rule",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "sharedStakeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "submitEvidence",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_translation",
+                "type": "string"
+            }
+        ],
+        "name": "submitTranslation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "tasks",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "submissionTimeout",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minPrice",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxPrice",
+                "type": "uint256"
+            },
+            {
+                "internalType": "enum Linguo.Status",
+                "name": "status",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint256",
+                "name": "lastInteraction",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "requester",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "requesterDeposit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "sumDeposit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "disputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ruling",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "translationMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "winnerStakeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address payable",
+                "name": "_beneficiary",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_taskID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_round",
+                "type": "uint256"
+            }
+        ],
+        "name": "withdrawFeesAndRewards",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

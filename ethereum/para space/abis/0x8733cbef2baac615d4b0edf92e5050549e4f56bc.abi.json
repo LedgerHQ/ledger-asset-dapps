@@ -1,0 +1,200 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "maxPriceMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minExpPriceMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minPriceMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "stepLinear",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "stepExp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tickLength",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+            }
+        ],
+        "name": "PRBMathUD60x18__Exp2InputTooBig",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+            }
+        ],
+        "name": "PRBMathUD60x18__ExpInputTooBig",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "x",
+                "type": "uint256"
+            }
+        ],
+        "name": "PRBMathUD60x18__LogInputTooSmall",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "prod1",
+                "type": "uint256"
+            }
+        ],
+        "name": "PRBMath__MulDivFixedPointOverflow",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "prod1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "denominator",
+                "type": "uint256"
+            }
+        ],
+        "name": "PRBMath__MulDivOverflow",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "auctionStartTimestamp",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "currentTimestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "calculateAuctionPriceMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMaxPriceMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMinExpPriceMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMinPriceMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getStepExp",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getStepLinear",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getTickLength",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

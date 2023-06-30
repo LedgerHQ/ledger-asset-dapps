@@ -1,0 +1,894 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "oldBorrowCap",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "newBorrowCap",
+                "type": "uint256"
+            }
+        ],
+        "name": "BorrowCapChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ltv",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "liquidationThreshold",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "liquidationBonus",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralConfigurationChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "oldFee",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "newFee",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidationProtocolFeeChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "active",
+                "type": "bool"
+            }
+        ],
+        "name": "ReserveActive",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "oldStrategy",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newStrategy",
+                "type": "address"
+            }
+        ],
+        "name": "ReserveAuctionStrategyChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "enabled",
+                "type": "bool"
+            }
+        ],
+        "name": "ReserveBorrowing",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            }
+        ],
+        "name": "ReserveDropped",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "oldReserveFactor",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "newReserveFactor",
+                "type": "uint256"
+            }
+        ],
+        "name": "ReserveFactorChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "frozen",
+                "type": "bool"
+            }
+        ],
+        "name": "ReserveFrozen",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "xToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "variableDebtToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "interestRateStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "ReserveInitialized",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "oldStrategy",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newStrategy",
+                "type": "address"
+            }
+        ],
+        "name": "ReserveInterestRateStrategyChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "paused",
+                "type": "bool"
+            }
+        ],
+        "name": "ReservePaused",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "oldState",
+                "type": "bool"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "newState",
+                "type": "bool"
+            }
+        ],
+        "name": "SiloedBorrowingChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "oldSupplyCap",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "newSupplyCap",
+                "type": "uint256"
+            }
+        ],
+        "name": "SupplyCapChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "proxy",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            }
+        ],
+        "name": "VariableDebtTokenUpgraded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "proxy",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            }
+        ],
+        "name": "XTokenUpgraded",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "CONFIGURATOR_REVISION",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ltv",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "liquidationThreshold",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "liquidationBonus",
+                "type": "uint256"
+            }
+        ],
+        "name": "configureReserveAsCollateral",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            }
+        ],
+        "name": "dropReserve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "xTokenImpl",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "variableDebtTokenImpl",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "underlyingAssetDecimals",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "interestRateStrategyAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "auctionStrategyAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "underlyingAsset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "enum DataTypes.AssetType",
+                        "name": "assetType",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "treasury",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "incentivesController",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "xTokenName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "xTokenSymbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "variableDebtTokenName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "variableDebtTokenSymbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "params",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct ConfiguratorInputTypes.InitReserveInput[]",
+                "name": "input",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "initReserves",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IPoolAddressesProvider",
+                "name": "provider",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint64",
+                "name": "value",
+                "type": "uint64"
+            }
+        ],
+        "name": "setAuctionRecoveryHealthFactor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "newBorrowCap",
+                "type": "uint256"
+            }
+        ],
+        "name": "setBorrowCap",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "newFee",
+                "type": "uint256"
+            }
+        ],
+        "name": "setLiquidationProtocolFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "paused",
+                "type": "bool"
+            }
+        ],
+        "name": "setPoolPause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "active",
+                "type": "bool"
+            }
+        ],
+        "name": "setReserveActive",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "newAuctionStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setReserveAuctionStrategyAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "enabled",
+                "type": "bool"
+            }
+        ],
+        "name": "setReserveBorrowing",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "newReserveFactor",
+                "type": "uint256"
+            }
+        ],
+        "name": "setReserveFactor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "freeze",
+                "type": "bool"
+            }
+        ],
+        "name": "setReserveFreeze",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "newRateStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setReserveInterestRateStrategyAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "paused",
+                "type": "bool"
+            }
+        ],
+        "name": "setReservePause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "newSiloed",
+                "type": "bool"
+            }
+        ],
+        "name": "setSiloedBorrowing",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "newSupplyCap",
+                "type": "uint256"
+            }
+        ],
+        "name": "setSupplyCap",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "asset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "incentivesController",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "symbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "implementation",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "params",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct ConfiguratorInputTypes.UpdateNTokenInput",
+                "name": "input",
+                "type": "tuple"
+            }
+        ],
+        "name": "updateNToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "asset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "treasury",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "incentivesController",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "symbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "implementation",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "params",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct ConfiguratorInputTypes.UpdatePTokenInput",
+                "name": "input",
+                "type": "tuple"
+            }
+        ],
+        "name": "updatePToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "asset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "incentivesController",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "symbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "implementation",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bytes",
+                        "name": "params",
+                        "type": "bytes"
+                    }
+                ],
+                "internalType": "struct ConfiguratorInputTypes.UpdateDebtTokenInput",
+                "name": "input",
+                "type": "tuple"
+            }
+        ],
+        "name": "updateVariableDebtToken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

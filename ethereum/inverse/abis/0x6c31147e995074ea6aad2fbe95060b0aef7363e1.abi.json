@@ -1,0 +1,471 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_poolId",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "address",
+                "name": "_vault",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "dolaBorrowAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "period",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "iterations",
+                "type": "uint256"
+            }
+        ],
+        "name": "approximateDolaAndDbrNeeded",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "dolaNeeded",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dbrNeeded",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxDebt",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "duration",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "buyDbrAndBorrowOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "collateralAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxDebt",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "duration",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositBuyDbrAndBorrowOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "borrowAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositNativeEthAndBorrowOnBehalf",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxDebt",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "duration",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositNativeEthBuyDbrAndBorrowOnBehalf",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            }
+        ],
+        "name": "depositNativeEthOnBehalf",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "collateralAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "repayAndWithdrawNativeEthOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minDolaFromDbr",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dbrAmountToSell",
+                "type": "uint256"
+            }
+        ],
+        "name": "sellDbrAndRepayOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minDolaFromDbr",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dbrAmountToSell",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "collateralAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "sellDbrRepayAndWithdrawNativeEthOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dolaAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minDolaFromDbr",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "dbrAmountToSell",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "collateralAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "sellDbrRepayAndWithdrawOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract IMarket",
+                "name": "market",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "collateralAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "v",
+                "type": "uint8"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "r",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "s",
+                "type": "bytes32"
+            }
+        ],
+        "name": "withdrawNativeEthOnBehalf",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
+    }
+]

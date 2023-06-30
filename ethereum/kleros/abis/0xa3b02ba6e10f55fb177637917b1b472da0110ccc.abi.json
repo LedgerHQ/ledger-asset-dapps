@@ -1,0 +1,685 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "round",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ruling",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "contributor",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "Contribution",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            }
+        ],
+        "name": "Dispute",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_evidenceGroupID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_party",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "Evidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_metaEvidenceID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_evidence",
+                "type": "string"
+            }
+        ],
+        "name": "MetaEvidence",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "contract IArbitrator",
+                "name": "_arbitrator",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "_disputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "Ruling",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "round",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "RulingFunded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "round",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ruling",
+                "type": "uint256"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "contributor",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "reward",
+                "type": "uint256"
+            }
+        ],
+        "name": "Withdrawal",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "DENOMINATOR",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "MAX_NO_OF_CHOICES",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "VERSION",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "arbitrator",
+        "outputs": [
+            {
+                "internalType": "contract IArbitrator",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_winnerStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_loserStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_loserAppealPeriodMultiplier",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeMultipliers",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "_arbitratorExtraData",
+                "type": "bytes"
+            },
+            {
+                "internalType": "string",
+                "name": "_metaevidenceURI",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_numberOfRulingOptions",
+                "type": "uint256"
+            }
+        ],
+        "name": "createDispute",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "disputeID",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "disputeIDtoRoundArray",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "feeRewards",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "disputes",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "arbitratorExtraData",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bool",
+                "name": "isRuled",
+                "type": "bool"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ruling",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "disputeIDOnArbitratorSide",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "externalIDtoLocalID",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "fundAppeal",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "fullyFunded",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getMultipliers",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "_winnerStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_loserStakeMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_loserAppealPeriodMultiplier",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_denominator",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_contributor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_contributedTo",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "getTotalWithdrawableAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "sum",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "governor",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "loserAppealPeriodMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "loserStakeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "numberOfRulingOptions",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_externalDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "rule",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_newGovernor",
+                "type": "address"
+            }
+        ],
+        "name": "setGovernor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_evidenceURI",
+                "type": "string"
+            }
+        ],
+        "name": "submitEvidence",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "winnerStakeMultiplier",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_contributor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_roundNumber",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_ruling",
+                "type": "uint256"
+            }
+        ],
+        "name": "withdrawFeesAndRewards",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_contributor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_contributedTo",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "withdrawFeesAndRewardsForAllRounds",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_localDisputeID",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address payable",
+                "name": "_contributor",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_roundNumber",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_contributedTo",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "withdrawFeesAndRewardsForMultipleRulings",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

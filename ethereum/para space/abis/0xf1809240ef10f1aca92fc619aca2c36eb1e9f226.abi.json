@@ -1,0 +1,303 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IPoolAddressesProvider",
+                "name": "provider",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IAutoCompoundApe",
+                "name": "apeCompound",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IERC20",
+                "name": "apeCoin",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "reserve",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            }
+        ],
+        "name": "ReserveUsedAsCollateralEnabled",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "nftAsset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "borrowAsset",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "borrowAmount",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "cashAmount",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct IPoolApeStaking.StakingInfo",
+                "name": "stakingInfo",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint32",
+                        "name": "tokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint224",
+                        "name": "amount",
+                        "type": "uint224"
+                    }
+                ],
+                "internalType": "struct ApeCoinStaking.SingleNft[]",
+                "name": "_nfts",
+                "type": "tuple[]"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint32",
+                        "name": "mainTokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "bakcTokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint184",
+                        "name": "amount",
+                        "type": "uint184"
+                    }
+                ],
+                "internalType": "struct ApeCoinStaking.PairNftDepositWithAmount[]",
+                "name": "_nftPairs",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "borrowApeAndStake",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "internalType": "address[]",
+                "name": "users",
+                "type": "address[]"
+            },
+            {
+                "internalType": "uint256[][]",
+                "name": "tokenIds",
+                "type": "uint256[][]"
+            }
+        ],
+        "name": "claimApeAndCompound",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "_nfts",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "claimApeCoin",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint128",
+                        "name": "mainTokenId",
+                        "type": "uint128"
+                    },
+                    {
+                        "internalType": "uint128",
+                        "name": "bakcTokenId",
+                        "type": "uint128"
+                    }
+                ],
+                "internalType": "struct ApeCoinStaking.PairNft[]",
+                "name": "_nftPairs",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "claimBAKC",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "underlyingAsset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "repayAsset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "onBehalfOf",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "totalAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "repayAndSupply",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "unstakeApePositionAndRepay",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint32",
+                        "name": "tokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint224",
+                        "name": "amount",
+                        "type": "uint224"
+                    }
+                ],
+                "internalType": "struct ApeCoinStaking.SingleNft[]",
+                "name": "_nfts",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "withdrawApeCoin",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "nftAsset",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint32",
+                        "name": "mainTokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint32",
+                        "name": "bakcTokenId",
+                        "type": "uint32"
+                    },
+                    {
+                        "internalType": "uint184",
+                        "name": "amount",
+                        "type": "uint184"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isUncommit",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct ApeCoinStaking.PairNftWithdrawWithAmount[]",
+                "name": "_nftPairs",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "withdrawBAKC",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

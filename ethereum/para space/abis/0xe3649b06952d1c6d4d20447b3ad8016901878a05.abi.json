@@ -1,0 +1,352 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "contract IPoolAddressesProvider",
+                "name": "provider",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "oldValue",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "newValue",
+                "type": "uint256"
+            }
+        ],
+        "name": "ClaimApeForYieldIncentiveUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "reserve",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "liquidityRate",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "variableBorrowRate",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "liquidityIndex",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "variableBorrowIndex",
+                "type": "uint256"
+            }
+        ],
+        "name": "ReserveDataUpdated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            }
+        ],
+        "name": "dropReserve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getAssetLtvAndLT",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "ltv",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "lt",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            }
+        ],
+        "name": "getUserAccountData",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "totalCollateralBase",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "totalDebtBase",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "availableBorrowsBase",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "currentLiquidationThreshold",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ltv",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "healthFactor",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "erc721HealthFactor",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "xTokenAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "variableDebtAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "interestRateStrategyAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "auctionStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "initReserve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "assets",
+                "type": "address[]"
+            }
+        ],
+        "name": "mintToTreasury",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "enum DataTypes.AssetType",
+                "name": "assetType",
+                "type": "uint8"
+            },
+            {
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountOrTokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "rescueTokens",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint64",
+                "name": "value",
+                "type": "uint64"
+            }
+        ],
+        "name": "setAuctionRecoveryHealthFactor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "user",
+                "type": "address"
+            }
+        ],
+        "name": "setAuctionValidityTime",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "fee",
+                "type": "uint256"
+            }
+        ],
+        "name": "setClaimApeForCompoundFee",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "data",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct DataTypes.ReserveConfigurationMap",
+                "name": "configuration",
+                "type": "tuple"
+            }
+        ],
+        "name": "setConfiguration",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "auctionStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setReserveAuctionStrategyAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "asset",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "rateStrategyAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setReserveInterestRateStrategyAddress",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+            }
+        ],
+        "name": "unlimitedApproveTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

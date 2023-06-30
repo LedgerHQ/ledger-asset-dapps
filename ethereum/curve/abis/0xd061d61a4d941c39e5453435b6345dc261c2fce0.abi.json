@@ -1,0 +1,165 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "recipient",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "gauge",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "minted",
+                "type": "uint256"
+            }
+        ],
+        "name": "Minted",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "_token",
+                "type": "address"
+            },
+            {
+                "name": "_controller",
+                "type": "address"
+            }
+        ],
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "gas": 100038,
+        "inputs": [
+            {
+                "name": "gauge_addr",
+                "type": "address"
+            }
+        ],
+        "name": "mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 408502,
+        "inputs": [
+            {
+                "name": "gauge_addrs",
+                "type": "address[8]"
+            }
+        ],
+        "name": "mint_many",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 101219,
+        "inputs": [
+            {
+                "name": "gauge_addr",
+                "type": "address"
+            },
+            {
+                "name": "_for",
+                "type": "address"
+            }
+        ],
+        "name": "mint_for",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 36726,
+        "inputs": [
+            {
+                "name": "minting_user",
+                "type": "address"
+            }
+        ],
+        "name": "toggle_approve_mint",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 1301,
+        "inputs": [],
+        "name": "token",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 1331,
+        "inputs": [],
+        "name": "controller",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 1669,
+        "inputs": [
+            {
+                "name": "arg0",
+                "type": "address"
+            },
+            {
+                "name": "arg1",
+                "type": "address"
+            }
+        ],
+        "name": "minted",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 1699,
+        "inputs": [
+            {
+                "name": "arg0",
+                "type": "address"
+            },
+            {
+                "name": "arg1",
+                "type": "address"
+            }
+        ],
+        "name": "allowed_to_mint_for",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
