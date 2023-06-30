@@ -58,7 +58,12 @@
             },
             {
                 "indexed": false,
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -86,6 +91,11 @@
             {
                 "indexed": false,
                 "name": "loss",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "name": "debtPaid",
                 "type": "uint256"
             },
             {
@@ -139,18 +149,6 @@
             }
         ],
         "name": "UpdateManagement",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "name": "guestList",
-                "type": "address"
-            }
-        ],
-        "name": "UpdateGuestList",
         "type": "event"
     },
     {
@@ -264,11 +262,28 @@
             },
             {
                 "indexed": false,
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
                 "type": "uint256"
             }
         ],
-        "name": "StrategyUpdateRateLimit",
+        "name": "StrategyUpdateMinDebtPerHarvest",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "strategy",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "name": "maxDebtPerHarvest",
+                "type": "uint256"
+            }
+        ],
+        "name": "StrategyUpdateMaxDebtPerHarvest",
         "type": "event"
     },
     {
@@ -402,7 +417,43 @@
         "type": "function"
     },
     {
-        "gas": 4519,
+        "inputs": [
+            {
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "name": "governance",
+                "type": "address"
+            },
+            {
+                "name": "rewards",
+                "type": "address"
+            },
+            {
+                "name": "nameOverride",
+                "type": "string"
+            },
+            {
+                "name": "symbolOverride",
+                "type": "string"
+            },
+            {
+                "name": "guardian",
+                "type": "address"
+            },
+            {
+                "name": "management",
+                "type": "address"
+            }
+        ],
+        "name": "initialize",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 5946,
         "inputs": [],
         "name": "apiVersion",
         "outputs": [
@@ -415,7 +466,7 @@
         "type": "function"
     },
     {
-        "gas": 107017,
+        "gas": 108344,
         "inputs": [
             {
                 "name": "name",
@@ -428,7 +479,7 @@
         "type": "function"
     },
     {
-        "gas": 71867,
+        "gas": 73194,
         "inputs": [
             {
                 "name": "symbol",
@@ -441,7 +492,7 @@
         "type": "function"
     },
     {
-        "gas": 36338,
+        "gas": 37665,
         "inputs": [
             {
                 "name": "governance",
@@ -454,7 +505,7 @@
         "type": "function"
     },
     {
-        "gas": 37610,
+        "gas": 38937,
         "inputs": [],
         "name": "acceptGovernance",
         "outputs": [],
@@ -462,7 +513,7 @@
         "type": "function"
     },
     {
-        "gas": 37748,
+        "gas": 39075,
         "inputs": [
             {
                 "name": "management",
@@ -475,20 +526,7 @@
         "type": "function"
     },
     {
-        "gas": 37778,
-        "inputs": [
-            {
-                "name": "guestList",
-                "type": "address"
-            }
-        ],
-        "name": "setGuestList",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "gas": 37808,
+        "gas": 39626,
         "inputs": [
             {
                 "name": "rewards",
@@ -501,7 +539,20 @@
         "type": "function"
     },
     {
-        "gas": 37738,
+        "gas": 37789,
+        "inputs": [
+            {
+                "name": "degradation",
+                "type": "uint256"
+            }
+        ],
+        "name": "setLockedProfitDegradation",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 39065,
         "inputs": [
             {
                 "name": "limit",
@@ -514,7 +565,7 @@
         "type": "function"
     },
     {
-        "gas": 37872,
+        "gas": 39199,
         "inputs": [
             {
                 "name": "fee",
@@ -527,7 +578,7 @@
         "type": "function"
     },
     {
-        "gas": 37902,
+        "gas": 39229,
         "inputs": [
             {
                 "name": "fee",
@@ -540,7 +591,7 @@
         "type": "function"
     },
     {
-        "gas": 39146,
+        "gas": 41773,
         "inputs": [
             {
                 "name": "guardian",
@@ -553,7 +604,7 @@
         "type": "function"
     },
     {
-        "gas": 39217,
+        "gas": 41844,
         "inputs": [
             {
                 "name": "active",
@@ -566,7 +617,7 @@
         "type": "function"
     },
     {
-        "gas": 763893,
+        "gas": 1090134,
         "inputs": [
             {
                 "name": "queue",
@@ -579,7 +630,7 @@
         "type": "function"
     },
     {
-        "gas": 76733,
+        "gas": 79308,
         "inputs": [
             {
                 "name": "receiver",
@@ -601,7 +652,7 @@
         "type": "function"
     },
     {
-        "gas": 116496,
+        "gas": 121671,
         "inputs": [
             {
                 "name": "sender",
@@ -627,7 +678,7 @@
         "type": "function"
     },
     {
-        "gas": 38244,
+        "gas": 38241,
         "inputs": [
             {
                 "name": "spender",
@@ -649,7 +700,7 @@
         "type": "function"
     },
     {
-        "gas": 40285,
+        "gas": 42882,
         "inputs": [
             {
                 "name": "spender",
@@ -671,7 +722,7 @@
         "type": "function"
     },
     {
-        "gas": 40309,
+        "gas": 42906,
         "inputs": [
             {
                 "name": "spender",
@@ -693,7 +744,7 @@
         "type": "function"
     },
     {
-        "gas": 81237,
+        "gas": 91494,
         "inputs": [
             {
                 "name": "owner",
@@ -727,7 +778,7 @@
         "type": "function"
     },
     {
-        "gas": 4123,
+        "gas": 8698,
         "inputs": [],
         "name": "totalAssets",
         "outputs": [
@@ -790,7 +841,7 @@
         "type": "function"
     },
     {
-        "gas": 364171,
+        "gas": 830798,
         "inputs": [],
         "name": "maxAvailableShares",
         "outputs": [
@@ -878,7 +929,7 @@
         "type": "function"
     },
     {
-        "gas": 12412,
+        "gas": 43519,
         "inputs": [],
         "name": "pricePerShare",
         "outputs": [
@@ -891,7 +942,7 @@
         "type": "function"
     },
     {
-        "gas": 1450351,
+        "gas": 1523989,
         "inputs": [
             {
                 "name": "strategy",
@@ -902,7 +953,11 @@
                 "type": "uint256"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -916,7 +971,7 @@
         "type": "function"
     },
     {
-        "gas": 115316,
+        "gas": 124263,
         "inputs": [
             {
                 "name": "strategy",
@@ -933,24 +988,41 @@
         "type": "function"
     },
     {
-        "gas": 41467,
+        "gas": 47611,
         "inputs": [
             {
                 "name": "strategy",
                 "type": "address"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
                 "type": "uint256"
             }
         ],
-        "name": "updateStrategyRateLimit",
+        "name": "updateStrategyMinDebtPerHarvest",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "gas": 41344,
+        "gas": 47641,
+        "inputs": [
+            {
+                "name": "strategy",
+                "type": "address"
+            },
+            {
+                "name": "maxDebtPerHarvest",
+                "type": "uint256"
+            }
+        ],
+        "name": "updateStrategyMaxDebtPerHarvest",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "gas": 42854,
         "inputs": [
             {
                 "name": "strategy",
@@ -967,7 +1039,7 @@
         "type": "function"
     },
     {
-        "gas": 1105801,
+        "gas": 1190208,
         "inputs": [
             {
                 "name": "oldVersion",
@@ -1003,7 +1075,7 @@
         "type": "function"
     },
     {
-        "gas": 1196920,
+        "gas": 1255644,
         "inputs": [
             {
                 "name": "strategy",
@@ -1016,7 +1088,7 @@
         "type": "function"
     },
     {
-        "gas": 23091666,
+        "gas": 23636673,
         "inputs": [
             {
                 "name": "strategy",
@@ -1087,7 +1159,7 @@
         "type": "function"
     },
     {
-        "gas": 9808,
+        "gas": 21381,
         "inputs": [],
         "name": "availableDepositLimit",
         "outputs": [
@@ -1129,7 +1201,7 @@
         "type": "function"
     },
     {
-        "gas": 937520,
+        "gas": 1170904,
         "inputs": [
             {
                 "name": "gain",
@@ -1183,7 +1255,7 @@
         "type": "function"
     },
     {
-        "gas": 9053,
+        "gas": 13920,
         "inputs": [],
         "name": "name",
         "outputs": [
@@ -1196,7 +1268,7 @@
         "type": "function"
     },
     {
-        "gas": 8106,
+        "gas": 11673,
         "inputs": [],
         "name": "symbol",
         "outputs": [
@@ -1209,7 +1281,7 @@
         "type": "function"
     },
     {
-        "gas": 2711,
+        "gas": 3678,
         "inputs": [],
         "name": "decimals",
         "outputs": [
@@ -1222,7 +1294,7 @@
         "type": "function"
     },
     {
-        "gas": 2956,
+        "gas": 3923,
         "inputs": [
             {
                 "name": "arg0",
@@ -1240,7 +1312,7 @@
         "type": "function"
     },
     {
-        "gas": 3201,
+        "gas": 4168,
         "inputs": [
             {
                 "name": "arg0",
@@ -1262,7 +1334,7 @@
         "type": "function"
     },
     {
-        "gas": 2801,
+        "gas": 3768,
         "inputs": [],
         "name": "totalSupply",
         "outputs": [
@@ -1275,7 +1347,7 @@
         "type": "function"
     },
     {
-        "gas": 2831,
+        "gas": 3798,
         "inputs": [],
         "name": "token",
         "outputs": [
@@ -1288,7 +1360,7 @@
         "type": "function"
     },
     {
-        "gas": 2861,
+        "gas": 3828,
         "inputs": [],
         "name": "governance",
         "outputs": [
@@ -1301,7 +1373,7 @@
         "type": "function"
     },
     {
-        "gas": 2891,
+        "gas": 3858,
         "inputs": [],
         "name": "management",
         "outputs": [
@@ -1314,7 +1386,7 @@
         "type": "function"
     },
     {
-        "gas": 2921,
+        "gas": 3888,
         "inputs": [],
         "name": "guardian",
         "outputs": [
@@ -1327,20 +1399,7 @@
         "type": "function"
     },
     {
-        "gas": 2951,
-        "inputs": [],
-        "name": "guestList",
-        "outputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "gas": 10322,
+        "gas": 22641,
         "inputs": [
             {
                 "name": "arg0",
@@ -1362,7 +1421,11 @@
                 "type": "uint256"
             },
             {
-                "name": "rateLimit",
+                "name": "minDebtPerHarvest",
+                "type": "uint256"
+            },
+            {
+                "name": "maxDebtPerHarvest",
                 "type": "uint256"
             },
             {
@@ -1386,7 +1449,7 @@
         "type": "function"
     },
     {
-        "gas": 3120,
+        "gas": 4057,
         "inputs": [
             {
                 "name": "arg0",
@@ -1404,7 +1467,7 @@
         "type": "function"
     },
     {
-        "gas": 3041,
+        "gas": 3978,
         "inputs": [],
         "name": "emergencyShutdown",
         "outputs": [
@@ -1417,7 +1480,7 @@
         "type": "function"
     },
     {
-        "gas": 3071,
+        "gas": 4008,
         "inputs": [],
         "name": "depositLimit",
         "outputs": [
@@ -1430,7 +1493,7 @@
         "type": "function"
     },
     {
-        "gas": 3101,
+        "gas": 4038,
         "inputs": [],
         "name": "debtRatio",
         "outputs": [
@@ -1443,7 +1506,7 @@
         "type": "function"
     },
     {
-        "gas": 3131,
+        "gas": 4068,
         "inputs": [],
         "name": "totalDebt",
         "outputs": [
@@ -1456,7 +1519,7 @@
         "type": "function"
     },
     {
-        "gas": 3161,
+        "gas": 4098,
         "inputs": [],
         "name": "lastReport",
         "outputs": [
@@ -1469,7 +1532,7 @@
         "type": "function"
     },
     {
-        "gas": 3191,
+        "gas": 4128,
         "inputs": [],
         "name": "activation",
         "outputs": [
@@ -1482,7 +1545,33 @@
         "type": "function"
     },
     {
-        "gas": 3221,
+        "gas": 4158,
+        "inputs": [],
+        "name": "lockedProfit",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 4188,
+        "inputs": [],
+        "name": "lockedProfitDegradation",
+        "outputs": [
+            {
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "gas": 4218,
         "inputs": [],
         "name": "rewards",
         "outputs": [
@@ -1495,7 +1584,7 @@
         "type": "function"
     },
     {
-        "gas": 3251,
+        "gas": 4248,
         "inputs": [],
         "name": "managementFee",
         "outputs": [
@@ -1508,7 +1597,7 @@
         "type": "function"
     },
     {
-        "gas": 3281,
+        "gas": 4278,
         "inputs": [],
         "name": "performanceFee",
         "outputs": [
@@ -1521,7 +1610,7 @@
         "type": "function"
     },
     {
-        "gas": 3526,
+        "gas": 4523,
         "inputs": [
             {
                 "name": "arg0",
@@ -1539,7 +1628,7 @@
         "type": "function"
     },
     {
-        "gas": 3341,
+        "gas": 4338,
         "inputs": [],
         "name": "DOMAIN_SEPARATOR",
         "outputs": [
