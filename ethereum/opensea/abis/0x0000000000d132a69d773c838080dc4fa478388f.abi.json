@@ -1,0 +1,297 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduitController",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "initialOwner",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "initialRevoker",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "CallerIsNotNewPotentialOwner",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "CallerIsNotOwner",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InitialOwnerIsNullAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduitController",
+                "type": "address"
+            }
+        ],
+        "name": "InvalidConduitController",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidRevoker",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NewPotentialOwnerIsNullAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "currentOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnerAlreadySet",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "RevokerIsNullAddress",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newPotentialOwner",
+                "type": "address"
+            }
+        ],
+        "name": "PotentialOwnerUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "revoker",
+                "type": "address"
+            }
+        ],
+        "name": "RevokerUpdated",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            }
+        ],
+        "name": "acceptConduitOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "acceptOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            }
+        ],
+        "name": "cancelConduitOwnershipTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "cancelOwnershipTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "channel",
+                "type": "address"
+            }
+        ],
+        "name": "closeChannel",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getConduitController",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "conduitController",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getRevoker",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "revoker",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "potentialOwner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "newPotentialOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferConduitOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newPotentialOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "channel",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "isOpen",
+                "type": "bool"
+            }
+        ],
+        "name": "updateChannel",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "revoker",
+                "type": "address"
+            }
+        ],
+        "name": "updateRevoker",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
