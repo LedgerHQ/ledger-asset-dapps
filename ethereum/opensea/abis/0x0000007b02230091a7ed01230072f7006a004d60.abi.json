@@ -1,0 +1,88 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "conduitCreator",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidConduitCreator",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract ConduitControllerInterface",
+                "name": "conduitController",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            }
+        ],
+        "name": "cancelOwnershipTransfer",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract ConduitControllerInterface",
+                "name": "conduitController",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "conduitKey",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "address",
+                "name": "initialOwner",
+                "type": "address"
+            }
+        ],
+        "name": "createConduit",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "contract ConduitControllerInterface",
+                "name": "conduitController",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "conduit",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "newPotentialOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
