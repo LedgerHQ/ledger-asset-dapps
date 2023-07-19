@@ -3650,6 +3650,7 @@
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "admin",
                     "functionType": "unknown",
                     "options": {},
@@ -3672,8 +3673,7 @@
                             }
                         ]
                     },
-                    "selector": "0xf851a440",
-                    "arguments_skipped": []
+                    "selector": "0xf851a440"
                 },
                 {
                     "arguments": [
@@ -3689,6 +3689,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "changeAdmin",
                     "functionType": "unknown",
                     "options": {},
@@ -3717,11 +3718,11 @@
                             }
                         ]
                     },
-                    "selector": "0x8f283970",
-                    "arguments_skipped": []
+                    "selector": "0x8f283970"
                 },
                 {
                     "arguments": [],
+                    "arguments_skipped": [],
                     "functionName": "implementation",
                     "functionType": "unknown",
                     "options": {},
@@ -3744,8 +3745,7 @@
                             }
                         ]
                     },
-                    "selector": "0x5c60da1b",
-                    "arguments_skipped": []
+                    "selector": "0x5c60da1b"
                 },
                 {
                     "arguments": [
@@ -3761,6 +3761,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "upgradeTo",
                     "functionType": "unknown",
                     "options": {},
@@ -3789,8 +3790,7 @@
                             }
                         ]
                     },
-                    "selector": "0x3659cfe6",
-                    "arguments_skipped": []
+                    "selector": "0x3659cfe6"
                 },
                 {
                     "arguments": [
@@ -3817,6 +3817,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "upgradeToAndCall",
                     "functionType": "unknown",
                     "options": {},
@@ -3851,8 +3852,7 @@
                             }
                         ]
                     },
-                    "selector": "0x4f1ef286",
-                    "arguments_skipped": []
+                    "selector": "0x4f1ef286"
                 },
                 {
                     "arguments": [
@@ -4022,6 +4022,7 @@
                             }
                         }
                     ],
+                    "arguments_skipped": [],
                     "functionName": "directAcceptBid",
                     "functionType": "unknown",
                     "options": {},
@@ -4161,8 +4162,7 @@
                             }
                         ]
                     },
-                    "selector": "0x67d49a3b",
-                    "arguments_skipped": []
+                    "selector": "0x67d49a3b"
                 },
                 {
                     "arguments": [
@@ -4283,6 +4283,52 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "direct.buyOrderNftAmount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.nftData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.nftData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderSignature",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderSignature"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.buyOrderData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.buyOrderData"
                                     }
                                 }
                             }
@@ -4427,53 +4473,7 @@
                             }
                         ]
                     },
-                    "selector": "0x0d5f7d35",
-                    "arguments_skipped": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "direct.nftData",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "direct.nftData"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "direct.sellOrderData",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "direct.sellOrderData"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "direct.sellOrderSignature",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "direct.sellOrderSignature"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "direct.buyOrderData",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "direct.buyOrderData"
-                                    }
-                                }
-                            }
-                        }
-                    ]
+                    "selector": "0x0d5f7d35"
                 }
             ]
         },
@@ -8091,18 +8091,6 @@
                     "selector": "0xf2fde38b"
                 }
             ]
-        },
-        {
-            "abi": [],
-            "address": "0x1cf0dF2A5A20Cd61d68d4489eEBbf85b8d39e18a",
-            "name": "0x1cf0dF2A5A20Cd61d68d4489eEBbf85b8d39e18a",
-            "parsers": []
-        },
-        {
-            "abi": [],
-            "address": "0xFDfF6b56CcE39482032b27140252FF4F16432785",
-            "name": "0xFDfF6b56CcE39482032b27140252FF4F16432785",
-            "parsers": []
         }
     ],
     "id": "rarible",
