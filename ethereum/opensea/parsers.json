@@ -17881,68 +17881,6 @@
                     "selector": "0x2e1a7d4d"
                 },
                 {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "dst",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "dst"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "wad",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "wad"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "arguments_skipped": [],
-                    "functionName": "transfer",
-                    "functionType": "unknown",
-                    "options": {},
-                    "screens": {
-                        "blue_screens": [
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Function",
-                                                "value": "transfer"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.dst",
-                                                "label": "dst"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.wad",
-                                                "label": "wad"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            }
-                        ]
-                    },
-                    "selector": "0xa9059cbb"
-                },
-                {
                     "arguments": [],
                     "arguments_skipped": [],
                     "functionName": "deposit",
