@@ -3500,158 +3500,6 @@
                     "arguments": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "newDefaultFeeReceiver",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "newDefaultFeeReceiver"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "arguments_skipped": [],
-                    "functionName": "setDefaultFeeReceiver",
-                    "functionType": "unknown",
-                    "options": {},
-                    "screens": {
-                        "blue_screens": [
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Function",
-                                                "value": "setDefaultFeeReceiver"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.newDefaultFeeReceiver",
-                                                "label": "newDefaultFeeReceiver"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            }
-                        ]
-                    },
-                    "selector": "0x1cdfe3d8"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "token",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "token"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "wallet",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "wallet"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "arguments_skipped": [],
-                    "functionName": "setFeeReceiver",
-                    "functionType": "unknown",
-                    "options": {},
-                    "screens": {
-                        "blue_screens": [
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Function",
-                                                "value": "setFeeReceiver"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.token",
-                                                "label": "token"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.wallet",
-                                                "label": "wallet"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            }
-                        ]
-                    },
-                    "selector": "0xe66db25e"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "newProtocolFee",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "newProtocolFee"
-                                    }
-                                }
-                            }
-                        }
-                    ],
-                    "arguments_skipped": [],
-                    "functionName": "setProtocolFee",
-                    "functionType": "unknown",
-                    "options": {},
-                    "screens": {
-                        "blue_screens": [
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Function",
-                                                "value": "setProtocolFee"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.newProtocolFee",
-                                                "label": "newProtocolFee"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            }
-                        ]
-                    },
-                    "selector": "0x787dce3d"
-                },
-                {
-                    "arguments": [
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "newRoyaltiesRegistry",
                             "value": {
                                 "terminalValue": {
@@ -3799,6 +3647,833 @@
                         ]
                     },
                     "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "admin",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "admin"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf851a440"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newAdmin",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newAdmin"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "changeAdmin",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "changeAdmin"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newAdmin",
+                                                "label": "newAdmin"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8f283970"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "implementation",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "implementation"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x5c60da1b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newImplementation",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementation"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "upgradeTo",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "upgradeTo"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementation",
+                                                "label": "newImplementation"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x3659cfe6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newImplementation",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementation"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "data"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "upgradeToAndCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "upgradeToAndCall"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementation",
+                                                "label": "newImplementation"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.data",
+                                                "label": "data"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4f1ef286"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "direct.bidMaker",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidMaker"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidNftAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidNftAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.nftAssetClass",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.nftAssetClass"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.nftData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.nftData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidPaymentAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidPaymentAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "direct.paymentToken",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.paymentToken"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidSalt",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidSalt"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidStart",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidStart"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidEnd",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidEnd"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidDataType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidDataType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.bidSignature",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.bidSignature"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderPaymentAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderPaymentAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderNftAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderNftAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderData"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "directAcceptBid",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "directAcceptBid"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidMaker",
+                                                "label": "direct.bidMaker"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidNftAmount",
+                                                "label": "direct.bidNftAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.nftAssetClass",
+                                                "label": "direct.nftAssetClass"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.nftData",
+                                                "label": "direct.nftData"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidPaymentAmount",
+                                                "label": "direct.bidPaymentAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.paymentToken",
+                                                "label": "direct.paymentToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidSalt",
+                                                "label": "direct.bidSalt"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidStart",
+                                                "label": "direct.bidStart"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidEnd",
+                                                "label": "direct.bidEnd"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidDataType",
+                                                "label": "direct.bidDataType"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidData",
+                                                "label": "direct.bidData"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.bidSignature",
+                                                "label": "direct.bidSignature"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderPaymentAmount",
+                                                "label": "direct.sellOrderPaymentAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderNftAmount",
+                                                "label": "direct.sellOrderNftAmount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderData",
+                                                "label": "direct.sellOrderData"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x67d49a3b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "direct.sellOrderMaker",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderMaker"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderNftAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderNftAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.nftAssetClass",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.nftAssetClass"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderPaymentAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderPaymentAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "direct.paymentToken",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.paymentToken"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderSalt",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderSalt"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderStart",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderStart"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderEnd",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderEnd"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderDataType",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderDataType"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.buyOrderPaymentAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.buyOrderPaymentAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.buyOrderNftAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.buyOrderNftAmount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.nftData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.nftData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderData"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.sellOrderSignature",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.sellOrderSignature"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "direct.buyOrderData",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "direct.buyOrderData"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "directPurchase",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "directPurchase"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderMaker",
+                                                "label": "direct.sellOrderMaker"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderNftAmount",
+                                                "label": "direct.sellOrderNftAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.nftAssetClass",
+                                                "label": "direct.nftAssetClass"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "direct.nftData",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderPaymentAmount",
+                                                "label": "direct.sellOrderPaymentAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.paymentToken",
+                                                "label": "direct.paymentToken"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderSalt",
+                                                "label": "direct.sellOrderSalt"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderStart",
+                                                "label": "direct.sellOrderStart"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderEnd",
+                                                "label": "direct.sellOrderEnd"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.sellOrderDataType",
+                                                "label": "direct.sellOrderDataType"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "direct.sellOrderData",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "direct.sellOrderSignature",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.buyOrderPaymentAmount",
+                                                "label": "direct.buyOrderPaymentAmount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.direct.buyOrderNftAmount",
+                                                "label": "direct.buyOrderNftAmount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "direct.buyOrderData",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0d5f7d35"
                 }
             ]
         },
