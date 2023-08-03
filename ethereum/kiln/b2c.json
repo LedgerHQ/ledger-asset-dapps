@@ -43,6 +43,34 @@
                     "plugin": "Kiln"
                 }
             }
+        },
+        {
+            "address": "0x5DB5235b5C7e247488784986e58019fFFd98FdA4",
+            "contractName": "LedgerLiveV2",
+            "selectors": {
+                "0x3a4b66f1": {
+                    "method": "stake",
+                    "plugin": "Kiln"
+                },
+                "0x721c6513": {
+                    "method": "requestExit",
+                    "plugin": "Kiln"
+                },
+                "0xa6d95360": {
+                    "method": "multiClaim",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0x8d6fd650500f82c7d978a440348e5a9b886943bf",
+            "contractName": "KilnExitQueueV2",
+            "selectors": {
+                "0x10dd50a7": {
+                    "method": "claim",
+                    "plugin": "Kiln"
+                }
+            }
         }
     ],
     "name": "kiln"
