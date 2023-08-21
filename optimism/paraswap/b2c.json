@@ -1,0 +1,100 @@
+{
+    "blockchainName": "optimism",
+    "chainId": 10,
+    "contracts": [
+        {
+            "address": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
+            "contractName": "AugustusSwapper",
+            "selectors": {
+                "0x0b86a4c1": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "swapOnUniswapV2Fork",
+                    "plugin": "Paraswap"
+                },
+                "0x2298207a": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "simpleBuy",
+                    "plugin": "Paraswap"
+                },
+                "0x46c67b6d": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.0.path.-1.to"
+                    ],
+                    "method": "megaSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x54840d1a": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0x54e3f31b": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "simpleSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x64466805": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "method": "swapOnZeroXv4",
+                    "plugin": "Paraswap"
+                },
+                "0x81033120": {
+                    "erc20OfInterest": [
+                        "fromToken",
+                        "toToken"
+                    ],
+                    "method": "swapOnZeroXv2",
+                    "plugin": "Paraswap"
+                },
+                "0x935fb84b": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "buyOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0xa94e78ef": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.-1.to"
+                    ],
+                    "method": "multiSwap",
+                    "plugin": "Paraswap"
+                },
+                "0xc03786b0": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "buyOnUniswapFork",
+                    "plugin": "Paraswap"
+                },
+                "0xf5661034": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapOnUniswapFork",
+                    "plugin": "Paraswap"
+                }
+            }
+        }
+    ],
+    "name": "Paraswap"
+}
