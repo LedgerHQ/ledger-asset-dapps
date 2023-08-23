@@ -1,0 +1,67 @@
+{
+    "blockchainName": "optimism",
+    "chainId": 10,
+    "contracts": [
+        {
+            "address": "0x1111111254eeb25477b68fb85ed929f73a960582",
+            "contractName": "AggregationRouterV5",
+            "selectors": {
+                "0x0502b1c5": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "unoswap",
+                    "plugin": "1inch"
+                },
+                "0x12aa3caf": {
+                    "erc20OfInterest": [
+                        "desc.srcToken",
+                        "desc.dstToken"
+                    ],
+                    "method": "swap",
+                    "plugin": "1inch"
+                },
+                "0x3c15fd91": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "unoswapToWithPermit",
+                    "plugin": "1inch"
+                },
+                "0x3eca9c0a": {
+                    "erc20OfInterest": [
+                        "order.makerAsset",
+                        "order.takerAsset"
+                    ],
+                    "method": "fillOrderRFQ",
+                    "plugin": "1inch"
+                },
+                "0x70ccbd31": {
+                    "erc20OfInterest": [
+                        "order.makerAsset",
+                        "order.takerAsset"
+                    ],
+                    "method": "fillOrderRFQToWithPermit",
+                    "plugin": "1inch"
+                },
+                "0x84bd6d29": {
+                    "erc20OfInterest": [
+                        "srcToken",
+                        "dstToken"
+                    ],
+                    "method": "clipperSwap",
+                    "plugin": "1inch"
+                },
+                "0xc805a666": {
+                    "erc20OfInterest": [
+                        "srcToken",
+                        "dstToken"
+                    ],
+                    "method": "clipperSwapToWithPermit",
+                    "plugin": "1inch"
+                }
+            }
+        }
+    ],
+    "name": "1inch"
+}
