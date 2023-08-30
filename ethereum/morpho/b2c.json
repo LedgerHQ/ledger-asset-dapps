@@ -1,0 +1,80 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x8888882f8f843896699869179fb6e4f7e3b58888",
+            "contractName": "Morpho",
+            "selectors": {
+                "0x0c0a769b": {
+                    "erc20OfInterest": [],
+                    "method": "supply",
+                    "plugin": "Morpho"
+                },
+                "0x148e23ce": {
+                    "erc20OfInterest": [],
+                    "method": "claimRewards",
+                    "plugin": "Morpho"
+                },
+                "0x1da649cf": {
+                    "erc20OfInterest": [],
+                    "method": "repay",
+                    "plugin": "Morpho"
+                },
+                "0x4b8a3529": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Morpho"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x3b14e5c73e0a56d607a8688098326fd4b4292135",
+            "contractName": "RewardsDistributor",
+            "selectors": {
+                "0x3d13f874": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x777777c9898d384f785ee44acfe945efdff5f3e0",
+            "contractName": "Morpho",
+            "selectors": {
+                "0x0c0a769b": {
+                    "erc20OfInterest": [],
+                    "method": "supply",
+                    "plugin": "Morpho"
+                },
+                "0x1da649cf": {
+                    "erc20OfInterest": [],
+                    "method": "repay",
+                    "plugin": "Morpho"
+                },
+                "0x3111e7b3": {
+                    "erc20OfInterest": [],
+                    "method": "claimRewards",
+                    "plugin": "Morpho"
+                },
+                "0x4b8a3529": {
+                    "erc20OfInterest": [],
+                    "method": "borrow",
+                    "plugin": "Morpho"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                }
+            }
+        }
+    ],
+    "name": "Morpho"
+}
