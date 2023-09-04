@@ -1,0 +1,93 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xdd3f50f8a6cafbe9b31a427582963f465e745af8",
+            "contractName": "RocketDepositPool",
+            "selectors": {
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "RocketPool"
+                }
+            }
+        },
+        {
+            "address": "0x1d8f8f00cfa6758d7be78336684788fb0ee0fa46",
+            "contractName": "RocketStorage",
+            "selectors": {
+                "0xa543ccea": {
+                    "erc20OfInterest": [],
+                    "method": "setWithdrawalAddress",
+                    "plugin": "RocketPool"
+                },
+                "0xbd439126": {
+                    "erc20OfInterest": [],
+                    "method": "confirmWithdrawalAddress",
+                    "plugin": "RocketPool"
+                }
+            }
+        },
+        {
+            "address": "0x0d8d8f8541b12a0e1194b7cc4b6d954b90ab82ec",
+            "contractName": "RocketNodeStaking",
+            "selectors": {
+                "0x3e200d4b": {
+                    "erc20OfInterest": [],
+                    "method": "stakeRPL",
+                    "plugin": "RocketPool"
+                },
+                "0x6b088d5c": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawRPL",
+                    "plugin": "RocketPool"
+                },
+                "0xcb1c8321": {
+                    "erc20OfInterest": [],
+                    "method": "stakeRPLFor",
+                    "plugin": "RocketPool"
+                }
+            }
+        },
+        {
+            "address": "0xae78736cd615f374d3085123a210448e74fc6393",
+            "contractName": "RocketTokenRETH",
+            "selectors": {
+                "0x42966c68": {
+                    "erc20OfInterest": [],
+                    "method": "burn",
+                    "plugin": "RocketPool"
+                }
+            }
+        },
+        {
+            "address": "0xd33526068d116ce69f19a9ee46f0bd304f21a51f",
+            "contractName": "RocketTokenRPL",
+            "selectors": {
+                "0xfe784eaa": {
+                    "erc20OfInterest": [],
+                    "method": "swapTokens",
+                    "plugin": "RocketPool"
+                }
+            }
+        },
+        {
+            "address": "0x16d5a408e807db8ef7c578279beeee6b228f1c1c",
+            "contractName": "RocketSwapRouter",
+            "selectors": {
+                "0x55362f4d": {
+                    "erc20OfInterest": [],
+                    "method": "swapTo",
+                    "plugin": "RocketPool"
+                },
+                "0xa824ae8b": {
+                    "erc20OfInterest": [],
+                    "method": "swapFrom",
+                    "plugin": "RocketPool"
+                }
+            }
+        }
+    ],
+    "name": "RocketPool"
+}
