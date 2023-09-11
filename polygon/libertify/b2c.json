@@ -1,0 +1,27 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x9f4294dc2ba0e4569cbfa3d8a0a5f2f23385db50",
+            "contractName": "LibertiV2Proxy",
+            "selectors": {
+                "0xa2922622": {
+                    "erc20OfInterest": [
+                        "dstToken"
+                    ],
+                    "method": "withdrawWithSymbolCheck",
+                    "plugin": "libertify"
+                },
+                "0xaa2daba6": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "depositWithSymbolCheck",
+                    "plugin": "libertify"
+                }
+            }
+        }
+    ],
+    "name": "libertify"
+}
