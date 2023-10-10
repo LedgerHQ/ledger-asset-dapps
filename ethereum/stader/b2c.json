@@ -22,6 +22,33 @@
                     "plugin": "Staderlabs"
                 }
             }
+        },
+        {
+            "address": "0xcf5ea1b38380f6af39068375516daf40ed70d299",
+            "contractName": "StaderStakePoolsManager",
+            "selectors": {
+                "0xf340fa01": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Staderlabs"
+                }
+            }
+        },
+        {
+            "address": "0x9f0491b32dbce587c50c4c43ab303b06478193a7",
+            "contractName": "UserWithdrawalManager",
+            "selectors": {
+                "0x379607f5": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "Staderlabs"
+                },
+                "0xccc143b8": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdraw",
+                    "plugin": "Staderlabs"
+                }
+            }
         }
     ],
     "name": "Staderlabs"
