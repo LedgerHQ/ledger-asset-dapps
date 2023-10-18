@@ -1,0 +1,55 @@
+{
+    "blockchainName": "celo",
+    "chainId": 42220,
+    "contracts": [
+        {
+            "address": "0x7d21685c17607338b313a7174bab6620bad0aab7",
+            "contractName": "AccountsProxy",
+            "selectors": {
+                "0x9dca362f": {
+                    "erc20OfInterest": [],
+                    "method": "createAccount",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x6cc083aed9e3ebe302a6336dbc7c921c9f03349e",
+            "contractName": "LockedGoldProxy",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6198e339": {
+                    "erc20OfInterest": [],
+                    "method": "unlock",
+                    "plugin": "StakeKit"
+                },
+                "0xf83d08ba": {
+                    "erc20OfInterest": [],
+                    "method": "lock",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x8d6677192144292870907e3fa8a5527fe55a7ff6",
+            "contractName": "ElectionProxy",
+            "selectors": {
+                "0x580d747a": {
+                    "erc20OfInterest": [],
+                    "method": "vote",
+                    "plugin": "StakeKit"
+                },
+                "0x6e198475": {
+                    "erc20OfInterest": [],
+                    "method": "revokeActive",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}
