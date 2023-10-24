@@ -1,0 +1,243 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_wethAddr",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "BadData",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadReceiver",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadReturn",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadSelector",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadSymbol",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadToken",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "BadValue",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "FailedTransfer",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "UnevenSwap",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "srcToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "vaultAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "data",
+                "type": "bytes[]"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "srcToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "vaultAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "vaultSymbol",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "data",
+                "type": "bytes[]"
+            }
+        ],
+        "name": "depositWithSymbolCheck",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "vaultAddr",
+                "type": "address"
+            }
+        ],
+        "name": "previewWithdraw",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "tokens",
+                "type": "address[]"
+            },
+            {
+                "internalType": "uint256[]",
+                "name": "amountsOut",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "dstToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "vaultAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "data",
+                "type": "bytes[]"
+            }
+        ],
+        "name": "withdraw",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountOut",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "dstToken",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "vaultAddr",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minAmountOut",
+                "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "vaultSymbol",
+                "type": "string"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "data",
+                "type": "bytes[]"
+            }
+        ],
+        "name": "withdrawWithSymbolCheck",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
