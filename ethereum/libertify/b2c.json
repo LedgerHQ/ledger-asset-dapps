@@ -1,0 +1,27 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x27522e9f1af54762f385ea127b2b4bfb454ff728",
+            "contractName": "LibertiV2Proxy",
+            "selectors": {
+                "0xa2922622": {
+                    "erc20OfInterest": [
+                        "dstToken"
+                    ],
+                    "method": "withdrawWithSymbolCheck",
+                    "plugin": "libertify"
+                },
+                "0xaa2daba6": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "depositWithSymbolCheck",
+                    "plugin": "libertify"
+                }
+            }
+        }
+    ],
+    "name": "libertify"
+}
