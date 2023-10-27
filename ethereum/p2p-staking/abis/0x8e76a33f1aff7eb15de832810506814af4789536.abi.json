@@ -1,0 +1,222 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "bool",
+                "name": "_mainnet",
+                "type": "bool"
+            },
+            {
+                "internalType": "address",
+                "name": "_depositContract",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_feeDistributorFactory",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "P2pEth2Depositor__AmountOfParametersError",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pEth2Depositor__DoNotSendEthDirectlyHere",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pEth2Depositor__EtherValueError",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_passedAddress",
+                "type": "address"
+            }
+        ],
+        "name": "P2pEth2Depositor__NotFactory",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pEth2Depositor__ValidatorCountError",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_from",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_newFeeDistributorAddress",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "_firstValidatorId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_validatorCount",
+                "type": "uint256"
+            }
+        ],
+        "name": "P2pEth2DepositEvent",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "collateral",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes[]",
+                "name": "_pubkeys",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_withdrawal_credentials",
+                "type": "bytes"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "_signatures",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "bytes32[]",
+                "name": "_deposit_data_roots",
+                "type": "bytes32[]"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct IFeeDistributor.FeeRecipient",
+                "name": "_clientConfig",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct IFeeDistributor.FeeRecipient",
+                "name": "_referrerConfig",
+                "type": "tuple"
+            }
+        ],
+        "name": "deposit",
+        "outputs": [],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "i_depositContract",
+        "outputs": [
+            {
+                "internalType": "contract IDepositContract",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "i_feeDistributorFactory",
+        "outputs": [
+            {
+                "internalType": "contract IFeeDistributorFactory",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "interfaceId",
+                "type": "bytes4"
+            }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "validatorsMaxAmount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
+    }
+]
