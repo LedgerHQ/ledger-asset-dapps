@@ -1,0 +1,190 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xdb46d1dc155634fbc732f92e853b10b288ad5a1d",
+            "contractName": "LensHub",
+            "selectors": {
+                "0x20905506": {
+                    "erc20OfInterest": [],
+                    "method": "whitelist_profile_creator",
+                    "plugin": "Lens"
+                },
+                "0x4727ce3a": {
+                    "erc20OfInterest": [],
+                    "method": "collect",
+                    "plugin": "Lens"
+                },
+                "0x4926c4ed": {
+                    "erc20OfInterest": [],
+                    "method": "change_del_exec_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x4b7312a9": {
+                    "erc20OfInterest": [],
+                    "method": "follow",
+                    "plugin": "Lens"
+                },
+                "0x4d7b35a0": {
+                    "erc20OfInterest": [],
+                    "method": "follow_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x51c3659c": {
+                    "erc20OfInterest": [],
+                    "method": "change_del_exec_1",
+                    "plugin": "Lens"
+                },
+                "0x560a4db1": {
+                    "erc20OfInterest": [],
+                    "method": "act",
+                    "plugin": "Lens"
+                },
+                "0x65f29f27": {
+                    "erc20OfInterest": [],
+                    "method": "quote_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x66b0dcd3": {
+                    "erc20OfInterest": [],
+                    "method": "post",
+                    "plugin": "Lens"
+                },
+                "0x6d0fd658": {
+                    "erc20OfInterest": [],
+                    "method": "metadata_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x6dea40b3": {
+                    "erc20OfInterest": [],
+                    "method": "set_follow_mod",
+                    "plugin": "Lens"
+                },
+                "0x809d8947": {
+                    "erc20OfInterest": [],
+                    "method": "unfollow_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x815ed04a": {
+                    "erc20OfInterest": [],
+                    "method": "unfollow",
+                    "plugin": "Lens"
+                },
+                "0x907cd7d2": {
+                    "erc20OfInterest": [],
+                    "method": "post_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xb273b4a7": {
+                    "erc20OfInterest": [],
+                    "method": "comment",
+                    "plugin": "Lens"
+                },
+                "0xb42df51a": {
+                    "erc20OfInterest": [],
+                    "method": "comment_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xb7902e73": {
+                    "erc20OfInterest": [],
+                    "method": "collect_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xc1f4b40a": {
+                    "erc20OfInterest": [],
+                    "method": "change_del_exec_2",
+                    "plugin": "Lens"
+                },
+                "0xc5d5d96a": {
+                    "erc20OfInterest": [],
+                    "method": "act",
+                    "plugin": "Lens"
+                },
+                "0xc6d45944": {
+                    "erc20OfInterest": [],
+                    "method": "set_block_status_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xc86642c7": {
+                    "erc20OfInterest": [],
+                    "method": "act_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xce30bb4f": {
+                    "erc20OfInterest": [],
+                    "method": "set_follow_mod_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xe6a402b5": {
+                    "erc20OfInterest": [],
+                    "method": "mirror_with_sign",
+                    "plugin": "Lens"
+                },
+                "0xefe4fd83": {
+                    "erc20OfInterest": [],
+                    "method": "metadata",
+                    "plugin": "Lens"
+                },
+                "0xf0ba35f0": {
+                    "erc20OfInterest": [],
+                    "method": "quote",
+                    "plugin": "Lens"
+                },
+                "0xf90604d1": {
+                    "erc20OfInterest": [],
+                    "method": "mirror",
+                    "plugin": "Lens"
+                },
+                "0xfb827e82": {
+                    "erc20OfInterest": [],
+                    "method": "set_block_status",
+                    "plugin": "Lens"
+                }
+            }
+        },
+        {
+            "address": "0xd4f2f33680fccb36748fa9831851643781608844",
+            "contractName": "TokenHandleRegistry",
+            "selectors": {
+                "0x0c65b39d": {
+                    "erc20OfInterest": [],
+                    "method": "unlink",
+                    "plugin": "Lens"
+                },
+                "0x7e502fe0": {
+                    "erc20OfInterest": [],
+                    "method": "link_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x825ab164": {
+                    "erc20OfInterest": [],
+                    "method": "unlink_with_sign",
+                    "plugin": "Lens"
+                },
+                "0x86cf48e7": {
+                    "erc20OfInterest": [],
+                    "method": "link",
+                    "plugin": "Lens"
+                }
+            }
+        },
+        {
+            "address": "0xe7e7ead361f3aacd73a61a9bd6c10ca17f38e945",
+            "contractName": "LensHandle",
+            "selectors": {
+                "0x42966c68": {
+                    "erc20OfInterest": [],
+                    "method": "burn",
+                    "plugin": "Lens"
+                },
+                "0xf08e8f5e": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Lens"
+                }
+            }
+        }
+    ],
+    "name": "Lens"
+}

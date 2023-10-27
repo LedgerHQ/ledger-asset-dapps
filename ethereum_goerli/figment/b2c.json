@@ -1,0 +1,17 @@
+{
+    "blockchainName": "ethereum_goerli",
+    "chainId": 5,
+    "contracts": [
+        {
+            "address": "0x94a2da805867c962148d3832d9afc512034a62c5",
+            "contractName": "FigmentEth2Depositor",
+            "selectors": {
+                "0x4f498c73": {
+                    "method": "deposit",
+                    "plugin": "Figment"
+                }
+            }
+        }
+    ],
+    "name": "Figment"
+}

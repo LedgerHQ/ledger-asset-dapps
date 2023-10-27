@@ -1,0 +1,27 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x8e76a33f1aff7eb15de832810506814af4789536",
+            "contractName": "P2P.org",
+            "selectors": {
+                "0x2c4b04fa": {
+                    "method": "deposit",
+                    "plugin": "P2P.org"
+                }
+            }
+        },
+        {
+            "address": "0x4e1224f513048e18e7a1883985b45dc0fe1d917e",
+            "contractName": "P2P.org",
+            "selectors": {
+                "0x66792ba1": {
+                    "method": "send",
+                    "plugin": "P2P.org"
+                }
+            }
+        }
+    ],
+    "name": "P2P.org"
+}
