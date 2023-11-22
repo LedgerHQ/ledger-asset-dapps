@@ -41,6 +41,26 @@
                     "plugin": "libertify"
                 }
             }
+        },
+        {
+            "address": "0x77c075c1de9b61e0c30de095febf67841d4d9ff8",
+            "contractName": "LibertiV2Proxy",
+            "selectors": {
+                "0xa2922622": {
+                    "erc20OfInterest": [
+                        "dstToken"
+                    ],
+                    "method": "withdrawWithSymbolCheck",
+                    "plugin": "libertify"
+                },
+                "0xaa2daba6": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "depositWithSymbolCheck",
+                    "plugin": "libertify"
+                }
+            }
         }
     ],
     "name": "libertify"

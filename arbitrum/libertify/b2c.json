@@ -1,0 +1,27 @@
+{
+    "blockchainName": "arbitrum",
+    "chainId": 42161,
+    "contracts": [
+        {
+            "address": "0x833a41f86a87e3ff87c7577b2a79634e580e8a4b",
+            "contractName": "LibertiV2Proxy",
+            "selectors": {
+                "0xa2922622": {
+                    "erc20OfInterest": [
+                        "dstToken"
+                    ],
+                    "method": "withdrawWithSymbolCheck",
+                    "plugin": "libertify"
+                },
+                "0xaa2daba6": {
+                    "erc20OfInterest": [
+                        "srcToken"
+                    ],
+                    "method": "depositWithSymbolCheck",
+                    "plugin": "libertify"
+                }
+            }
+        }
+    ],
+    "name": "libertify"
+}
