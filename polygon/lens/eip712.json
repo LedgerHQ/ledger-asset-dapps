@@ -445,34 +445,6 @@
                                 "path": "pointedPubId"
                             },
                             {
-                                "label": "referrerProfileIds",
-                                "path": "referrerProfileIds"
-                            },
-                            {
-                                "label": "referrerPubIds",
-                                "path": "referrerPubIds"
-                            },
-                            {
-                                "label": "referenceModuleData",
-                                "path": "referenceModuleData"
-                            },
-                            {
-                                "label": "actionModules",
-                                "path": "actionModules"
-                            },
-                            {
-                                "label": "actionModulesInitDatas",
-                                "path": "actionModulesInitDatas"
-                            },
-                            {
-                                "label": "referenceModule",
-                                "path": "referenceModule"
-                            },
-                            {
-                                "label": "referenceModuleInitData",
-                                "path": "referenceModuleInitData"
-                            },
-                            {
                                 "label": "nonce",
                                 "path": "nonce"
                             },
@@ -481,81 +453,49 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Comment",
-                        "schema": {
-                            "Comment": [
-                                {
-                                    "name": "profileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "contentURI",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "pointedProfileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "pointedPubId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "referrerProfileIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referrerPubIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referenceModuleData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "actionModules",
-                                    "type": "address[]"
-                                },
-                                {
-                                    "name": "actionModulesInitDatas",
-                                    "type": "bytes[]"
-                                },
-                                {
-                                    "name": "referenceModule",
-                                    "type": "address"
-                                },
-                                {
-                                    "name": "referenceModuleInitData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "nonce",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "deadline",
-                                    "type": "uint256"
-                                }
-                            ],
-                            "EIP712Domain": [
-                                {
-                                    "name": "name",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "version",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "chainId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "verifyingContract",
-                                    "type": "address"
-                                }
-                            ]
-                        }
+                        "label": "Comment"
+                    },
+                    "schema": {
+                        "Comment": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "contentURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "pointedProfileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "pointedPubId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ]
                     }
                 },
                 {
@@ -969,18 +909,6 @@
                                 "path": "pointedPubId"
                             },
                             {
-                                "label": "referrerProfileIds",
-                                "path": "referrerProfileIds"
-                            },
-                            {
-                                "label": "referrerPubIds",
-                                "path": "referrerPubIds"
-                            },
-                            {
-                                "label": "referenceModuleData",
-                                "path": "referenceModuleData"
-                            },
-                            {
                                 "label": "nonce",
                                 "path": "nonce"
                             },
@@ -989,65 +917,53 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "mirror",
-                        "schema": {
-                            "EIP712Domain": [
-                                {
-                                    "name": "name",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "version",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "chainId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "verifyingContract",
-                                    "type": "address"
-                                }
-                            ],
-                            "Mirror": [
-                                {
-                                    "name": "profileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "metadataURI",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "pointedProfileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "pointedPubId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "referrerProfileIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referrerPubIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referenceModuleData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "nonce",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "deadline",
-                                    "type": "uint256"
-                                }
-                            ]
-                        }
+                        "label": "mirror"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Mirror": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "metadataURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "pointedProfileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "pointedPubId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
                     }
                 },
                 {
@@ -1123,22 +1039,6 @@
                                 "path": "contentURI"
                             },
                             {
-                                "label": "actionModules",
-                                "path": "actionModules"
-                            },
-                            {
-                                "label": "actionModulesInitDatas",
-                                "path": "actionModulesInitDatas"
-                            },
-                            {
-                                "label": "referenceModule",
-                                "path": "referenceModule"
-                            },
-                            {
-                                "label": "referenceModuleInitData",
-                                "path": "referenceModuleInitData"
-                            },
-                            {
                                 "label": "nonce",
                                 "path": "nonce"
                             },
@@ -1147,61 +1047,45 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Post",
-                        "schema": {
-                            "EIP712Domain": [
-                                {
-                                    "name": "name",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "version",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "chainId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "verifyingContract",
-                                    "type": "address"
-                                }
-                            ],
-                            "Post": [
-                                {
-                                    "name": "profileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "contentURI",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "actionModules",
-                                    "type": "address[]"
-                                },
-                                {
-                                    "name": "actionModulesInitDatas",
-                                    "type": "bytes[]"
-                                },
-                                {
-                                    "name": "referenceModule",
-                                    "type": "address"
-                                },
-                                {
-                                    "name": "referenceModuleInitData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "nonce",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "deadline",
-                                    "type": "uint256"
-                                }
-                            ]
-                        }
+                        "label": "Post"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Post": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "contentURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
                     }
                 },
                 {
@@ -1212,49 +1096,41 @@
                                 "path": "profile_id"
                             },
                             {
-                                "label": "referenceModule",
-                                "path": "referenceModule"
-                            },
-                            {
                                 "label": "signatureDeadline",
                                 "path": "signatureDeadline"
                             }
                         ],
-                        "label": "post_with_sign",
-                        "schema": {
-                            "EIP712Domain": [
-                                {
-                                    "name": "name",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "version",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "chainId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "verifyingContract",
-                                    "type": "address"
-                                }
-                            ],
-                            "post_with_sign": [
-                                {
-                                    "name": "profile_id",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "referenceModule",
-                                    "type": "address"
-                                },
-                                {
-                                    "name": "signatureDeadline",
-                                    "type": "uint256"
-                                }
-                            ]
-                        }
+                        "label": "post_with_sign"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "post_with_sign": [
+                            {
+                                "name": "profile_id",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "signatureDeadline",
+                                "type": "uint256"
+                            }
+                        ]
                     }
                 },
                 {
@@ -1277,34 +1153,6 @@
                                 "path": "pointedPubId"
                             },
                             {
-                                "label": "referrerProfileIds",
-                                "path": "referrerProfileIds"
-                            },
-                            {
-                                "label": "referrerPubIds",
-                                "path": "referrerPubIds"
-                            },
-                            {
-                                "label": "referenceModuleData",
-                                "path": "referenceModuleData"
-                            },
-                            {
-                                "label": "actionModules",
-                                "path": "actionModules"
-                            },
-                            {
-                                "label": "actionModulesInitDatas",
-                                "path": "actionModulesInitDatas"
-                            },
-                            {
-                                "label": "referenceModule",
-                                "path": "referenceModule"
-                            },
-                            {
-                                "label": "referenceModuleInitData",
-                                "path": "referenceModuleInitData"
-                            },
-                            {
                                 "label": "nonce",
                                 "path": "nonce"
                             },
@@ -1313,81 +1161,49 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Quote",
-                        "schema": {
-                            "EIP712Domain": [
-                                {
-                                    "name": "name",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "version",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "chainId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "verifyingContract",
-                                    "type": "address"
-                                }
-                            ],
-                            "Quote": [
-                                {
-                                    "name": "profileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "contentURI",
-                                    "type": "string"
-                                },
-                                {
-                                    "name": "pointedProfileId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "pointedPubId",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "referrerProfileIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referrerPubIds",
-                                    "type": "uint256[]"
-                                },
-                                {
-                                    "name": "referenceModuleData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "actionModules",
-                                    "type": "address[]"
-                                },
-                                {
-                                    "name": "actionModulesInitDatas",
-                                    "type": "bytes[]"
-                                },
-                                {
-                                    "name": "referenceModule",
-                                    "type": "address"
-                                },
-                                {
-                                    "name": "referenceModuleInitData",
-                                    "type": "bytes"
-                                },
-                                {
-                                    "name": "nonce",
-                                    "type": "uint256"
-                                },
-                                {
-                                    "name": "deadline",
-                                    "type": "uint256"
-                                }
-                            ]
-                        }
+                        "label": "Quote"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Quote": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "contentURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "pointedProfileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "pointedPubId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
                     }
                 },
                 {
