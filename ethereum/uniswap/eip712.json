@@ -29,18 +29,18 @@
                         "label": "Permit2"
                     },
                     "schema": {
-                        "PermitSingle": [
+                        "EIP712Domain": [
                             {
-                                "name": "details",
-                                "type": "PermitDetails"
+                                "name": "name",
+                                "type": "string"
                             },
                             {
-                                "name": "spender",
-                                "type": "address"
-                            },
-                            {
-                                "name": "sigDeadline",
+                                "name": "chainId",
                                 "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
                             }
                         ],
                         "PermitDetails": [
@@ -61,18 +61,18 @@
                                 "type": "uint48"
                             }
                         ],
-                        "EIP712Domain": [
+                        "PermitSingle": [
                             {
-                                "name": "name",
-                                "type": "string"
+                                "name": "details",
+                                "type": "PermitDetails"
                             },
                             {
-                                "name": "chainId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "verifyingContract",
+                                "name": "spender",
                                 "type": "address"
+                            },
+                            {
+                                "name": "sigDeadline",
+                                "type": "uint256"
                             }
                         ]
                     }
