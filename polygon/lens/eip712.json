@@ -146,10 +146,6 @@
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "ChangeDelegatedExecutorsConfig"
@@ -1250,6 +1246,63 @@
                     "mapper": {
                         "fields": [
                             {
+                                "label": "profileId",
+                                "path": "profileId"
+                            },
+                            {
+                                "label": "metadataURI",
+                                "path": "metadataURI"
+                            },                 
+                            {
+                                "label": "nonce",
+                                "path": "nonce"
+                            }
+                        ],
+                        "label": "SetProfileMetadataURI"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "SetProfileMetadataURI": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "metadataURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
                                 "label": "byProfileId",
                                 "path": "byProfileId"
                             },
@@ -1295,19 +1348,19 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "profile_id",
-                                "path": "profile_id"
+                                "label": "profileId",
+                                "path": "profileId"
                             },
                             {
                                 "label": "followModule",
                                 "path": "followModule"
                             },
                             {
-                                "label": "signatureDeadline",
-                                "path": "signatureDeadline"
+                                "label": "nonce",
+                                "path": "nonce"
                             }
                         ],
-                        "label": "set_follow_mod_with_sig"
+                        "label": "Set Follow Module"
                     },
                     "schema": {
                         "EIP712Domain": [
@@ -1328,9 +1381,9 @@
                                 "type": "address"
                             }
                         ],
-                        "set_follow_mod_with_sig": [
+                        "SetFollowModule": [
                             {
-                                "name": "profile_id",
+                                "name": "profileId",
                                 "type": "uint256"
                             },
                             {
@@ -1338,7 +1391,15 @@
                                 "type": "address"
                             },
                             {
-                                "name": "signatureDeadline",
+                                "name": "followModuleInitData",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
                                 "type": "uint256"
                             }
                         ]
