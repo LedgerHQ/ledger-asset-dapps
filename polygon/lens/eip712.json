@@ -1494,7 +1494,13 @@
                             }
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            "address": "0xd4f2f33680fccb36748fa9831851643781608844",
+            "contractName": "TokenHandleRegistry",
+            "messages": [
                 {
                     "mapper": {
                         "fields": [
@@ -1543,6 +1549,63 @@
                             },
                             {
                                 "name": "signatureDeadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "handleId",
+                                "path": "handleId"
+                            },
+                            {
+                                "label": "profileId",
+                                "path": "profileId"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            }
+                        ],
+                        "label": "unlink"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "unlink": [
+                            {
+                                "name": "handleId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
                                 "type": "uint256"
                             }
                         ]
