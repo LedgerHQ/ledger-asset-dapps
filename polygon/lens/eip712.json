@@ -45,76 +45,39 @@
                         ],
                         "act": [
                             {
-                                "name": "pubprofileId",
+                                "name": "publicationActedProfileId",
                                 "type": "uint256"
                             },
                             {
-                                "name": "publicationId",
+                                "name": "publicationActedId",
                                 "type": "uint256"
                             },
                             {
-                                "name": "actorprofileId",
-                                "type": "uint256"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "mapper": {
-                        "fields": [
-                            {
-                                "label": "pubprofileId",
-                                "path": "pubprofileId"
-                            },
-                            {
-                                "label": "publicationId",
-                                "path": "publicationId"
-                            },
-                            {
-                                "label": "actorprofileId",
-                                "path": "actorprofileId"
-                            },
-                            {
-                                "label": "signatureDeadline",
-                                "path": "signatureDeadline"
-                            }
-                        ],
-                        "label": "act_with_sign"
-                    },
-                    "schema": {
-                        "EIP712Domain": [
-                            {
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "name": "version",
-                                "type": "string"
-                            },
-                            {
-                                "name": "chainId",
+                                "name": "actorProfileId",
                                 "type": "uint256"
                             },
                             {
-                                "name": "verifyingContract",
+                                "name": "referrerProfileIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "referrerPubIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "actionModuleAddress",
                                 "type": "address"
-                            }
-                        ],
-                        "act_with_sign": [
+                            },
                             {
-                                "name": "pubprofileId",
+                                "name": "actionModuleData",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "nonce",
                                 "type": "uint256"
                             },
                             {
-                                "name": "publicationId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "actorprofileId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "signatureDeadline",
+                                "name": "deadline",
                                 "type": "uint256"
                             }
                         ]
@@ -161,16 +124,16 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "delegatorProfileId",
+                                "label": "Delegator ProfileId",
                                 "path": "delegatorProfileId"
                             },
                             {
-                                "label": "delegatedExecutors",
-                                "path": "delegatedExecutors"
+                                "label": "Delegated Executors",
+                                "path": "delegatedExecutors.[]"
                             },
                             {
-                                "label": "approvals",
-                                "path": "approvals"
+                                "label": "Approvals",
+                                "path": "approvals.[]"
                             },
                             {
                                 "label": "configNumber",
@@ -183,10 +146,6 @@
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "ChangeDelegatedExecutorsConfig"
@@ -246,84 +205,15 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "delegatorProfileId",
-                                "path": "delegatorProfileId"
-                            },
-                            {
-                                "label": "delegatedExecutor",
-                                "path": "delegatedExecutor"
-                            },
-                            {
-                                "label": "approval",
-                                "path": "approval"
-                            },
-                            {
-                                "label": "configNumber",
-                                "path": "configNumber"
-                            },
-                            {
-                                "label": "signatureDeadline",
-                                "path": "signatureDeadline"
-                            }
-                        ],
-                        "label": "change_delegate_exe_config__with_sign"
-                    },
-                    "schema": {
-                        "EIP712Domain": [
-                            {
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "name": "version",
-                                "type": "string"
-                            },
-                            {
-                                "name": "chainId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "verifyingContract",
-                                "type": "address"
-                            }
-                        ],
-                        "change_delegate_exe_config__with_sign": [
-                            {
-                                "name": "delegatorProfileId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "delegatedExecutor",
-                                "type": "address"
-                            },
-                            {
-                                "name": "approval",
-                                "type": "bool"
-                            },
-                            {
-                                "name": "configNumber",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "signatureDeadline",
-                                "type": "uint256"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "mapper": {
-                        "fields": [
-                            {
-                                "label": "publicationCollectedProfileId",
+                                "label": "Publication Collected ProfileId",
                                 "path": "publicationCollectedProfileId"
                             },
                             {
-                                "label": "publicationCollectedId",
+                                "label": "Publication CollectedId",
                                 "path": "publicationCollectedId"
                             },
                             {
-                                "label": "collectorProfileId",
+                                "label": "collector ProfileId",
                                 "path": "collectorProfileId"
                             }
                         ],
@@ -429,28 +319,24 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "profileId",
+                                "label": "Profile Id",
                                 "path": "profileId"
                             },
                             {
-                                "label": "contentURI",
+                                "label": "content URI",
                                 "path": "contentURI"
                             },
                             {
-                                "label": "pointedProfileId",
+                                "label": "Pointed Profile Id",
                                 "path": "pointedProfileId"
                             },
                             {
-                                "label": "pointedPubId",
+                                "label": "Pointed Pub Id",
                                 "path": "pointedPubId"
                             },
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "Comment"
@@ -472,6 +358,34 @@
                             {
                                 "name": "pointedPubId",
                                 "type": "uint256"
+                            },
+                            {
+                                "name": "referrerProfileIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "referrerPubIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "referenceModuleData",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "actionModules",
+                                "type": "address[]"
+                            },
+                            {
+                                "name": "actionModulesInitDatas",
+                                "type": "bytes[]"
+                            },
+                            {
+                                "name": "referenceModule",
+                                "type": "address"
+                            },
+                            {
+                                "name": "referenceModuleInitData",
+                                "type": "bytes"
                             },
                             {
                                 "name": "nonce",
@@ -612,16 +526,16 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "followerProfileId",
+                                "label": "follower ProfileId",
                                 "path": "followerProfileId"
                             },
                             {
-                                "label": "idsOfProfilesToFollow",
-                                "path": "idsOfProfilesToFollow"
+                                "label": "ids Of Profiles To Follow",
+                                "path": "idsOfProfilesToFollow.[]"
                             },
                             {
-                                "label": "followTokenIds",
-                                "path": "followTokenIds"
+                                "label": "follow TokenIds",
+                                "path": "followTokenIds.[]"
                             },
                             {
                                 "label": "datas",
@@ -630,10 +544,6 @@
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "Follow"
@@ -893,10 +803,6 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "profile_id",
-                                "path": "profile_id"
-                            },
-                            {
                                 "label": "profileId",
                                 "path": "profileId"
                             },
@@ -911,10 +817,6 @@
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "mirror"
@@ -954,6 +856,18 @@
                             {
                                 "name": "pointedPubId",
                                 "type": "uint256"
+                            },
+                            {
+                                "name": "referrerProfileIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "referrerPubIds",
+                                "type": "uint256[]"
+                            },
+                            {
+                                "name": "referenceModuleData",
+                                "type": "bytes"
                             },
                             {
                                 "name": "nonce",
@@ -1031,20 +945,16 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "profileId",
+                                "label": "Profile Id",
                                 "path": "profileId"
                             },
                             {
-                                "label": "contentURI",
+                                "label": "Post URI",
                                 "path": "contentURI"
                             },
                             {
                                 "label": "nonce",
                                 "path": "nonce"
-                            },
-                            {
-                                "label": "deadline",
-                                "path": "deadline"
                             }
                         ],
                         "label": "Post"
@@ -1076,6 +986,22 @@
                             {
                                 "name": "contentURI",
                                 "type": "string"
+                            },
+                            {
+                                "name": "actionModules",
+                                "type": "address[]"
+                            },
+                            {
+                                "name": "actionModulesInitDatas",
+                                "type": "bytes[]"
+                            },
+                            {
+                                "name": "referenceModule",
+                                "type": "address"
+                            },
+                            {
+                                "name": "referenceModuleInitData",
+                                "type": "bytes"
                             },
                             {
                                 "name": "nonce",
@@ -1320,6 +1246,63 @@
                     "mapper": {
                         "fields": [
                             {
+                                "label": "profileId",
+                                "path": "profileId"
+                            },
+                            {
+                                "label": "metadataURI",
+                                "path": "metadataURI"
+                            },
+                            {
+                                "label": "nonce",
+                                "path": "nonce"
+                            }
+                        ],
+                        "label": "SetProfileMetadataURI"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "SetProfileMetadataURI": [
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "metadataURI",
+                                "type": "string"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
                                 "label": "byProfileId",
                                 "path": "byProfileId"
                             },
@@ -1365,19 +1348,19 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "profile_id",
-                                "path": "profile_id"
+                                "label": "profileId",
+                                "path": "profileId"
                             },
                             {
                                 "label": "followModule",
                                 "path": "followModule"
                             },
                             {
-                                "label": "signatureDeadline",
-                                "path": "signatureDeadline"
+                                "label": "nonce",
+                                "path": "nonce"
                             }
                         ],
-                        "label": "set_follow_mod_with_sig"
+                        "label": "Set Follow Module"
                     },
                     "schema": {
                         "EIP712Domain": [
@@ -1398,9 +1381,9 @@
                                 "type": "address"
                             }
                         ],
-                        "set_follow_mod_with_sig": [
+                        "SetFollowModule": [
                             {
-                                "name": "profile_id",
+                                "name": "profileId",
                                 "type": "uint256"
                             },
                             {
@@ -1408,7 +1391,15 @@
                                 "type": "address"
                             },
                             {
-                                "name": "signatureDeadline",
+                                "name": "followModuleInitData",
+                                "type": "bytes"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
                                 "type": "uint256"
                             }
                         ]
@@ -1463,12 +1454,12 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "unfollowerProfileId",
+                                "label": "Unfollower ProfileId",
                                 "path": "unfollowerProfileId"
                             },
                             {
-                                "label": "idsOfProfilesToUnfollow",
-                                "path": "idsOfProfilesToUnfollow"
+                                "label": "ids Of Profiles To Unfollow",
+                                "path": "idsOfProfilesToUnfollow.[]"
                             },
                             {
                                 "label": "nonce",
@@ -1564,7 +1555,13 @@
                             }
                         ]
                     }
-                },
+                }
+            ]
+        },
+        {
+            "address": "0xd4f2f33680fccb36748fa9831851643781608844",
+            "contractName": "TokenHandleRegistry",
+            "messages": [
                 {
                     "mapper": {
                         "fields": [
@@ -1613,6 +1610,63 @@
                             },
                             {
                                 "name": "signatureDeadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "handleId",
+                                "path": "handleId"
+                            },
+                            {
+                                "label": "profileId",
+                                "path": "profileId"
+                            },
+                            {
+                                "label": "nonce",
+                                "path": "uint256"
+                            }
+                        ],
+                        "label": "unlink"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "unlink": [
+                            {
+                                "name": "handleId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "profileId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
                                 "type": "uint256"
                             }
                         ]
