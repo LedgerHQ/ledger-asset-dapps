@@ -1,0 +1,73 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "blockchainName": {
+            "enum": [
+                "polygon_zk_evm"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                1101
+            ]
+        },
+        "contracts": {
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "contractName": {
+                        "type": "string"
+                    },
+                    "selectors": {
+                        "additionalProperties": false,
+                        "patternProperties": {
+                            "^0x[a-z0-9]{8}$": {
+                                "properties": {
+                                    "erc20OfInterest": {
+                                        "items": [
+                                            {
+                                                "type": "string"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    },
+                                    "method": {
+                                        "type": "string"
+                                    },
+                                    "plugin": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "plugin"
+                                ],
+                                "type": "object"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "address",
+                    "contractName",
+                    "selectors"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchainName",
+        "contracts",
+        "name",
+        "chainId"
+    ],
+    "type": "object"
+}

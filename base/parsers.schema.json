@@ -1,0 +1,490 @@
+{
+    "$defs": {
+        "bluescreen": {
+            "properties": {
+                "key_value_screen": {
+                    "properties": {
+                        "properties": {
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "properties": {
+                                            "static_entry": {
+                                                "properties": {
+                                                    "label": {
+                                                        "type": "string"
+                                                    },
+                                                    "value": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "label",
+                                                    "value"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "required": [
+                                            "static_entry"
+                                        ],
+                                        "title": "Static Entry",
+                                        "type": "object"
+                                    },
+                                    {
+                                        "properties": {
+                                            "property_ref": {
+                                                "properties": {
+                                                    "key": {
+                                                        "type": "string"
+                                                    },
+                                                    "label": {
+                                                        "type": "string"
+                                                    },
+                                                    "placeholder": {
+                                                        "type": "string"
+                                                    },
+                                                    "skip_if_not_present": {
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "key",
+                                                    "label"
+                                                ],
+                                                "type": "object"
+                                            }
+                                        },
+                                        "required": [
+                                            "property_ref"
+                                        ],
+                                        "title": "Property Reference",
+                                        "type": "object"
+                                    }
+                                ]
+                            },
+                            "type": "array"
+                        },
+                        "skip_subheader": {
+                            "type": "boolean"
+                        },
+                        "subtitle": {
+                            "type": "string"
+                        },
+                        "title": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "properties",
+                        "title"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "key_value_screen"
+            ],
+            "type": "object"
+        },
+        "literal": {
+            "oneOf": [
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "string": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "string"
+                    ],
+                    "title": "String"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "bytes": {
+                            "pattern": "^0x[a-zA-Z0-9]+$",
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "bytes"
+                    ],
+                    "title": "Bytes"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "uint64": {
+                            "maximum": 18446744073709551616,
+                            "minimum": 0,
+                            "type": "integer"
+                        }
+                    },
+                    "required": [
+                        "uint64"
+                    ],
+                    "title": "Uint64"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "bignum": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "big_endian": {
+                                    "default": true,
+                                    "type": "boolean"
+                                },
+                                "bytes": {
+                                    "pattern": "^[A-Z0-9]+$",
+                                    "type": "string"
+                                },
+                                "is_negative": {
+                                    "default": true,
+                                    "type": "boolean"
+                                }
+                            },
+                            "required": [
+                                "bytes",
+                                "big_endian",
+                                "is_negative"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "bignum"
+                    ],
+                    "title": "Bignum"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "boolean": {
+                            "type": "boolean"
+                        }
+                    },
+                    "required": [
+                        "boolean"
+                    ],
+                    "title": "Boolean"
+                }
+            ],
+            "type": "object"
+        },
+        "path": {
+            "oneOf": [
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "abi_path": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "abi_path"
+                    ],
+                    "title": "ABI Path"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "binary_path": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "binary": {
+                                    "type": "string"
+                                },
+                                "type": {
+                                    "enum": [
+                                        "SOLIDITYTYPE_ADDRESS",
+                                        "SOLIDITYTYPE_INT256",
+                                        "SOLIDITYTYPE_UINT256",
+                                        "SOLIDITYTYPE_STRING",
+                                        "SOLIDITYTYPE_BYTES",
+                                        "SOLIDITYTYPE_BOOL"
+                                    ]
+                                }
+                            },
+                            "required": [
+                                "binary",
+                                "type"
+                            ],
+                            "type": "object"
+                        }
+                    },
+                    "required": [
+                        "binary_path"
+                    ],
+                    "title": "Binary Path"
+                }
+            ],
+            "type": "object"
+        },
+        "screens": {
+            "description": "Optional description (per selector) of the screen displayed on PSD, overriding the default screen",
+            "properties": {
+                "blue_screens": {
+                    "items": {
+                        "$ref": "#/$defs/bluescreen"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "blue_screens"
+            ],
+            "type": "object"
+        },
+        "terminalValue": {
+            "oneOf": [
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "path": {
+                            "$ref": "#/$defs/path"
+                        }
+                    },
+                    "required": [
+                        "path"
+                    ],
+                    "title": "Path"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "literal": {
+                            "$ref": "#/$defs/literal"
+                        }
+                    },
+                    "required": [
+                        "literal"
+                    ],
+                    "title": "Literal"
+                },
+                {
+                    "additionalProperties": false,
+                    "properties": {
+                        "atpPropertyReference": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "atpPropertyReference"
+                    ],
+                    "title": "ATP Property Reference"
+                }
+            ],
+            "type": "object"
+        }
+    },
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "description": "Description of a DApp and all the contracts linked to it.",
+    "properties": {
+        "blockchainName": {
+            "enum": [
+                "base"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                8453
+            ]
+        },
+        "contracts": {
+            "description": "The different contracts linked to the over-arching DApp.",
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-fA-F0-9]{40}$",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "parsers": {
+                        "description": "Description of contract's functions along with the arguments we want to parse and validate.",
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "arguments": {
+                                    "description": "Arguments to parse from the payload and how to parse them",
+                                    "items": {
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "format": {
+                                                "description": "The format (different from the type) describes how the parsed argument should be displayed on the device.",
+                                                "enum": [
+                                                    "ARGUMENTFORMAT_AMOUNT",
+                                                    "ARGUMENTFORMAT_ASCII",
+                                                    "ARGUMENTFORMAT_BOOLEAN",
+                                                    "ARGUMENTFORMAT_EIP55",
+                                                    "ARGUMENTFORMAT_PERCENTAGE",
+                                                    "ARGUMENTFORMAT_RAW"
+                                                ]
+                                            },
+                                            "name": {
+                                                "description": "Internal name of the argument, can be different from the name in the ABI.",
+                                                "type": "string"
+                                            },
+                                            "value": {
+                                                "description": "Contains the paths to read in the data. The exact schema of this object depends on the content of `value.type`",
+                                                "oneOf": [
+                                                    {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "amount": {
+                                                                "additionalProperties": false,
+                                                                "properties": {
+                                                                    "tokenId": {
+                                                                        "$ref": "#/$defs/terminalValue",
+                                                                        "title": "Amount - Token ID"
+                                                                    },
+                                                                    "value": {
+                                                                        "$ref": "#/$defs/terminalValue",
+                                                                        "title": "Amount - Value"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "tokenId",
+                                                                    "value"
+                                                                ],
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "amount"
+                                                        ],
+                                                        "title": "Amount Value",
+                                                        "type": "object"
+                                                    },
+                                                    {
+                                                        "additionalProperties": false,
+                                                        "properties": {
+                                                            "terminalValue": {
+                                                                "$ref": "#/$defs/terminalValue",
+                                                                "additionalProperties": false,
+                                                                "title": "Terminal Value - Value",
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "terminalValue"
+                                                        ],
+                                                        "title": "Terminal Value",
+                                                        "type": "object"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "required": [
+                                            "format",
+                                            "name",
+                                            "value"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "arguments_skipped": {},
+                                "functionName": {
+                                    "description": "Name displayed on the device to allow the user to identify the function called.",
+                                    "type": "string"
+                                },
+                                "functionType": {
+                                    "enum": [
+                                        "approve",
+                                        "approve_erc1155",
+                                        "approve_erc721",
+                                        "borrow",
+                                        "burn_erc1155",
+                                        "burn_erc721",
+                                        "buy",
+                                        "claim_reward",
+                                        "claim_stake",
+                                        "configure",
+                                        "delegate",
+                                        "lend",
+                                        "mint_erc1155",
+                                        "mint_erc721",
+                                        "move_stake",
+                                        "repay_loan",
+                                        "stake",
+                                        "stake_reward",
+                                        "swap",
+                                        "transfer_erc1155",
+                                        "transfer_erc721",
+                                        "unknown",
+                                        "unstake",
+                                        "unwrap",
+                                        "withdraw",
+                                        "wrap"
+                                    ]
+                                },
+                                "options": {
+                                    "additionalProperties": false,
+                                    "description": "Various additionnal info for to parse the contract",
+                                    "properties": {
+                                        "ethContractAddress": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "screens": {
+                                    "$ref": "#/$defs/screens",
+                                    "title": "Screens"
+                                },
+                                "selector": {
+                                    "description": "Unique identifier of the function in the contract.",
+                                    "pattern": "^0x[a-f0-9]{8}$",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "functionType",
+                                "functionName",
+                                "options",
+                                "selector",
+                                "arguments"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "name",
+                    "address",
+                    "parsers"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "external_requirement": {
+            "enum": [
+                "nftmetadata"
+            ]
+        },
+        "id": {
+            "pattern": "^[a-z0-9_]+$",
+            "type": "string"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchainName",
+        "name",
+        "id",
+        "chainId",
+        "contracts"
+    ],
+    "type": "object"
+}
