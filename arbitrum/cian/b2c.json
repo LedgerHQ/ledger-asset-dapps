@@ -1,0 +1,44 @@
+{
+    "blockchainName": "arbitrum",
+    "chainId": 42161,
+    "contracts": [
+        {
+            "address": "0xf2254b4da1d68540b855e4d219aac1ef0edba575",
+            "contractName": "VaultWstETHWrapper",
+            "selectors": {
+                "0x259f8d1a": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                },
+                "0x4d447995": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                }
+            }
+        },
+        {
+            "address": "0xe946dd7d03f6f5c440f68c84808ca88d26475fc5",
+            "contractName": "VaultWstETH",
+            "selectors": {
+                "0x65ae14b5": {
+                    "erc20OfInterest": [],
+                    "method": "deleverageWithdraw",
+                    "plugin": "CIAN"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                }
+            }
+        }
+    ],
+    "name": "CIAN"
+}

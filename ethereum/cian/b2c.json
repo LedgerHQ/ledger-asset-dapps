@@ -1,0 +1,91 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x4e8e60ccdf79ebaa4189d91b5dc9b0f85df9a427",
+            "contractName": "VaultStETHWrapper",
+            "selectors": {
+                "0x259f8d1a": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                },
+                "0x32ca494b": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawWstETH",
+                    "plugin": "CIAN"
+                },
+                "0x4d447995": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                },
+                "0x5243318f": {
+                    "erc20OfInterest": [],
+                    "method": "depositWstETH",
+                    "plugin": "CIAN"
+                }
+            }
+        },
+        {
+            "address": "0xcdd374f491fbf3f4fcf6e9023c99043774005137",
+            "contractName": "VaultStETH",
+            "selectors": {
+                "0x65ae14b5": {
+                    "erc20OfInterest": [],
+                    "method": "deleverageWithdraw",
+                    "plugin": "CIAN"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                }
+            }
+        },
+        {
+            "address": "0xcad31182fd45298eeac76ada71969cd0c722a949",
+            "contractName": "VaultRETHWrapper",
+            "selectors": {
+                "0x259f8d1a": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                },
+                "0x4d447995": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                }
+            }
+        },
+        {
+            "address": "0xb8c0c50d255b93f5276549cba7f4bf78751a5d34",
+            "contractName": "VaultRETH",
+            "selectors": {
+                "0x65ae14b5": {
+                    "erc20OfInterest": [],
+                    "method": "deleverageWithdraw",
+                    "plugin": "CIAN"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "CIAN"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "CIAN"
+                }
+            }
+        }
+    ],
+    "name": "CIAN"
+}
