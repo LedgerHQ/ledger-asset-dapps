@@ -1,0 +1,60 @@
+{
+    "blockchainName": "base",
+    "chainId": 8453,
+    "contracts": [
+        {
+            "address": "0x7251febeabb01ec9de53ece7a96f1c951f886dd2",
+            "contractName": "OKXEarnEntryPoint",
+            "selectors": {
+                "0x016cba5f": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "OKX Web3"
+                }
+            }
+        },
+        {
+            "address": "0x6b2c0c7be2048daa9b5527982c29f48062b34d58",
+            "contractName": "OKX DEX. Aggregation Router",
+            "selectors": {
+                "0x0d5f0e3b": {
+                    "erc20OfInterest": [],
+                    "method": "uniswapV3SwapTo",
+                    "plugin": "OKX Web3"
+                },
+                "0x12a0ddc7": {
+                    "erc20OfInterest": [],
+                    "method": "PMMV2Swap",
+                    "plugin": "OKX Web3"
+                },
+                "0x9871efa4": {
+                    "erc20OfInterest": [],
+                    "method": "unxswapByOrderId",
+                    "plugin": "OKX Web3"
+                },
+                "0xb80c2f09": {
+                    "erc20OfInterest": [],
+                    "method": "smartSwapByOrderId",
+                    "plugin": "OKX Web3"
+                }
+            }
+        },
+        {
+            "address": "0x5965851f21dae82ea7c62f87fb7c57172e9f2add",
+            "contractName": "OKX DEX. Aggregation Router",
+            "selectors": {
+                "0x3d21e25a": {
+                    "erc20OfInterest": [],
+                    "method": "swapBridgeToV2",
+                    "plugin": "OKX Web3"
+                },
+                "0x972250fe": {
+                    "erc20OfInterest": [],
+                    "method": "bridgeToV2",
+                    "plugin": "OKX Web3"
+                }
+            }
+        }
+    ],
+    "name": "OKX Web3"
+}
