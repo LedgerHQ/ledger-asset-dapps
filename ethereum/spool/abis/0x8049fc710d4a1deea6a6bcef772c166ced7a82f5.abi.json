@@ -1,0 +1,676 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            },
+            {
+                "internalType": "contract ISpoolAccessControl",
+                "name": "accessControl_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IActionManager",
+                "name": "actionManager_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IGuardManager",
+                "name": "guardManager_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract ISmartVaultRegistry",
+                "name": "smartVaultRegistry_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IAssetGroupRegistry",
+                "name": "assetGroupRegistry_",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IRiskManager",
+                "name": "riskManager_",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "ConfigurationAddressZero",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "depositFeePct",
+                "type": "uint256"
+            }
+        ],
+        "name": "DepositFeeTooLarge",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidStaticAllocation",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "address_",
+                "type": "address"
+            }
+        ],
+        "name": "InvalidStrategy",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidStrategyAllocationsLength",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "mgmtFeePct",
+                "type": "uint256"
+            }
+        ],
+        "name": "ManagementFeeTooLarge",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NotSameAssetGroup",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "performanceFeePct",
+                "type": "uint256"
+            }
+        ],
+        "name": "PerformanceFeeTooLarge",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SingleStrategyDynamicAllocation",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "SmartVaultRegistrationNoStrategies",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "StaticAllocationAndAllocationProviderSet",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "StaticAllocationAndRiskProviderSet",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "StaticAllocationAndRiskToleranceSet",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "StrategiesNotUnique",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "StrategyCapExceeded",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "smartVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "deployer",
+                "type": "address"
+            }
+        ],
+        "name": "SmartVaultDeployed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+            }
+        ],
+        "name": "Upgraded",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "smartVaultName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "svtSymbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "baseURI",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "assetGroupId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address[]",
+                        "name": "strategies",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "uint16a16",
+                        "name": "strategyAllocation",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "int8",
+                        "name": "riskTolerance",
+                        "type": "int8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "riskProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "allocationProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "contract IAction[]",
+                        "name": "actions",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "actionRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "methodSignature",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "contractAddress",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "bytes2",
+                                "name": "operator",
+                                "type": "bytes2"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "expectedValue",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "enum GuardParamType[]",
+                                "name": "methodParamTypes",
+                                "type": "uint8[]"
+                            },
+                            {
+                                "internalType": "bytes[]",
+                                "name": "methodParamValues",
+                                "type": "bytes[]"
+                            }
+                        ],
+                        "internalType": "struct GuardDefinition[][]",
+                        "name": "guards",
+                        "type": "tuple[][]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "guardRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "managementFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "depositFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "performanceFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "allowRedeemFor",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct SmartVaultSpecification",
+                "name": "specification",
+                "type": "tuple"
+            }
+        ],
+        "name": "deploySmartVault",
+        "outputs": [
+            {
+                "internalType": "contract ISmartVault",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "smartVaultName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "svtSymbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "baseURI",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "assetGroupId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address[]",
+                        "name": "strategies",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "uint16a16",
+                        "name": "strategyAllocation",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "int8",
+                        "name": "riskTolerance",
+                        "type": "int8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "riskProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "allocationProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "contract IAction[]",
+                        "name": "actions",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "actionRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "methodSignature",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "contractAddress",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "bytes2",
+                                "name": "operator",
+                                "type": "bytes2"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "expectedValue",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "enum GuardParamType[]",
+                                "name": "methodParamTypes",
+                                "type": "uint8[]"
+                            },
+                            {
+                                "internalType": "bytes[]",
+                                "name": "methodParamValues",
+                                "type": "bytes[]"
+                            }
+                        ],
+                        "internalType": "struct GuardDefinition[][]",
+                        "name": "guards",
+                        "type": "tuple[][]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "guardRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "managementFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "depositFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "performanceFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "allowRedeemFor",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct SmartVaultSpecification",
+                "name": "specification",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "salt",
+                "type": "bytes32"
+            }
+        ],
+        "name": "deploySmartVaultDeterministically",
+        "outputs": [
+            {
+                "internalType": "contract ISmartVault",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "implementation",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "smartVaultName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "svtSymbol",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "baseURI",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "assetGroupId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address[]",
+                        "name": "strategies",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "uint16a16",
+                        "name": "strategyAllocation",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "int8",
+                        "name": "riskTolerance",
+                        "type": "int8"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "riskProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "allocationProvider",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "contract IAction[]",
+                        "name": "actions",
+                        "type": "address[]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "actionRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "methodSignature",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "contractAddress",
+                                "type": "address"
+                            },
+                            {
+                                "internalType": "bytes2",
+                                "name": "operator",
+                                "type": "bytes2"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "expectedValue",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "enum GuardParamType[]",
+                                "name": "methodParamTypes",
+                                "type": "uint8[]"
+                            },
+                            {
+                                "internalType": "bytes[]",
+                                "name": "methodParamValues",
+                                "type": "bytes[]"
+                            }
+                        ],
+                        "internalType": "struct GuardDefinition[][]",
+                        "name": "guards",
+                        "type": "tuple[][]"
+                    },
+                    {
+                        "internalType": "enum RequestType[]",
+                        "name": "guardRequestTypes",
+                        "type": "uint8[]"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "managementFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "depositFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "uint16",
+                        "name": "performanceFeePct",
+                        "type": "uint16"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "allowRedeemFor",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct SmartVaultSpecification",
+                "name": "specification",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "salt",
+                "type": "bytes32"
+            }
+        ],
+        "name": "predictDeterministicAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newImplementation",
+                "type": "address"
+            }
+        ],
+        "name": "upgradeTo",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

@@ -1,0 +1,180 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xd8d2c1c3c7982272e3e12dec5af681433fdcf003",
+            "contractName": "RewardManager",
+            "selectors": {
+                "0x2aba2aeb": {
+                    "erc20OfInterest": [
+                        "path.1"
+                    ],
+                    "method": "addToken",
+                    "plugin": "Spool"
+                },
+                "0xb02029e0": {
+                    "erc20OfInterest": [],
+                    "method": "extendRewardEmission",
+                    "plugin": "Spool"
+                },
+                "0xfb7e92ea": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x5f63195445f9949ff2f88c48e3566e4dc156c5d7",
+            "contractName": "SmartVaultManager",
+            "selectors": {
+                "0x388bbfd3": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Spool"
+                },
+                "0xe1c2eea6": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFast",
+                    "plugin": "Spool"
+                },
+                "0xf8a70486": {
+                    "erc20OfInterest": [],
+                    "method": "claimWithdrawal",
+                    "plugin": "Spool"
+                },
+                "0xfa15b91b": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x20df904668a6e0aa374015af47b1911f417b7c8d",
+            "contractName": "DepositSwapper",
+            "selectors": {
+                "0xd99d32e3": {
+                    "erc20OfInterest": [],
+                    "method": "swapAndDeposit",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x8049fc710d4a1deea6a6bcef772c166ced7a82f5",
+            "contractName": "SmartVaultFactory",
+            "selectors": {
+                "0x6fc3f5d5": {
+                    "erc20OfInterest": [],
+                    "method": "deploySmartVault",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x08f4b84852cdfacbb2082913a1caeb90afe5357a",
+            "contractName": "Vault1",
+            "selectors": {
+                "0x8ab936b8": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x26ac1dba97c1f3f33eea9ad8b3e9d9dc588c023e",
+            "contractName": "Vault2",
+            "selectors": {
+                "0x084fd9b4": {
+                    "erc20OfInterest": [],
+                    "method": "claimFromVault",
+                    "plugin": "Spool"
+                },
+                "0x510ccb43": {
+                    "erc20OfInterest": [],
+                    "method": "getRewards",
+                    "plugin": "Spool"
+                },
+                "0x73c2ad9c": {
+                    "erc20OfInterest": [
+                        "token"
+                    ],
+                    "method": "addToken",
+                    "plugin": "Spool"
+                },
+                "0x8ab936b8": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Spool"
+                },
+                "0xd7b9d423": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawFast",
+                    "plugin": "Spool"
+                },
+                "0xfd3c11a8": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0xdd4051c3571c143b989c3227e8eb50983974835c",
+            "contractName": "Controller",
+            "selectors": {
+                "0x510ccb43": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Spool"
+                },
+                "0xc48ef844": {
+                    "erc20OfInterest": [],
+                    "method": "createVault",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0xc3160c5cc63b6116dd182faa8393d3ad9313e213",
+            "contractName": "Staking",
+            "selectors": {
+                "0x2e17de78": {
+                    "erc20OfInterest": [],
+                    "method": "unstake",
+                    "plugin": "Spool"
+                },
+                "0xa694fc3a": {
+                    "erc20OfInterest": [],
+                    "method": "stake",
+                    "plugin": "Spool"
+                },
+                "0xd1e6044a": {
+                    "erc20OfInterest": [],
+                    "method": "compound",
+                    "plugin": "Spool"
+                },
+                "0xf4de10ac": {
+                    "erc20OfInterest": [],
+                    "method": "getStakingRewards",
+                    "plugin": "Spool"
+                }
+            }
+        },
+        {
+            "address": "0x08772c1872c997fec8da3c7f36c1fc28ebe72e97",
+            "contractName": "Vesting",
+            "selectors": {
+                "0x4e71d92d": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "Spool"
+                }
+            }
+        }
+    ],
+    "name": "Spool"
+}
