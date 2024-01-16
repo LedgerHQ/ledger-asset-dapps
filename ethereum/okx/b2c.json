@@ -40,6 +40,32 @@
             }
         },
         {
+            "address": "0xf3de3c0d654fda23dad170f0f320a92172509127",
+            "contractName": "OKX DEX. Aggregation Router",
+            "selectors": {
+                "0x0d5f0e3b": {
+                    "erc20OfInterest": [],
+                    "method": "uniswapV3SwapTo",
+                    "plugin": "OKX Web3"
+                },
+                "0x12a0ddc7": {
+                    "erc20OfInterest": [],
+                    "method": "PMMV2Swap",
+                    "plugin": "OKX Web3"
+                },
+                "0x9871efa4": {
+                    "erc20OfInterest": [],
+                    "method": "unxswapByOrderId",
+                    "plugin": "OKX Web3"
+                },
+                "0xb80c2f09": {
+                    "erc20OfInterest": [],
+                    "method": "smartSwapByOrderId",
+                    "plugin": "OKX Web3"
+                }
+            }
+        },
+        {
             "address": "0xfc99f58a8974a4bc36e60e2d490bb8d72899ee9f",
             "contractName": "OKX DEX. Aggregation Router",
             "selectors": {
