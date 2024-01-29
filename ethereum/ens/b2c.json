@@ -1,0 +1,118 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x084b1c3c81545d370f3634392de611caabff8148",
+            "contractName": "ReverseRegistrar",
+            "selectors": {
+                "0xc47f0027": {
+                    "erc20OfInterest": [],
+                    "method": "setName",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+            "contractName": "ETHRegistrarController",
+            "selectors": {
+                "0x85f6d155": {
+                    "erc20OfInterest": [],
+                    "method": "register",
+                    "plugin": "ENS"
+                },
+                "0xacf1a841": {
+                    "erc20OfInterest": [],
+                    "method": "renew",
+                    "plugin": "ENS"
+                },
+                "0xf14fcbc8": {
+                    "erc20OfInterest": [],
+                    "method": "commit",
+                    "plugin": "ENS"
+                },
+                "0xf7a16963": {
+                    "erc20OfInterest": [],
+                    "method": "registerWithConfig",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0x00000000000c2e074ec69a0dfb2997ba6c7d2e1e",
+            "contractName": "RegistryWithFallback",
+            "selectors": {
+                "0x1896f70a": {
+                    "erc20OfInterest": [],
+                    "method": "setResolver",
+                    "plugin": "ENS"
+                },
+                "0x5b0fc9c3": {
+                    "erc20OfInterest": [],
+                    "method": "setOwner",
+                    "plugin": "ENS"
+                },
+                "0x5ef2c7f0": {
+                    "erc20OfInterest": [],
+                    "method": "setSubnodeRecord",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0xff252725f6122a92551a5fa9a6b6bf10eb0be035",
+            "contractName": "BulkRenewal",
+            "selectors": {
+                "0xe8d6dbb4": {
+                    "erc20OfInterest": [],
+                    "method": "RenewAll",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0x58774bb8acd458a640af0b88238369a167546ef2",
+            "contractName": "DNSRegistrar",
+            "selectors": {
+                "0x224199c2": {
+                    "erc20OfInterest": [],
+                    "method": "ProveAndClaimWithResolver",
+                    "plugin": "ENS"
+                },
+                "0x8bbedf75": {
+                    "erc20OfInterest": [],
+                    "method": "ProveAndClaim",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0x231b0ee14048e9dccd1d247744d114a4eb5e8e63",
+            "contractName": "PublicResolver",
+            "selectors": {
+                "0x10f13a8c": {
+                    "erc20OfInterest": [],
+                    "method": "SetText",
+                    "plugin": "ENS"
+                },
+                "0x304e6ade": {
+                    "erc20OfInterest": [],
+                    "method": "SetContentHash",
+                    "plugin": "ENS"
+                },
+                "0x8b95dd71": {
+                    "erc20OfInterest": [],
+                    "method": "SetAddr",
+                    "plugin": "ENS"
+                },
+                "0xac9650d8": {
+                    "erc20OfInterest": [],
+                    "method": "Multicall",
+                    "plugin": "ENS"
+                }
+            }
+        }
+    ],
+    "name": "ENS"
+}
