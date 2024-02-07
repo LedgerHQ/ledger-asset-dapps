@@ -71,6 +71,24 @@
                     "plugin": "Kiln"
                 }
             }
+        },
+        {
+            "address": "0x858646372cc42e1a627fce94aa7a7033e7cf075a",
+            "contractName": "EigenLayerStrategyManager",
+            "selectors": {
+                "0xe7a050aa": {
+                    "method": "depositIntoStrategy",
+                    "plugin": "Kiln"
+                },
+                "0xf123991e": {
+                    "method": "queueWithdrawal",
+                    "plugin": "Kiln"
+                },
+                "0xf3be65d3": {
+                    "method": "completeQueuedWithdrawal",
+                    "plugin": "Kiln"
+                }
+            }
         }
     ],
     "name": "kiln"
