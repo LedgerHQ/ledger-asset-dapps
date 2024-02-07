@@ -58,9 +58,6 @@
     {
         "inputs": [
             {
-                "internalType": "struct QueuedWithdrawal",
-                "name": "queuedWithdrawal",
-                "type": "tuple",
                 "components": [
                     {
                         "internalType": "address[]",
@@ -78,9 +75,6 @@
                         "type": "address"
                     },
                     {
-                        "internalType": "struct WithdrawerAndNonce",
-                        "name": "withdrawerAndNonce",
-                        "type": "tuple",
                         "components": [
                             {
                                 "internalType": "address",
@@ -92,7 +86,10 @@
                                 "name": "nonce",
                                 "type": "uint96"
                             }
-                        ]
+                        ],
+                        "internalType": "struct WithdrawerAndNonce",
+                        "name": "withdrawerAndNonce",
+                        "type": "tuple"
                     },
                     {
                         "internalType": "uint32",
@@ -104,7 +101,10 @@
                         "name": "delegatedAddress",
                         "type": "address"
                     }
-                ]
+                ],
+                "internalType": "struct QueuedWithdrawal",
+                "name": "queuedWithdrawal",
+                "type": "tuple"
             },
             {
                 "internalType": "address[]",
