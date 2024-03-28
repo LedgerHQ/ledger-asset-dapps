@@ -7,7 +7,7 @@ from json.decoder import JSONDecodeError
 from pathlib import Path
 from typing import Callable, Tuple, List
 
-from eth_utils import to_checksum_address
+from eth_utils.address import to_checksum_address
 from jsonschema import ValidationError
 from jsonschema.validators import validator_for
 
@@ -28,6 +28,78 @@ def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, 
             errors.append({"file": filename, "message": error_message})
 
     logger.info(f"Result: {valid} valid, {invalid} invalid")
+    if invalid:
+        for error in errors:
+            logger.error(f"Validation error: {error}")
+        raise ValidationError(f"Invalid files: {errors}")
+
+
+def check_duplicate_contract(glob_path: str):
+    invalid, errors, results, all = 0, [], [], {}
+    for filename in glob.iglob(glob_path, recursive=True):
+        logger.debug("Validating %s...", filename)
+        with open(filename, "r", newline="") as f:
+            data = f.read()
+
+        try:
+            target_path = Path(filename)
+            target_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug(
+                "\tinvalid: File %s is not a valid json", filename, exc_info=True
+            )
+            return False, str(err)
+
+        result = {}
+        blockChain = target_data.get("blockchainName", None)
+        name = target_data.get("name", None)
+        for contract in target_data.get("contracts", []):
+            address = contract.get("address", None)
+            if address is None:
+                continue
+            address = address.lower()
+
+            abi_path = target_path.parent / "abis" / f"{address}.abi.json"
+            with open(abi_path, "r", newline="") as f:
+                abi_data = json.load(f)
+
+            for data in abi_data:
+                for input in data.get("inputs", []):
+                    input.pop("name", None)
+
+            selectors = {}
+            for selector, data in contract.get("selectors", []).items():
+                selectors[selector] = data["plugin"]
+
+            result[address] = {
+                "blockChain": blockChain,
+                "name": name,
+                "abi": abi_data,
+                "filename": filename,
+                "selectors": {**selectors},
+            }
+
+            results.append(result)
+
+    for result in results:
+        for contract_address, data in result.items():
+            invalid_inter, error = 0, []
+            existing = all.get(contract_address, None)
+            if existing is None:
+                all[contract_address] = data
+            else:
+                if existing is not None:
+                    if existing["abi"] != data["abi"]:
+                        invalid_inter += 1
+                        error.append("seem to have two different abi")
+                    if existing["selectors"] != data["selectors"]:
+                        invalid_inter += 1
+                        error.append("seem to have differents selectors")
+                    if invalid_inter:
+                        invalid += 1
+                        errors.append({"file": data['filename'], "message": f"plugin contract {contract_address} " + " and ".join(error)})
+                    all[contract_address] = {**existing, **data}
+
     if invalid:
         for error in errors:
             logger.error(f"Validation error: {error}")
@@ -256,7 +328,6 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
                 )
 
     if error:
-        return False, f"Errors found on file content"
+        return False, "Errors found on file content"
 
     return True, ""
-
