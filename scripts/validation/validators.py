@@ -48,7 +48,8 @@ def check_duplicate_contract(glob_path: str):
             logger.debug(
                 "\tinvalid: File %s is not a valid json", filename, exc_info=True
             )
-            return False, str(err)
+            errors.append({"file": filename, "message": str(err)})
+            continue
 
         result = {}
         blockChain = target_data.get("blockchainName", None)
@@ -61,7 +62,14 @@ def check_duplicate_contract(glob_path: str):
 
             abi_path = target_path.parent / "abis" / f"{address}.abi.json"
             with open(abi_path, "r", newline="") as f:
-                abi_data = json.load(f)
+                try:
+                    abi_data = json.load(f)
+                except JSONDecodeError as err:
+                    logger.debug(
+                        "\tinvalid: File %s is not a valid json", abi_path, exc_info=True
+                    )
+                    errors.append({"file": abi_path, "message": str(err)})
+                    continue
 
             for data in abi_data:
                 for input in data.get("inputs", []):
