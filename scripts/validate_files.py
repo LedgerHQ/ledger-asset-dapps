@@ -13,6 +13,7 @@ from validation.validators import (
     format_validator,
     missing_abi_validator,
     run_validations,
+    check_duplicate_contract,
     schema_validator,
     unique_field_validator,
     contract_matching_validator,
@@ -58,11 +59,19 @@ VALIDATORS = {
 if __name__ == "__main__":
     failed = False
     logger = logging.getLogger(__name__)
+
+    try:
+        logger.info("Running duplicate contract check")
+        check_duplicate_contract("./*/**/b2c.json")
+    except ValidationError:
+        failed = True
+
     for validator_name, (path, validator) in VALIDATORS.items():
         logger.info("Running validation for %s", validator_name)
         try:
             run_validations(path, validator)
         except ValidationError:
             failed = True
+
     if failed:
         exit(1)
