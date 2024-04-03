@@ -7,7 +7,7 @@ from json.decoder import JSONDecodeError
 from pathlib import Path
 from typing import Callable, Tuple, List
 
-from eth_utils import to_checksum_address
+from eth_utils.address import to_checksum_address
 from jsonschema import ValidationError
 from jsonschema.validators import validator_for
 
@@ -28,6 +28,107 @@ def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, 
             errors.append({"file": filename, "message": error_message})
 
     logger.info(f"Result: {valid} valid, {invalid} invalid")
+    if invalid:
+        for error in errors:
+            logger.error(f"Validation error: {error}")
+        raise ValidationError(f"Invalid files: {errors}")
+
+
+# Some DApps using these contracts are already signed and have collisions.
+# Until we know how to correctly handle these cases
+# we exclude them from the collision check
+# https://ledgerhq.atlassian.net/wiki/spaces/BE/pages/4623073281/DApps+contract+collision+analysis
+__excluded_contract = [
+    "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
+    "0x1111111254fb6c44bac0bed2854e76f90643097d",
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+]
+
+
+def check_duplicate_contract(glob_path: str):
+    invalid, errors, results, all = 0, [], [], {}
+    for filename in glob.iglob(glob_path, recursive=True):
+        logger.debug("Validating %s...", filename)
+        with open(filename, "r", newline="") as f:
+            data = f.read()
+
+        try:
+            target_path = Path(filename)
+            target_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug(
+                "\tinvalid: File %s is not a valid json", filename, exc_info=True
+            )
+            errors.append({"file": filename, "message": str(err)})
+            continue
+
+        result = {}
+        blockChain = target_data.get("blockchainName", None)
+        name = target_data.get("name", None)
+        for contract in target_data.get("contracts", []):
+            address = contract.get("address", None)
+            if address in __excluded_contract:
+                continue
+            elif address is None:
+                continue
+            address = address.lower()
+
+            abi_path = target_path.parent / "abis" / f"{address}.abi.json"
+            with open(abi_path, "r", newline="") as f:
+                try:
+                    abi_data = json.load(f)
+                except JSONDecodeError as err:
+                    logger.debug(
+                        "\tinvalid: File %s is not a valid json",
+                        abi_path,
+                        exc_info=True,
+                    )
+                    errors.append({"file": abi_path, "message": str(err)})
+                    continue
+
+            for data in abi_data:
+                for input in data.get("inputs", []):
+                    input.pop("name", None)
+
+            selectors = {}
+            for selector, data in contract.get("selectors", []).items():
+                selectors[selector] = data["plugin"]
+
+            result[address] = {
+                "blockChain": blockChain,
+                "name": name,
+                "abi": abi_data,
+                "filename": filename,
+                "selectors": {**selectors},
+            }
+
+            results.append(result)
+
+    for result in results:
+        for contract_address, data in result.items():
+            invalid_inter, error = 0, []
+            existing = all.get(contract_address, None)
+            if existing is None:
+                all[contract_address] = data
+            else:
+                if existing is not None:
+                    if existing["abi"] != data["abi"]:
+                        invalid_inter += 1
+                        error.append("seem to have two different abi")
+                    if existing["selectors"] != data["selectors"]:
+                        invalid_inter += 1
+                        error.append("seem to have differents selectors")
+                    if invalid_inter:
+                        invalid += 1
+                        errors.append(
+                            {
+                                "file": data["filename"],
+                                "message": f"plugin contract {contract_address} "
+                                + " and ".join(error),
+                            }
+                        )
+                    all[contract_address] = {**existing, **data}
+
     if invalid:
         for error in errors:
             logger.error(f"Validation error: {error}")
@@ -62,16 +163,16 @@ def endlines_validator(data: str, filename: str) -> Tuple[bool, str]:
     return is_valid, error_message
 
 
-def unique_field_validator(
-    field_names: List[str]
-):
+def unique_field_validator(field_names: List[str]):
     unique = dict()
 
     def _inner_validator(data: str, filename: str) -> Tuple[bool, str]:
         try:
             json_data = json.loads(data)
         except JSONDecodeError as err:
-            logger.debug("\tinvalid: File %s is not a valid json", filename, exc_info=True)
+            logger.debug(
+                "\tinvalid: File %s is not a valid json", filename, exc_info=True
+            )
             return False, str(err)
         field_value = next(
             json_data[field_name]
@@ -223,13 +324,21 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
     for contract in target_data.get("contracts", []):
         logger.info(
             "\tchecking contract %s...",
-            contract['address'],
+            contract["address"],
         )
-        abi_path = target_path.parent / "abis" / f"{contract['address'].lower()}.abi.json"
+        abi_path = (
+            target_path.parent / "abis" / f"{contract['address'].lower()}.abi.json"
+        )
         abi_data = json.load(abi_path.open())
 
-        target_functions = {parser["functionName"]: parser for parser in contract.get("parsers", [])}
-        abi_functions = {function["name"]: function for function in abi_data if function["type"] == "function"}
+        target_functions = {
+            parser["functionName"]: parser for parser in contract.get("parsers", [])
+        }
+        abi_functions = {
+            function["name"]: function
+            for function in abi_data
+            if function["type"] == "function"
+        }
 
         for name, function in target_functions.items():
             if name not in abi_functions:
@@ -246,7 +355,11 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
             )
 
             function_args = {arg["name"] for arg in function.get("arguments", [])}
-            screen_args = {arg["name"] for arg in function.get("screen", []) if arg["label"] != "Function"}
+            screen_args = {
+                arg["name"]
+                for arg in function.get("screen", [])
+                if arg["label"] != "Function"
+            }
             if not screen_args <= function_args:
                 error = True
                 logger.info(
@@ -256,7 +369,6 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
                 )
 
     if error:
-        return False, f"Errors found on file content"
+        return False, "Errors found on file content"
 
     return True, ""
-
