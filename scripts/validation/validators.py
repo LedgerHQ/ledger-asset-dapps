@@ -34,6 +34,10 @@ def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, 
         raise ValidationError(f"Invalid files: {errors}")
 
 
+# this DApps are already signed
+# till we know how to correctly handle this cases
+# we exclude them for checking
+# https://ledgerhq.atlassian.net/wiki/spaces/BE/pages/4623073281/DApps+contract+collision+analysis
 __excluded_contract = [
     "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
     "0x1111111254fb6c44bac0bed2854e76f90643097d",
