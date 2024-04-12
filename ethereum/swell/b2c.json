@@ -1,0 +1,84 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x46ddc39e780088b1b146aba8cbbe15dc321a1a1d",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x242eba0e": {
+                    "erc20OfInterest": [],
+                    "method": "deletePendingValidators",
+                    "plugin": "Swell"
+                },
+                "0x32f73258": {
+                    "erc20OfInterest": [],
+                    "method": "updateOperatorControllingAddress",
+                    "plugin": "Swell"
+                },
+                "0x54741d6d": {
+                    "erc20OfInterest": [],
+                    "method": "addOperator",
+                    "plugin": "Swell"
+                },
+                "0x60ec5216": {
+                    "erc20OfInterest": [],
+                    "method": "addNewValidatorDetails",
+                    "plugin": "Swell"
+                },
+                "0x9f5db69c": {
+                    "erc20OfInterest": [],
+                    "method": "updateOperatorName",
+                    "plugin": "Swell"
+                },
+                "0xc3953502": {
+                    "erc20OfInterest": [],
+                    "method": "usePubKeysForValidatorSetup",
+                    "plugin": "Swell"
+                },
+                "0xc4d66de8": {
+                    "erc20OfInterest": [],
+                    "method": "initialize",
+                    "plugin": "Swell"
+                },
+                "0xdd307b99": {
+                    "erc20OfInterest": [],
+                    "method": "enableOperator",
+                    "plugin": "Swell"
+                },
+                "0xe8f28a6c": {
+                    "erc20OfInterest": [],
+                    "method": "updateOperatorRewardAddress",
+                    "plugin": "Swell"
+                },
+                "0xeda74e71": {
+                    "erc20OfInterest": [],
+                    "method": "deleteActiveValidators",
+                    "plugin": "Swell"
+                },
+                "0xf4f3b200": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawERC20",
+                    "plugin": "Swell"
+                },
+                "0xf56408ed": {
+                    "erc20OfInterest": [],
+                    "method": "disableOperator",
+                    "plugin": "Swell"
+                }
+            }
+        },
+        {
+            "address": "0xfae103dc9cf190ed75350761e95403b7b8afa6c0",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Swell"
+                }
+            }
+        }
+    ],
+    "name": "Swell"
+}
