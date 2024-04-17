@@ -1,26 +1,9 @@
 {
-    "$schema": "http://json-schema.org/draft-04/schema#",
+    "inherit_from": "eip712.schema.json",
     "properties": {
-        "blockchainName": {
-            "enum": [
-                "ethereum"
-            ]
-        },
-        "chainId": {
-            "enum": [
-                1
-            ]
-        },
         "contracts": {
             "items": {
                 "properties": {
-                    "address": {
-                        "pattern": "^0x[a-z0-9]{40}$",
-                        "type": "string"
-                    },
-                    "contractName": {
-                        "type": "string"
-                    },
                     "messages": {
                         "items": {
                             "additionalProperties": false,
@@ -30,17 +13,17 @@
                                     "properties": {
                                         "fields": {
                                             "items": {
+                                                "additionalProperties": false,
                                                 "properties": {
-                                                    "label": {
+                                                    "format": {
                                                         "type": "string"
                                                     },
-                                                    "path": {
+                                                    "assetPath": {
                                                         "type": "string"
                                                     }
                                                 },
                                                 "required": [
-                                                    "path",
-                                                    "label"
+                                                    "format"
                                                 ],
                                                 "type": "object"
                                             },
@@ -50,30 +33,17 @@
                                             "type": "string"
                                         }
                                     },
-                                    "required": [
-                                        "label",
-                                        "fields"
-                                    ],
                                     "type": "object"
                                 },
                                 "schema": {
                                     "type": "object"
                                 }
                             },
-                            "required": [
-                                "schema",
-                                "mapper"
-                            ],
                             "type": "object"
                         },
                         "type": "array"
                     }
                 },
-                "required": [
-                    "address",
-                    "contractName",
-                    "messages"
-                ],
                 "type": "object"
             },
             "type": "array"
@@ -82,11 +52,5 @@
             "type": "string"
         }
     },
-    "required": [
-        "blockchainName",
-        "contracts",
-        "name",
-        "chainId"
-    ],
     "type": "object"
 }
