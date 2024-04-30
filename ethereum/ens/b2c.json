@@ -14,7 +14,55 @@
             }
         },
         {
+            "address": "0x9062c0a6dbd6108336bcbe4593a3d1ce05512069",
+            "contractName": "ReverseRegistrar",
+            "selectors": {
+                "0xc47f0027": {
+                    "erc20OfInterest": [],
+                    "method": "setName",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0xa58e81fe9b61b5c3fe2afd33cf304c454abfc7cb",
+            "contractName": "ReverseRegistrar",
+            "selectors": {
+                "0xc47f0027": {
+                    "erc20OfInterest": [],
+                    "method": "setName",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
             "address": "0x283af0b28c62c092c9727f1ee09c02ca627eb7f5",
+            "contractName": "ETHRegistrarController",
+            "selectors": {
+                "0x85f6d155": {
+                    "erc20OfInterest": [],
+                    "method": "register",
+                    "plugin": "ENS"
+                },
+                "0xacf1a841": {
+                    "erc20OfInterest": [],
+                    "method": "renew",
+                    "plugin": "ENS"
+                },
+                "0xf14fcbc8": {
+                    "erc20OfInterest": [],
+                    "method": "commit",
+                    "plugin": "ENS"
+                },
+                "0xf7a16963": {
+                    "erc20OfInterest": [],
+                    "method": "registerWithConfig",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0x253553366da8546fc250f225fe3d25d0c782303b",
             "contractName": "ETHRegistrarController",
             "selectors": {
                 "0x85f6d155": {
@@ -63,6 +111,17 @@
         {
             "address": "0xff252725f6122a92551a5fa9a6b6bf10eb0be035",
             "contractName": "BulkRenewal",
+            "selectors": {
+                "0xe8d6dbb4": {
+                    "erc20OfInterest": [],
+                    "method": "RenewAll",
+                    "plugin": "ENS"
+                }
+            }
+        },
+        {
+            "address": "0xa12159e5131b1eef6b4857eee3e1954744b5033a",
+            "contractName": "StaticBulkRenewal",
             "selectors": {
                 "0xe8d6dbb4": {
                     "erc20OfInterest": [],
