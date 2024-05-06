@@ -39,7 +39,7 @@
                                                         "type": "string"
                                                     },
                                                     "format": {
-                                                        "type": "string"
+                                                        "enum": ["coin", "amount", "address"]
                                                     },
                                                     "assetPath": {
                                                         "type": "string"
@@ -47,8 +47,7 @@
                                                 },
                                                 "required": [
                                                     "path",
-                                                    "label",
-                                                    "format"
+                                                    "label"
                                                 ],
                                                 "type": "object"
                                             },
