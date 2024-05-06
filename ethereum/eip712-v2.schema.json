@@ -32,16 +32,20 @@
                                             "items": {
                                                 "additionalProperties": false,
                                                 "properties": {
+                                                    "assetPath": {
+                                                        "type": "string"
+                                                    },
+                                                    "format": {
+                                                        "enum": [
+                                                            "coin",
+                                                            "amount",
+                                                            "address"
+                                                        ]
+                                                    },
                                                     "label": {
                                                         "type": "string"
                                                     },
                                                     "path": {
-                                                        "type": "string"
-                                                    },
-                                                    "format": {
-                                                        "enum": ["coin", "amount", "address"]
-                                                    },
-                                                    "assetPath": {
                                                         "type": "string"
                                                     }
                                                 },
