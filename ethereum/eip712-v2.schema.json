@@ -35,17 +35,23 @@
                                                     "assetPath": {
                                                         "type": "string"
                                                     },
+                                                    "datetime": {
+                                                        "format": "date-time",
+                                                        "type": "string"
+                                                    },
                                                     "format": {
                                                         "enum": [
-                                                            "coin",
-                                                            "amount",
-                                                            "address"
+                                                            "token",
+                                                            "amount"
                                                         ]
                                                     },
                                                     "label": {
                                                         "type": "string"
                                                     },
                                                     "path": {
+                                                        "type": "string"
+                                                    },
+                                                    "raw": {
                                                         "type": "string"
                                                     }
                                                 },
