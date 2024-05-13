@@ -35,23 +35,18 @@
                                                     "assetPath": {
                                                         "type": "string"
                                                     },
-                                                    "datetime": {
-                                                        "format": "date-time",
-                                                        "type": "string"
-                                                    },
                                                     "format": {
                                                         "enum": [
                                                             "token",
-                                                            "amount"
+                                                            "amount",
+                                                            "raw",
+                                                            "datetime"
                                                         ]
                                                     },
                                                     "label": {
                                                         "type": "string"
                                                     },
                                                     "path": {
-                                                        "type": "string"
-                                                    },
-                                                    "raw": {
                                                         "type": "string"
                                                     }
                                                 },
