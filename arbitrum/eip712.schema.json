@@ -30,8 +30,19 @@
                                     "properties": {
                                         "fields": {
                                             "items": {
-                                                "additionalProperties": true,
+                                                "additionalProperties": false,
                                                 "properties": {
+                                                    "assetPath": {
+                                                        "type": "string"
+                                                    },
+                                                    "format": {
+                                                        "enum": [
+                                                            "token",
+                                                            "amount",
+                                                            "raw",
+                                                            "datetime"
+                                                        ]
+                                                    },
                                                     "label": {
                                                         "type": "string"
                                                     },
