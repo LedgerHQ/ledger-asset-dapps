@@ -3,12 +3,12 @@
     "properties": {
         "blockchainName": {
             "enum": [
-                "base"
+                "ethereum"
             ]
         },
         "chainId": {
             "enum": [
-                8453
+                1
             ]
         },
         "contracts": {
@@ -32,6 +32,17 @@
                                             "items": {
                                                 "additionalProperties": true,
                                                 "properties": {
+                                                    "assetPath": {
+                                                        "type": "string"
+                                                    },
+                                                    "format": {
+                                                        "enum": [
+                                                            "token",
+                                                            "amount",
+                                                            "raw",
+                                                            "datetime"
+                                                        ]
+                                                    },
                                                     "label": {
                                                         "type": "string"
                                                     },
