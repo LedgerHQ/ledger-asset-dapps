@@ -1,0 +1,187 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0xF0075B3Cf8953d3E23b0eF65960913Fd97eb5227",
+            "name": "0xF0075B3Cf8953d3E23b0eF65960913Fd97eb5227",
+            "parsers": [
+                {
+                    "arguments": [],
+                    "functionName": "deposit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "deposit"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "pubkeys",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "withdrawal_credentials",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "signatures",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "deposit_data_roots",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4f498c73"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "pause",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "pause"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8456cb59"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "renounceOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "renounceOwnership"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x715018a6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferOwnership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "newOwner"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [],
+                    "functionName": "unpause",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "unpause"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x3f4ba83a"
+                }
+            ]
+        }
+    ],
+    "id": "figment",
+    "name": "figment"
+}
