@@ -1,45 +1,44 @@
 {
-    "blockchainName": "ethereum",
-    "chainId": 1,
+    "chainId": 5,
     "contracts": [
         {
             "address": "0x1e68238ce926dec62b3fbc99ab06eb1d85ce0270",
-            "contractName": "KilnStaking",
+            "contractName": "KilnStakingV1",
             "selectors": {
-                "0x0968f264": {
-                    "method": "withdraw",
-                    "plugin": "Kiln"
-                },
-                "0x0ffab6c2": {
-                    "method": "batchWithdrawCLFee",
-                    "plugin": "Kiln"
-                },
-                "0x2ba03a79": {
-                    "method": "withdrawCLFee",
-                    "plugin": "Kiln"
-                },
-                "0xb6b06dec": {
-                    "method": "requestValidatorsExit",
-                    "plugin": "Kiln"
-                },
-                "0xbf509bd4": {
-                    "method": "withdrawELFee",
-                    "plugin": "Kiln"
-                },
                 "0xd0e30db0": {
                     "method": "deposit",
-                    "plugin": "Kiln"
-                },
-                "0xe8a0c121": {
-                    "method": "batchWithdraw",
                     "plugin": "Kiln"
                 },
                 "0xe99454f5": {
                     "method": "setWithdrawal",
                     "plugin": "Kiln"
                 },
+                "0x0968f264": {
+                    "method": "withdraw",
+                    "plugin": "Kiln"
+                },
+                "0x2ba03a79": {
+                    "method": "withdrawCLFee",
+                    "plugin": "Kiln"
+                },
+                "0xbf509bd4": {
+                    "method": "withdrawELFee",
+                    "plugin": "Kiln"
+                },
+                "0xe8a0c121": {
+                    "method": "batchWithdraw",
+                    "plugin": "Kiln"
+                },
                 "0xef5e4682": {
                     "method": "batchWithdrawELFee",
+                    "plugin": "Kiln"
+                },
+                "0x0ffab6c2": {
+                    "method": "batchWithdrawCLFee",
+                    "plugin": "Kiln"
+                },
+                "0xb6b06dec": {
+                    "method": "requestValidatorsExit",
                     "plugin": "Kiln"
                 }
             }
@@ -73,6 +72,16 @@
             }
         },
         {
+            "address": "0x8fe52f7fce2ed6304aca6d45d5c993d5be06852a",
+            "contractName": "KilnExitQueueClaimHelper",
+            "selectors": {
+                "0xb7ba18c7": {
+                    "method": "multiClaim",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
             "address": "0x858646372cc42e1a627fce94aa7a7033e7cf075a",
             "contractName": "EigenLayerStrategyManager",
             "selectors": {
@@ -80,16 +89,30 @@
                     "method": "depositIntoStrategy",
                     "plugin": "Kiln"
                 },
-                "0xf123991e": {
-                    "method": "queueWithdrawal",
+                "0x0dd8dd02": {
+                    "method": "queueWithdrawals",
                     "plugin": "Kiln"
                 },
-                "0xf3be65d3": {
-                    "method": "completeQueuedWithdrawal",
+                "0x33404396": {
+                    "method": "completeQueuedWithdrawals",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a",
+            "contractName": "EigenLayerDelegationManager",
+            "selectors": {
+                "0xeea9064b": {
+                    "method": "delegateTo",
+                    "plugin": "Kiln"
+                },
+                "0xda8be864": {
+                    "method": "undelegate",
                     "plugin": "Kiln"
                 }
             }
         }
     ],
-    "name": "kiln"
+    "name": "Kiln"
 }
