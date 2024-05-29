@@ -1,0 +1,118 @@
+{
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xbcE4D2d73436ff23d3E5da7b0c435C218c25c5E0",
+            "contractName": "KilnStakingV1",
+            "selectors": {
+                "0xd0e30db0": {
+                    "method": "deposit",
+                    "plugin": "Kiln"
+                },
+                "0xe99454f5": {
+                    "method": "setWithdrawal",
+                    "plugin": "Kiln"
+                },
+                "0x0968f264": {
+                    "method": "withdraw",
+                    "plugin": "Kiln"
+                },
+                "0x2ba03a79": {
+                    "method": "withdrawCLFee",
+                    "plugin": "Kiln"
+                },
+                "0xbf509bd4": {
+                    "method": "withdrawELFee",
+                    "plugin": "Kiln"
+                },
+                "0xe8a0c121": {
+                    "method": "batchWithdraw",
+                    "plugin": "Kiln"
+                },
+                "0xef5e4682": {
+                    "method": "batchWithdrawELFee",
+                    "plugin": "Kiln"
+                },
+                "0x0ffab6c2": {
+                    "method": "batchWithdrawCLFee",
+                    "plugin": "Kiln"
+                },
+                "0xb6b06dec": {
+                    "method": "requestValidatorsExit",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0xf448e20f8a69aeb88a7dfb837e6afab5e7bcf80e",
+            "contractName": "LedgerLiveV2",
+            "selectors": {
+                "0x3a4b66f1": {
+                    "method": "stake",
+                    "plugin": "Kiln"
+                },
+                "0x721c6513": {
+                    "method": "requestExit",
+                    "plugin": "Kiln"
+                },
+                "0xb7ba18c7": {
+                    "method": "multiClaim",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0x8979117a69dfa7f4d4e3c7b59197ff03f4a2ceaf",
+            "contractName": "KilnExitQueueV2",
+            "selectors": {
+                "0xadcf1163": {
+                    "method": "claim",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0xca4DD914fA713214844c84F153A5e1627536a7fC",
+            "contractName": "KilnExitQueueClaimHelper",
+            "selectors": {
+                "0xb7ba18c7": {
+                    "method": "multiClaim",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0xdfB5f6CE42aAA7830E94ECFCcAd411beF4d4D5b6",
+            "contractName": "EigenLayerStrategyManager",
+            "selectors": {
+                "0xe7a050aa": {
+                    "method": "depositIntoStrategy",
+                    "plugin": "Kiln"
+                },
+                "0x0dd8dd02": {
+                    "method": "queueWithdrawals",
+                    "plugin": "Kiln"
+                },
+                "0x33404396": {
+                    "method": "completeQueuedWithdrawals",
+                    "plugin": "Kiln"
+                }
+            }
+        },
+        {
+            "address": "0xA44151489861Fe9e3055d95adC98FbD462B948e7",
+            "contractName": "EigenLayerDelegationManager",
+            "selectors": {
+                "0xeea9064b": {
+                    "method": "delegateTo",
+                    "plugin": "Kiln"
+                },
+                "0xda8be864": {
+                    "method": "undelegate",
+                    "plugin": "Kiln"
+                }
+            }
+        }
+    ],
+    "name": "Kiln"
+}
