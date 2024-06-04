@@ -1,0 +1,2844 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x370DE27fdb7D1Ff1e1BaA7D11c5820a324Cf623C",
+            "name": "ERC20FeeProxy",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_tokenAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_tokenAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "_amount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "_tokenAddress"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_amount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferFromWithReferenceAndFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Pay ERC20 claim including a fee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._tokenAddress",
+                                                "label": "Token address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._amount",
+                                                "label": "Amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc219a14d"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x3b4837C9F4A606b71e61FD56Db6241781194df92",
+            "name": "ERC20SwapToConversion",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_erc20Address",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_erc20Address"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "approvePaymentProxyToSpend",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approvePaymentProxyToSpend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._erc20Address",
+                                                "label": "_erc20Address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentProxy",
+                                                "label": "_paymentProxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xad2f5be6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_erc20Address",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_erc20Address"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "approveRouterToSpend",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approveRouterToSpend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._erc20Address",
+                                                "label": "_erc20Address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x30e175c9"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "renounceOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "renounceOwnership"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x715018a6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_newSwapRouterAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_newSwapRouterAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setRouter",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setRouter"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._newSwapRouterAddress",
+                                                "label": "_newSwapRouterAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc0d78655"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "_requestAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "_chainlinkPath.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_requestAmount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_amountInMax",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_amountInMax"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_requestFeeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_requestFeeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_deadline",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_deadline"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_chainlinkMaxRateTimespan",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_chainlinkMaxRateTimespan"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "swapTransferWithReference",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap tokens to pay an exact fiat claim amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentProxy",
+                                                "label": "Payment proxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._requestAmount",
+                                                "label": "Request amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._amountInMax",
+                                                "label": "Max to spend"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Swap contract",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Path",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._requestFeeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._deadline",
+                                                "label": "Swap deadline"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._chainlinkMaxRateTimespan",
+                                                "label": "Min conversion freshness"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xad6d6106"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferOwnership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "newOwner"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_chainlinkConversionPath",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_chainlinkConversionPath"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateConversionPathAddress",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateConversionPathAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._chainlinkConversionPath",
+                                                "label": "_chainlinkConversionPath"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x7a38d1cb"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_newRequestSwapFees",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_newRequestSwapFees"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateRequestSwapFees",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateRequestSwapFees"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._newRequestSwapFees",
+                                                "label": "_newRequestSwapFees"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x1d7bc74b"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x3cF63891928B8CeebB81C95426600a18cd59C03f",
+            "name": "BatchConversionPayments",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "batchERC20Payments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchERC20Payments"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "requestDetails",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "pathsToUSD",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x9af8a581"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "batchMultiERC20ConversionPayments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchMultiERC20ConversionPayments"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "requestDetails",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "pathsToUSD",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xb677bf0e"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "batchMultiERC20Payments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchMultiERC20Payments"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "requestDetails",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "pathsToUSD",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xa4b519ff"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
+                            "name": "skipFeeUSDLimit",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "skipFeeUSDLimit"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "batchNativeConversionPayments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchNativeConversionPayments"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "requestDetails",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.skipFeeUSDLimit",
+                                                "label": "skipFeeUSDLimit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x0e48b8db"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_BOOLEAN",
+                            "name": "skipFeeUSDLimit",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "skipFeeUSDLimit"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "batchNativePayments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchNativePayments"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "requestDetails",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.skipFeeUSDLimit",
+                                                "label": "skipFeeUSDLimit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x333ec062"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.paymentNetworkId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.paymentNetworkId"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.recipient",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.recipient"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.requestAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.requestAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.maxToSpend",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.maxToSpend"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.maxRateTimespan",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.requestDetails.0.maxRateTimespan"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.requestDetails.0.path",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": ""
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "batchPayments",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Pay multiple claims at once"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.paymentNetworkId",
+                                                "label": "Payment network ID"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.recipient",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.requestAmount",
+                                                "label": "Request amount"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Path",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.maxToSpend",
+                                                "label": "Max to spend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.maxRateTimespan",
+                                                "label": "Min conversion freshness"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Path to USD",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "subtitle": " ",
+                                    "title": ""
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        }
+                                    ],
+                                    "subtitle": " ",
+                                    "title": ""
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x92cddb91"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "renounceOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "renounceOwnership"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x715018a6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_batchFee",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_batchFee"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setBatchFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setBatchFee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._batchFee",
+                                                "label": "_batchFee"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf4d08412"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_batchFeeAmountUSDLimit",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_batchFeeAmountUSDLimit"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setBatchFeeAmountUSDLimit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setBatchFeeAmountUSDLimit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._batchFeeAmountUSDLimit",
+                                                "label": "_batchFeeAmountUSDLimit"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x16ac30a9"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_chainlinkConversionPath",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_chainlinkConversionPath"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setChainlinkConversionPath",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setChainlinkConversionPath"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._chainlinkConversionPath",
+                                                "label": "_chainlinkConversionPath"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xe695f75c"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_NativeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_NativeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_USDAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_USDAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setNativeAndUSDAddress",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setNativeAndUSDAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._NativeAddress",
+                                                "label": "_NativeAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._USDAddress",
+                                                "label": "_USDAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xdf6557ec"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentErc20ConversionProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentErc20ConversionProxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setPaymentErc20ConversionProxy",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setPaymentErc20ConversionProxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentErc20ConversionProxy",
+                                                "label": "_paymentErc20ConversionProxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x81fe66ce"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentErc20Proxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentErc20Proxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setPaymentErc20Proxy",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setPaymentErc20Proxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentErc20Proxy",
+                                                "label": "_paymentErc20Proxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4465549a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentNativeConversionProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentNativeConversionProxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setPaymentNativeConversionProxy",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setPaymentNativeConversionProxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentNativeConversionProxy",
+                                                "label": "_paymentNativeConversionProxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x7abff543"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentNativeProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentNativeProxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setPaymentNativeProxy",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setPaymentNativeProxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentNativeProxy",
+                                                "label": "_paymentNativeProxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8da2f6d8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferOwnership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "newOwner"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x626e6E3dac82205EA5FfB526092F4DCe525E46a9",
+            "name": "ERC20SwapToPay",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_erc20Address",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_erc20Address"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "approvePaymentProxyToSpend",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approvePaymentProxyToSpend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._erc20Address",
+                                                "label": "_erc20Address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentProxy",
+                                                "label": "_paymentProxy"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xad2f5be6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_erc20Address",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_erc20Address"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "approveRouterToSpend",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "approveRouterToSpend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._erc20Address",
+                                                "label": "_erc20Address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x30e175c9"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "renounceOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "renounceOwnership"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x715018a6"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_newSwapRouterAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_newSwapRouterAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "setRouter",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "setRouter"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._newSwapRouterAddress",
+                                                "label": "_newSwapRouterAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc0d78655"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "_amount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "_path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_amount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_amountInMax",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_amountInMax"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_deadline",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_deadline"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "swapTransferWithReference",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Swap tokens to pay an exact claim amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentProxy",
+                                                "label": "Payment proxy"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._amount",
+                                                "label": "Amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._amountInMax",
+                                                "label": "Max to spend"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Path",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._deadline",
+                                                "label": "Swap deadline"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x5f2993bf"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferOwnership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "newOwner"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_newRequestSwapFees",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_newRequestSwapFees"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateRequestSwapFees",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateRequestSwapFees"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._newRequestSwapFees",
+                                                "label": "_newRequestSwapFees"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x1d7bc74b"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0x7Ebf48a26253810629C191b56C3212Fd0D211c26",
+            "name": "EthConversionProxy",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "account",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "account"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "addWhitelistAdmin",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "addWhitelistAdmin"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.account",
+                                                "label": "account"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x7362d9c8"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "renounceWhitelistAdmin",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "renounceWhitelistAdmin"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4c5a628c"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_requestAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_requestAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_maxRateTimespan",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_maxRateTimespan"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferWithReferenceAndFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Pay fiat claim with, including a fee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._requestAmount",
+                                                "label": "Request amount"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Path",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._maxRateTimespan",
+                                                "label": "Min conversion freshness"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xac473c8a"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_chainlinkConversionPathAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_chainlinkConversionPathAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateConversionPathAddress",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateConversionPathAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._chainlinkConversionPathAddress",
+                                                "label": "_chainlinkConversionPathAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x7a38d1cb"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxyAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxyAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateConversionProxyAddress",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "updateConversionProxyAddress"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentProxyAddress",
+                                                "label": "_paymentProxyAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x5536bcde"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0xe72Ecea44b6d8B2b3cf5171214D9730E86213cA2",
+            "name": "ERC20ConversionProxy",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_AMOUNT",
+                            "name": "_requestAmount",
+                            "value": {
+                                "amount": {
+                                    "tokenId": {
+                                        "path": {
+                                            "abi_path": "_path.-1"
+                                        }
+                                    },
+                                    "value": {
+                                        "path": {
+                                            "abi_path": "_requestAmount"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_maxToSpend",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_maxToSpend"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_maxRateTimespan",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_maxRateTimespan"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferFromWithReferenceAndFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Pay fiat claim with ERC20 tokens, including a fee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._requestAmount",
+                                                "label": "Request amount"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Path",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._maxToSpend",
+                                                "label": "Max to spend"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._maxRateTimespan",
+                                                "label": "Min conversion freshness"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x3af2c012"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0xfCFBcfc4f5A421089e3Df45455F7f4985FE2D6a8",
+            "name": "EthereumFeeProxy",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_amount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_amount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferExactEthWithReferenceAndFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "transferExactEthWithReferenceAndFee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "_to"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._amount",
+                                                "label": "_amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "_paymentReference"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "_feeAmount"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            },
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "_feeAddress"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd7c95e98"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_to",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_to"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_paymentReference",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentReference"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_feeAmount",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_feeAddress"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferWithReferenceAndFee",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Pay claim including a fee"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._to",
+                                                "label": "Payment address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._feeAddress",
+                                                "label": "Fee payment address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xb868980b"
+                }
+            ]
+        }
+    ],
+    "id": "requestfinance",
+    "name": "requestfinance"
+}
