@@ -1,45 +1,45 @@
 {
-    "chainId": 17000,
     "blockchainName": "ethereum_holesky",
+    "chainId": 17000,
     "contracts": [
         {
             "address": "0xbce4d2d73436ff23d3e5da7b0c435c218c25c5e0",
             "contractName": "KilnStakingV1",
             "selectors": {
-                "0xd0e30db0": {
-                    "method": "deposit",
-                    "plugin": "Kiln"
-                },
-                "0xe99454f5": {
-                    "method": "setWithdrawal",
-                    "plugin": "Kiln"
-                },
                 "0x0968f264": {
                     "method": "withdraw",
-                    "plugin": "Kiln"
-                },
-                "0x2ba03a79": {
-                    "method": "withdrawCLFee",
-                    "plugin": "Kiln"
-                },
-                "0xbf509bd4": {
-                    "method": "withdrawELFee",
-                    "plugin": "Kiln"
-                },
-                "0xe8a0c121": {
-                    "method": "batchWithdraw",
-                    "plugin": "Kiln"
-                },
-                "0xef5e4682": {
-                    "method": "batchWithdrawELFee",
                     "plugin": "Kiln"
                 },
                 "0x0ffab6c2": {
                     "method": "batchWithdrawCLFee",
                     "plugin": "Kiln"
                 },
+                "0x2ba03a79": {
+                    "method": "withdrawCLFee",
+                    "plugin": "Kiln"
+                },
                 "0xb6b06dec": {
                     "method": "requestValidatorsExit",
+                    "plugin": "Kiln"
+                },
+                "0xbf509bd4": {
+                    "method": "withdrawELFee",
+                    "plugin": "Kiln"
+                },
+                "0xd0e30db0": {
+                    "method": "deposit",
+                    "plugin": "Kiln"
+                },
+                "0xe8a0c121": {
+                    "method": "batchWithdraw",
+                    "plugin": "Kiln"
+                },
+                "0xe99454f5": {
+                    "method": "setWithdrawal",
+                    "plugin": "Kiln"
+                },
+                "0xef5e4682": {
+                    "method": "batchWithdrawELFee",
                     "plugin": "Kiln"
                 }
             }
@@ -86,16 +86,16 @@
             "address": "0xdfb5f6ce42aaa7830e94ecfccad411bef4d4d5b6",
             "contractName": "EigenLayerStrategyManager",
             "selectors": {
-                "0xe7a050aa": {
-                    "method": "depositIntoStrategy",
-                    "plugin": "Kiln"
-                },
                 "0x0dd8dd02": {
                     "method": "queueWithdrawals",
                     "plugin": "Kiln"
                 },
                 "0x33404396": {
                     "method": "completeQueuedWithdrawals",
+                    "plugin": "Kiln"
+                },
+                "0xe7a050aa": {
+                    "method": "depositIntoStrategy",
                     "plugin": "Kiln"
                 }
             }
@@ -104,12 +104,12 @@
             "address": "0xa44151489861fe9e3055d95adc98fbd462b948e7",
             "contractName": "EigenLayerDelegationManager",
             "selectors": {
-                "0xeea9064b": {
-                    "method": "delegateTo",
-                    "plugin": "Kiln"
-                },
                 "0xda8be864": {
                     "method": "undelegate",
+                    "plugin": "Kiln"
+                },
+                "0xeea9064b": {
+                    "method": "delegateTo",
                     "plugin": "Kiln"
                 }
             }
