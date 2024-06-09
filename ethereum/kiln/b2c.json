@@ -86,14 +86,6 @@
             "address": "0x858646372cc42e1a627fce94aa7a7033e7cf075a",
             "contractName": "EigenLayerStrategyManager",
             "selectors": {
-                "0x0dd8dd02": {
-                    "method": "queueWithdrawals",
-                    "plugin": "Kiln"
-                },
-                "0x33404396": {
-                    "method": "completeQueuedWithdrawals",
-                    "plugin": "Kiln"
-                },
                 "0xe7a050aa": {
                     "method": "depositIntoStrategy",
                     "plugin": "Kiln"
@@ -104,6 +96,14 @@
             "address": "0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a",
             "contractName": "EigenLayerDelegationManager",
             "selectors": {
+                "0x0dd8dd02": {
+                    "method": "queueWithdrawals",
+                    "plugin": "Kiln"
+                },
+                "0x33404396": {
+                    "method": "completeQueuedWithdrawals",
+                    "plugin": "Kiln"
+                },
                 "0xda8be864": {
                     "method": "undelegate",
                     "plugin": "Kiln"
