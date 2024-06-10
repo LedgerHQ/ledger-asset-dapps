@@ -27,7 +27,7 @@
             "address": "0xcf5ea1b38380f6af39068375516daf40ed70d299",
             "contractName": "StaderStakePoolsManager",
             "selectors": {
-                "0xf340fa01": {
+                "0xb7482509": {
                     "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "Staderlabs"
@@ -38,14 +38,32 @@
             "address": "0x9f0491b32dbce587c50c4c43ab303b06478193a7",
             "contractName": "UserWithdrawalManager",
             "selectors": {
+                "0x1f7ec122": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdraw",
+                    "plugin": "Staderlabs"
+                },
                 "0x379607f5": {
                     "erc20OfInterest": [],
                     "method": "claim",
                     "plugin": "Staderlabs"
-                },
-                "0xccc143b8": {
+                }
+            }
+        },
+        {
+            "address": "0x036676389e48133b63a802f8635ad39e752d375d",
+            "contractName": "LRTDepositPool",
+            "selectors": {
+                "0x72c51c0b": {
                     "erc20OfInterest": [],
-                    "method": "requestWithdraw",
+                    "method": "depositETH",
+                    "plugin": "Staderlabs"
+                },
+                "0xc3ae1766": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "depositAsset",
                     "plugin": "Staderlabs"
                 }
             }
