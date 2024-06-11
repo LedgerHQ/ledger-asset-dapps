@@ -11,24 +11,20 @@
                         "fields": [
                             {
                                 "label": "Owner",
-                                "path": "owner",
-                                "type": "address"
+                                "path": "owner"
                             },
                             {
                                 "label": "Spender",
-                                "path": "spender",
-                                "type": "address"
+                                "path": "spender"
                             },
                             {
                                 "label": "Allowance",
-                                "path": "value",
-                                "type": "uint256"
+                                "path": "value"
                             },
                             {
                                 "format": "datetime",
                                 "label": "Deadline",
-                                "path": "deadline",
-                                "type": "uint256"
+                                "path": "deadline"
                             }
                         ],
                         "label": "Permit"
