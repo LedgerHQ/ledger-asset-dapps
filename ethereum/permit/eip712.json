@@ -1,0 +1,83 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "contractName": "USDC",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Owner",
+                                "path": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "label": "Spender",
+                                "path": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "label": "Allowance",
+                                "path": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Deadline",
+                                "path": "deadline",
+                                "type": "uint256"
+                            }
+                        ],
+                        "label": "Permit"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Permit"
+}
