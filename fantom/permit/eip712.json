@@ -1,10 +1,10 @@
 {
-    "blockchainName": "ethereum",
+    "blockchainName": "fantom",
     "chainId": 1,
     "contracts": [
         {
-            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-            "contractName": "USDC",
+            "address": "0x6626c47c00f1d87902fc13eecfac3ed06d5e8d8a",
+            "contractName": "Wootrade Network",
             "messages": [
                 {
                     "mapper": {
@@ -27,7 +27,7 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Permit USDC transfers"
+                        "label": "Permit Wootrade Network transfers"
                     },
                     "schema": {
                         "EIP712Domain": [
@@ -75,8 +75,8 @@
             ]
         },
         {
-            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
-            "contractName": "Dai Stablecoin v2.0",
+            "address": "0xfb98b335551a418cd0737375a2ea0ded62ea213b",
+            "contractName": "miMATIC",
             "messages": [
                 {
                     "mapper": {
@@ -99,79 +99,7 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Permit Dai Stablecoin v2.0 transfers"
-                    },
-                    "schema": {
-                        "EIP712Domain": [
-                            {
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "name": "version",
-                                "type": "string"
-                            },
-                            {
-                                "name": "chainId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "verifyingContract",
-                                "type": "address"
-                            }
-                        ],
-                        "Permit": [
-                            {
-                                "name": "owner",
-                                "type": "address"
-                            },
-                            {
-                                "name": "spender",
-                                "type": "address"
-                            },
-                            {
-                                "name": "value",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "nonce",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "deadline",
-                                "type": "uint256"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-            "contractName": "Aave",
-            "messages": [
-                {
-                    "mapper": {
-                        "fields": [
-                            {
-                                "label": "Owner",
-                                "path": "owner"
-                            },
-                            {
-                                "label": "Spender",
-                                "path": "spender"
-                            },
-                            {
-                                "label": "Allowance",
-                                "path": "value"
-                            },
-                            {
-                                "format": "datetime",
-                                "label": "Deadline",
-                                "path": "deadline"
-                            }
-                        ],
-                        "label": "Permit Aave transfers"
+                        "label": "Permit miMATIC transfers"
                     },
                     "schema": {
                         "EIP712Domain": [

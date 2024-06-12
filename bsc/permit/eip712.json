@@ -1,10 +1,10 @@
 {
-    "blockchainName": "ethereum",
-    "chainId": 1,
+    "blockchainName": "bsc",
+    "chainId": 56,
     "contracts": [
         {
-            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-            "contractName": "USDC",
+            "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+            "contractName": "1INCH Token",
             "messages": [
                 {
                     "mapper": {
@@ -27,7 +27,7 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Permit USDC transfers"
+                        "label": "Permit 1INCH Token transfers"
                     },
                     "schema": {
                         "EIP712Domain": [
@@ -75,8 +75,8 @@
             ]
         },
         {
-            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
-            "contractName": "Dai Stablecoin v2.0",
+            "address": "0x7e624fa0e1c4abfd309cc15719b7e2580887f570",
+            "contractName": "PolkastarterToken",
             "messages": [
                 {
                     "mapper": {
@@ -99,79 +99,7 @@
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Permit Dai Stablecoin v2.0 transfers"
-                    },
-                    "schema": {
-                        "EIP712Domain": [
-                            {
-                                "name": "name",
-                                "type": "string"
-                            },
-                            {
-                                "name": "version",
-                                "type": "string"
-                            },
-                            {
-                                "name": "chainId",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "verifyingContract",
-                                "type": "address"
-                            }
-                        ],
-                        "Permit": [
-                            {
-                                "name": "owner",
-                                "type": "address"
-                            },
-                            {
-                                "name": "spender",
-                                "type": "address"
-                            },
-                            {
-                                "name": "value",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "nonce",
-                                "type": "uint256"
-                            },
-                            {
-                                "name": "deadline",
-                                "type": "uint256"
-                            }
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
-            "contractName": "Aave",
-            "messages": [
-                {
-                    "mapper": {
-                        "fields": [
-                            {
-                                "label": "Owner",
-                                "path": "owner"
-                            },
-                            {
-                                "label": "Spender",
-                                "path": "spender"
-                            },
-                            {
-                                "label": "Allowance",
-                                "path": "value"
-                            },
-                            {
-                                "format": "datetime",
-                                "label": "Deadline",
-                                "path": "deadline"
-                            }
-                        ],
-                        "label": "Permit Aave transfers"
+                        "label": "Permit PolkastarterToken transfers"
                     },
                     "schema": {
                         "EIP712Domain": [
