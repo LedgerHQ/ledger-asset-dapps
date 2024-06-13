@@ -14,16 +14,16 @@
                                 "path": "maker"
                             },
                             {
-                                "label": "Swap Amount",
-                                "path": "makingAmount",
+                                "assetPath": "makingToken",
                                 "format": "amount",
-                                "assetPath": "makingToken" 
+                                "label": "Swap Amount",
+                                "path": "makingAmount"
                             },
                             {
-                                "label": "Receive Minimum",
-                                "path": "takingAmount",
+                                "assetPath": "takingToken",
                                 "format": "amount",
-                                "assetPath": "takingToken" 
+                                "label": "Receive Minimum",
+                                "path": "takingAmount"
                             },
                             {
                                 "label": "Recipient",
@@ -33,56 +33,56 @@
                         "label": "1inch Order"
                     },
                     "schema": {
-                        "EIP712Domain" : [
+                        "EIP712Domain": [
                             {
-                                "type": "string",
-                                "name": "name"
+                                "name": "name",
+                                "type": "string"
                             },
                             {
-                                "type": "string",
-                                "name": "version"
+                                "name": "version",
+                                "type": "string"
                             },
                             {
-                                "type": "uint256",
-                                "name": "chainId"
+                                "name": "chainId",
+                                "type": "uint256"
                             },
                             {
-                                "type": "address",
-                                "name": "verifyingContract"
+                                "name": "verifyingContract",
+                                "type": "address"
                             }
                         ],
                         "OrderStructure": [
                             {
-                                "type": "uint256",
-                                "name": "salt"
+                                "name": "salt",
+                                "type": "uint256"
                             },
                             {
-                                "type": "address",
-                                "name": "maker"
+                                "name": "maker",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "receiver"
+                                "name": "receiver",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "makerAsset"
+                                "name": "makerAsset",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "takerAsset"
+                                "name": "takerAsset",
+                                "type": "address"
                             },
                             {
-                                "type": "uint256",
-                                "name": "makingAmount"
+                                "name": "makingAmount",
+                                "type": "uint256"
                             },
                             {
-                                "type": "uint256",
-                                "name": "takingAmount"
+                                "name": "takingAmount",
+                                "type": "uint256"
                             },
                             {
-                                "type": "uint256",
-                                "name": "makerTraits"
+                                "name": "makerTraits",
+                                "type": "uint256"
                             }
                         ]
                     }
@@ -95,16 +95,16 @@
                                 "path": "maker"
                             },
                             {
-                                "label": "Swap Amount",
-                                "path": "makingAmount",
+                                "assetPath": "makingToken",
                                 "format": "amount",
-                                "assetPath": "makingToken" 
+                                "label": "Swap Amount",
+                                "path": "makingAmount"
                             },
                             {
-                                "label": "Receive Minimum",
-                                "path": "takingAmount",
+                                "assetPath": "takingToken",
                                 "format": "amount",
-                                "assetPath": "takingToken" 
+                                "label": "Receive Minimum",
+                                "path": "takingAmount"
                             },
                             {
                                 "label": "Recipient",
@@ -114,64 +114,64 @@
                         "label": "1inch Order"
                     },
                     "schema": {
-                        "EIP712Domain" : [
+                        "EIP712Domain": [
                             {
-                                "type": "string",
-                                "name": "name"
+                                "name": "name",
+                                "type": "string"
                             },
                             {
-                                "type": "string",
-                                "name": "version"
+                                "name": "version",
+                                "type": "string"
                             },
                             {
-                                "type": "uint256",
-                                "name": "chainId"
+                                "name": "chainId",
+                                "type": "uint256"
                             },
                             {
-                                "type": "address",
-                                "name": "verifyingContract"
+                                "name": "verifyingContract",
+                                "type": "address"
                             }
                         ],
                         "OrderStructure": [
                             {
-                                "type": "uint256",
-                                "name": "salt"
+                                "name": "salt",
+                                "type": "uint256"
                             },
                             {
-                                "type": "address",
-                                "name": "makerAsset"
+                                "name": "makerAsset",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "takerAsset"
+                                "name": "takerAsset",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "maker"
+                                "name": "maker",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "receiver"
+                                "name": "receiver",
+                                "type": "address"
                             },
                             {
-                                "type": "address",
-                                "name": "allowedSender"
+                                "name": "allowedSender",
+                                "type": "address"
                             },
                             {
-                                "type": "uint256",
-                                "name": "makingAmount"
+                                "name": "makingAmount",
+                                "type": "uint256"
                             },
                             {
-                                "type": "uint256",
-                                "name": "takingAmount"
+                                "name": "takingAmount",
+                                "type": "uint256"
                             },
                             {
-                                "type": "uint256",
-                                "name": "offsets"
+                                "name": "offsets",
+                                "type": "uint256"
                             },
                             {
-                                "type": "bytes",
-                                "name": "interactions"
+                                "name": "interactions",
+                                "type": "bytes"
                             }
                         ]
                     }
