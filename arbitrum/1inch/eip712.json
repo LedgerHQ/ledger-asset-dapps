@@ -1,0 +1,182 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x7F069df72b7A39bCE9806e3AfaF579E54D8CF2b9",
+            "contractName": "1inch Limit Order Protocol",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Swap Amount",
+                                "path": "makingAmount",
+                                "format": "amount",
+                                "assetPath": "makingToken" 
+                            },
+                            {
+                                "label": "Receive Minimum",
+                                "path": "takingAmount",
+                                "format": "amount",
+                                "assetPath": "takingToken" 
+                            },
+                            {
+                                "label": "Recipient",
+                                "path": "receiver"
+                            }
+                        ],
+                        "label": "1inch Order"
+                    },
+                    "schema": {
+                        "EIP712Domain" : [
+                            {
+                                "type": "string",
+                                "name": "name"
+                            },
+                            {
+                                "type": "string",
+                                "name": "version"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "chainId"
+                            },
+                            {
+                                "type": "address",
+                                "name": "verifyingContract"
+                            }
+                        ],
+                        "OrderStructure": [
+                            {
+                                "type": "uint256",
+                                "name": "salt"
+                            },
+                            {
+                                "type": "address",
+                                "name": "maker"
+                            },
+                            {
+                                "type": "address",
+                                "name": "receiver"
+                            },
+                            {
+                                "type": "address",
+                                "name": "makerAsset"
+                            },
+                            {
+                                "type": "address",
+                                "name": "takerAsset"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "makingAmount"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "takingAmount"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "makerTraits"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "maker"
+                            },
+                            {
+                                "label": "Swap Amount",
+                                "path": "makingAmount",
+                                "format": "amount",
+                                "assetPath": "makingToken" 
+                            },
+                            {
+                                "label": "Receive Minimum",
+                                "path": "takingAmount",
+                                "format": "amount",
+                                "assetPath": "takingToken" 
+                            },
+                            {
+                                "label": "Recipient",
+                                "path": "receiver"
+                            }
+                        ],
+                        "label": "1inch Order"
+                    },
+                    "schema": {
+                        "EIP712Domain" : [
+                            {
+                                "type": "string",
+                                "name": "name"
+                            },
+                            {
+                                "type": "string",
+                                "name": "version"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "chainId"
+                            },
+                            {
+                                "type": "address",
+                                "name": "verifyingContract"
+                            }
+                        ],
+                        "OrderStructure": [
+                            {
+                                "type": "uint256",
+                                "name": "salt"
+                            },
+                            {
+                                "type": "address",
+                                "name": "makerAsset"
+                            },
+                            {
+                                "type": "address",
+                                "name": "takerAsset"
+                            },
+                            {
+                                "type": "address",
+                                "name": "maker"
+                            },
+                            {
+                                "type": "address",
+                                "name": "receiver"
+                            },
+                            {
+                                "type": "address",
+                                "name": "allowedSender"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "makingAmount"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "takingAmount"
+                            },
+                            {
+                                "type": "uint256",
+                                "name": "offsets"
+                            },
+                            {
+                                "type": "bytes",
+                                "name": "interactions"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
