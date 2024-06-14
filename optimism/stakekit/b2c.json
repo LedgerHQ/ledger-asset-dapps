@@ -1,4 +1,5 @@
 {
+    "blockchainName": "optimism",
     "chainId": 10,
     "contracts": [
         {
@@ -6,12 +7,16 @@
             "contractName": "InitializableImmutableAdminUpgradeabilityProxy",
             "selectors": {
                 "0x617ba037": {
-                    "erc20OfInterest": ["asset"],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "supply",
                     "plugin": "StakeKit"
                 },
                 "0x69328dec": {
-                    "erc20OfInterest": ["asset"],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 }
@@ -21,22 +26,7 @@
             "address": "0xad17a225074191d5c8a37b50fda1ae278a2ee6a2",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -46,9 +36,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -57,22 +62,7 @@
             "address": "0xfbef713696465ddab297164c3b6a0122d92a3bac",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -82,9 +72,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -93,22 +98,7 @@
             "address": "0x0a2f234ad2e5e9047067904a9d37d0cd02b80d12",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -118,9 +108,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -129,22 +134,7 @@
             "address": "0xa628c54c850ff1077b5c954491d19ecce7e321ff",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -154,9 +144,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -165,22 +170,7 @@
             "address": "0x4c8b1958b09b3bde714f68864bcc3a74eaf1a23d",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -190,9 +180,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -201,22 +206,7 @@
             "address": "0xc328d83883f5f90e1108d4dd7a18ffca17ae74d7",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -226,9 +216,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -237,22 +242,7 @@
             "address": "0x65343f414ffd6c97b0f6add33d16f6845ac22bac",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -262,9 +252,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -273,22 +278,7 @@
             "address": "0x7edf16076e56fa4c111055fba1ff5556b8757cfb",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -298,9 +288,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -309,22 +314,7 @@
             "address": "0x5b977577eb8a480f63e11fc615d6753adb8652ae",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -334,9 +324,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -345,22 +350,7 @@
             "address": "0xad17a225074191d5c8a37b50fda1ae278a2ee6a2",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -370,9 +360,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -381,22 +386,7 @@
             "address": "0x2a90f479002daae9934c3a70ebb6e8dbeb46292b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -406,9 +396,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -417,22 +422,7 @@
             "address": "0xb4e4cfa9971c7e1069685771dab61ca56e72e5c3",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -442,9 +432,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -453,22 +458,7 @@
             "address": "0x7d2382b1f8af621229d33464340541db362b4907",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -478,9 +468,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -489,22 +494,7 @@
             "address": "0x161e7411a291ccaf377279fce6a8c8d689dbebe8",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -514,9 +504,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -525,22 +530,7 @@
             "address": "0xfaee21d0f0af88ee72bb6d68e54a90e6ec2616de",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -550,9 +540,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -561,22 +566,7 @@
             "address": "0x22687ca792a8cb5e169a77e0949e71fe37147604",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -586,9 +576,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -597,22 +602,7 @@
             "address": "0x5e70e0ede43373bd9cf4bc85199d424acf0241ef",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -622,9 +612,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -633,22 +638,7 @@
             "address": "0x6759574667896a453304897993d61f00fdc7214d",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -658,9 +648,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -669,22 +674,7 @@
             "address": "0x682df61222a3fb64f3e88fef41ce21499adcc647",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -694,9 +684,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -705,22 +710,7 @@
             "address": "0x88b429359665b8685b7431f5a0f6e8c719bf49aa",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -730,9 +720,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -741,22 +746,7 @@
             "address": "0x1b1d2efb6045851f8ccde24369003e0ff157980b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -766,9 +756,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -777,22 +782,7 @@
             "address": "0x1d49ab5b03268e329fc7d2111e5364e63b36a3ce",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -802,9 +792,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -813,22 +818,7 @@
             "address": "0xc86b70e2c16c5fb5315e4663737e0e077abfc395",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -838,9 +828,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -849,22 +854,7 @@
             "address": "0x3ad9566b15aacdd26d8a220ca8635f925ea7a3f6",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -874,9 +864,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -885,22 +890,7 @@
             "address": "0xd7ee0e2d232bcbefa74ef36a439d0de880c6ece5",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -910,9 +900,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -921,22 +926,7 @@
             "address": "0xf89fdbbce1a707061e9d59b8e4387f89798b4d10",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -946,9 +936,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -957,22 +962,7 @@
             "address": "0xcf6bef33c49824226fb9defcdc3b1de11f207db7",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -982,9 +972,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -993,22 +998,7 @@
             "address": "0x3fb792fa67cde50a41e20304e4afef522cf711ee",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1018,9 +1008,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1029,22 +1034,7 @@
             "address": "0x531fdb1c8429f404116932226d487db94471c4b7",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1054,9 +1044,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1065,22 +1070,7 @@
             "address": "0x39f60710a27a87332d10e3333c2eff41eec911ee",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1090,9 +1080,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1101,22 +1106,7 @@
             "address": "0x950f384f566b82cca6380f75ae42e2bbe9b357b2",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1126,9 +1116,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1137,22 +1142,7 @@
             "address": "0x83b8391b9efbc5b5a38777fb22a4968c622a405a",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1162,9 +1152,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1173,22 +1178,7 @@
             "address": "0x3b141bd7d6e1d67e2101a08e4dd849a8408d91aa",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1198,9 +1188,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1209,22 +1214,7 @@
             "address": "0x01c77e8a099e97b7b0dca2f987d9bd1911cdde50",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1234,9 +1224,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1245,22 +1250,7 @@
             "address": "0xb9a14c5c760023801f8c731b4621c99f8ac211d9",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1270,9 +1260,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1281,22 +1286,7 @@
             "address": "0x36baf52bc8a2db4450500c1a6c78f10f6d0e1c3b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1306,9 +1296,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1317,22 +1322,7 @@
             "address": "0x71117bcd8fe69177eeb8857538d625209756b745",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1342,9 +1332,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1353,22 +1358,7 @@
             "address": "0xb3532518daca20fd14e539b0ed6c0de5c59fd2de",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1378,9 +1368,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1389,22 +1394,7 @@
             "address": "0xdddcaee873f2d9df0e18a80709ef2b396d4a6ea5",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1414,9 +1404,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1425,22 +1430,7 @@
             "address": "0x6ec9d003f0e5184ee54c1d899b414322a0f0dc07",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1450,9 +1440,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1461,22 +1466,7 @@
             "address": "0xf7d66b41cd4241eae450fd9d2d6995754634d9f3",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1486,9 +1476,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1497,22 +1502,7 @@
             "address": "0x56eef8430dddf95b2b92c58b21edf1ac7f77e6a6",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1522,9 +1512,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1533,22 +1538,7 @@
             "address": "0x6afa09145245eaedddab9333523af9984494ff34",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1558,9 +1548,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1569,22 +1574,7 @@
             "address": "0x830cb4aabf786b9349d9701dd8ee073215d95174",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1594,9 +1584,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1605,22 +1610,7 @@
             "address": "0x68f2b1db2da6204489279a8fc681f83728bb9622",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1630,9 +1620,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1641,22 +1646,7 @@
             "address": "0x507343bad3a1ee0b67c3b1712133290ded43980d",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1666,9 +1656,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1677,22 +1682,7 @@
             "address": "0x3f14df340498f3eaa2894bfc19789dd592dc062d",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1702,9 +1692,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1713,22 +1718,7 @@
             "address": "0x4f1220f6375e95b43462465972cb2f478ed34d0b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1738,9 +1728,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1749,22 +1754,7 @@
             "address": "0xf6b272134a193df5b04332e73184e5b40b8eb810",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1774,9 +1764,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1785,22 +1790,7 @@
             "address": "0xbc61b71562b01a3a4808d3b9291a3bf743ab3361",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1810,9 +1800,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1821,22 +1826,7 @@
             "address": "0x6a44b0415a5c440d32e82965fdfaad54a72d477d",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1846,9 +1836,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1857,22 +1862,7 @@
             "address": "0x45b0a7dc29b7856a1b5069db4cfa2a984b69cc41",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1882,9 +1872,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1893,22 +1898,7 @@
             "address": "0x36e4c18b2b43cc989085b4a7306915b115058abf",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1918,9 +1908,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1929,22 +1934,7 @@
             "address": "0xc2626acedc27cffb418680d0307c9178955a4743",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1954,9 +1944,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -1965,22 +1970,7 @@
             "address": "0xf5a8af3c13c0f6c139f58aac8a549100484e0aad",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -1990,9 +1980,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2001,22 +2006,7 @@
             "address": "0xa31ad8d355b5223ad34fd4fd0bc854a68e7d9681",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2026,9 +2016,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2037,22 +2042,7 @@
             "address": "0x05bbaf27429eb35cb3d51a979acba69f2f00e66a",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2062,9 +2052,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2073,22 +2078,7 @@
             "address": "0x6657bdb994fc8678f6d709077f30aa0b3249b5c8",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2098,9 +2088,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2109,22 +2114,7 @@
             "address": "0x686c125472024bdd3fa74eeb3720b3237541dcdc",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2134,9 +2124,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2145,22 +2150,7 @@
             "address": "0xaa07ca79490b3cda1a25b8fcc69b76c09c6e7a4f",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2170,9 +2160,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2181,22 +2186,7 @@
             "address": "0x78e20312105a85b7fe86db119cfd5cd8de81fdaa",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2206,9 +2196,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2217,22 +2222,7 @@
             "address": "0x4e9c59f9b1b13ba7e1ac4c09b64df7fdeff41b03",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2242,9 +2232,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2253,22 +2258,7 @@
             "address": "0xfa3c6122906f2a2d644409dbb507db1060d10b3a",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2278,9 +2268,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2289,22 +2294,7 @@
             "address": "0x03894ca9b0cabfc53dde7c2dcfcc2a58d6192687",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2314,9 +2304,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2325,22 +2330,7 @@
             "address": "0x906122ac1b55b71248abfa552fdc6abd3356884a",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2350,9 +2340,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2361,22 +2366,7 @@
             "address": "0x8e8d635e28bb8774fd23107cc1d9b6d30ad5d0b9",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2386,9 +2376,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2397,22 +2402,7 @@
             "address": "0xd0d2ac44cc842079e978bb11b094764f7d0dec6a",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2422,9 +2412,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2433,22 +2438,7 @@
             "address": "0xb83dbac6087592328909996a39d138e89e4b0afe",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2458,9 +2448,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2469,22 +2474,7 @@
             "address": "0x7bdea31f968089f93a548ddec8bb74036e8ac6e0",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2494,9 +2484,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2505,22 +2510,7 @@
             "address": "0xdd76a3c91a358b1093de52cb82af5ec3282f6f7f",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2530,9 +2520,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2541,22 +2546,7 @@
             "address": "0x9e724b3f65b509326a4f5ec90d4689bee6b6c78e",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2566,9 +2556,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2577,22 +2582,7 @@
             "address": "0x87be630d279bfd004775c1166f8a488b2fffa500",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2602,9 +2592,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2613,22 +2618,7 @@
             "address": "0xd02ce9e211279ab3f414ff7a661518f9173780cb",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2638,9 +2628,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2649,22 +2654,7 @@
             "address": "0x9056b19fde674b5ad8397e7ed3e25a1bccef0c27",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2674,9 +2664,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2685,22 +2690,7 @@
             "address": "0x7e1d451799af57ea5570d1015c342c12a918a30b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2710,9 +2700,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2721,22 +2726,7 @@
             "address": "0x50032be2b2c7e8a6a6bc241e3aebef21497a3cf0",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2746,9 +2736,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2757,22 +2762,7 @@
             "address": "0xd402f3c8a999bfe97f8644e80dbd57e2ba7704ae",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2782,9 +2772,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2793,22 +2798,7 @@
             "address": "0x00cb8e36a9c40491a39e8bf2864ed30c1b579860",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2818,9 +2808,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2829,22 +2834,7 @@
             "address": "0x00a2faf97cc2b985b29a0a0eaa6e0d8033dc0ea1",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2854,9 +2844,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2865,22 +2870,7 @@
             "address": "0x6f4f01a02e6037aa98d22405fea4dcab98d2a8ee",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2890,9 +2880,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2901,22 +2906,7 @@
             "address": "0xc3439ba7db7566ed0def55c179ed9b3ba273a67f",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2926,9 +2916,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2937,22 +2942,7 @@
             "address": "0x43360fdd9546e3e77ac2e6793f53219729743293",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2962,9 +2952,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -2973,22 +2978,7 @@
             "address": "0xc3566662862c26ff56e3e709dc021902cc68becd",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -2998,9 +2988,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -3009,22 +3014,7 @@
             "address": "0x3bde2ab72afe70286fc944c07d98883e383df239",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -3034,9 +3024,24 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -3045,22 +3050,7 @@
             "address": "0xa7b550b3a80361d8e47e07616dc42f04c655881b",
             "contractName": "Vyper_contract",
             "selectors": {
-                "0xd0e30db0": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0xb6b55f25": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x6e553f65": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
-                "0x3ccfd60b": {
+                "0x00f714ce": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeKit"
@@ -3070,13 +3060,28 @@
                     "method": "withdraw",
                     "plugin": "StakeKit"
                 },
-                "0x00f714ce": {
+                "0x3ccfd60b": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb6b55f25": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xd0e30db0": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
         }
     ],
     "name": "StakeKit"
-  }
+}

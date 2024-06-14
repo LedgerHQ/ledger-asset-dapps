@@ -1,15 +1,11 @@
 {
+    "blockchainName": "ethereum",
     "chainId": 1,
     "contracts": [
         {
             "address": "0x5954ab967bc958940b7eb73ee84797dc8a2afbb9",
             "contractName": "ApeCoinStaking",
             "selectors": {
-                "0x9dcaafb4": {
-                    "erc20OfInterest": [],
-                    "method": "depositSelfApeCoin",
-                    "plugin": "StakeKit"
-                },
                 "0x7f60d338": {
                     "erc20OfInterest": [],
                     "method": "withdrawSelfApeCoin",
@@ -18,6 +14,11 @@
                 "0x8279e760": {
                     "erc20OfInterest": [],
                     "method": "claimSelfApeCoin",
+                    "plugin": "StakeKit"
+                },
+                "0x9dcaafb4": {
+                    "erc20OfInterest": [],
+                    "method": "depositSelfApeCoin",
                     "plugin": "StakeKit"
                 }
             }
@@ -37,9 +38,9 @@
             "address": "0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599",
             "contractName": "TransparentUpgradeableProxy",
             "selectors": {
-                "0xf532e86a": {
+                "0x46e04a2f": {
                     "erc20OfInterest": [],
-                    "method": "submit",
+                    "method": "claimTokens",
                     "plugin": "StakeKit"
                 },
                 "0xccc143b8": {
@@ -47,9 +48,9 @@
                     "method": "requestWithdraw",
                     "plugin": "StakeKit"
                 },
-                "0x46e04a2f": {
+                "0xf532e86a": {
                     "erc20OfInterest": [],
-                    "method": "claimTokens",
+                    "method": "submit",
                     "plugin": "StakeKit"
                 }
             }
@@ -63,14 +64,14 @@
                     "method": "buyVoucher",
                     "plugin": "StakeKit"
                 },
-                "0xc83ec04d": {
-                    "erc20OfInterest": [],
-                    "method": "sellVoucher_new",
-                    "plugin": "StakeKit"
-                },
                 "0xc7b8981c": {
                     "erc20OfInterest": [],
                     "method": "withdrawRewards",
+                    "plugin": "StakeKit"
+                },
+                "0xc83ec04d": {
+                    "erc20OfInterest": [],
+                    "method": "sellVoucher_new",
                     "plugin": "StakeKit"
                 },
                 "0xe97fddc2": {
@@ -84,14 +85,14 @@
             "address": "0xc5c9fb6223a989208df27dcee33fc59ff5c26fff",
             "contractName": "InitializableAdminUpgradeabilityProxy",
             "selectors": {
-                "0x47e7ef24": {
-                    "erc20OfInterest": [],
-                    "method": "deposit",
-                    "plugin": "StakeKit"
-                },
                 "0x2e1a7d4d": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x47e7ef24": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
                     "plugin": "StakeKit"
                 }
             }
@@ -121,14 +122,14 @@
             "address": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
             "contractName": "SushiBar",
             "selectors": {
-                "0xa59f3e0c": {
-                    "erc20OfInterest": [],
-                    "method": "enter",
-                    "plugin": "StakeKit"
-                },
                 "0x67dfd4c9": {
                     "erc20OfInterest": [],
                     "method": "leave",
+                    "plugin": "StakeKit"
+                },
+                "0xa59f3e0c": {
+                    "erc20OfInterest": [],
+                    "method": "enter",
                     "plugin": "StakeKit"
                 }
             }
@@ -176,22 +177,6 @@
                 "0xb460af94": {
                     "erc20OfInterest": [],
                     "method": "withdraw",
-                    "plugin": "StakeKit"
-                }
-            }
-        },
-        {
-            "address": "0x889edc2edab5f40e902b864ad4d7ade8e412f9b1",
-            "contractName": "OssifiableProxy",
-            "selectors": {
-                "0xd6681042": {
-                    "erc20OfInterest": [],
-                    "method": "requestWithdrawals",
-                    "plugin": "StakeKit"
-                },
-                "0xe3afe0a3": {
-                    "erc20OfInterest": [],
-                    "method": "claimWithdrawals",
                     "plugin": "StakeKit"
                 }
             }
