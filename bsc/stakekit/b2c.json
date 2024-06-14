@@ -1,0 +1,18 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "address": "0x0000000000000000000000000000000000001004",
+            "contractName": "TokenHub",
+            "selectors": {
+                "0xaa7415f5": {
+                    "erc20OfInterest": [],
+                    "method": "transferOut",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}

@@ -1,0 +1,186 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x5954ab967bc958940b7eb73ee84797dc8a2afbb9",
+            "contractName": "ApeCoinStaking",
+            "selectors": {
+                "0x7f60d338": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawSelfApeCoin",
+                    "plugin": "StakeKit"
+                },
+                "0x8279e760": {
+                    "erc20OfInterest": [],
+                    "method": "claimSelfApeCoin",
+                    "plugin": "StakeKit"
+                },
+                "0x9dcaafb4": {
+                    "erc20OfInterest": [],
+                    "method": "depositSelfApeCoin",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0xc874b064f465bdd6411d45734b56fac750cda29a",
+            "contractName": "AdminUpgradeabilityProxy",
+            "selectors": {
+                "0x3a4b66f1": {
+                    "erc20OfInterest": [],
+                    "method": "stake",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x9ee91f9f426fa633d227f7a9b000e28b9dfd8599",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x46e04a2f": {
+                    "erc20OfInterest": [],
+                    "method": "claimTokens",
+                    "plugin": "StakeKit"
+                },
+                "0xccc143b8": {
+                    "erc20OfInterest": [],
+                    "method": "requestWithdraw",
+                    "plugin": "StakeKit"
+                },
+                "0xf532e86a": {
+                    "erc20OfInterest": [],
+                    "method": "submit",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x857679d69fe50e7b722f94acd2629d80c355163d",
+            "contractName": "ValidatorShareProxy",
+            "selectors": {
+                "0x6ab15071": {
+                    "erc20OfInterest": [],
+                    "method": "buyVoucher",
+                    "plugin": "StakeKit"
+                },
+                "0xc7b8981c": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawRewards",
+                    "plugin": "StakeKit"
+                },
+                "0xc83ec04d": {
+                    "erc20OfInterest": [],
+                    "method": "sellVoucher_new",
+                    "plugin": "StakeKit"
+                },
+                "0xe97fddc2": {
+                    "erc20OfInterest": [],
+                    "method": "unstakeClaimTokens_new",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0xc5c9fb6223a989208df27dcee33fc59ff5c26fff",
+            "contractName": "InitializableAdminUpgradeabilityProxy",
+            "selectors": {
+                "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0x47e7ef24": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0xf55041e37e12cd407ad00ce2910b8269b01263b9",
+            "contractName": "GraphProxy",
+            "selectors": {
+                "0x026e402b": {
+                    "erc20OfInterest": [],
+                    "method": "delegate",
+                    "plugin": "StakeKit"
+                },
+                "0x4d99dd16": {
+                    "erc20OfInterest": [],
+                    "method": "undelegate",
+                    "plugin": "StakeKit"
+                },
+                "0x51a60b02": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawDelegated",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x8798249c2e607446efb7ad49ec89dd1865ff4272",
+            "contractName": "SushiBar",
+            "selectors": {
+                "0x67dfd4c9": {
+                    "erc20OfInterest": [],
+                    "method": "leave",
+                    "plugin": "StakeKit"
+                },
+                "0xa59f3e0c": {
+                    "erc20OfInterest": [],
+                    "method": "enter",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0xc3d688b66703497daa19211eedff47f25384cdc3",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0xf2b9fdb8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "StakeKit"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [
+                        "to"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x1b0e765f6224c21223aea2af16c1c46e38885a40",
+            "contractName": "CometRewards",
+            "selectors": {
+                "0xb7034f7e": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}
