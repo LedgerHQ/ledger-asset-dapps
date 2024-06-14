@@ -89,16 +89,31 @@
                                 "path": "spender"
                             },
                             {
+                                "format": "token",
+                                "label": "Approve token",
+                                "path": "permitted.token"
+                            },
+                            {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
                                 "label": "Approve amount",
                                 "path": "permitted.amount"
                             },
                             {
+                                "format": "token",
+                                "label": "Token to swap",
+                                "path": "witness.inputToken"
+                            },
+                            {
                                 "assetPath": "witness.inputToken",
                                 "format": "amount",
                                 "label": "To swap",
                                 "path": "witness.inputAmount"
+                            },
+                            {
+                                "format": "token",
+                                "label": "Token to receive",
+                                "path": "witness.outputs[-1].token"
                             },
                             {
                                 "assetPath": "witness.outputs[-1].token",
@@ -233,16 +248,31 @@
                                 "path": "spender"
                             },
                             {
+                                "format": "token",
+                                "label": "Approve token",
+                                "path": "permitted.token"
+                            },
+                            {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
                                 "label": "Approve amount",
                                 "path": "permitted.amount"
                             },
                             {
+                                "format": "token",
+                                "label": "Token to swap",
+                                "path": "witness.inputToken"
+                            },
+                            {
                                 "assetPath": "witness.inputToken",
                                 "format": "amount",
                                 "label": "Spend max",
                                 "path": "witness.inputStartAmount"
+                            },
+                            {
+                                "format": "token",
+                                "label": "Token to receive",
+                                "path": "witness.outputs[-1].token"
                             },
                             {
                                 "assetPath": "witness.outputs[-1].token",
@@ -393,16 +423,31 @@
                                 "path": "spender"
                             },
                             {
+                                "format": "token",
+                                "label": "Approve token",
+                                "path": "permitted.token"
+                            },
+                            {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
                                 "label": "Approve amount",
                                 "path": "permitted.amount"
                             },
                             {
+                                "format": "token",
+                                "label": "Token to swap",
+                                "path": "witness.inputToken"
+                            },
+                            {
                                 "assetPath": "witness.inputToken",
                                 "format": "amount",
                                 "label": "To swap",
                                 "path": "witness.intStartAmount"
+                            },
+                            {
+                                "format": "token",
+                                "label": "Token to receive",
+                                "path": "witness.outputs[-1].token"
                             },
                             {
                                 "assetPath": "witness.outputs[-1].token",
