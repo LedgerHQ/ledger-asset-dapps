@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import glob
+import hashlib
 import json
 import logging
 import re
@@ -220,6 +221,11 @@ def schema_validator(schema_path: str):
 def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
+        for contract in loaded["contracts"]:
+            for message in contract["messages"]:
+                # schema types must be sorted by key for reproducible hashing
+                message["schema"] = dict(sorted(message["schema"].items()))
+
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
         if formatted != data and (formatted + "\n") != data:
             logger.debug(
