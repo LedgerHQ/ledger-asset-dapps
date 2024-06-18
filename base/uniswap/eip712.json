@@ -442,7 +442,7 @@
                                 "assetPath": "witness.inputToken",
                                 "format": "amount",
                                 "label": "To swap",
-                                "path": "witness.intStartAmount"
+                                "path": "witness.inputStartAmount"
                             },
                             {
                                 "format": "token",
@@ -526,11 +526,11 @@
                                 "type": "address"
                             },
                             {
-                                "name": "intStartAmount",
+                                "name": "inputStartAmount",
                                 "type": "uint256"
                             },
                             {
-                                "name": "intEndAmount",
+                                "name": "inputEndAmount",
                                 "type": "uint256"
                             },
                             {
