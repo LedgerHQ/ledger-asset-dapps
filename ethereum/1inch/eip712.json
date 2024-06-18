@@ -16,10 +16,10 @@
                             {
                                 "format": "token",
                                 "label": "Swap Token",
-                                "path": "makingToken"
+                                "path": "makerAsset"
                             },
                             {
-                                "assetPath": "makingToken",
+                                "assetPath": "makerAsset",
                                 "format": "amount",
                                 "label": "Swap Amount",
                                 "path": "makingAmount"
@@ -27,10 +27,10 @@
                             {
                                 "format": "token",
                                 "label": "Receive Token",
-                                "path": "takingToken"
+                                "path": "takerAsset"
                             },
                             {
-                                "assetPath": "takingToken",
+                                "assetPath": "takerAsset",
                                 "format": "amount",
                                 "label": "Receive Minimum",
                                 "path": "takingAmount"
@@ -105,13 +105,23 @@
                                 "path": "maker"
                             },
                             {
-                                "assetPath": "makingToken",
+                                "format": "token",
+                                "label": "Swap Token",
+                                "path": "makerAsset"
+                            },
+                            {
+                                "assetPath": "makerAsset",
                                 "format": "amount",
                                 "label": "Swap Amount",
                                 "path": "makingAmount"
                             },
                             {
-                                "assetPath": "takingToken",
+                                "format": "token",
+                                "label": "Receive Token",
+                                "path": "takerAsset"
+                            },
+                            {
+                                "assetPath": "takerAsset",
                                 "format": "amount",
                                 "label": "Receive Minimum",
                                 "path": "takingAmount"
@@ -202,7 +212,7 @@
                             {
                                 "format": "token",
                                 "label": "Swap Token",
-                                "path": "makingToken"
+                                "path": "makerAsset"
                             },
                             {
                                 "assetPath": "makerAsset",
@@ -213,7 +223,7 @@
                             {
                                 "format": "token",
                                 "label": "Receive Token",
-                                "path": "takingToken"
+                                "path": "takerAsset"
                             },
                             {
                                 "assetPath": "takerAsset",
