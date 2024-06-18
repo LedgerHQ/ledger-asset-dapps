@@ -111,19 +111,16 @@
                                 "path": "witness.inputAmount"
                             },
                             {
-                                "format": "token",
-                                "label": "Token to receive",
-                                "path": "witness.outputs[-1].token"
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].tokens"
                             },
                             {
-                                "assetPath": "witness.outputs[-1].token",
-                                "format": "amount",
-                                "label": "Receive at Minimum",
-                                "path": "witness.outputs[-1].amount"
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].amount"
                             },
                             {
-                                "label": "On Address",
-                                "path": "witness.outputs[-1].recipient"
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
                             },
                             {
                                 "format": "datetime",
@@ -270,19 +267,16 @@
                                 "path": "witness.inputStartAmount"
                             },
                             {
-                                "format": "token",
-                                "label": "Token to receive",
-                                "path": "witness.outputs[-1].token"
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].tokens"
                             },
                             {
-                                "assetPath": "witness.outputs[-1].token",
-                                "format": "amount",
-                                "label": "Receive at Minimum",
-                                "path": "witness.outputs[-1].endAmount"
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].amount"
                             },
                             {
-                                "label": "On Address",
-                                "path": "witness.outputs[-1].recipient"
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
                             },
                             {
                                 "format": "datetime",
@@ -445,19 +439,16 @@
                                 "path": "witness.inputStartAmount"
                             },
                             {
-                                "format": "token",
-                                "label": "Token to receive",
-                                "path": "witness.outputs[-1].token"
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].tokens"
                             },
                             {
-                                "assetPath": "witness.outputs[-1].token",
-                                "format": "amount",
-                                "label": "Receive at Minimum",
-                                "path": "witness.outputs[-1].endAmount"
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].amount"
                             },
                             {
-                                "label": "On Address",
-                                "path": "witness.outputs[-1].recipient"
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
                             },
                             {
                                 "format": "datetime",
