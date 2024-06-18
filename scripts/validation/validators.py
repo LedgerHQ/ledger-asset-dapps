@@ -226,17 +226,6 @@ def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
                 # schema types must be sorted by key for reproducible hashing
                 message["schema"] = dict(sorted(message["schema"].items()))
 
-                if "ethereum/uniswap" in filename and "PermitWitnessTransferFrom" in data and "ExclusiveDutchOrder" in data:
-
-                    schema_str = json.dumps(message["schema"], separators=(",", ":"), indent=None)
-                    schema_hash = hashlib.sha224(schema_str.encode("utf-8")).hexdigest()
-
-                    print(f"SCHEMA HASH: {schema_hash}")
-                    if schema_hash != "a35a03a79619e46c3773d8880c952f7caeea45674557cfd2470e8fc5":
-                        print("no match")
-                    else:
-                        print("match OK")
-
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
         if formatted != data and (formatted + "\n") != data:
             logger.debug(
