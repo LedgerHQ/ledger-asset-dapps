@@ -8,7 +8,36 @@
             "messages": [
                 {
                     "mapper": {
-                        "fields": [],
+                        "fields": [
+                            {
+                                "label": "Collateral address",
+                                "path": "collateralAddress"
+                            },
+                            {
+                                "label": "Initial Collateral Amount",
+                                "path": "initialCollateralAmount"
+                            },
+                            {
+                                "label": "Loan Amount",
+                                "path": "loanAmount"
+                            },
+                            {
+                                "label": "Loan ID",
+                                "path": "loanId"
+                            },
+                            {
+                                "label": "Loan interest rate",
+                                "path": "loanInterestRate"
+                            },
+                            {
+                                "label": "Load Term",
+                                "path": "loanTerm"
+                            },
+                            {
+                                "label": "Underlying Address",
+                                "path": "underlyingAddress"
+                            }
+                        ],
                         "label": "SmartCredit.io"
                     },
                     "schema": {
