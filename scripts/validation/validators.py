@@ -328,7 +328,7 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
         return False, str(err)
 
     for contract in target_data.get("contracts", []):
-        logger.info(
+        logger.debug(
             "\tchecking contract %s...",
             contract["address"],
         )
@@ -355,7 +355,7 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
                 )
                 continue
 
-            logger.info(
+            logger.debug(
                 "\tchecking function %s...",
                 name,
             )
