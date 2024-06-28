@@ -12,16 +12,16 @@
                             {
                                 "assetPath": "details.token",
                                 "format": "amount",
-                                "label": "Amount",
+                                "label": "Amount allowance",
                                 "path": "details.amount"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Duration",
+                                "label": "Approval expire",
                                 "path": "details.expiration"
                             }
                         ],
@@ -86,13 +86,13 @@
                             {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
-                                "label": "Approve amount",
+                                "label": "Amount allowance",
                                 "path": "permitted.amount"
                             },
                             {
                                 "assetPath": "witness.inputToken",
                                 "format": "amount",
-                                "label": "To swap",
+                                "label": "Send",
                                 "path": "witness.inputAmount"
                             },
                             {
