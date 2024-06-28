@@ -1,0 +1,139 @@
+{
+    "blockchainName": "ethereum_goerli",
+    "chainId": 5,
+    "contracts": [
+        {
+            "address": "0x9c1D4220cA82115167A5da4c00c062C78Fd3D3F8",
+            "name": "Kiln Staking Contract",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "amount",
+                            "name": "amountToStake",
+                            "value": {
+                                "quantity": {
+                                    "path": {
+                                        "transaction": "amount"
+                                    }
+                                },
+                                "token": {
+                                    "constant": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "deposit",
+                    "functionType": "stake",
+                    "options": {
+                        "ethContractAddress": "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE"
+                    },
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Stake ETH",
+                            "static": true
+                        },
+                        {
+                            "label": "Amount to stake",
+                            "name": "amountToStake"
+                        }
+                    ],
+                    "selector": "0xd0e30db0"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Withdraw",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Withdraw staked ETH",
+                            "static": true
+                        },
+                        {
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr"
+                        }
+                    ],
+                    "selector": "0x0968f264"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Withdraw CL rewards",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Withdraw consensus rewards",
+                            "static": true
+                        },
+                        {
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr"
+                        }
+                    ],
+                    "selector": "0x2ba03a79"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "eip55",
+                            "name": "_validatorAddr",
+                            "value": {
+                                "address": {
+                                    "path": {
+                                        "default": "_publicKey"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "Withdraw EL rewards",
+                    "functionType": "withdraw",
+                    "options": {},
+                    "screen": [
+                        {
+                            "label": "Function",
+                            "name": "Withdraw execution rewards",
+                            "static": true
+                        },
+                        {
+                            "label": "Validator addr.",
+                            "name": "_validatorAddr"
+                        }
+                    ],
+                    "selector": "0xbf509bd4"
+                }
+            ]
+        }
+    ],
+    "id": "kiln",
+    "name": "kiln"
+}
