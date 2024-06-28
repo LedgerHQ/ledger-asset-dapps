@@ -10,25 +10,25 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Owner",
+                                "label": "From",
                                 "path": "owner"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
                                 "format": "amount",
-                                "label": "Allowance",
+                                "label": "Amount allowance",
                                 "path": "value"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Deadline",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
-                        "label": "Permit USDC (bridged) transfers"
+                        "label": "Permit USDC"
                     },
                     "schema": {
                         "EIP712Domain": [
@@ -83,21 +83,21 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Owner",
+                                "label": "From",
                                 "path": "owner"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
                                 "format": "amount",
-                                "label": "Allowance",
+                                "label": "Amount allowance",
                                 "path": "value"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Deadline",
+                                "label": "Aproval expire",
                                 "path": "deadline"
                             }
                         ],
