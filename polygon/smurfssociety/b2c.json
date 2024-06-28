@@ -1,0 +1,18 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x48c75fbf0452fa8ff2928ddf46b0fe7629cca2ff",
+            "contractName": "SmurfCauldron",
+            "selectors": {
+                "0x86687ebc": {
+                    "erc20OfInterest": [],
+                    "method": "burnClay",
+                    "plugin": "TheSmurfsSociety"
+                }
+            }
+        }
+    ],
+    "name": "app.thesmurfssociety.com"
+}
