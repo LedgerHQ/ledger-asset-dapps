@@ -29,23 +29,58 @@ jobs:
     name: Static analysis
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+
+      - name: Checkout
         uses: actions/checkout@v3
-      -
-        name: Setup Python
+
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.9'
           cache: 'pipenv'
-      -
-        name: Install pipenv
+
+      - name: Install pipenv
         run: pip install -U pip pipenv wheel
-      -
-        name: Install python dependencies
+
+      - name: Install python dependencies
         env:
           PYPI_DEPLOY_TOKEN: ${{ secrets.PYPI_DEPLOY_TOKEN }}
         run: pipenv sync --dev
-      -
-        name: Validate files and format
-        run: pipenv run validate_files
+
+      - name: Validate files and format
+        id: validation
+        uses: 'selfagency/capture-output@v1'
+        with:
+          cmd: pipenv
+          args: run,validate_files
+
+      - name: Add success report comment
+        if: ${{ always() && steps.validation.outcome == 'success' && github.event_name == 'pull_request' }}
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: validation_result
+          message: |
+            Changes have passed validation ✅
+            <details>
+              <summary>Validation logs</summary>
+              <pre>${{ steps.validation.outputs.output }}</pre>
+            </details>
+
+      - name: Add failure report comment
+        if: ${{ always() && steps.validation.outcome != 'success' && github.event_name == 'pull_request' }}
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: validation_result
+          message: |
+            Changes have some validation errors ❌
+            <details>
+              <summary>Validation logs</summary>
+              <pre>${{ steps.validation.outputs.output }}</pre>
+            </details>
+            <br/>
+            Please fix errors, you can run validation locally with:
+            <pre>
+            pip install --user pip pipenv wheel
+            pipenv sync --dev
+            pipenv run validate_files
+            </pre>

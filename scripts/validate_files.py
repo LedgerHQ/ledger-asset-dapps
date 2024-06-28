@@ -58,6 +58,7 @@ VALIDATORS = {
 
 if __name__ == "__main__":
     failed = False
+    logging.basicConfig(level=logging.INFO, format='%(message)s', force=True)
     logger = logging.getLogger(__name__)
 
     try:
