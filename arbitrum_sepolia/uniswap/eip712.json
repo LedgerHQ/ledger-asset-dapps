@@ -10,23 +10,18 @@
                     "mapper": {
                         "fields": [
                             {
-                                "format": "token",
-                                "label": "Token",
-                                "path": "details.token"
-                            },
-                            {
                                 "assetPath": "details.token",
                                 "format": "amount",
-                                "label": "Amount",
+                                "label": "Amount allowance",
                                 "path": "details.amount"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Duration",
+                                "label": "Approval expire",
                                 "path": "details.expiration"
                             }
                         ],
@@ -85,24 +80,14 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Approve token",
-                                "path": "permitted.token"
                             },
                             {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
-                                "label": "Approve amount",
+                                "label": "Amount allowance",
                                 "path": "permitted.amount"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Token to swap",
-                                "path": "witness.inputToken"
                             },
                             {
                                 "assetPath": "witness.inputToken",
@@ -124,7 +109,7 @@
                             },
                             {
                                 "format": "datetime",
-                                "label": "Duration",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
@@ -241,24 +226,14 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Approve token",
-                                "path": "permitted.token"
                             },
                             {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
-                                "label": "Approve amount",
+                                "label": "Amount allowance",
                                 "path": "permitted.amount"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Token to swap",
-                                "path": "witness.inputToken"
                             },
                             {
                                 "assetPath": "witness.inputToken",
@@ -280,7 +255,7 @@
                             },
                             {
                                 "format": "datetime",
-                                "label": "Duration",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
@@ -413,24 +388,14 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Approve token",
-                                "path": "permitted.token"
                             },
                             {
                                 "assetPath": "permitted.token",
                                 "format": "amount",
-                                "label": "Approve amount",
+                                "label": "Amount allowance",
                                 "path": "permitted.amount"
-                            },
-                            {
-                                "format": "token",
-                                "label": "Token to swap",
-                                "path": "witness.inputToken"
                             },
                             {
                                 "assetPath": "witness.inputToken",
@@ -452,7 +417,7 @@
                             },
                             {
                                 "format": "datetime",
-                                "label": "Duration",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],

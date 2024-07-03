@@ -10,20 +10,21 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Owner",
+                                "label": "From",
                                 "path": "owner"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
-                                "label": "Allowance",
+                                "format": "amount",
+                                "label": "Amount allowance",
                                 "path": "value"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Deadline",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
@@ -82,20 +83,21 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Owner",
+                                "label": "From",
                                 "path": "owner"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
-                                "label": "Allowance",
+                                "format": "amount",
+                                "label": "Amount allowance",
                                 "path": "value"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Deadline",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
@@ -154,20 +156,21 @@
                     "mapper": {
                         "fields": [
                             {
-                                "label": "Owner",
+                                "label": "From",
                                 "path": "owner"
                             },
                             {
-                                "label": "Spender",
+                                "label": "Approve to spender",
                                 "path": "spender"
                             },
                             {
-                                "label": "Allowance",
+                                "format": "amount",
+                                "label": "Amount allowance",
                                 "path": "value"
                             },
                             {
                                 "format": "datetime",
-                                "label": "Deadline",
+                                "label": "Approval expire",
                                 "path": "deadline"
                             }
                         ],
