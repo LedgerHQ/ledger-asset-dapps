@@ -54,36 +54,3 @@ jobs:
         with:
           cmd: pipenv
           args: run,validate_files
-
-      - name: Add success report comment
-        if: ${{ always() && steps.validation.outcome == 'success' && github.event_name == 'pull_request' }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.CI_BOT_TOKEN }}
-          comment_tag: validation_result
-          message: |
-            Changes have passed validation ✅
-            <details>
-              <summary>Validation logs</summary>
-              <pre>${{ steps.validation.outputs.output }}</pre>
-            </details>
-
-      - name: Add failure report comment
-        if: ${{ always() && steps.validation.outcome != 'success' && github.event_name == 'pull_request' }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          GITHUB_TOKEN: ${{ secrets.CI_BOT_TOKEN }}
-          comment_tag: validation_result
-          message: |
-            Changes have some validation errors ❌
-            <details>
-              <summary>Validation logs</summary>
-              <pre>${{ steps.validation.outputs.output }}</pre>
-            </details>
-            <br/>
-            Please fix errors, you can run validation locally with:
-            <pre>
-            pip install --user pip pipenv wheel
-            pipenv sync --dev
-            pipenv run validate_files
-            </pre>
