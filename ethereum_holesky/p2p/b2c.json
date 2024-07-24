@@ -1,0 +1,27 @@
+{
+    "blockchainName": "ethereum_holesky",
+    "chainId": 17000,
+    "contracts": [
+        {
+            "address": "0x257640704d813ccf3679f752a7be6d27fa9c01b0",
+            "contractName": "P2P.org",
+            "selectors": {
+                "0x2c4b04fa": {
+                    "method": "deposit",
+                    "plugin": "P2P.org"
+                }
+            }
+        },
+        {
+            "address": "0x8c87efba90414687a66c8b2e7d21039e81d55456",
+            "contractName": "P2P.org",
+            "selectors": {
+                "0x66792ba1": {
+                    "method": "send",
+                    "plugin": "P2P.org"
+                }
+            }
+        }
+    ],
+    "name": "P2P.org"
+}
