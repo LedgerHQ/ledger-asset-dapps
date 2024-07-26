@@ -19,6 +19,7 @@ from validation.validators import (
     contract_matching_validator,
     missing_schema_validator,
     eip55_address_validator,
+    check_duplicate_plugin,
 )
 
 logging.basicConfig(level="INFO")
@@ -64,6 +65,8 @@ if __name__ == "__main__":
     try:
         logger.info("Running duplicate contract check")
         check_duplicate_contract("./*/**/b2c.json")
+        logger.info("Running duplicate plugin check")
+        check_duplicate_plugin("./*/**/b2c.json")
     except ValidationError:
         failed = True
 
