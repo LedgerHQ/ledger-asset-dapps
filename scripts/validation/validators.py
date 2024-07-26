@@ -165,8 +165,6 @@ def check_duplicate_plugin(glob_path: str):
             elif address in __excluded_contracts_from_plugin_collision:
                 continue
 
-            address = address.lower()
-
             for selector, data in contract.get("selectors", []).items():
                 plugin = data["plugin"]
 
