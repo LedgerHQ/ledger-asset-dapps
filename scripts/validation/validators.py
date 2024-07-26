@@ -45,6 +45,10 @@ __excluded_contract = [
     "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
 ]
 
+__excluded_contracts_from_plugin_collision = [
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+]
+
 
 def check_duplicate_contract(glob_path: str):
     invalid, errors, results, all = 0, [], [], {}
@@ -129,6 +133,67 @@ def check_duplicate_contract(glob_path: str):
                             }
                         )
                     all[contract_address] = {**existing, **data}
+
+    if invalid:
+        for error in errors:
+            logger.error(f"Validation error: {error}")
+        raise ValidationError(f"Invalid files: {errors}")
+
+
+def check_duplicate_plugin(glob_path: str):
+    invalid, errors, results, all = 0, [], [], {}
+    for filename in glob.iglob(glob_path, recursive=True):
+        logger.debug("Validating %s... for duplicate plugins", filename)
+        with open(filename, "r", newline="") as f:
+            data = f.read()
+
+        try:
+            target_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug(
+                "\tinvalid: File %s is not a valid json", filename, exc_info=True
+            )
+            errors.append({"file": filename, "message": str(err)})
+            continue
+
+        records = []
+        blockchain = target_data.get("blockchainName", None)
+        for contract in target_data.get("contracts", []):
+            address = contract.get("address", None)
+            if address is None:
+                continue
+            elif address in __excluded_contracts_from_plugin_collision:
+                continue
+
+            for selector, data in contract.get("selectors", []).items():
+                plugin = data["plugin"]
+
+                record = {
+                    "filename": filename,
+                    "blockchain": blockchain,
+                    "contract": address.lower(),
+                    "selector": selector.lower(),
+                    "plugin": plugin,
+                }
+                logger.debug(f"adding record {record}")
+                records.append(record)
+
+        # check if among the records there are multiple plugins associated with a given (chain_id, contract, selector) triplet
+        for record in records:
+            filename = record["filename"]
+            blockchain = record["blockchain"]
+            contract = record["contract"]
+            selector = record["selector"]
+            plugin = record["plugin"]
+            existing_record = all.get((blockchain, contract, selector), None)
+            if existing_record is None:
+                all[(blockchain, contract, selector)] = record
+            elif existing_record["plugin"] != plugin:
+                invalid += 1
+                errors.append(f"File {filename} and file {existing_record['filename']} bind "
+                              f"(blockchain={blockchain}, contract={contract}, selector={selector}) to different plugins "
+                              f"{plugin} and {existing_record['plugin']} respectively, "
+                              f"please remove one of the bindings")
 
     if invalid:
         for error in errors:
