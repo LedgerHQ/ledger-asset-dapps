@@ -173,8 +173,8 @@ def check_duplicate_plugin(glob_path: str):
                 record = {
                     "filename": filename,
                     "blockchain": blockchain,
-                    "contract": address,
-                    "selector": selector,
+                    "contract": address.lower(),
+                    "selector": selector.lower(),
                     "plugin": plugin,
                 }
                 logger.debug(f"adding record {record}")
@@ -192,9 +192,10 @@ def check_duplicate_plugin(glob_path: str):
                 all[(blockchain, contract, selector)] = record
             elif existing_record["plugin"] != plugin:
                 invalid += 1
-                errors.append(f"file {filename} and file {existing_record['filename']} reference "
-                              f"different plugins the (blockchain={blockchain}, contract={contract}, selector={selector}) triplet, "
-                              f"the first has plugin={plugin} and the second {existing_record['plugin']}")
+                errors.append(f"File {filename} and file {existing_record['filename']} bind "
+                              f"(blockchain={blockchain}, contract={contract}, selector={selector}) to different plugins "
+                              f"{plugin} and {existing_record['plugin']} respectively, "
+                              f"please remove one of the bindings")
 
     if invalid:
         for error in errors:
