@@ -1,0 +1,51 @@
+{
+    "blockchainName": "base",
+    "chainId": 8453,
+    "contracts": [
+        {
+            "address": "0x123f3167a416ca19365de03a65e0af3532af7223",
+            "contractName": "CompoundV2MigrationBundlerV2",
+            "selectors": {
+                "0xac9650d8": {
+                    "erc20OfInterest": [],
+                    "method": "multicall",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x23055618898e202386e6c13955a58d3c68200bfb",
+            "contractName": "ChainAgnosticBundlerV2",
+            "selectors": {
+                "0xac9650d8": {
+                    "erc20OfInterest": [],
+                    "method": "multicall",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xcae2929babc60be34818eaa5f40bf69265677108",
+            "contractName": "AaveV3MigrationBundlerV2",
+            "selectors": {
+                "0xac9650d8": {
+                    "erc20OfInterest": [],
+                    "method": "multicall",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x1f8076e2eb6f10b12e6886f30d4909a91969f7da",
+            "contractName": "CompoundV3MigrationBundlerV2",
+            "selectors": {
+                "0xac9650d8": {
+                    "erc20OfInterest": [],
+                    "method": "multicall",
+                    "plugin": "Morpho"
+                }
+            }
+        }
+    ],
+    "name": "Morpho"
+}
