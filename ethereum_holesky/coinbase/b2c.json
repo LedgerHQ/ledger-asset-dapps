@@ -1,0 +1,25 @@
+{
+    "blockchainName": "ethereum_holesky",
+    "chainId": 17000,
+    "contracts": [
+        {
+            "address": "0xa55416de5de61a0ac1aa8970a280e04388b1de4b",
+            "contractName": "Coinbase Test Staked ETH",
+            "selectors": {
+                "0x3a4b66f1": {
+                    "method": "stake",
+                    "plugin": "Coinbase"
+                },
+                "0x721c6513": {
+                    "method": "requestExit",
+                    "plugin": "Coinbase"
+                },
+                "0xb7ba18c7": {
+                    "method": "multiClaim",
+                    "plugin": "Coinbase"
+                }
+            }
+        }
+    ],
+    "name": "Coinbase"
+}
