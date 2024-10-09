@@ -80,7 +80,107 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0x42842e0e"
                 },
@@ -158,7 +258,107 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0xb88d4fde"
                 },
@@ -219,7 +419,101 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Approve NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token to approve"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Address to approve"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0x095ea7b3"
                 },
@@ -280,7 +574,101 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0xa22cb465"
                 },
@@ -324,7 +712,95 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Mint NFT"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Receiver"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0x6a627842"
                 }
@@ -425,7 +901,117 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0xf242432a"
                 },
@@ -520,7 +1106,117 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer NFT"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.tokenID",
+                                                "label": "Token ID"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.amount",
+                                                "label": "Quantity"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.from",
+                                                "label": "Token sender"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.to",
+                                                "label": "Token recipient"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0x0febdd49"
                 },
@@ -581,7 +1277,101 @@
                                     "title": "APPROVE CONTRACT DATA"
                                 }
                             }
-                        ]
+                        ],
+                        "stax_flow": {
+                            "approve_question": "Approve NFT operation?",
+                            "approved_text": "You approved the NFT operation",
+                            "cancel_question": "Cancel NFT operation review?",
+                            "canceled_text": "You canceled the NFT operation review",
+                            "flow_icon": 21,
+                            "properties_screens": [
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "account.name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.contractName",
+                                                "label": "Collection name"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.serviceName",
+                                                "label": "Service name"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "amount"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "maxGasPrice",
+                                                "label": "Base fee + buffer"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "gasLimit"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "maxFees",
+                                                "label": "Max fee"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "addr",
+                                                "label": "NFT address"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Set approval for all"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": [
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.operator",
+                                                "label": "Operator"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.approved",
+                                                "label": "Approved"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "request_subtitle_text": "Non-Fungible Tokens (NFTs) define ownership of unique digital items",
+                            "request_text": "Review NFT operation"
+                        }
                     },
                     "selector": "0xa22cb465"
                 }
