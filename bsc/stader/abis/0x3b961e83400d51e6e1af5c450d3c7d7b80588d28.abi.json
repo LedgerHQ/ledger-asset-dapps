@@ -5,6 +5,87 @@
         "type": "constructor"
     },
     {
+        "inputs": [],
+        "name": "AlreadyClaimed",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_currentER",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_maxAllowableDelta",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_newER",
+                "type": "uint256"
+            }
+        ],
+        "name": "ExchangeRateOutOfBounds",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "InvalidIndex",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "MaxLimitReached",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NoOperatorsAvailable",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NoWithdrawalRequests",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "NotProcessed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "OperatorNotExisted",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "TransferFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "Unbonding",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "WithdrawalBelowMinimum",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ZeroAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "ZeroAmount",
+        "type": "error"
+    },
+    {
         "anonymous": false,
         "inputs": [
             {
@@ -16,8 +97,77 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_idx",
+                "name": "_index",
                 "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amountInBnb",
+                "type": "uint256"
+            }
+        ],
+        "name": "ClaimedWithdrawal",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_operator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amountInBnb",
+                "type": "uint256"
+            }
+        ],
+        "name": "CompletedBatchUndelegation",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_account",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amountInBnb",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amountInBnbX",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_referralId",
+                "type": "string"
+            }
+        ],
+        "name": "DelegateReferral",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_account",
+                "type": "address"
             },
             {
                 "indexed": false,
@@ -26,7 +176,7 @@
                 "type": "uint256"
             }
         ],
-        "name": "ClaimWithdrawal",
+        "name": "Delegated",
         "type": "event"
     },
     {
@@ -35,17 +185,17 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_uuid",
+                "name": "_currentER",
                 "type": "uint256"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amount",
+                "name": "_newER",
                 "type": "uint256"
             }
         ],
-        "name": "Delegate",
+        "name": "ExchangeRateUpdated",
         "type": "event"
     },
     {
@@ -80,30 +230,23 @@
             {
                 "indexed": true,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_fromOperator",
                 "type": "address"
-            }
-        ],
-        "name": "ProposeManager",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
+            },
             {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "_rewardsId",
-                "type": "uint256"
+                "indexed": true,
+                "internalType": "address",
+                "name": "_toOperator",
+                "type": "address"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amount",
+                "name": "_amountInBnb",
                 "type": "uint256"
             }
         ],
-        "name": "Redelegate",
+        "name": "Redelegated",
         "type": "event"
     },
     {
@@ -120,22 +263,15 @@
                 "internalType": "uint256",
                 "name": "_amountInBnbX",
                 "type": "uint256"
-            }
-        ],
-        "name": "RequestWithdraw",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
+            },
             {
-                "indexed": true,
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
+                "indexed": false,
+                "internalType": "string",
+                "name": "_referralId",
+                "type": "string"
             }
         ],
-        "name": "RevokeBotRole",
+        "name": "RequestedWithdrawal",
         "type": "event"
     },
     {
@@ -217,32 +353,6 @@
         "anonymous": false,
         "inputs": [
             {
-                "indexed": true,
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "SetBCDepositWallet",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": true,
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "SetBotRole",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
                 "indexed": false,
                 "internalType": "uint256",
                 "name": "_feeBps",
@@ -256,71 +366,77 @@
         "anonymous": false,
         "inputs": [
             {
-                "indexed": true,
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_maxActiveRequestsPerUser",
+                "type": "uint256"
+            }
+        ],
+        "name": "SetMaxActiveRequestsPerUser",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_maxExchangeRateSlippageBps",
+                "type": "uint256"
+            }
+        ],
+        "name": "SetMaxExchangeRateSlippageBps",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_minWithdrawableBnbx",
+                "type": "uint256"
+            }
+        ],
+        "name": "SetMinWithdrawableBnbx",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_treasury",
                 "type": "address"
             }
         ],
-        "name": "SetManager",
+        "name": "SetStaderTreasury",
         "type": "event"
     },
     {
         "anonymous": false,
         "inputs": [
             {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "_minDelegateThreshold",
-                "type": "uint256"
-            }
-        ],
-        "name": "SetMinDelegateThreshold",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
+                "indexed": true,
+                "internalType": "address",
+                "name": "_operator",
+                "type": "address"
+            },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_minUndelegateThreshold",
-                "type": "uint256"
-            }
-        ],
-        "name": "SetMinUndelegateThreshold",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "TransferOut",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "_uuid",
+                "name": "_amountInBnb",
                 "type": "uint256"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amount",
+                "name": "_amountInBnbX",
                 "type": "uint256"
             }
         ],
-        "name": "Undelegate",
+        "name": "StartedBatchUndelegation",
         "type": "event"
     },
     {
@@ -338,12 +454,12 @@
     },
     {
         "inputs": [],
-        "name": "BOT",
+        "name": "BNBX",
         "outputs": [
             {
-                "internalType": "bytes32",
+                "internalType": "contract IBnbX",
                 "name": "",
-                "type": "bytes32"
+                "type": "address"
             }
         ],
         "stateMutability": "view",
@@ -364,12 +480,12 @@
     },
     {
         "inputs": [],
-        "name": "TEN_DECIMALS",
+        "name": "MANAGER_ROLE",
         "outputs": [
             {
-                "internalType": "uint256",
+                "internalType": "bytes32",
                 "name": "",
-                "type": "uint256"
+                "type": "bytes32"
             }
         ],
         "stateMutability": "view",
@@ -377,27 +493,41 @@
     },
     {
         "inputs": [],
-        "name": "acceptNewManager",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "name": "OPERATOR_REGISTRY",
+        "outputs": [
+            {
+                "internalType": "contract IOperatorRegistry",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {
-        "inputs": [
+        "inputs": [],
+        "name": "OPERATOR_ROLE",
+        "outputs": [
             {
-                "internalType": "uint256",
-                "name": "_id",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
             }
         ],
-        "name": "addRestakingRewards",
-        "outputs": [],
-        "stateMutability": "nonpayable",
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "STAKE_HUB",
+        "outputs": [
+            {
+                "internalType": "contract IStakeHub",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
         "type": "function"
     },
     {
@@ -408,35 +538,22 @@
                 "type": "uint256"
             }
         ],
-        "name": "claimWithdraw",
-        "outputs": [],
+        "name": "claimWithdrawal",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_uuid",
-                "type": "uint256"
-            }
-        ],
-        "name": "completeDelegation",
+        "inputs": [],
+        "name": "completeBatchUndelegation",
         "outputs": [],
         "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_uuid",
-                "type": "uint256"
-            }
-        ],
-        "name": "completeUndelegation",
-        "outputs": [],
-        "stateMutability": "payable",
         "type": "function"
     },
     {
@@ -478,49 +595,29 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "deposit",
-        "outputs": [],
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_referralId",
+                "type": "string"
+            }
+        ],
+        "name": "delegate",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
         "stateMutability": "payable",
         "type": "function"
     },
     {
         "inputs": [],
-        "name": "depositsBridgingOut",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "depositsDelegated",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "depositsInContract",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
+        "name": "delegateWithoutMinting",
+        "outputs": [],
+        "stateMutability": "payable",
         "type": "function"
     },
     {
@@ -538,48 +635,58 @@
     },
     {
         "inputs": [],
-        "name": "getBnbXWithdrawLimit",
+        "name": "firstUnbondingBatchIndex",
         "outputs": [
             {
                 "internalType": "uint256",
-                "name": "_bnbXWithdrawLimit",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_uuid",
-                "type": "uint256"
-            }
-        ],
-        "name": "getBotDelegateRequest",
-        "outputs": [
-            {
-                "components": [
-                    {
-                        "internalType": "uint256",
-                        "name": "startTime",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "endTime",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
-                        "type": "uint256"
-                    }
-                ],
-                "internalType": "struct IStakeManager.BotDelegateRequest",
                 "name": "",
-                "type": "tuple"
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "firstUnprocessedUserIndex",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "forceUpdateER",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getActualStakeAcrossAllOperators",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getBatchWithdrawalRequestCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -589,36 +696,41 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_uuid",
+                "name": "_batchId",
                 "type": "uint256"
             }
         ],
-        "name": "getBotUndelegateRequest",
+        "name": "getBatchWithdrawalRequestInfo",
         "outputs": [
             {
                 "components": [
                     {
                         "internalType": "uint256",
-                        "name": "startTime",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "endTime",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "amount",
+                        "name": "amountInBnb",
                         "type": "uint256"
                     },
                     {
                         "internalType": "uint256",
                         "name": "amountInBnbX",
                         "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "unlockTime",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "operator",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isClaimable",
+                        "type": "bool"
                     }
                 ],
-                "internalType": "struct IStakeManager.BotUndelegateRequest",
+                "internalType": "struct BatchWithdrawalRequest",
                 "name": "",
                 "type": "tuple"
             }
@@ -627,40 +739,37 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "getContracts",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_batchSize",
+                "type": "uint256"
+            }
+        ],
+        "name": "getBnbxToBurnForBatchSize",
         "outputs": [
             {
-                "internalType": "address",
-                "name": "_manager",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_bnbX",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_tokenHub",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_bcDepositWallet",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "bnbxToBurn",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "getExtraBnbInContract",
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "getRedelegationFee",
         "outputs": [
             {
                 "internalType": "uint256",
-                "name": "_extraBnb",
+                "name": "",
                 "type": "uint256"
             }
         ],
@@ -688,20 +797,7 @@
     },
     {
         "inputs": [],
-        "name": "getTokenHubRelayFee",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "getTotalPooledBnb",
+        "name": "getUnprocessedWithdrawalRequestCount",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -718,24 +814,14 @@
                 "internalType": "address",
                 "name": "_user",
                 "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_idx",
-                "type": "uint256"
             }
         ],
-        "name": "getUserRequestStatus",
+        "name": "getUserRequestIds",
         "outputs": [
             {
-                "internalType": "bool",
-                "name": "_isClaimable",
-                "type": "bool"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
             }
         ],
         "stateMutability": "view",
@@ -744,19 +830,29 @@
     {
         "inputs": [
             {
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
+                "internalType": "uint256",
+                "name": "_requestId",
+                "type": "uint256"
             }
         ],
-        "name": "getUserWithdrawalRequests",
+        "name": "getUserRequestInfo",
         "outputs": [
             {
                 "components": [
                     {
-                        "internalType": "uint256",
-                        "name": "uuid",
-                        "type": "uint256"
+                        "internalType": "address",
+                        "name": "user",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "processed",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "claimed",
+                        "type": "bool"
                     },
                     {
                         "internalType": "uint256",
@@ -765,13 +861,26 @@
                     },
                     {
                         "internalType": "uint256",
-                        "name": "startTime",
+                        "name": "batchId",
                         "type": "uint256"
                     }
                 ],
-                "internalType": "struct IStakeManager.WithdrawalRequest[]",
+                "internalType": "struct WithdrawalRequest",
                 "name": "",
-                "type": "tuple[]"
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getWithdrawalRequestCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -823,38 +932,23 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_bnbX",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
                 "name": "_admin",
                 "type": "address"
             },
             {
                 "internalType": "address",
-                "name": "_manager",
+                "name": "_operatorRegistry",
                 "type": "address"
             },
             {
                 "internalType": "address",
-                "name": "_tokenHub",
+                "name": "_bnbX",
                 "type": "address"
             },
             {
                 "internalType": "address",
-                "name": "_bcDepositWallet",
+                "name": "_staderTreasury",
                 "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_bot",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_feeBps",
-                "type": "uint256"
             }
         ],
         "name": "initialize",
@@ -864,7 +958,7 @@
     },
     {
         "inputs": [],
-        "name": "minDelegateThreshold",
+        "name": "maxActiveRequestsPerUser",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -877,7 +971,7 @@
     },
     {
         "inputs": [],
-        "name": "minUndelegateThreshold",
+        "name": "maxExchangeRateSlippageBps",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -890,7 +984,7 @@
     },
     {
         "inputs": [],
-        "name": "nextDelegateUUID",
+        "name": "minWithdrawableBnbx",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -903,15 +997,9 @@
     },
     {
         "inputs": [],
-        "name": "nextUndelegateUUID",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
+        "name": "pause",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -931,11 +1019,21 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
+                "name": "_fromOperator",
                 "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_toOperator",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
             }
         ],
-        "name": "proposeNewManager",
+        "name": "redelegate",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -962,38 +1060,23 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_amountInBnbX",
+                "name": "_amount",
                 "type": "uint256"
+            },
+            {
+                "internalType": "string",
+                "name": "_referralId",
+                "type": "string"
             }
         ],
         "name": "requestWithdraw",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
+        "outputs": [
             {
                 "internalType": "uint256",
-                "name": "_uuid",
+                "name": "",
                 "type": "uint256"
             }
         ],
-        "name": "retryTransferOut",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "revokeBotRole",
-        "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
@@ -1019,51 +1102,6 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "name": "rewardsIdUsed",
-        "outputs": [
-            {
-                "internalType": "bool",
-                "name": "",
-                "type": "bool"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "setBCDepositWallet",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "setBotRole",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
                 "name": "_feeBps",
                 "type": "uint256"
             }
@@ -1077,11 +1115,11 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_minDelegateThreshold",
+                "name": "_maxActiveRequestsPerUser",
                 "type": "uint256"
             }
         ],
-        "name": "setMinDelegateThreshold",
+        "name": "setMaxActiveRequestsPerUser",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1090,48 +1128,69 @@
         "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_minUndelegateThreshold",
+                "name": "_maxExchangeRateSlippageBps",
                 "type": "uint256"
             }
         ],
-        "name": "setMinUndelegateThreshold",
+        "name": "setMaxExchangeRateSlippageBps",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_minWithdrawableBnbx",
+                "type": "uint256"
+            }
+        ],
+        "name": "setMinWithdrawableBnbx",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_staderTreasury",
+                "type": "address"
+            }
+        ],
+        "name": "setStaderTreasury",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
     {
         "inputs": [],
-        "name": "startDelegation",
+        "name": "staderTreasury",
         "outputs": [
             {
-                "internalType": "uint256",
-                "name": "_uuid",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
+                "internalType": "address",
+                "name": "",
+                "type": "address"
             }
         ],
-        "stateMutability": "payable",
+        "stateMutability": "view",
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "startUndelegation",
-        "outputs": [
+        "inputs": [
             {
                 "internalType": "uint256",
-                "name": "_uuid",
+                "name": "_batchSize",
                 "type": "uint256"
             },
             {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
+                "internalType": "address",
+                "name": "_operator",
+                "type": "address"
             }
         ],
+        "name": "startBatchUndelegation",
+        "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
     },
@@ -1156,14 +1215,7 @@
     },
     {
         "inputs": [],
-        "name": "togglePause",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "totalBnbXToBurn",
+        "name": "totalDelegated",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -1176,28 +1228,20 @@
     },
     {
         "inputs": [],
-        "name": "totalClaimableBnb",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_uuid",
-                "type": "uint256"
-            }
-        ],
-        "name": "undelegationStarted",
+        "name": "unpause",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "updateER",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
     }
 ]
