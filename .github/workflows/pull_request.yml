@@ -26,23 +26,6 @@ jobs:
         timeout-minutes: 10
         uses: actions/checkout@v4
 
-      - name: Add labels
-        timeout-minutes: 30
-        uses: actions/labeler@v5
-
-      - name: Enforce labels
-        timeout-minutes: 5
-        uses: mheap/github-action-required-labels@v5
-        with:
-          mode: minimum
-          count: 1
-          labels: |
-            documentation
-            specifications
-            descriptors
-            ci
-          add_comment: true
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
