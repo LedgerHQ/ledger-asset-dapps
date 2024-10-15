@@ -77,6 +77,11 @@
     },
     {
         "inputs": [],
+        "name": "TokenTransferFailed",
+        "type": "error"
+    },
+    {
+        "inputs": [],
         "name": "ValueAlreadyInUse",
         "type": "error"
     },
@@ -176,25 +181,6 @@
             }
         ],
         "name": "ETHSwappedForLST",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
-                "indexed": false,
-                "internalType": "address",
-                "name": "to",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "EthTransferred",
         "type": "event"
     },
     {
@@ -403,21 +389,6 @@
                 "internalType": "uint256",
                 "name": "assetStakedInEigenLayer",
                 "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "assetUnstakingFromEigenLayer",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "assetLyingInConverter",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "assetLyingUnstakingVault",
-                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -440,21 +411,6 @@
             {
                 "internalType": "uint256",
                 "name": "ethStakedInEigenLayer",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "ethUnstakingFromEigenLayer",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "ethLyingInConverter",
-                "type": "uint256"
-            },
-            {
-                "internalType": "uint256",
-                "name": "ethLyingInUnstakingVault",
                 "type": "uint256"
             }
         ],
@@ -584,19 +540,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "asset",
-                "type": "address"
-            }
-        ],
-        "name": "maxApproveToLRTConverter",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
