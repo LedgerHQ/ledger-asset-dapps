@@ -7,12 +7,16 @@
             "contractName": "MTbillDepositVault",
             "selectors": {
                 "0xc02dd27a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
                     "method": "depositInstant",
                     "plugin": "Midas"
                 },
                 "0x6e26b9f8": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
                     "method": "depositRequest",
                     "plugin": "Midas"
                 }
@@ -23,12 +27,16 @@
             "contractName": "MBasisDepositVault",
             "selectors": {
                 "0xc02dd27a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
                     "method": "depositInstant",
                     "plugin": "Midas"
                 },
                 "0x6e26b9f8": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
                     "method": "depositRequest",
                     "plugin": "Midas"
                 }
@@ -39,12 +47,16 @@
             "contractName": "MTbillRedemptionVault",
             "selectors": {
                 "0x8b53f75e": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemInstant",
                     "plugin": "Midas"
                 },
                 "0xbfc2d46a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemRequest",
                     "plugin": "Midas"
                 },
@@ -60,12 +72,16 @@
             "contractName": "MBasisRedemptionVault",
             "selectors": {
                 "0x8b53f75e": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemInstant",
                     "plugin": "Midas"
                 },
                 "0xbfc2d46a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemRequest",
                     "plugin": "Midas"
                 },
@@ -81,12 +97,16 @@
             "contractName": "MTbillRedemptionVaultBuidl",
             "selectors": {
                 "0x8b53f75e": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemInstant",
                     "plugin": "Midas"
                 },
                 "0xbfc2d46a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemRequest",
                     "plugin": "Midas"
                 },
@@ -102,12 +122,16 @@
             "contractName": "MBasisRedemptionVaultSwapper",
             "selectors": {
                 "0x8b53f75e": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemInstant",
                     "plugin": "Midas"
                 },
                 "0xbfc2d46a": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
                     "method": "redeemRequest",
                     "plugin": "Midas"
                 },
