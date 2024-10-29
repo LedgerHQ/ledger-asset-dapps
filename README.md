@@ -28,5 +28,3 @@ In case you need to update to lowercase all Ethereum addresses, you should be ab
 ```
 sed -e 's/\("0x.*"\)/\L\1/' b2c.json > b2c.json.new
 ```
-
-
