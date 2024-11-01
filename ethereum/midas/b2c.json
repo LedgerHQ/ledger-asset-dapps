@@ -1,0 +1,192 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x99361435420711723af805f08187c9e6bf796683",
+            "contractName": "MTbillDepositVault",
+            "selectors": {
+                "0x6e26b9f8": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositRequest",
+                    "plugin": "Midas"
+                },
+                "0xc02dd27a": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositInstant",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0xa8a5c4ff4c86a459ebbdc39c5be77833b3a15d88",
+            "contractName": "MBasisDepositVault",
+            "selectors": {
+                "0x6e26b9f8": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositRequest",
+                    "plugin": "Midas"
+                },
+                "0xc02dd27a": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositInstant",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0x10cc8dbca90db7606013d8cd2e77eb024df693bd",
+            "contractName": "MBtcDepositVault",
+            "selectors": {
+                "0x6e26b9f8": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositRequest",
+                    "plugin": "Midas"
+                },
+                "0xc02dd27a": {
+                    "erc20OfInterest": [
+                        "tokenIn"
+                    ],
+                    "method": "depositInstant",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0xf6e51d24f4793ac5e71e0502213a9bbe3a6d4517",
+            "contractName": "MTbillRedemptionVault",
+            "selectors": {
+                "0x8b53f75e": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemInstant",
+                    "plugin": "Midas"
+                },
+                "0xbfc2d46a": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemRequest",
+                    "plugin": "Midas"
+                },
+                "0xd5f73f5c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFiatRequest",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0x19ab19e61a930bc5c7b75bf06cdd954218ca9f0b",
+            "contractName": "MBasisRedemptionVault",
+            "selectors": {
+                "0x8b53f75e": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemInstant",
+                    "plugin": "Midas"
+                },
+                "0xbfc2d46a": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemRequest",
+                    "plugin": "Midas"
+                },
+                "0xd5f73f5c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFiatRequest",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0x30d9d1e76869516aea980390494aaed45c3efc1a",
+            "contractName": "MBtcRedemptionVault",
+            "selectors": {
+                "0x8b53f75e": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemInstant",
+                    "plugin": "Midas"
+                },
+                "0xbfc2d46a": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemRequest",
+                    "plugin": "Midas"
+                },
+                "0xd5f73f5c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFiatRequest",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0x569d7dccbf6923350521ecbc28a555a500c4f0ec",
+            "contractName": "MTbillRedemptionVaultBuidl",
+            "selectors": {
+                "0x8b53f75e": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemInstant",
+                    "plugin": "Midas"
+                },
+                "0xbfc2d46a": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemRequest",
+                    "plugin": "Midas"
+                },
+                "0xd5f73f5c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFiatRequest",
+                    "plugin": "Midas"
+                }
+            }
+        },
+        {
+            "address": "0x0d89c1c4799353f3805a3e6c4e1cbbb83217d123",
+            "contractName": "MBasisRedemptionVaultSwapper",
+            "selectors": {
+                "0x8b53f75e": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemInstant",
+                    "plugin": "Midas"
+                },
+                "0xbfc2d46a": {
+                    "erc20OfInterest": [
+                        "tokenOut"
+                    ],
+                    "method": "redeemRequest",
+                    "plugin": "Midas"
+                },
+                "0xd5f73f5c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemFiatRequest",
+                    "plugin": "Midas"
+                }
+            }
+        }
+    ],
+    "name": "Midas"
+}
