@@ -1,0 +1,41 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xe6d8d8ac54461b1c5ed15740eee322043f696c08",
+            "contractName": "Stakewise",
+            "selectors": {
+                "0x066055e0": {
+                    "method": "burnOsToken",
+                    "plugin": "ChorusOne"
+                },
+                "0x201b9eb5": {
+                    "method": "mintOsToken",
+                    "plugin": "ChorusOne"
+                },
+                "0x43e82a79": {
+                    "method": "redeemOsToken",
+                    "plugin": "ChorusOne"
+                },
+                "0x7bde82f2": {
+                    "method": "redeem",
+                    "plugin": "ChorusOne"
+                },
+                "0x8697d2c2": {
+                    "method": "claimExitedAssets",
+                    "plugin": "ChorusOne"
+                },
+                "0x8ceab9aa": {
+                    "method": "enterExitQueue",
+                    "plugin": "ChorusOne"
+                },
+                "0xf9609f08": {
+                    "method": "deposit",
+                    "plugin": "ChorusOne"
+                }
+            }
+        }
+    ],
+    "name": "ChorusOne"
+}
