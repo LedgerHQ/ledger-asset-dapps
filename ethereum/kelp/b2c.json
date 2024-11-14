@@ -12,7 +12,9 @@
                     "plugin": "Kelp"
                 },
                 "0xc3ae1766": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "depositAsset",
                     "plugin": "Kelp"
                 }
@@ -23,12 +25,16 @@
             "contractName": "LRTWithdrawalManager",
             "selectors": {
                 "0xc5a67b01": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "initiateWithdrawal",
                     "plugin": "Kelp"
                 },
                 "0xd3a86833": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "completeWithdrawal",
                     "plugin": "Kelp"
                 }
@@ -49,7 +55,9 @@
                     "plugin": "Kelp"
                 },
                 "0xe8c3516b": {
-                    "erc20OfInterest": [],
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
                     "method": "getRSETHWithERC20",
                     "plugin": "Kelp"
                 }
