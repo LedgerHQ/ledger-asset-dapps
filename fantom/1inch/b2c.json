@@ -1,28 +1,7 @@
 {
-    "blockchainName": "arbitrum",
-    "chainId": 42161,
+    "blockchainName": "fantom",
+    "chainId": 250,
     "contracts": [
-        {
-            "address": "0x11111112542d85b3ef69ae05771c2dccff4faa26",
-            "contractName": "AggregationRouterV3",
-            "selectors": {
-                "0x2e95b6c8": {
-                    "erc20OfInterest": [
-                        "srcToken"
-                    ],
-                    "method": "unoswap",
-                    "plugin": "1inch"
-                },
-                "0x7c025200": {
-                    "erc20OfInterest": [
-                        "desc.srcToken",
-                        "desc.dstToken"
-                    ],
-                    "method": "swap",
-                    "plugin": "1inch"
-                }
-            }
-        },
         {
             "address": "0x1111111254fb6c44bac0bed2854e76f90643097d",
             "contractName": "AggregationRouterV4",
