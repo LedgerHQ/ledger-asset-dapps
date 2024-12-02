@@ -1,30 +1,9 @@
 {
-    "blockchainName": "optimism",
-    "chainId": 10,
+    "blockchainName": "zksync",
+    "chainId": 324,
     "contracts": [
         {
-            "address": "0x11111112542d85b3ef69ae05771c2dccff4faa26",
-            "contractName": "AggregationRouterV3",
-            "selectors": {
-                "0x2e95b6c8": {
-                    "erc20OfInterest": [
-                        "srcToken"
-                    ],
-                    "method": "unoswap",
-                    "plugin": "1inch"
-                },
-                "0x7c025200": {
-                    "erc20OfInterest": [
-                        "desc.srcToken",
-                        "desc.dstToken"
-                    ],
-                    "method": "swap",
-                    "plugin": "1inch"
-                }
-            }
-        },
-        {
-            "address": "0x1111111254eeb25477b68fb85ed929f73a960582",
+            "address": "0x6e2b76966cbd9cf4cc2fa0d76d24d5241e0abc2f",
             "contractName": "AggregationRouterV5",
             "selectors": {
                 "0x0502b1c5": {

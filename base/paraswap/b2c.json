@@ -1,0 +1,45 @@
+{
+    "blockchainName": "base",
+    "chainId": 8453,
+    "contracts": [
+        {
+            "address": "0x59c7c832e96d2568bea6db468c1aadcbbda08a52",
+            "contractName": "AugustusSwapper",
+            "selectors": {
+                "0x2298207a": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "simpleBuy",
+                    "plugin": "Paraswap"
+                },
+                "0x46c67b6d": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.0.path.-1.to"
+                    ],
+                    "method": "megaSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x54e3f31b": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "simpleSwap",
+                    "plugin": "Paraswap"
+                },
+                "0xa94e78ef": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.-1.to"
+                    ],
+                    "method": "multiSwap",
+                    "plugin": "Paraswap"
+                }
+            }
+        }
+    ],
+    "name": "Paraswap"
+}
