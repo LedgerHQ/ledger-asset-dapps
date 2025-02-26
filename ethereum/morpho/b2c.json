@@ -76,78 +76,1686 @@
             }
         },
         {
-            "address": "0x3a0e2e9fb9c95fbc843daf166276c90b6c479558",
-            "contractName": "CompoundV3MigrationBundler",
+            "address": "0xfd32fa2ca22c76dd6e550706ad913fc6ce91c75d",
+            "contractName": "PublicAllocator",
             "selectors": {
-                "0xac9650d8": {
+                "0x833947fd": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "reallocateTo",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0x16f38d2e764e7bebf625a8e995b34968226d2f9c",
-            "contractName": "AaveV3OptimizerMigrationBundler",
+            "address": "0x38989bba00bdf8181f4082995b3deae96163ac5d",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0x26bf52a84360ad3d01d7cdc28fc2ddc04d8c8647",
-            "contractName": "CompoundV2MigrationBundler",
+            "address": "0xa02f5e93f783baf150aa1f8b341ae90fe0a772f7",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0x98ccb155e86bb478d514a827d16f58c6912f9bdc",
-            "contractName": "AaveV3MigrationBundler",
+            "address": "0xfbdee8670b273e12b019210426e70091464b02ab",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0x4095f064b8d3c3548a3bebfd0bbfd04750e30077",
-            "contractName": "EthereumBundlerV2",
+            "address": "0xf587f2e8aff7d76618d3b6b4626621860fbd54e3",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0xa7995f71aa11525db02fc2473c37dee5dbf55107",
-            "contractName": "EthereumBundler",
+            "address": "0x98cf0b67da0f16e1f8f1a1d23ad8dc64c0c70e0b",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
         },
         {
-            "address": "0xb3dcc75db379925edfd3007511a8ce0cb4aa8e76",
-            "contractName": "AaveV2MigrationBundler",
+            "address": "0xc0a14627d6a23f70c809777ced873238581c1032",
+            "contractName": "MetaMorpho",
             "selectors": {
-                "0xac9650d8": {
+                "0x095ea7b3": {
                     "erc20OfInterest": [],
-                    "method": "multicall",
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef01735c132ada46aa9aa4c54623caa92a64cb",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef07e929f84466a591de130e4154667214f491",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x186514400e52270cef3d80e1c6f8d10a75d47344",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x78fc2c2ed1a4cdb5402365934ae5648adad094d0",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x2c25f6c25770ffec5959d34b94bf898865e5d6b1",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef02e5e13584ab96848af90261f0c8ee04722a",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef047a543e45807105e51a8bbefcc5950fcfba",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x2371e134e3455e0593363cbf89d3b6cf53740618",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xdd0f28e19c1780eb6396170735d45153d261490d",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xebfa750279defa89b8d99bdd145a016f6292757b",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x4ca0e178c94f039d7f202e09d8d1a655ed3fb6b6",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xc21db71648b18c5b9e038d88393c9b254cf8eac8",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x95eef579155cd2c5510f312c8fa39208c3be01a8",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x8cb3649114051ca5119141a34c200d65dc0faa73",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x500331c9ff24d9d11aee6b07734aa72343ea74a5",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x73e65dbd630f90604062f6e02fab9138e713edd9",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef094333aedd535c130958c204e84f681fd9fa",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef087c8430c0f9dcba39ba866eb7c22200599b",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef796ae50ba5423857cac27dd36369cfc8241b",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeefda19bc6114633fc17e6d074a6a2b472c756f",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef033b4520267c5acfcb45414117b633fcb3dd",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef050ecd6a16c4e7bffbb52ebba7846c4b8cd4",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x4881ef0bf6d2365d3dd6499ccd7532bcdbce0658",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef0075e03a5ce0d84d4accf3481363e0584f5c",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeef11ecb698f4b5378685c05a210bdf71093521",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbeefc01767ed5086f35decb6c00e6c12bc7476c1",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x89d80f5e9bc88d8021b352064ae73f0eaf79ebd8",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x125d41a6e5dbf455cd9df8f80bcc6fd172d52cc6",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x67315dd969b8cd3a3520c245837bf71f54579c75",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x8eb67a509616cd6a7c1b3c8c21d48ff57df3d458",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xbe40491f3261fd42724f1aeb465796eb11c06ddf",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x60d715515d4411f7f43e4206dc5d4a3677f0ec78",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x78b18e07dc43017fceaabad0751d6464c0f56b25",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x4f460bb11cf958606c69a963b4a17f9daeeea8b6",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xc080f56504e0278828a403269db945f6c6d6e014",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xd63070114470f685b75b74d60eec7c1113d33a3d",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x1265a81d42d513df40d0031f8f2e1346954d665a",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x1c530d6de70c05a81bf1670157b9d928e9699089",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x225c119ffaf1caddcfcdb493283edf4b816bf773",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x43fd147d5319b8cf39a6e57143684efca9cf3613",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x9a8bc3b04b7f3d87cfc09ba407dced575f2d61d8",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x2f1abb81ed86be95bcf8178ba62c8e72d6834775",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x443df5eee3196e9b2dd77cabd3ea76c3dee8f9b2",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x1b4cd53a1a8e5f50ab6320ef34e5fb4d3df7b6f6",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x4ff4186188f8406917293a9e01a1ca16d3cf9e59",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0x0f359fd18bda75e9c49bc027e7da59a4b01bf32a",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xb9c9158ab81f90996cad891ffbadfbaad733c8c6",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "Morpho"
+                }
+            }
+        },
+        {
+            "address": "0xe0c98605f279e4d7946d25b75869c69802823763",
+            "contractName": "MetaMorpho",
+            "selectors": {
+                "0x095ea7b3": {
+                    "erc20OfInterest": [],
+                    "method": "approve",
+                    "plugin": "Morpho"
+                },
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Morpho"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "Morpho"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Morpho"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
                     "plugin": "Morpho"
                 }
             }
