@@ -1,0 +1,110 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "blockchainName": {
+            "enum": [
+                "fantom"
+            ]
+        },
+        "chainId": {
+            "enum": [
+                250
+            ]
+        },
+        "contracts": {
+            "items": {
+                "properties": {
+                    "address": {
+                        "pattern": "^0x[a-z0-9]{40}$",
+                        "type": "string"
+                    },
+                    "contractName": {
+                        "type": "string"
+                    },
+                    "messages": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "mapper": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "fields": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "assetPath": {
+                                                        "type": "string"
+                                                    },
+                                                    "format": {
+                                                        "enum": [
+                                                            "amount",
+                                                            "raw",
+                                                            "datetime"
+                                                        ]
+                                                    },
+                                                    "label": {
+                                                        "maxLength": 39,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "path": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "path",
+                                                    "label"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "minItems": 1,
+                                            "type": "array"
+                                        },
+                                        "label": {
+                                            "maxLength": 39,
+                                            "minLength": 1,
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "label",
+                                        "fields"
+                                    ],
+                                    "type": "object"
+                                },
+                                "schema": {
+                                    "type": "object"
+                                }
+                            },
+                            "required": [
+                                "schema",
+                                "mapper"
+                            ],
+                            "type": "object"
+                        },
+                        "minItems": 1,
+                        "type": "array"
+                    }
+                },
+                "required": [
+                    "address",
+                    "contractName",
+                    "messages"
+                ],
+                "type": "object"
+            },
+            "minItems": 1,
+            "type": "array"
+        },
+        "name": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "blockchainName",
+        "contracts",
+        "name",
+        "chainId"
+    ],
+    "type": "object"
+}

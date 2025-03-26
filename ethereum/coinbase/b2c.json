@@ -1,0 +1,25 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xc4dcb059dd98b45b090da8982234c61d0b9e84f9",
+            "contractName": "LC Staked Shared ETH (lcETH)",
+            "selectors": {
+                "0x3a4b66f1": {
+                    "method": "stake",
+                    "plugin": "Coinbase"
+                },
+                "0x721c6513": {
+                    "method": "requestExit",
+                    "plugin": "Coinbase"
+                },
+                "0xb7ba18c7": {
+                    "method": "multiClaim",
+                    "plugin": "Coinbase"
+                }
+            }
+        }
+    ],
+    "name": "Coinbase"
+}

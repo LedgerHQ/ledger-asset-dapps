@@ -1,0 +1,48 @@
+name: pull request
+
+on:
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIPENV_NOSPIN: 1
+
+jobs:
+  pull_request:
+    name: pull request
+    runs-on: public-ledgerhq-shared-small
+    timeout-minutes: 60
+    steps:
+
+      - name: Checkout
+        timeout-minutes: 10
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pipenv'
+
+      - name: Install pipenv
+        run: pip install -U pip pipenv wheel
+
+      - name: Install python dependencies
+        env:
+          PYPI_DEPLOY_TOKEN: ${{ secrets.PYPI_DEPLOY_TOKEN }}
+        run: pipenv sync --dev
+
+      - name: Validate files and format
+        id: validation
+        uses: selfagency/capture-output@v1
+        with:
+          cmd: pipenv
+          args: run,validate_files

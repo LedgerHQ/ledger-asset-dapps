@@ -1,0 +1,43 @@
+{
+    "blockchainName": "arbitrum",
+    "chainId": 42161,
+    "contracts": [
+        {
+            "address": "0x794a61358d6845594f94dc1db02a252b5b4814ad",
+            "contractName": "InitializableImmutableAdminUpgradeabilityProxy",
+            "selectors": {
+                "0x617ba037": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "StakeKit"
+                },
+                "0x69328dec": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x004626a008b1acdc4c74ab51644093b155e59a23",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}

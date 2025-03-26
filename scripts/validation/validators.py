@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import glob
+import hashlib
 import json
 import logging
 import re
@@ -41,6 +42,10 @@ def run_validations(glob_path: str, validator: Callable[[str, str], Tuple[bool, 
 __excluded_contract = [
     "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
     "0x1111111254fb6c44bac0bed2854e76f90643097d",
+    "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+]
+
+__excluded_contracts_from_plugin_collision = [
     "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
 ]
 
@@ -135,6 +140,67 @@ def check_duplicate_contract(glob_path: str):
         raise ValidationError(f"Invalid files: {errors}")
 
 
+def check_duplicate_plugin(glob_path: str):
+    invalid, errors, results, all = 0, [], [], {}
+    for filename in glob.iglob(glob_path, recursive=True):
+        logger.debug("Validating %s... for duplicate plugins", filename)
+        with open(filename, "r", newline="") as f:
+            data = f.read()
+
+        try:
+            target_data = json.loads(data)
+        except JSONDecodeError as err:
+            logger.debug(
+                "\tinvalid: File %s is not a valid json", filename, exc_info=True
+            )
+            errors.append({"file": filename, "message": str(err)})
+            continue
+
+        records = []
+        blockchain = target_data.get("blockchainName", None)
+        for contract in target_data.get("contracts", []):
+            address = contract.get("address", None)
+            if address is None:
+                continue
+            elif address in __excluded_contracts_from_plugin_collision:
+                continue
+
+            for selector, data in contract.get("selectors", []).items():
+                plugin = data["plugin"]
+
+                record = {
+                    "filename": filename,
+                    "blockchain": blockchain,
+                    "contract": address.lower(),
+                    "selector": selector.lower(),
+                    "plugin": plugin,
+                }
+                logger.debug(f"adding record {record}")
+                records.append(record)
+
+        # check if among the records there are multiple plugins associated with a given (chain_id, contract, selector) triplet
+        for record in records:
+            filename = record["filename"]
+            blockchain = record["blockchain"]
+            contract = record["contract"]
+            selector = record["selector"]
+            plugin = record["plugin"]
+            existing_record = all.get((blockchain, contract, selector), None)
+            if existing_record is None:
+                all[(blockchain, contract, selector)] = record
+            elif existing_record["plugin"] != plugin:
+                invalid += 1
+                errors.append(f"File {filename} and file {existing_record['filename']} bind "
+                              f"(blockchain={blockchain}, contract={contract}, selector={selector}) to different plugins "
+                              f"{plugin} and {existing_record['plugin']} respectively, "
+                              f"please remove one of the bindings")
+
+    if invalid:
+        for error in errors:
+            logger.error(f"Validation error: {error}")
+        raise ValidationError(f"Invalid files: {errors}")
+
+
 def format_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
@@ -220,6 +286,11 @@ def schema_validator(schema_path: str):
 def eip712_schema_validator(data: str, filename: str) -> Tuple[bool, str]:
     try:
         loaded = json.loads(data)
+        for contract in loaded["contracts"]:
+            for message in contract["messages"]:
+                # schema types must be sorted by key for reproducible hashing
+                message["schema"] = dict(sorted(message["schema"].items()))
+
         formatted = json.dumps(loaded, indent=4, sort_keys=True, ensure_ascii=False)
         if formatted != data and (formatted + "\n") != data:
             logger.debug(
@@ -322,7 +393,7 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
         return False, str(err)
 
     for contract in target_data.get("contracts", []):
-        logger.info(
+        logger.debug(
             "\tchecking contract %s...",
             contract["address"],
         )
@@ -349,7 +420,7 @@ def contract_matching_validator(data: str, filename: str) -> Tuple[bool, str]:
                 )
                 continue
 
-            logger.info(
+            logger.debug(
                 "\tchecking function %s...",
                 name,
             )

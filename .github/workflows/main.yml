@@ -1,0 +1,61 @@
+name: main
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PIPENV_NOSPIN: 1
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+
+      - name: Checkout
+        timeout-minutes: 10
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+          cache: 'pipenv'
+
+      - name: Install pipenv
+        run: pip install -U pip pipenv wheel
+
+      - name: Install python dependencies
+        env:
+          PYPI_DEPLOY_TOKEN: ${{ secrets.PYPI_DEPLOY_TOKEN }}
+        run: pipenv sync --dev
+
+      - name: Validate files and format
+        id: validation
+        uses: selfagency/capture-output@v1
+        with:
+          cmd: pipenv
+          args: run,validate_files
+
+  update_cal:
+    runs-on: ubuntu-latest
+    needs: ci
+    timeout-minutes: 60
+    strategy:
+      matrix:
+        repo: ['LedgerHQ/crypto-assets', 'LedgerHQ/python-erc7730']
+    steps:
+      - name: Trigger update on ${{ matrix.repo }}
+        timeout-minutes: 60
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.CI_BOT_TOKEN }}
+          repository: ${{ matrix.repo }}
+          event-type: submodules

@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 jsonschema = "*"
+eth-utils = "*"
+eth-hash = {extras = ["pycryptodome"], version = "*"}
 
 [dev-packages]
 eth-hash = {version = "*", extras = ["pycryptodome"]}

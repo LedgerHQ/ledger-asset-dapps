@@ -1,0 +1,118 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x990E6F7a8863457Dc752e12FabfE572d5704279B",
+            "name": "Brick Towers Native Staking - Deposit",
+            "parsers": [
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "batchDeposit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "batchDeposit"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "pubkeys",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "withdrawal_credentials",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "signatures",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "deposit_data_roots",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xca0bfcce"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0xC0d85F63cD3D280a1Db839Ed7e927FC994E1fabe",
+            "name": "Brick Towers Native Staking - Request Exit",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "pubkeys.0",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "pubkeys.0"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "requestVoluntaryExit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "requestVoluntaryExit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.pubkeys.0",
+                                                "label": "pubkeys.0"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x9aa3033a"
+                }
+            ]
+        }
+    ],
+    "id": "bricktowers",
+    "name": "Brick Towers"
+}

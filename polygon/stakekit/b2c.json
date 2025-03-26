@@ -1,0 +1,58 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xf25212e676d1f7f89cd72ffee66158f541246445",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0xf2b9fdb8": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "StakeKit"
+                },
+                "0xf3fef3a3": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x45939657d1ca34a8fa39a924b71d28fe8431e581",
+            "contractName": "CometRewards",
+            "selectors": {
+                "0xb7034f7e": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x794a61358d6845594f94dc1db02a252b5b4814ad",
+            "contractName": "InitializableImmutableAdminUpgradeabilityProxy",
+            "selectors": {
+                "0x617ba037": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "StakeKit"
+                },
+                "0x69328dec": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}

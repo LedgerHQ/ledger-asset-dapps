@@ -37,13 +37,14 @@
                                                     },
                                                     "format": {
                                                         "enum": [
-                                                            "token",
                                                             "amount",
                                                             "raw",
                                                             "datetime"
                                                         ]
                                                     },
                                                     "label": {
+                                                        "maxLength": 39,
+                                                        "minLength": 1,
                                                         "type": "string"
                                                     },
                                                     "path": {
@@ -56,9 +57,12 @@
                                                 ],
                                                 "type": "object"
                                             },
+                                            "minItems": 1,
                                             "type": "array"
                                         },
                                         "label": {
+                                            "maxLength": 39,
+                                            "minLength": 1,
                                             "type": "string"
                                         }
                                     },
@@ -78,6 +82,7 @@
                             ],
                             "type": "object"
                         },
+                        "minItems": 1,
                         "type": "array"
                     }
                 },
@@ -88,6 +93,7 @@
                 ],
                 "type": "object"
             },
+            "minItems": 1,
             "type": "array"
         },
         "name": {

@@ -1,0 +1,44 @@
+{
+    "blockchainName": "bsc",
+    "chainId": 56,
+    "contracts": [
+        {
+            "address": "0x0000000000000000000000000000000000001004",
+            "contractName": "TokenHub",
+            "selectors": {
+                "0xaa7415f5": {
+                    "erc20OfInterest": [],
+                    "method": "transferOut",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x0000000000000000000000000000000000002002",
+            "contractName": "StakeHub",
+            "selectors": {
+                "0x4d99dd16": {
+                    "erc20OfInterest": [],
+                    "method": "undelegate",
+                    "plugin": "StakeKit"
+                },
+                "0x59491871": {
+                    "erc20OfInterest": [],
+                    "method": "redelegate",
+                    "plugin": "StakeKit"
+                },
+                "0x982ef0a7": {
+                    "erc20OfInterest": [],
+                    "method": "delegate",
+                    "plugin": "StakeKit"
+                },
+                "0xaad3ec96": {
+                    "erc20OfInterest": [],
+                    "method": "claim",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}
