@@ -1,0 +1,561 @@
+{
+    "blockchainName": "avalanche_c_chain",
+    "chainId": 43114,
+    "contracts": [
+        {
+            "address": "0x000000000022d473030f116ddee9f6b43ac78ba3",
+            "contractName": "Uniswap Protocol: Permit2",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "assetPath": "details.token",
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "details.amount"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "details.expiration"
+                            }
+                        ],
+                        "label": "Permit2"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "PermitDetails": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint160"
+                            },
+                            {
+                                "name": "expiration",
+                                "type": "uint48"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint48"
+                            }
+                        ],
+                        "PermitSingle": [
+                            {
+                                "name": "details",
+                                "type": "PermitDetails"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "sigDeadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "assetPath": "permitted.token",
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "permitted.amount"
+                            },
+                            {
+                                "assetPath": "witness.inputToken",
+                                "format": "amount",
+                                "label": "To swap",
+                                "path": "witness.inputAmount"
+                            },
+                            {
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].token"
+                            },
+                            {
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].amount"
+                            },
+                            {
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "UniswapX Limit Order"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "LimitOrder": [
+                            {
+                                "name": "info",
+                                "type": "OrderInfo"
+                            },
+                            {
+                                "name": "inputToken",
+                                "type": "address"
+                            },
+                            {
+                                "name": "inputAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "outputs",
+                                "type": "OutputToken[]"
+                            }
+                        ],
+                        "OrderInfo": [
+                            {
+                                "name": "reactor",
+                                "type": "address"
+                            },
+                            {
+                                "name": "swapper",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "additionalValidationContract",
+                                "type": "address"
+                            },
+                            {
+                                "name": "additionalValidationData",
+                                "type": "bytes"
+                            }
+                        ],
+                        "OutputToken": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "recipient",
+                                "type": "address"
+                            }
+                        ],
+                        "PermitWitnessTransferFrom": [
+                            {
+                                "name": "permitted",
+                                "type": "TokenPermissions"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "witness",
+                                "type": "LimitOrder"
+                            }
+                        ],
+                        "TokenPermissions": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "assetPath": "permitted.token",
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "permitted.amount"
+                            },
+                            {
+                                "assetPath": "witness.inputToken",
+                                "format": "amount",
+                                "label": "Spend max",
+                                "path": "witness.inputStartAmount"
+                            },
+                            {
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].token"
+                            },
+                            {
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].endAmount"
+                            },
+                            {
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "UniswapX Dutch Order"
+                    },
+                    "schema": {
+                        "DutchOrder": [
+                            {
+                                "name": "info",
+                                "type": "OrderInfo"
+                            },
+                            {
+                                "name": "decayStartTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "decayEndTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "inputToken",
+                                "type": "address"
+                            },
+                            {
+                                "name": "inputStartAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "inputEndAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "outputs",
+                                "type": "DutchOutput[]"
+                            }
+                        ],
+                        "DutchOutput": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "startAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "endAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "recipient",
+                                "type": "address"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "OrderInfo": [
+                            {
+                                "name": "reactor",
+                                "type": "address"
+                            },
+                            {
+                                "name": "swapper",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "additionalValidationContract",
+                                "type": "address"
+                            },
+                            {
+                                "name": "additionalValidationData",
+                                "type": "bytes"
+                            }
+                        ],
+                        "PermitWitnessTransferFrom": [
+                            {
+                                "name": "permitted",
+                                "type": "TokenPermissions"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "witness",
+                                "type": "DutchOrder"
+                            }
+                        ],
+                        "TokenPermissions": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "assetPath": "permitted.token",
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "permitted.amount"
+                            },
+                            {
+                                "assetPath": "witness.inputToken",
+                                "format": "amount",
+                                "label": "To swap",
+                                "path": "witness.inputStartAmount"
+                            },
+                            {
+                                "label": "Tokens to receive",
+                                "path": "witness.outputs.[].token"
+                            },
+                            {
+                                "label": "Minimum amounts to receive",
+                                "path": "witness.outputs.[].endAmount"
+                            },
+                            {
+                                "label": "On Addresses",
+                                "path": "witness.outputs.[].recipient"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "UniswapX Exclusive Dutch Order"
+                    },
+                    "schema": {
+                        "DutchOutput": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "startAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "endAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "recipient",
+                                "type": "address"
+                            }
+                        ],
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "ExclusiveDutchOrder": [
+                            {
+                                "name": "info",
+                                "type": "OrderInfo"
+                            },
+                            {
+                                "name": "decayStartTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "decayEndTime",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "exclusiveFiller",
+                                "type": "address"
+                            },
+                            {
+                                "name": "exclusivityOverrideBps",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "inputToken",
+                                "type": "address"
+                            },
+                            {
+                                "name": "inputStartAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "inputEndAmount",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "outputs",
+                                "type": "DutchOutput[]"
+                            }
+                        ],
+                        "OrderInfo": [
+                            {
+                                "name": "reactor",
+                                "type": "address"
+                            },
+                            {
+                                "name": "swapper",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "additionalValidationContract",
+                                "type": "address"
+                            },
+                            {
+                                "name": "additionalValidationData",
+                                "type": "bytes"
+                            }
+                        ],
+                        "PermitWitnessTransferFrom": [
+                            {
+                                "name": "permitted",
+                                "type": "TokenPermissions"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "witness",
+                                "type": "ExclusiveDutchOrder"
+                            }
+                        ],
+                        "TokenPermissions": [
+                            {
+                                "name": "token",
+                                "type": "address"
+                            },
+                            {
+                                "name": "amount",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Permit2"
+}

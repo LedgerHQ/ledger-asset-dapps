@@ -1,0 +1,39 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x858646372cc42e1a627fce94aa7a7033e7cf075a",
+            "contractName": "EigenLayerStrategyManager",
+            "selectors": {
+                "0xe7a050aa": {
+                    "method": "depositIntoStrategy",
+                    "plugin": "EigenLayer"
+                }
+            }
+        },
+        {
+            "address": "0x39053d51b77dc0d36036fc1fcc8cb819df8ef37a",
+            "contractName": "EigenLayerDelegationManager",
+            "selectors": {
+                "0x0dd8dd02": {
+                    "method": "queueWithdrawals",
+                    "plugin": "EigenLayer"
+                },
+                "0x33404396": {
+                    "method": "completeQueuedWithdrawals",
+                    "plugin": "EigenLayer"
+                },
+                "0xda8be864": {
+                    "method": "undelegate",
+                    "plugin": "EigenLayer"
+                },
+                "0xeea9064b": {
+                    "method": "delegateTo",
+                    "plugin": "EigenLayer"
+                }
+            }
+        }
+    ],
+    "name": "EigenLayer"
+}

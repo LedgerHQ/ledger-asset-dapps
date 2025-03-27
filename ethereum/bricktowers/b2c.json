@@ -1,0 +1,111 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x990e6f7a8863457dc752e12fabfe572d5704279b",
+            "contractName": "BatchDeposit",
+            "selectors": {
+                "0xca0bfcce": {
+                    "method": "deposit",
+                    "plugin": "Brick Towers"
+                }
+            }
+        },
+        {
+            "address": "0xc0d85f63cd3d280a1db839ed7e927fc994e1fabe",
+            "contractName": "VoluntaryExit",
+            "selectors": {
+                "0x9aa3033a": {
+                    "method": "requestVoluntaryExit",
+                    "plugin": "Brick Towers"
+                }
+            }
+        },
+        {
+            "address": "0x302be829c61c287787030888bbcf11115ecd5773",
+            "contractName": "Brick Towers Public Pooled Staking Contract",
+            "selectors": {
+                "0x01d523b6": {
+                    "method": "updateStateAndDepositAndMintOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x066055e0": {
+                    "method": "burnOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x18f72950": {
+                    "method": "updateStateAndDeposit",
+                    "plugin": "Brick Towers"
+                },
+                "0x1a7ff553": {
+                    "method": "updateState",
+                    "plugin": "Brick Towers"
+                },
+                "0x201b9eb5": {
+                    "method": "mintOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x8697d2c2": {
+                    "method": "claimExitedAssets",
+                    "plugin": "Brick Towers"
+                },
+                "0x8ceab9aa": {
+                    "method": "enterExitQueue",
+                    "plugin": "Brick Towers"
+                },
+                "0xac9650d8": {
+                    "method": "multicall",
+                    "plugin": "Brick Towers"
+                },
+                "0xf9609f08": {
+                    "method": "deposit",
+                    "plugin": "Brick Towers"
+                }
+            }
+        },
+        {
+            "address": "0x91804d6d10f2bd4e03338f40dee01cf294085cd1",
+            "contractName": "Brick Towers Institutional Pooled Staking Contract",
+            "selectors": {
+                "0x01d523b6": {
+                    "method": "updateStateAndDepositAndMintOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x066055e0": {
+                    "method": "burnOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x18f72950": {
+                    "method": "updateStateAndDeposit",
+                    "plugin": "Brick Towers"
+                },
+                "0x1a7ff553": {
+                    "method": "updateState",
+                    "plugin": "Brick Towers"
+                },
+                "0x201b9eb5": {
+                    "method": "mintOsToken",
+                    "plugin": "Brick Towers"
+                },
+                "0x8697d2c2": {
+                    "method": "claimExitedAssets",
+                    "plugin": "Brick Towers"
+                },
+                "0x8ceab9aa": {
+                    "method": "enterExitQueue",
+                    "plugin": "Brick Towers"
+                },
+                "0xac9650d8": {
+                    "method": "multicall",
+                    "plugin": "Brick Towers"
+                },
+                "0xf9609f08": {
+                    "method": "deposit",
+                    "plugin": "Brick Towers"
+                }
+            }
+        }
+    ],
+    "name": "Brick Towers"
+}

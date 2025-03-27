@@ -1,0 +1,153 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0x27f8d03b3a2196956ed754badc28d73be8830a6e",
+            "contractName": "Aave Matic Market DAI",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit Aave Matic Market DAI transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0x28424507fefb6f7f8e9d3860f56504e4e5f5f390",
+            "contractName": "Aave Matic Market WETH",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit Aave Matic Market WETH transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Permit"
+}

@@ -1,0 +1,372 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+            "contractName": "USDC",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit USDC transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
+            "contractName": "Dai Stablecoin v2.0",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit Dai Stablecoin v2.0 transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9",
+            "contractName": "Aave",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit Aave transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0xae7ab96520de3a18e5e111b5eaab095312d7fe84",
+            "contractName": "Liquid staked Ether 2.0",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit stETH transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "address": "0x7f39c581f595b53c5cb19bd0b3f8da6c935e2ca0",
+            "contractName": "Wrapped liquid staked Ether 2.0",
+            "messages": [
+                {
+                    "mapper": {
+                        "fields": [
+                            {
+                                "label": "From",
+                                "path": "owner"
+                            },
+                            {
+                                "label": "Approve to spender",
+                                "path": "spender"
+                            },
+                            {
+                                "format": "amount",
+                                "label": "Amount allowance",
+                                "path": "value"
+                            },
+                            {
+                                "format": "datetime",
+                                "label": "Approval expire",
+                                "path": "deadline"
+                            }
+                        ],
+                        "label": "Permit wstETH transfers"
+                    },
+                    "schema": {
+                        "EIP712Domain": [
+                            {
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "name": "version",
+                                "type": "string"
+                            },
+                            {
+                                "name": "chainId",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "verifyingContract",
+                                "type": "address"
+                            }
+                        ],
+                        "Permit": [
+                            {
+                                "name": "owner",
+                                "type": "address"
+                            },
+                            {
+                                "name": "spender",
+                                "type": "address"
+                            },
+                            {
+                                "name": "value",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "nonce",
+                                "type": "uint256"
+                            },
+                            {
+                                "name": "deadline",
+                                "type": "uint256"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "name": "Permit"
+}

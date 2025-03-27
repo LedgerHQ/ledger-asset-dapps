@@ -1,0 +1,79 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "address": "0x036676389e48133b63a802f8635ad39e752d375d",
+            "contractName": "LRTDepositPool",
+            "selectors": {
+                "0x72c51c0b": {
+                    "erc20OfInterest": [],
+                    "method": "depositETH",
+                    "plugin": "Kelp"
+                },
+                "0xc3ae1766": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "depositAsset",
+                    "plugin": "Kelp"
+                }
+            }
+        },
+        {
+            "address": "0x62de59c08eb5dae4b7e6f7a8cad3006d6965ec16",
+            "contractName": "LRTWithdrawalManager",
+            "selectors": {
+                "0xc5a67b01": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "initiateWithdrawal",
+                    "plugin": "Kelp"
+                },
+                "0xd3a86833": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "completeWithdrawal",
+                    "plugin": "Kelp"
+                }
+            }
+        },
+        {
+            "address": "0xbf28c9fcb12a97441488f9c68faa49811a98688a",
+            "contractName": "rsETHAdapter",
+            "selectors": {
+                "0x4e3c04bd": {
+                    "erc20OfInterest": [],
+                    "method": "getRSETHWithETH",
+                    "plugin": "Kelp"
+                },
+                "0xb8aa0db9": {
+                    "erc20OfInterest": [],
+                    "method": "depositRsETH",
+                    "plugin": "Kelp"
+                },
+                "0xe8c3516b": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "getRSETHWithERC20",
+                    "plugin": "Kelp"
+                }
+            }
+        },
+        {
+            "address": "0xe1b4d34e8754600962cd944b535180bd758e6c2e",
+            "contractName": "agETHToken",
+            "selectors": {
+                "0x7d41c86e": {
+                    "erc20OfInterest": [],
+                    "method": "requestRedeem",
+                    "plugin": "Kelp"
+                }
+            }
+        }
+    ],
+    "name": "Kelp"
+}

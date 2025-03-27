@@ -70,17 +70,6 @@
                                     }
                                 }
                             }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "_feeAddress",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_feeAddress"
-                                    }
-                                }
-                            }
                         }
                     ],
                     "arguments_skipped": [],
@@ -135,12 +124,6 @@
                                             "property_ref": {
                                                 "key": "sci.eth.arg._feeAmount",
                                                 "label": "Fee amount"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAddress",
-                                                "label": "Fee payment address"
                                             }
                                         }
                                     ],
@@ -343,17 +326,6 @@
                     "arguments": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "_paymentProxy",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_paymentProxy"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "_to",
                             "value": {
                                 "terminalValue": {
@@ -383,17 +355,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "_amountInMax",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_amountInMax"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "_paymentReference",
                             "value": {
                                 "terminalValue": {
@@ -410,6 +371,30 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "_requestFeeAmount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_amountInMax",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_amountInMax"
                                     }
                                 }
                             }
@@ -448,7 +433,6 @@
                             }
                         }
                     ],
-                    "arguments_skipped": [],
                     "functionName": "swapTransferWithReference",
                     "functionType": "unknown",
                     "options": {},
@@ -465,12 +449,6 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg._paymentProxy",
-                                                "label": "Payment proxy"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
                                                 "key": "sci.eth.arg._to",
                                                 "label": "Payment address"
                                             }
@@ -483,33 +461,6 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg._amountInMax",
-                                                "label": "Max to spend"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Swap contract",
-                                                "value": "(Cannot be displayed)"
-                                            }
-                                        },
-                                        {
-                                            "static_entry": {
-                                                "label": "Path",
-                                                "value": "(Cannot be displayed)"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
                                                 "key": "sci.eth.arg._paymentReference",
                                                 "label": "Payment reference"
                                             }
@@ -518,33 +469,6 @@
                                             "property_ref": {
                                                 "key": "sci.eth.arg._requestFeeAmount",
                                                 "label": "Fee amount"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAddress",
-                                                "label": "Fee payment address"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._deadline",
-                                                "label": "Swap deadline"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._chainlinkMaxRateTimespan",
-                                                "label": "Min conversion freshness"
                                             }
                                         }
                                     ],
@@ -1009,28 +933,6 @@
                 {
                     "arguments": [
                         {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "feeAddress",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "feeAddress"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "metaDetails.0.paymentNetworkId",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "metaDetails.0.paymentNetworkId"
-                                    }
-                                }
-                            }
-                        },
-                        {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "metaDetails.0.requestDetails.0.recipient",
                             "value": {
@@ -1073,6 +975,30 @@
                                     }
                                 }
                             }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "feeAddress",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "feeAddress"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "metaDetails.0.paymentNetworkId",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "metaDetails.0.paymentNetworkId"
+                                    }
+                                }
+                            }
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
@@ -1095,9 +1021,7 @@
                                     }
                                 }
                             }
-                        }
-                    ],
-                    "arguments_skipped": [
+                        },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "metaDetails.0.requestDetails.0.path",
@@ -1126,12 +1050,6 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg.metaDetails.0.paymentNetworkId",
-                                                "label": "Payment network ID"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
                                                 "key": "sci.eth.arg.metaDetails.0.requestDetails.0.recipient",
                                                 "label": "Payment address"
                                             }
@@ -1143,21 +1061,6 @@
                                             }
                                         },
                                         {
-                                            "static_entry": {
-                                                "label": "Path",
-                                                "value": "(Cannot be displayed)"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
                                             "property_ref": {
                                                 "key": "sci.eth.arg.metaDetails.0.requestDetails.0.paymentReference",
                                                 "label": "Payment reference"
@@ -1168,42 +1071,11 @@
                                                 "key": "sci.eth.arg.metaDetails.0.requestDetails.0.feeAmount",
                                                 "label": "Fee amount"
                                             }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.maxToSpend",
-                                                "label": "Max to spend"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.metaDetails.0.requestDetails.0.maxRateTimespan",
-                                                "label": "Min conversion freshness"
-                                            }
-                                        },
-                                        {
-                                            "static_entry": {
-                                                "label": "Path to USD",
-                                                "value": "(Cannot be displayed)"
-                                            }
                                         }
                                     ],
+                                    "skip_subheader": false,
                                     "subtitle": " ",
-                                    "title": ""
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg.feeAddress",
-                                                "label": "Fee payment address"
-                                            }
-                                        }
-                                    ],
-                                    "subtitle": " ",
-                                    "title": ""
+                                    "title": "APPROVE CONTRACT DATA"
                                 }
                             }
                         ]
@@ -1849,17 +1721,6 @@
                     "arguments": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "_paymentProxy",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_paymentProxy"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
                             "name": "_to",
                             "value": {
                                 "terminalValue": {
@@ -1889,17 +1750,6 @@
                         },
                         {
                             "format": "ARGUMENTFORMAT_RAW",
-                            "name": "_amountInMax",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_amountInMax"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
                             "name": "_paymentReference",
                             "value": {
                                 "terminalValue": {
@@ -1916,6 +1766,30 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "_feeAmount"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "_paymentProxy",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_paymentProxy"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "_amountInMax",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "_amountInMax"
                                     }
                                 }
                             }
@@ -1943,7 +1817,6 @@
                             }
                         }
                     ],
-                    "arguments_skipped": [],
                     "functionName": "swapTransferWithReference",
                     "functionType": "unknown",
                     "options": {},
@@ -1960,12 +1833,6 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg._paymentProxy",
-                                                "label": "Payment proxy"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
                                                 "key": "sci.eth.arg._to",
                                                 "label": "Payment address"
                                             }
@@ -1978,27 +1845,6 @@
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg._amountInMax",
-                                                "label": "Max to spend"
-                                            }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
-                                        {
-                                            "static_entry": {
-                                                "label": "Path",
-                                                "value": "(Cannot be displayed)"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
                                                 "key": "sci.eth.arg._paymentReference",
                                                 "label": "Payment reference"
                                             }
@@ -2007,18 +1853,6 @@
                                             "property_ref": {
                                                 "key": "sci.eth.arg._feeAmount",
                                                 "label": "Fee amount"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAddress",
-                                                "label": "Fee payment address"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._deadline",
-                                                "label": "Swap deadline"
                                             }
                                         }
                                     ],
@@ -2245,7 +2079,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
                             "name": "_feeAddress",
@@ -2269,7 +2105,6 @@
                             }
                         }
                     ],
-                    "arguments_skipped": [],
                     "functionName": "transferWithReferenceAndFee",
                     "functionType": "unknown",
                     "options": {},
@@ -2297,42 +2132,15 @@
                                             }
                                         },
                                         {
-                                            "static_entry": {
-                                                "label": "Path",
-                                                "value": "(Cannot be displayed)"
-                                            }
-                                        },
-                                        {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._paymentReference",
                                                 "label": "Payment reference"
                                             }
-                                        }
-                                    ],
-                                    "skip_subheader": false,
-                                    "subtitle": " ",
-                                    "title": "APPROVE CONTRACT DATA"
-                                }
-                            },
-                            {
-                                "key_value_screen": {
-                                    "properties": [
+                                        },
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._feeAmount",
                                                 "label": "Fee amount"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAddress",
-                                                "label": "Fee payment address"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._maxRateTimespan",
-                                                "label": "Min conversion freshness"
                                             }
                                         }
                                     ],
@@ -2456,24 +2264,6 @@
                             }
                         },
                         {
-                            "format": "ARGUMENTFORMAT_AMOUNT",
-                            "name": "_requestAmount",
-                            "value": {
-                                "amount": {
-                                    "tokenId": {
-                                        "path": {
-                                            "abi_path": "_path.-1"
-                                        }
-                                    },
-                                    "value": {
-                                        "path": {
-                                            "abi_path": "_requestAmount"
-                                        }
-                                    }
-                                }
-                            }
-                        },
-                        {
                             "format": "ARGUMENTFORMAT_RAW",
                             "name": "_paymentReference",
                             "value": {
@@ -2491,39 +2281,6 @@
                                 "terminalValue": {
                                     "path": {
                                         "abi_path": "_feeAmount"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_EIP55",
-                            "name": "_feeAddress",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_feeAddress"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "_maxToSpend",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_maxToSpend"
-                                    }
-                                }
-                            }
-                        },
-                        {
-                            "format": "ARGUMENTFORMAT_RAW",
-                            "name": "_maxRateTimespan",
-                            "value": {
-                                "terminalValue": {
-                                    "path": {
-                                        "abi_path": "_maxRateTimespan"
                                     }
                                 }
                             }
@@ -2557,15 +2314,15 @@
                                             }
                                         },
                                         {
-                                            "static_entry": {
-                                                "label": "Path",
-                                                "value": "(Cannot be displayed)"
+                                            "property_ref": {
+                                                "key": "sci.eth.arg._paymentReference",
+                                                "label": "Payment reference"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "sci.eth.arg._paymentReference",
-                                                "label": "Payment reference"
+                                                "key": "sci.eth.arg._feeAmount",
+                                                "label": "Fee amount"
                                             }
                                         }
                                     ],
@@ -2577,12 +2334,6 @@
                             {
                                 "key_value_screen": {
                                     "properties": [
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAmount",
-                                                "label": "Fee amount"
-                                            }
-                                        },
                                         {
                                             "property_ref": {
                                                 "key": "sci.eth.arg._feeAddress",
@@ -2774,7 +2525,9 @@
                                     }
                                 }
                             }
-                        },
+                        }
+                    ],
+                    "arguments_skipped": [
                         {
                             "format": "ARGUMENTFORMAT_EIP55",
                             "name": "_feeAddress",
@@ -2787,7 +2540,6 @@
                             }
                         }
                     ],
-                    "arguments_skipped": [],
                     "functionName": "transferWithReferenceAndFee",
                     "functionType": "unknown",
                     "options": {},
@@ -2818,12 +2570,6 @@
                                             "property_ref": {
                                                 "key": "sci.eth.arg._feeAmount",
                                                 "label": "Fee amount"
-                                            }
-                                        },
-                                        {
-                                            "property_ref": {
-                                                "key": "sci.eth.arg._feeAddress",
-                                                "label": "Fee payment address"
                                             }
                                         }
                                     ],

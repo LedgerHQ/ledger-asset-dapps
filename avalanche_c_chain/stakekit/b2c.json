@@ -1,0 +1,63 @@
+{
+    "blockchainName": "avalanche_c_chain",
+    "chainId": 43114,
+    "contracts": [
+        {
+            "address": "0x794a61358d6845594f94dc1db02a252b5b4814ad",
+            "contractName": "InitializableImmutableAdminUpgradeabilityProxy",
+            "selectors": {
+                "0x617ba037": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "supply",
+                    "plugin": "StakeKit"
+                },
+                "0x69328dec": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x2b2c81e08f1af8835a78bb2a90ae924ace0ea4be",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x0d10d32c": {
+                    "erc20OfInterest": [],
+                    "method": "redeemOverdueShares",
+                    "plugin": "StakeKit"
+                },
+                "0x0f7e2048": {
+                    "erc20OfInterest": [],
+                    "method": "redeemOverdueShares",
+                    "plugin": "StakeKit"
+                },
+                "0x5bcb2fc6": {
+                    "erc20OfInterest": [],
+                    "method": "submit",
+                    "plugin": "StakeKit"
+                },
+                "0xbe040fb0": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "StakeKit"
+                },
+                "0xc9d2ff9d": {
+                    "erc20OfInterest": [],
+                    "method": "requestUnlock",
+                    "plugin": "StakeKit"
+                },
+                "0xdb006a75": {
+                    "erc20OfInterest": [],
+                    "method": "redeem",
+                    "plugin": "StakeKit"
+                }
+            }
+        }
+    ],
+    "name": "StakeKit"
+}
