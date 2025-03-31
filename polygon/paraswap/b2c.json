@@ -1,25 +1,16 @@
 {
-    "blockchainName": "polygon",
     "chainId": 137,
     "contracts": [
         {
             "address": "0xdef171fe48cf0115b1d80b88dc8eab59176fee57",
             "contractName": "AugustusSwapper",
             "selectors": {
-                "0x2298207a": {
+                "0xa6886da9": {
                     "erc20OfInterest": [
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "simpleBuy",
-                    "plugin": "Paraswap"
-                },
-                "0x46c67b6d": {
-                    "erc20OfInterest": [
-                        "data.fromToken",
-                        "data.path.0.path.-1.to"
-                    ],
-                    "method": "megaSwap",
+                    "method": "directUniV3Swap",
                     "plugin": "Paraswap"
                 },
                 "0x54840d1a": {
@@ -30,12 +21,60 @@
                     "method": "swapOnUniswap",
                     "plugin": "Paraswap"
                 },
+                "0xf5661034": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "swapOnUniswapFork",
+                    "plugin": "Paraswap"
+                },
                 "0x54e3f31b": {
                     "erc20OfInterest": [
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "simpleSwap",
+                    "method": "SimpleSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x935fb84b": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "buyOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0xc03786b0": {
+                    "erc20OfInterest": [
+                        "path.0",
+                        "path.-1"
+                    ],
+                    "method": "buyOnUniswapFork",
+                    "plugin": "Paraswap"
+                },
+                "0xa94e78ef": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.-1.to"
+                    ],
+                    "method": "multiSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x46c67b6d": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.path.0.path.-1.to"
+                    ],
+                    "method": "megaSwap",
+                    "plugin": "Paraswap"
+                },
+                "0x2298207a": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "simpleBuy",
                     "plugin": "Paraswap"
                 },
                 "0x64466805": {
@@ -53,38 +92,6 @@
                     ],
                     "method": "swapOnZeroXv2",
                     "plugin": "Paraswap"
-                },
-                "0x935fb84b": {
-                    "erc20OfInterest": [
-                        "path.0",
-                        "path.-1"
-                    ],
-                    "method": "buyOnUniswap",
-                    "plugin": "Paraswap"
-                },
-                "0xa94e78ef": {
-                    "erc20OfInterest": [
-                        "data.fromToken",
-                        "data.path.-1.to"
-                    ],
-                    "method": "multiSwap",
-                    "plugin": "Paraswap"
-                },
-                "0xc03786b0": {
-                    "erc20OfInterest": [
-                        "path.0",
-                        "path.-1"
-                    ],
-                    "method": "buyOnUniswapFork",
-                    "plugin": "Paraswap"
-                },
-                "0xf5661034": {
-                    "erc20OfInterest": [
-                        "path.0",
-                        "path.-1"
-                    ],
-                    "method": "swapOnUniswapFork",
-                    "plugin": "Paraswap"
                 }
             }
         },
@@ -97,7 +104,6 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "swapOnUniswapFork",
                     "plugin": "Paraswap"
                 },
                 "0x33635226": {
@@ -105,7 +111,6 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "buyOnUniswapFork",
                     "plugin": "Paraswap"
                 },
                 "0x58b9d179": {
@@ -121,7 +126,6 @@
                         "data.fromToken",
                         "data.path.-1.to"
                     ],
-                    "method": "multiSwap",
                     "plugin": "Paraswap"
                 },
                 "0xa27e8b6b": {
@@ -129,7 +133,6 @@
                         "fromToken",
                         "toToken"
                     ],
-                    "method": "simplBuy",
                     "plugin": "Paraswap"
                 },
                 "0xcfc0afeb": {
@@ -145,7 +148,6 @@
                         "data.fromToken",
                         "data.path.0.path.-1.to"
                     ],
-                    "method": "megaSwap",
                     "plugin": "Paraswap"
                 },
                 "0xf9355f72": {
@@ -153,7 +155,6 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "buyOnUniswap",
                     "plugin": "Paraswap"
                 },
                 "0xf95a49eb": {
@@ -161,11 +162,11 @@
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "buy",
                     "plugin": "Paraswap"
                 }
             }
         }
+
     ],
     "name": "Paraswap"
 }
