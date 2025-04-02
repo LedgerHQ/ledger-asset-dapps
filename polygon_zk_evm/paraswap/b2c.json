@@ -1,5 +1,4 @@
 {
-    "blockchainName": "polygon_zk_evm",
     "chainId": 1101,
     "contracts": [
         {
@@ -67,6 +66,14 @@
                         "path.-1"
                     ],
                     "method": "buyOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0xa6886da9": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "directUniV3Swap",
                     "plugin": "Paraswap"
                 },
                 "0xa94e78ef": {
