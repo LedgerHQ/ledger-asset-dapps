@@ -35,7 +35,7 @@
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "simpleSwap",
+                    "method": "SimpleSwap",
                     "plugin": "Paraswap"
                 },
                 "0x64466805": {
@@ -60,6 +60,14 @@
                         "path.-1"
                     ],
                     "method": "buyOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0xa6886da9": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "directUniV3Swap",
                     "plugin": "Paraswap"
                 },
                 "0xa94e78ef": {
@@ -97,7 +105,7 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "swapOnUniswapFork",
+                    "method": "SwapOnUniswapFork",
                     "plugin": "Paraswap"
                 },
                 "0x33635226": {
@@ -105,7 +113,7 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "buyOnUniswapFork",
+                    "method": "BuyOnUniswapFork",
                     "plugin": "Paraswap"
                 },
                 "0x58b9d179": {
@@ -113,7 +121,7 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "swapOnUniswap",
+                    "method": "SwapOnUniswap",
                     "plugin": "Paraswap"
                 },
                 "0x8f00eccb": {
@@ -121,7 +129,7 @@
                         "data.fromToken",
                         "data.path.-1.to"
                     ],
-                    "method": "multiSwap",
+                    "method": "MultiSwap",
                     "plugin": "Paraswap"
                 },
                 "0xa27e8b6b": {
@@ -129,7 +137,7 @@
                         "fromToken",
                         "toToken"
                     ],
-                    "method": "simplBuy",
+                    "method": "SimpleBuy",
                     "plugin": "Paraswap"
                 },
                 "0xcfc0afeb": {
@@ -137,7 +145,7 @@
                         "fromToken",
                         "toToken"
                     ],
-                    "method": "simpleSwap",
+                    "method": "SimpleSwap",
                     "plugin": "Paraswap"
                 },
                 "0xec1d21dd": {
@@ -145,7 +153,7 @@
                         "data.fromToken",
                         "data.path.0.path.-1.to"
                     ],
-                    "method": "megaSwap",
+                    "method": "MegaSwap",
                     "plugin": "Paraswap"
                 },
                 "0xf9355f72": {
@@ -153,7 +161,7 @@
                         "path.0",
                         "path.-1"
                     ],
-                    "method": "buyOnUniswap",
+                    "method": "BuyOnUniswap",
                     "plugin": "Paraswap"
                 },
                 "0xf95a49eb": {
@@ -161,7 +169,7 @@
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "buy",
+                    "method": "Buy",
                     "plugin": "Paraswap"
                 }
             }
