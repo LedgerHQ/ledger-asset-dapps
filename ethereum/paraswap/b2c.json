@@ -42,7 +42,7 @@
                         "data.fromToken",
                         "data.toToken"
                     ],
-                    "method": "simpleSwap",
+                    "method": "SimpleSwap",
                     "plugin": "Paraswap"
                 },
                 "0x64466805": {
@@ -67,6 +67,14 @@
                         "path.-1"
                     ],
                     "method": "buyOnUniswap",
+                    "plugin": "Paraswap"
+                },
+                "0xa6886da9": {
+                    "erc20OfInterest": [
+                        "data.fromToken",
+                        "data.toToken"
+                    ],
+                    "method": "directUniV3Swap",
                     "plugin": "Paraswap"
                 },
                 "0xa94e78ef": {
@@ -136,7 +144,6 @@
                         "fromToken",
                         "toToken"
                     ],
-                    "method": "simplBuy",
                     "plugin": "Paraswap"
                 },
                 "0xcfc0afeb": {
