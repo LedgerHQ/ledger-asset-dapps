@@ -1,0 +1,97 @@
+{
+    "blockchainName": "berachain",
+    "chainId": 80094,
+    "contracts": [
+        {
+            "address": "0x656b95e550c07a9ffe548bd4085c72418ceb1dba",
+            "contractName": "BGT",
+            "selectors": {
+                "0x2b153ce1": {
+                    "erc20OfInterest": [],
+                    "method": "queueDropBoost",
+                    "plugin": "Berachain"
+                },
+                "0x489fa30a": {
+                    "erc20OfInterest": [],
+                    "method": "queueBoost",
+                    "plugin": "Berachain"
+                },
+                "0x5c19a95c": {
+                    "erc20OfInterest": [],
+                    "method": "delegate",
+                    "plugin": "Berachain"
+                },
+                "0x814d2614": {
+                    "erc20OfInterest": [],
+                    "method": "dropBoost",
+                    "plugin": "Berachain"
+                },
+                "0x9b05e781": {
+                    "erc20OfInterest": [],
+                    "method": "activateBoost",
+                    "plugin": "Berachain"
+                },
+                "0x9c8b0547": {
+                    "erc20OfInterest": [],
+                    "method": "cancelDropBoost",
+                    "plugin": "Berachain"
+                },
+                "0xc3cda520": {
+                    "erc20OfInterest": [],
+                    "method": "delegateBySign",
+                    "plugin": "Berachain"
+                },
+                "0xf59f3cbf": {
+                    "erc20OfInterest": [],
+                    "method": "cancelBoost",
+                    "plugin": "Berachain"
+                }
+            }
+        },
+        {
+            "address": "0xa4afef880f5ce1f63c9fb48f661e27f8b4216401",
+            "contractName": "ERC1967Proxy",
+            "selectors": {
+                "0x328ebaf7": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "mint",
+                    "plugin": "Berachain"
+                },
+                "0xed596315": {
+                    "erc20OfInterest": [
+                        "asset"
+                    ],
+                    "method": "redeem",
+                    "plugin": "Berachain"
+                }
+            }
+        },
+        {
+            "address": "0x40c938e57a863cfdbf0a35bbee35809ec3ea54c8",
+            "contractName": "RewardVault",
+            "selectors": {
+                "0xa694fc3a": {
+                    "erc20OfInterest": [],
+                    "method": "stake",
+                    "plugin": "Berachain"
+                }
+            }
+        },
+        {
+            "address": "0x94ad6ac84f6c6fba8b8ccbd71d9f4f101def52a8",
+            "contractName": "ERC1967Proxy",
+            "selectors": {
+                "0x577ee5c7": {
+                    "erc20OfInterest": [
+                        "stakingToken"
+                    ],
+                    "method": "createRewardVault",
+                    "plugin": "Berachain"
+                }
+            }
+        }
+    ],
+    "name": "Berachain"
+}
