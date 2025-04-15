@@ -1,0 +1,614 @@
+[
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_governance", "type": "address" },
+      {
+        "internalType": "address",
+        "name": "_addressUpdater",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_oldRewardManager",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "rewardOwner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "recipients",
+        "type": "address[]"
+      }
+    ],
+    "name": "AllowedClaimRecipientsChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "rewardOwner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "executors",
+        "type": "address[]"
+      }
+    ],
+    "name": "ClaimExecutorsChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "authorizedAmountWei",
+        "type": "uint256"
+      }
+    ],
+    "name": "DailyAuthorizedInflationSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes4",
+        "name": "selector",
+        "type": "bytes4"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "allowedAfterTimestamp",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "encodedCall",
+        "type": "bytes"
+      }
+    ],
+    "name": "GovernanceCallTimelocked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "initialGovernance",
+        "type": "address"
+      }
+    ],
+    "name": "GovernanceInitialised",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "governanceSettings",
+        "type": "address"
+      }
+    ],
+    "name": "GovernedProductionModeEntered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amountReceivedWei",
+        "type": "uint256"
+      }
+    ],
+    "name": "InflationReceived",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "beneficiary",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sentTo",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "RewardClaimed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "rewardManager",
+        "type": "address"
+      }
+    ],
+    "name": "RewardManagerActivated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "rewardManager",
+        "type": "address"
+      }
+    ],
+    "name": "RewardManagerDeactivated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "address[]",
+        "name": "addresses",
+        "type": "address[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "rewards",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "RewardsDistributed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes4",
+        "name": "selector",
+        "type": "bytes4"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "TimelockedGovernanceCallCanceled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes4",
+        "name": "selector",
+        "type": "bytes4"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "timestamp",
+        "type": "uint256"
+      }
+    ],
+    "name": "TimelockedGovernanceCallExecuted",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "activate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "active",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_rewardOwner", "type": "address" }
+    ],
+    "name": "allowedClaimRecipients",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes4", "name": "_selector", "type": "bytes4" }
+    ],
+    "name": "cancelGovernanceCall",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_rewardOwner", "type": "address" },
+      {
+        "internalType": "address payable",
+        "name": "_recipient",
+        "type": "address"
+      },
+      { "internalType": "uint256", "name": "_rewardAmount", "type": "uint256" },
+      { "internalType": "bool", "name": "_wrap", "type": "bool" }
+    ],
+    "name": "claim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_rewardOwner", "type": "address" }
+    ],
+    "name": "claimExecutors",
+    "outputs": [
+      { "internalType": "address[]", "name": "", "type": "address[]" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "deactivate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_addresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "_rewardAmounts",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "distributeRewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "bytes4", "name": "_selector", "type": "bytes4" }
+    ],
+    "name": "executeGovernanceCall",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getAddressUpdater",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "_addressUpdater",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getContractName",
+    "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getInflationAddress",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address", "name": "_beneficiary", "type": "address" }
+    ],
+    "name": "getStateOfRewards",
+    "outputs": [
+      { "internalType": "uint256", "name": "_totalReward", "type": "uint256" },
+      { "internalType": "uint256", "name": "_claimedReward", "type": "uint256" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTokenPoolSupplyData",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "_lockedFundsWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalInflationAuthorizedWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalClaimedWei",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTotals",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "_totalAwardedWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalClaimedWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalInflationAuthorizedWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_totalInflationReceivedWei",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_lastInflationAuthorizationReceivedTs",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_dailyAuthorizedInflation",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "governance",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "governanceSettings",
+    "outputs": [
+      {
+        "internalType": "contract IGovernanceSettings",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_initialGovernance",
+        "type": "address"
+      }
+    ],
+    "name": "initialise",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "newRewardManager",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "oldRewardManager",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "productionMode",
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "receiveInflation",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "rewardDistributor",
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "_recipients",
+        "type": "address[]"
+      }
+    ],
+    "name": "setAllowedClaimRecipients",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      { "internalType": "address[]", "name": "_executors", "type": "address[]" }
+    ],
+    "name": "setClaimExecutors",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_toAuthorizeWei",
+        "type": "uint256"
+      }
+    ],
+    "name": "setDailyAuthorizedInflation",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_newRewardManager",
+        "type": "address"
+      }
+    ],
+    "name": "setNewRewardManager",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_rewardDistributor",
+        "type": "address"
+      }
+    ],
+    "name": "setRewardDistributor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "switchToProductionMode",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{ "internalType": "bytes4", "name": "", "type": "bytes4" }],
+    "name": "timelockedCalls",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "allowedAfterTimestamp",
+        "type": "uint256"
+      },
+      { "internalType": "bytes", "name": "encodedCall", "type": "bytes" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32[]",
+        "name": "_contractNameHashes",
+        "type": "bytes32[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "_contractAddresses",
+        "type": "address[]"
+      }
+    ],
+    "name": "updateContractAddresses",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "wNat",
+    "outputs": [
+      { "internalType": "contract WNat", "name": "", "type": "address" }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
