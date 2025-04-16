@@ -3,6 +3,68 @@
     "chainId": 1,
     "contracts": [
         {
+            "address": "0x4e6189f16a348e6233a33317c6480f2fd4fc7870",
+            "contractName": "TransparentUpgradeableProxy",
+            "selectors": {
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "StakeKit"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0xba087652": {
+                    "erc20OfInterest": [],
+                    "method": "reedeem",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0x9d39a5de30e57443bff2a8307a4256c8797a3497",
+            "contractName": "StakedUSDeV2",
+            "selectors": {
+                "0x6e553f65": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "StakeKit"
+                },
+                "0x9343d9e1": {
+                    "erc20OfInterest": [],
+                    "method": "cooldownShares",
+                    "plugin": "StakeKit"
+                },
+                "0x94bf804d": {
+                    "erc20OfInterest": [],
+                    "method": "mint",
+                    "plugin": "StakeKit"
+                },
+                "0xb460af94": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "StakeKit"
+                },
+                "0xcdac52ed": {
+                    "erc20OfInterest": [],
+                    "method": "cooldownAssets",
+                    "plugin": "StakeKit"
+                },
+                "0xf2888dbb": {
+                    "erc20OfInterest": [],
+                    "method": "unstake",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
             "address": "0x5954ab967bc958940b7eb73ee84797dc8a2afbb9",
             "contractName": "ApeCoinStaking",
             "selectors": {
@@ -320,6 +382,37 @@
         },
         {
             "address": "0x56d783ca8e0b998c57a428bf1c26a8baca50524e",
+            "contractName": "ValidatorShareProxy",
+            "selectors": {
+                "0x6ab15071": {
+                    "erc20OfInterest": [],
+                    "method": "buyVoucher",
+                    "plugin": "StakeKit"
+                },
+                "0x8759c234": {
+                    "erc20OfInterest": [],
+                    "method": "unstakeClaimTokens_newPOL",
+                    "plugin": "StakeKit"
+                },
+                "0xe0db556b": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawRewardsPOL",
+                    "plugin": "StakeKit"
+                },
+                "0xe4457a8a": {
+                    "erc20OfInterest": [],
+                    "method": "buyVoucherPOL",
+                    "plugin": "StakeKit"
+                },
+                "0xe570b78b": {
+                    "erc20OfInterest": [],
+                    "method": "sellVoucher_newPOL",
+                    "plugin": "StakeKit"
+                }
+            }
+        },
+        {
+            "address": "0xb929b89153fc2eed442e81e5a1add4e2fa39028f",
             "contractName": "ValidatorShareProxy",
             "selectors": {
                 "0x6ab15071": {
