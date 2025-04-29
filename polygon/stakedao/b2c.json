@@ -7,14 +7,17 @@
             "contractName": "PassiveEUR",
             "selectors": {
                 "0x2e1a7d4d": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeDAO"
                 },
                 "0xb6b55f25": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "StakeDAO"
                 },
                 "0xde5f6268": {
+                    "erc20OfInterest": [],
                     "method": "depositAll",
                     "plugin": "StakeDAO"
                 }
@@ -25,10 +28,12 @@
             "contractName": "Masterchef",
             "selectors": {
                 "0x441a3e70": {
+                    "erc20OfInterest": [],
                     "method": "withdraw",
                     "plugin": "StakeDAO"
                 },
                 "0xe2bbb158": {
+                    "erc20OfInterest": [],
                     "method": "deposit",
                     "plugin": "StakeDAO"
                 }
@@ -39,6 +44,7 @@
             "contractName": "MerkleDistributor",
             "selectors": {
                 "0xea25e176": {
+                    "erc20OfInterest": [],
                     "method": "claim",
                     "plugin": "StakeDAO"
                 }
