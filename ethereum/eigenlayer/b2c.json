@@ -7,6 +7,7 @@
             "contractName": "EigenLayerStrategyManager",
             "selectors": {
                 "0xe7a050aa": {
+                    "erc20OfInterest": [],
                     "method": "depositIntoStrategy",
                     "plugin": "EigenLayer"
                 }
@@ -17,18 +18,22 @@
             "contractName": "EigenLayerDelegationManager",
             "selectors": {
                 "0x0dd8dd02": {
+                    "erc20OfInterest": [],
                     "method": "queueWithdrawals",
                     "plugin": "EigenLayer"
                 },
                 "0x33404396": {
+                    "erc20OfInterest": [],
                     "method": "completeQueuedWithdrawals",
                     "plugin": "EigenLayer"
                 },
                 "0xda8be864": {
+                    "erc20OfInterest": [],
                     "method": "undelegate",
                     "plugin": "EigenLayer"
                 },
                 "0xeea9064b": {
+                    "erc20OfInterest": [],
                     "method": "delegateTo",
                     "plugin": "EigenLayer"
                 }
