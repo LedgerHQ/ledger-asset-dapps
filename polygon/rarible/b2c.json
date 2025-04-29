@@ -7,10 +7,12 @@
             "contractName": "RaribleContract",
             "selectors": {
                 "0xe2864fe3": {
+                    "erc20OfInterest": [],
                     "method": "cancel",
                     "plugin": "Rarible"
                 },
                 "0xe99a3f80": {
+                    "erc20OfInterest": [],
                     "method": "matchOrders",
                     "plugin": "Rarible"
                 }
@@ -21,6 +23,7 @@
             "contractName": "RaribleContract",
             "selectors": {
                 "0x27050d1f": {
+                    "erc20OfInterest": [],
                     "method": "createToken",
                     "plugin": "Rarible"
                 }
@@ -31,18 +34,22 @@
             "contractName": "RaribleContract",
             "selectors": {
                 "0x22a775b6": {
+                    "erc20OfInterest": [],
                     "method": "mintAndTransfer",
                     "plugin": "Rarible"
                 },
                 "0x3db397c6": {
+                    "erc20OfInterest": [],
                     "method": "__ERC721Rarible_init",
                     "plugin": "Rarible"
                 },
                 "0x832fbb29": {
+                    "erc20OfInterest": [],
                     "method": "transferFromOrMint",
                     "plugin": "Rarible"
                 },
                 "0xa22cb465": {
+                    "erc20OfInterest": [],
                     "method": "setApprovalForAll",
                     "plugin": "Rarible"
                 }
