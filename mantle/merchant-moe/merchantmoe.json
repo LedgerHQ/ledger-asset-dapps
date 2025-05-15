@@ -1,0 +1,65 @@
+{
+    "blockchainName": "mantle",
+    "chainId": 5000,
+    "contracts": [
+        {
+            "address": "0xeaEE7EE68874218c3558b40063c42B82D3E7232a",
+            "contractName": "MoeRouter",
+            "selectors": {
+                "0x38ed1739": {
+                    "erc20OfInterest": [],
+                    "method": "swapExactTokensForTokens",
+                    "plugin": "Merchant Moe"
+                },
+                "0x8803dbee": {
+                    "erc20OfInterest": [],
+                    "method": "swapTokensForExactTokens",
+                    "plugin": "Merchant Moe"
+                },
+                "0x7ff36ab5": {
+                    "erc20OfInterest": [],
+                    "method": "swapExactETHForTokens",
+                    "plugin": "Merchant Moe"
+                },
+                "0x18cbafe5": {
+                    "erc20OfInterest": [],
+                    "method": "swapExactTokensForETH",
+                    "plugin": "Merchant Moe"
+                }
+            }
+        },
+        {
+            "address": "0xd4BD5e47548D8A6ba2a0Bf4cE073Cbf8fa523DcC",
+            "contractName": "MasterChef",
+            "selectors": {
+                "0xe2bbb158": {
+                    "erc20OfInterest": [],
+                    "method": "deposit",
+                    "plugin": "Merchant Moe"
+                },
+                "0x441a3e70": {
+                    "erc20OfInterest": [],
+                    "method": "withdraw",
+                    "plugin": "Merchant Moe"
+                },
+                "0x3d18b912": {
+                    "erc20OfInterest": [],
+                    "method": "getReward",
+                    "plugin": "Merchant Moe"
+                }
+            }
+        },
+        {
+            "address": "0x5bef015ca9424a7c07b68490616a4c1f094bedec",
+            "contractName": "MoeFactory",
+            "selectors": {
+                "0xc9c65396": {
+                    "erc20OfInterest": [],
+                    "method": "createPair",
+                    "plugin": "Merchant Moe"
+                }
+            }
+        }
+    ],
+    "name": "Merchant Moe"
+}
