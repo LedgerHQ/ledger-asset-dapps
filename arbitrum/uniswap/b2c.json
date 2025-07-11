@@ -1,0 +1,18 @@
+{
+    "blockchainName": "arbitrum",
+    "chainId": 42161,
+    "contracts": [
+        {
+            "address": "0x5e325eda8064b456f4781070c0738d849c824258",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}
