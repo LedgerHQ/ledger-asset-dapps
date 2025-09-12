@@ -1,0 +1,734 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_feeDistributorFactory",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__AmountOfParametersError",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_caller",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_client",
+                "type": "address"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__CallerNotClient",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_caller",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_eip7251Enabler",
+                "type": "address"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__CallerNotEip7251Enabler",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__DoNotSendEthDirectlyHere",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__Eip7251NotEnabledYet",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__EthAmountPerValidatorInWeiOutOfRange",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__EtherValueError",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_receiver",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__FailedToSendEth",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes1",
+                "name": "_passedPrefix",
+                "type": "bytes1"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__IncorrectWithdrawalCredentialsPrefix",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__InsufficientBalance",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__NoDepositToReject",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__NoSmallDeposits",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_passedAddress",
+                "type": "address"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__NotFactory",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_passedAddress",
+                "type": "address"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__NotFeeDistributor",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__ShouldNotBeRejected",
+        "type": "error"
+    },
+    {
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__ValidatorCountError",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint40",
+                "name": "_expiration",
+                "type": "uint40"
+            },
+            {
+                "internalType": "uint40",
+                "name": "_now",
+                "type": "uint40"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__WaitForExpiration",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__WithdrawalCredentialsBytesNotZero",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_sender",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_feeDistributorInstance",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint40",
+                "name": "_expiration",
+                "type": "uint40"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes",
+                "name": "_extraData",
+                "type": "bytes"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__ClientEthAdded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "P2pOrgUnlimitedEthDepositor__Eip7251Enabled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_validatorCount",
+                "type": "uint256"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__Eth2Deposit",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__Eth2DepositCompleted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__Eth2DepositInProgress",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_feeDistributorInstance",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "_client",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__Refund",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "P2pOrgUnlimitedEthDepositor__ServiceRejected",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "internalType": "address",
+                "name": "_referenceFeeDistributor",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct FeeRecipient",
+                "name": "_clientConfig",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct FeeRecipient",
+                "name": "_referrerConfig",
+                "type": "tuple"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_extraData",
+                "type": "bytes"
+            }
+        ],
+        "name": "addEth",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "depositId",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "address",
+                "name": "feeDistributorInstance",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositAmount",
+        "outputs": [
+            {
+                "internalType": "uint112",
+                "name": "",
+                "type": "uint112"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositExpiration",
+        "outputs": [
+            {
+                "internalType": "uint40",
+                "name": "",
+                "type": "uint40"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositStatus",
+        "outputs": [
+            {
+                "internalType": "enum ClientDepositStatus",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "eip7251Enabled",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "enableEip7251",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "internalType": "address",
+                "name": "_feeDistributorInstance",
+                "type": "address"
+            }
+        ],
+        "name": "getDepositId",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "internalType": "address",
+                "name": "_referenceFeeDistributor",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct FeeRecipient",
+                "name": "_clientConfig",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint96",
+                        "name": "basisPoints",
+                        "type": "uint96"
+                    },
+                    {
+                        "internalType": "address payable",
+                        "name": "recipient",
+                        "type": "address"
+                    }
+                ],
+                "internalType": "struct FeeRecipient",
+                "name": "_referrerConfig",
+                "type": "tuple"
+            }
+        ],
+        "name": "getDepositId",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "i_depositContract",
+        "outputs": [
+            {
+                "internalType": "contract IDepositContract",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "i_feeDistributorFactory",
+        "outputs": [
+            {
+                "internalType": "contract IFeeDistributorFactory",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "internalType": "address",
+                "name": "_feeDistributorInstance",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "_pubkeys",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "bytes[]",
+                "name": "_signatures",
+                "type": "bytes[]"
+            },
+            {
+                "internalType": "bytes32[]",
+                "name": "_depositDataRoots",
+                "type": "bytes32[]"
+            }
+        ],
+        "name": "makeBeaconDeposit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_eth2WithdrawalCredentials",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint96",
+                "name": "_ethAmountPerValidatorInWei",
+                "type": "uint96"
+            },
+            {
+                "internalType": "address",
+                "name": "_feeDistributorInstance",
+                "type": "address"
+            }
+        ],
+        "name": "refund",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_depositId",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "_reason",
+                "type": "string"
+            }
+        ],
+        "name": "rejectService",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "interfaceId",
+                "type": "bytes4"
+            }
+        ],
+        "name": "supportsInterface",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "totalBalance",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
+    }
+]

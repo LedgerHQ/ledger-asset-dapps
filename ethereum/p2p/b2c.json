@@ -3,6 +3,17 @@
     "chainId": 1,
     "contracts": [
         {
+            "address": "0x23BE839a14cEc3D6D716D904f09368Bbf9c750eb",
+            "contractName": "P2P.org",
+            "selectors": {
+                "0xa49b131b": {
+                    "erc20OfInterest": [],
+                    "method": "addEth",
+                    "plugin": "P2P.org"
+                }
+            }
+        },
+        {
             "address": "0x8e76a33f1aff7eb15de832810506814af4789536",
             "contractName": "P2P.org",
             "selectors": {
