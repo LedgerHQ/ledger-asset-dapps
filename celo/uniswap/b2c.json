@@ -1,0 +1,18 @@
+{
+    "blockchainName": "celo",
+    "chainId": 42220,
+    "contracts": [
+        {
+            "address": "0x643770e279d5d0733f21d6dc03a8efbabf3255b4",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}

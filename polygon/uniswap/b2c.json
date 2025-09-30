@@ -1,0 +1,18 @@
+{
+    "blockchainName": "polygon",
+    "chainId": 137,
+    "contracts": [
+        {
+            "address": "0xec7be89e9d109e7e3fec59c222cf297125fefda2",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}
