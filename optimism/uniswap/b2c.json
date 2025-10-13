@@ -1,0 +1,18 @@
+{
+    "blockchainName": "optimism",
+    "chainId": 10,
+    "contracts": [
+        {
+            "address": "0xcb1355ff08ab38bbce60111f1bb2b784be25d7e8",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}

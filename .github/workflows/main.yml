@@ -21,7 +21,7 @@ jobs:
 
       - name: Checkout
         timeout-minutes: 10
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -54,7 +54,7 @@ jobs:
     steps:
       - name: Trigger update on ${{ matrix.repo }}
         timeout-minutes: 60
-        uses: peter-evans/repository-dispatch@v3
+        uses: peter-evans/repository-dispatch@v4
         with:
           token: ${{ secrets.CI_BOT_TOKEN }}
           repository: ${{ matrix.repo }}

@@ -89,6 +89,112 @@
                     "plugin": "Swell"
                 }
             }
+        },
+        {
+            "address": "0x4796d939b22027c2876d5ce9fde52da9ec4e2362",
+            "contractName": "RswETH",
+            "selectors": {
+                "0x06c933d8": {
+                    "erc20OfInterest": [],
+                    "method": "whitelistedAddresses",
+                    "plugin": "Swell"
+                },
+                "0x06fdde03": {
+                    "erc20OfInterest": [],
+                    "method": "name",
+                    "plugin": "Swell"
+                },
+                "0x0f010466": {
+                    "erc20OfInterest": [],
+                    "method": "swellTreasuryRewardPercentage",
+                    "plugin": "Swell"
+                },
+                "0x16b716d9": {
+                    "erc20OfInterest": [],
+                    "method": "nodeOperatorRewardPercentage",
+                    "plugin": "Swell"
+                },
+                "0x18160ddd": {
+                    "erc20OfInterest": [],
+                    "method": "totalETHDeposited",
+                    "plugin": "Swell"
+                },
+                "0x313ce567": {
+                    "erc20OfInterest": [],
+                    "method": "decimals",
+                    "plugin": "Swell"
+                },
+                "0x51fb012d": {
+                    "erc20OfInterest": [],
+                    "method": "whitelistEnabled",
+                    "plugin": "Swell"
+                },
+                "0x537ef9b5": {
+                    "erc20OfInterest": [],
+                    "method": "maximumRepriceDifferencePercentage",
+                    "plugin": "Swell"
+                },
+                "0x679aefce": {
+                    "erc20OfInterest": [],
+                    "method": "getRate",
+                    "plugin": "Swell"
+                },
+                "0x70a08231": {
+                    "erc20OfInterest": [],
+                    "method": "balanceOf",
+                    "plugin": "Swell"
+                },
+                "0x780a47e0": {
+                    "erc20OfInterest": [],
+                    "method": "ethToRswETHRate",
+                    "plugin": "Swell"
+                },
+                "0x7b2c9070": {
+                    "erc20OfInterest": [],
+                    "method": "totalETHDeposited",
+                    "plugin": "Swell"
+                },
+                "0x902340a1": {
+                    "erc20OfInterest": [],
+                    "method": "AccessControlManager",
+                    "plugin": "Swell"
+                },
+                "0x95d89b41": {
+                    "erc20OfInterest": [],
+                    "method": "symbol",
+                    "plugin": "Swell"
+                },
+                "0x9728adba": {
+                    "erc20OfInterest": [],
+                    "method": "maximumRepriceRswETHDifferencePercentage",
+                    "plugin": "Swell"
+                },
+                "0xa7b9544e": {
+                    "erc20OfInterest": [],
+                    "method": "rswETHToETHRate",
+                    "plugin": "Swell"
+                },
+                "0xbb6a0139": {
+                    "erc20OfInterest": [],
+                    "method": "minimumRepriceTime",
+                    "plugin": "Swell"
+                },
+                "0xd19dea65": {
+                    "erc20OfInterest": [],
+                    "method": "lastRepriceETHReserves",
+                    "plugin": "Swell"
+                },
+                "0xdd62ed3e": {
+                    "erc20OfInterest": [],
+                    "method": "allowance",
+                    "plugin": "Swell"
+                },
+                "0xfbda759b": {
+                    "erc20OfInterest": [],
+                    "method": "lastRepriceUNIX",
+                    "plugin": "Swell"
+                }
+            }
         }
     ],
     "name": "Swell"

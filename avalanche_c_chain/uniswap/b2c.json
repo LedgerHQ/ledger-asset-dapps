@@ -1,0 +1,18 @@
+{
+    "blockchainName": "avalanche_c_chain",
+    "chainId": 43114,
+    "contracts": [
+        {
+            "address": "0x4dae2f939acf50408e13d58534ff8c2776d45265",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}

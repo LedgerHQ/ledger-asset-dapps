@@ -1,5 +1,10 @@
 [
     {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
         "anonymous": false,
         "inputs": [
             {
@@ -42,7 +47,7 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amountClaimed",
+                "name": "_claimedAmount",
                 "type": "uint256"
             }
         ],
@@ -74,17 +79,30 @@
             {
                 "indexed": true,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_treasury",
                 "type": "address"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amount",
+                "name": "_feeAmount",
                 "type": "uint256"
             }
         ],
         "name": "DistributeFees",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "version",
+                "type": "uint8"
+            }
+        ],
+        "name": "Initialized",
         "type": "event"
     },
     {
@@ -116,25 +134,6 @@
         "anonymous": false,
         "inputs": [
             {
-                "indexed": true,
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
-            },
-            {
-                "indexed": false,
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "MintFromPolygon",
-        "type": "event"
-    },
-    {
-        "anonymous": false,
-        "inputs": [
-            {
                 "indexed": false,
                 "internalType": "address",
                 "name": "account",
@@ -156,13 +155,13 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amountMaticX",
+                "name": "_amountInMaticX",
                 "type": "uint256"
             },
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amountMatic",
+                "name": "_amountInStakeTokens",
                 "type": "uint256"
             }
         ],
@@ -249,9 +248,9 @@
         "inputs": [
             {
                 "indexed": false,
-                "internalType": "uint8",
+                "internalType": "uint16",
                 "name": "_feePercent",
-                "type": "uint8"
+                "type": "uint16"
             }
         ],
         "name": "SetFeePercent",
@@ -263,7 +262,7 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_fxStateRootTunnel",
                 "type": "address"
             }
         ],
@@ -276,11 +275,11 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_polToken",
                 "type": "address"
             }
         ],
-        "name": "SetInstantPoolOwner",
+        "name": "SetPOLToken",
         "type": "event"
     },
     {
@@ -289,7 +288,7 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_treasury",
                 "type": "address"
             }
         ],
@@ -302,7 +301,7 @@
             {
                 "indexed": false,
                 "internalType": "address",
-                "name": "_address",
+                "name": "_validatorRegistry",
                 "type": "address"
             }
         ],
@@ -334,7 +333,7 @@
             {
                 "indexed": false,
                 "internalType": "uint256",
-                "name": "_amountStaked",
+                "name": "_stakedAmount",
                 "type": "uint256"
             }
         ],
@@ -433,32 +432,6 @@
     {
         "inputs": [],
         "name": "DEFAULT_ADMIN_ROLE",
-        "outputs": [
-            {
-                "internalType": "bytes32",
-                "name": "",
-                "type": "bytes32"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "INSTANT_POOL_OWNER",
-        "outputs": [
-            {
-                "internalType": "bytes32",
-                "name": "",
-                "type": "bytes32"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "PREDICATE_ROLE",
         "outputs": [
             {
                 "internalType": "bytes32",
@@ -608,6 +581,64 @@
         "type": "function"
     },
     {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_balance",
+                "type": "uint256"
+            }
+        ],
+        "name": "convertMaticXToPOL",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_balance",
+                "type": "uint256"
+            }
+        ],
+        "name": "convertPOLToMaticX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
         "inputs": [],
         "name": "decimals",
         "outputs": [
@@ -649,9 +680,9 @@
         "name": "feePercent",
         "outputs": [
             {
-                "internalType": "uint8",
+                "internalType": "uint16",
                 "name": "",
-                "type": "uint8"
+                "type": "uint16"
             }
         ],
         "stateMutability": "view",
@@ -662,7 +693,7 @@
         "name": "fxStateRootTunnel",
         "outputs": [
             {
-                "internalType": "address",
+                "internalType": "contract IFxStateRootTunnel",
                 "name": "",
                 "type": "address"
             }
@@ -675,18 +706,23 @@
         "name": "getContracts",
         "outputs": [
             {
-                "internalType": "address",
+                "internalType": "contract IStakeManager",
                 "name": "_stakeManager",
                 "type": "address"
             },
             {
-                "internalType": "address",
-                "name": "_polygonERC20",
+                "internalType": "contract IERC20Upgradeable",
+                "name": "_maticToken",
                 "type": "address"
             },
             {
-                "internalType": "address",
+                "internalType": "contract IValidatorRegistry",
                 "name": "_validatorRegistry",
+                "type": "address"
+            },
+            {
+                "internalType": "contract IERC20Upgradeable",
+                "name": "_polToken",
                 "type": "address"
             }
         ],
@@ -716,7 +752,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
+                "name": "_user",
                 "type": "address"
             },
             {
@@ -790,7 +826,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
+                "name": "_user",
                 "type": "address"
             }
         ],
@@ -902,17 +938,12 @@
             },
             {
                 "internalType": "address",
-                "name": "_polygonERC20",
+                "name": "_maticToken",
                 "type": "address"
             },
             {
                 "internalType": "address",
                 "name": "_manager",
-                "type": "address"
-            },
-            {
-                "internalType": "address",
-                "name": "_instantPoolOwner",
                 "type": "address"
             },
             {
@@ -927,42 +958,16 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "instantPoolMatic",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "instantPoolMaticX",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "instantPoolOwner",
-        "outputs": [
+        "inputs": [
             {
                 "internalType": "address",
-                "name": "",
+                "name": "_polToken",
                 "type": "address"
             }
         ],
-        "stateMutability": "view",
+        "name": "initializeV2",
+        "outputs": [],
+        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -984,31 +989,6 @@
             }
         ],
         "name": "migrateDelegation",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_user",
-                "type": "address"
-            },
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "mint",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [],
-        "name": "mintMaticXToInstantPool",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -1037,32 +1017,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "provideInstantPoolMatic",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "provideInstantPoolMaticX",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -1117,9 +1071,9 @@
     {
         "inputs": [
             {
-                "internalType": "uint8",
+                "internalType": "uint16",
                 "name": "_feePercent",
-                "type": "uint8"
+                "type": "uint16"
             }
         ],
         "name": "setFeePercent",
@@ -1131,7 +1085,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
+                "name": "_fxStateRootTunnel",
                 "type": "address"
             }
         ],
@@ -1144,20 +1098,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
-                "type": "address"
-            }
-        ],
-        "name": "setInstantPoolOwner",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "address",
-                "name": "_address",
+                "name": "_treasury",
                 "type": "address"
             }
         ],
@@ -1170,7 +1111,7 @@
         "inputs": [
             {
                 "internalType": "address",
-                "name": "_address",
+                "name": "_validatorRegistry",
                 "type": "address"
             }
         ],
@@ -1193,13 +1134,6 @@
         "type": "function"
     },
     {
-        "inputs": [],
-        "name": "setupBotAdmin",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
         "inputs": [
             {
                 "internalType": "uint256",
@@ -1216,11 +1150,43 @@
         "inputs": [
             {
                 "internalType": "uint256",
+                "name": "_validatorId",
+                "type": "uint256"
+            }
+        ],
+        "name": "stakeRewardsAndDistributeFeesMatic",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
                 "name": "_amount",
                 "type": "uint256"
             }
         ],
         "name": "submit",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_amount",
+                "type": "uint256"
+            }
+        ],
+        "name": "submitPOL",
         "outputs": [
             {
                 "internalType": "uint256",
@@ -1248,19 +1214,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "swapMaticForMaticXViaInstantPool",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
@@ -1373,32 +1326,6 @@
             }
         ],
         "stateMutability": "view",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "withdrawInstantPoolMatic",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_amount",
-                "type": "uint256"
-            }
-        ],
-        "name": "withdrawInstantPoolMaticX",
-        "outputs": [],
-        "stateMutability": "nonpayable",
         "type": "function"
     },
     {
