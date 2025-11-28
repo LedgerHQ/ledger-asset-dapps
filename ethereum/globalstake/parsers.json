@@ -1,0 +1,679 @@
+{
+    "blockchainName": "ethereum",
+    "chainId": 1,
+    "contracts": [
+        {
+            "abi": [],
+            "address": "0x670ba6D42b347bb2EB52FD2dd449D2338a39b794",
+            "name": "0x670ba6D42b347bb2EB52FD2dd449D2338a39b794",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "client",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "client"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "provider",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "provider"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "commission",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "commission"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "deployNewRewardReceiver",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Deploy new reward receiver"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.client",
+                                                "label": "Client address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.provider",
+                                                "label": "Provider address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.commission",
+                                                "label": "Commission"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x98796d48"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "fundValidators",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Fund validators"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "DepositDataArray",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xb860d670"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newRewardReceiverImpl",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newRewardReceiverImpl"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "initialize",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "initialize"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newRewardReceiverImpl",
+                                                "label": "New implementation"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xc4d66de8"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "retrieveETH",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Retrieve ETH"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xd5b014c3"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newOwner",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newOwner"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "transferOwnership",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Transfer Ownership"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newOwner",
+                                                "label": "New owner address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf2fde38b"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newRewardReceiverImpl",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newRewardReceiverImpl"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "updateRewardReceiverImpl",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Update reward receiver implementation"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newRewardReceiverImpl",
+                                                "label": "New implementation"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x5c96539d"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "newImplementation",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "newImplementation"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "data",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "data"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "upgradeToAndCall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Upgrade to and call"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.newImplementation",
+                                                "label": "New implementation"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.data",
+                                                "label": "data"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x4f1ef286"
+                }
+            ]
+        },
+        {
+            "abi": [],
+            "address": "0xCF8357E5D8d90aA3c86EEbA3C494947DAb28bfaF",
+            "name": "0xCF8357E5D8d90aA3c86EEbA3C494947DAb28bfaF",
+            "parsers": [
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "timestamp",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "timestamp"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "positionTicket",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "positionTicket"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "exitQueueIndex",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "exitQueueIndex"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "claimExitedAssets",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Claim exited assets"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.timestamp",
+                                                "label": "Exit initiated at"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8697d2c2"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "receiver",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "receiver"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "referrer",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "referrer"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "deposit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Stake ETH with GlobalStake"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.receiver",
+                                                "label": "Client address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.referrer",
+                                                "label": "Referrer address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xf9609f08"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "shares",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "shares"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "receiver",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "receiver"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [],
+                    "functionName": "enterExitQueue",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Enter exit queue"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.shares",
+                                                "label": "Amount to exit"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.receiver",
+                                                "label": "Client address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x8ceab9aa"
+                },
+                {
+                    "arguments": [],
+                    "arguments_skipped": [],
+                    "functionName": "multicall",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Multicall"
+                                            }
+                                        },
+                                        {
+                                            "static_entry": {
+                                                "label": "data",
+                                                "value": "(Cannot be displayed)"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0xac9650d8"
+                },
+                {
+                    "arguments": [
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "receiver",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "receiver"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_EIP55",
+                            "name": "referrer",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "referrer"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "arguments_skipped": [
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "harvestParams.rewardsRoot",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "harvestParams.rewardsRoot"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "harvestParams.reward",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "harvestParams.reward"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "format": "ARGUMENTFORMAT_RAW",
+                            "name": "harvestParams.unlockedMevReward",
+                            "value": {
+                                "terminalValue": {
+                                    "path": {
+                                        "abi_path": "harvestParams.unlockedMevReward"
+                                    }
+                                }
+                            }
+                        }
+                    ],
+                    "functionName": "updateStateAndDeposit",
+                    "functionType": "unknown",
+                    "options": {},
+                    "screens": {
+                        "blue_screens": [
+                            {
+                                "key_value_screen": {
+                                    "properties": [
+                                        {
+                                            "static_entry": {
+                                                "label": "Function",
+                                                "value": "Stake ETH with GlobalStake"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.receiver",
+                                                "label": "Client address"
+                                            }
+                                        },
+                                        {
+                                            "property_ref": {
+                                                "key": "sci.eth.arg.referrer",
+                                                "label": "Referrer address"
+                                            }
+                                        }
+                                    ],
+                                    "skip_subheader": false,
+                                    "subtitle": " ",
+                                    "title": "APPROVE CONTRACT DATA"
+                                }
+                            }
+                        ]
+                    },
+                    "selector": "0x18f72950"
+                }
+            ]
+        }
+    ],
+    "id": "globalstake",
+    "name": "globalstake"
+}
