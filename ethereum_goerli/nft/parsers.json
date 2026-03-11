@@ -92,7 +92,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -113,18 +117,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -133,6 +152,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -143,6 +167,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -270,7 +297,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -291,18 +322,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -311,6 +357,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -321,6 +372,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -431,7 +485,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -452,18 +510,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -472,6 +545,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -482,6 +560,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -586,7 +667,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -607,18 +692,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -627,6 +727,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -637,6 +742,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -724,7 +832,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -745,18 +857,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -765,6 +892,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -775,6 +907,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -913,7 +1048,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -934,18 +1073,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -954,6 +1108,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -964,6 +1123,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -1118,7 +1280,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -1139,18 +1305,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -1159,6 +1340,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -1169,6 +1355,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
@@ -1289,7 +1478,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "account.name"
+                                                "format": {
+                                                    "string": {}
+                                                },
+                                                "key": "account.name",
+                                                "label": "Account"
                                             }
                                         },
                                         {
@@ -1310,18 +1503,33 @@
                                     "properties": [
                                         {
                                             "property_ref": {
-                                                "key": "amount"
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_COIN"
+                                                    }
+                                                },
+                                                "key": "amount",
+                                                "label": "Amount"
                                             }
                                         },
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxGasPrice",
                                                 "label": "Base fee + buffer"
                                             }
                                         },
                                         {
                                             "property_ref": {
-                                                "key": "gasLimit"
+                                                "format": {
+                                                    "decimal": {}
+                                                },
+                                                "key": "gasLimit",
+                                                "label": "Gas limit"
                                             }
                                         }
                                     ]
@@ -1330,6 +1538,11 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "amount": {
+                                                        "coin_or_fee": "AMOUNT_FEE"
+                                                    }
+                                                },
                                                 "key": "maxFees",
                                                 "label": "Max fee"
                                             }
@@ -1340,6 +1553,9 @@
                                     "properties": [
                                         {
                                             "property_ref": {
+                                                "format": {
+                                                    "string": {}
+                                                },
                                                 "key": "addr",
                                                 "label": "NFT address"
                                             }
