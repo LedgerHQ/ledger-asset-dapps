@@ -33,7 +33,7 @@ jobs:
           cache: 'pipenv'
 
       - name: Install pipenv
-        run: pip install -U pip pipenv wheel
+        run: pip install -U pip pipenv wheel setuptools
 
       - name: Install python dependencies
         env:
