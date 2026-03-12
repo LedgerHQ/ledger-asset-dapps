@@ -1,0 +1,68 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenOut",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountMTokenIn",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minReceiveAmount",
+                "type": "uint256"
+            }
+        ],
+        "name": "redeemInstant",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenOut",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountMTokenIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "redeemRequest",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "requestId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountMTokenIn",
+                "type": "uint256"
+            }
+        ],
+        "name": "redeemFiatRequest",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "requestId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

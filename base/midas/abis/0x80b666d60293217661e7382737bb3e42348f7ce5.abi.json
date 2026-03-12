@@ -1,0 +1,59 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenIn",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountToken",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "minReceiveAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "referrerId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositInstant",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenIn",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountToken",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "referrerId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "depositRequest",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "requestId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
