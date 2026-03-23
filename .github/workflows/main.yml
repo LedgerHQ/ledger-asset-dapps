@@ -39,7 +39,7 @@ jobs:
 
       - name: Validate files and format
         id: validation
-        uses: selfagency/capture-output@v1
+        uses: selfagency/capture-output@v2
         with:
           cmd: pipenv
           args: run,validate_files
