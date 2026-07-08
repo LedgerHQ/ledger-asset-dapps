@@ -1,0 +1,28 @@
+{
+  "blockchainName": "defi_oracle_meta",
+  "chainId": 138,
+  "contracts": [
+    {
+      "address": "0x86ADA6Ef91A3B450F89f2b751e93B1b7A3218895",
+      "contractName": "DODOPMMIntegration",
+      "selectors": {
+        "0x10b84623": {
+          "erc20OfInterest": ["tokenIn"],
+          "method": "swapExactIn",
+          "plugin": "Ethereum"
+        }
+      }
+    },
+    {
+      "address": "0xde9cD8ee2811E6E64a41D5F68Be315d33995975E",
+      "contractName": "SwapRouter02",
+      "selectors": {
+        "0x04e45aaf": {
+          "erc20OfInterest": ["params.tokenIn", "params.tokenOut"],
+          "method": "exactInputSingle",
+          "plugin": "Uniswap"
+        }
+      }
+    }
+  ]
+}
