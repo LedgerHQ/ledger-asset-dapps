@@ -1,0 +1,18 @@
+{
+    "blockchainName": "zksync",
+    "chainId": 324,
+    "contracts": [
+        {
+            "address": "0x28731bcc616b5f51dd52cf2e4df0e78dd1136c06",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}
