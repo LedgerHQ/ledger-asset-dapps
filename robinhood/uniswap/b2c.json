@@ -1,0 +1,18 @@
+{
+    "blockchainName": "robinhood",
+    "chainId": 4663,
+    "contracts": [
+        {
+            "address": "0x8876789976decbfcbbbe364623c63652db8c0904",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}

@@ -1,9 +1,9 @@
 {
-    "blockchainName": "base",
-    "chainId": 8453,
+    "blockchainName": "linea",
+    "chainId": 59144,
     "contracts": [
         {
-            "address": "0x3fc91a3afd70395cd496c647d5a6cc9d4b2b7fad",
+            "address": "0x661e93cca42afacb172121ef892830ca3b70f08d",
             "contractName": "UniversalRouter",
             "selectors": {
                 "0x3593564c": {
@@ -14,18 +14,7 @@
             }
         },
         {
-            "address": "0x6ff5693b99212da76ad316178a184ab56d299b43",
-            "contractName": "UniversalRouter",
-            "selectors": {
-                "0x3593564c": {
-                    "erc20OfInterest": [],
-                    "method": "execute",
-                    "plugin": "Uniswap"
-                }
-            }
-        },
-        {
-            "address": "0xfdf682f51fe81aa4898f0ae2163d8a55c127fbc7",
+            "address": "0x8b844f885672f333bc0042cb669255f93a4c1e6b",
             "contractName": "UniversalRouter",
             "selectors": {
                 "0x3593564c": {
