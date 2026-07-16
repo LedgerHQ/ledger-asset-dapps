@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+setuptools = "*"
 jsonschema = "*"
 eth-utils = "*"
 eth-hash = {extras = ["pycryptodome"], version = "*"}
@@ -16,4 +17,4 @@ eth-utils = "*"
 validate_files = "python ./scripts/validate_files.py"
 
 [requires]
-python_version = "3.9"
+python_version = "3.11"
