@@ -1,0 +1,1948 @@
+[
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "facetAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "enum IDiamond.FacetCutAction",
+                        "name": "action",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bytes4[]",
+                        "name": "functionSelectors",
+                        "type": "bytes4[]"
+                    }
+                ],
+                "internalType": "struct IDiamond.FacetCut[]",
+                "name": "_diamondCut",
+                "type": "tuple[]"
+            },
+            {
+                "internalType": "address",
+                "name": "_init",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_initCalldata",
+                "type": "bytes"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "constructor"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotAddFunctionToDiamondThatAlreadyExists",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4[]",
+                "name": "_selectors",
+                "type": "bytes4[]"
+            }
+        ],
+        "name": "CannotAddSelectorsToZeroAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotRemoveFunctionThatDoesNotExist",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotRemoveImmutableFunction",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotReplaceFunctionThatDoesNotExists",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotReplaceFunctionWithTheSameFunctionFromTheSameFacet",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4[]",
+                "name": "_selectors",
+                "type": "bytes4[]"
+            }
+        ],
+        "name": "CannotReplaceFunctionsFromFacetWithZeroAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_selector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "CannotReplaceImmutableFunction",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes4",
+                "name": "_functionSelector",
+                "type": "bytes4"
+            }
+        ],
+        "name": "FunctionNotFound",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint8",
+                "name": "_action",
+                "type": "uint8"
+            }
+        ],
+        "name": "IncorrectFacetCutAction",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_initializationContractAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "bytes",
+                "name": "_calldata",
+                "type": "bytes"
+            }
+        ],
+        "name": "InitializationFunctionReverted",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_contractAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "string",
+                "name": "_message",
+                "type": "string"
+            }
+        ],
+        "name": "NoBytecodeAtAddress",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_facetAddress",
+                "type": "address"
+            }
+        ],
+        "name": "NoSelectorsProvidedForFacetForCut",
+        "type": "error"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_facetAddress",
+                "type": "address"
+            }
+        ],
+        "name": "RemoveFacetAddressMustBeZeroAddress",
+        "type": "error"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "feeBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "mintingVaultCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "mintingPoolCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "freeCollateralLots",
+                "type": "uint256"
+            }
+        ],
+        "name": "AgentAvailable",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "collateralClass",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            }
+        ],
+        "name": "AgentCollateralTypeChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "destroyAllowedAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "AgentDestroyAnnounced",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            }
+        ],
+        "name": "AgentDestroyed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "AgentInCCB",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "validAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "AgentSettingChangeAnnounced",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+            }
+        ],
+        "name": "AgentSettingChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "owner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "collateralPool",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "collateralPoolToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "underlyingAddress",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "vaultCollateralToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "poolWNatToken",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "feeBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolFeeShareBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "mintingVaultCollateralRatioBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "mintingPoolCollateralRatioBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "buyFAssetByAgentFactorBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolExitCollateralRatioBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolTopupCollateralRatioBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "poolTopupTokenPriceFactorBIPS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "handshakeType",
+                        "type": "uint256"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct IAssetManagerEvents.AgentVaultCreationData",
+                "name": "creationData",
+                "type": "tuple"
+            }
+        ],
+        "name": "AgentVaultCreated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "exitAllowedAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "AvailableAgentExitAnnounced",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            }
+        ],
+        "name": "AvailableAgentExited",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "collateralClass",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "collateralToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "minCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ccbMinCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "safetyMinCollateralRatioBIPS",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralRatiosChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralReservationCancelled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "reservedAmountUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralReservationDeleted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralReservationRejected",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "feeUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "firstUnderlyingBlock",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "lastUnderlyingBlock",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "lastUnderlyingTimestamp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "paymentAddress",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "paymentReference",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "executor",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "executorFeeNatWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralReserved",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "collateralClass",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "token",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "decimals",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "directPricePair",
+                "type": "bool"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "assetFtsoSymbol",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "tokenFtsoSymbol",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "minCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ccbMinCollateralRatioBIPS",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "safetyMinCollateralRatioBIPS",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralTypeAdded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "collateralClass",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "collateralToken",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "validUntil",
+                "type": "uint256"
+            }
+        ],
+        "name": "CollateralTypeDeprecated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "value",
+                "type": "address"
+            }
+        ],
+        "name": "ContractChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "underlyingBlockNumber",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "underlyingBlockTimestamp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "updatedAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "CurrentUnderlyingBlockUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "facetAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "enum IDiamond.FacetCutAction",
+                        "name": "action",
+                        "type": "uint8"
+                    },
+                    {
+                        "internalType": "bytes4[]",
+                        "name": "functionSelectors",
+                        "type": "bytes4[]"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct IDiamond.FacetCut[]",
+                "name": "_diamondCut",
+                "type": "tuple[]"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "_init",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes",
+                "name": "_calldata",
+                "type": "bytes"
+            }
+        ],
+        "name": "DiamondCut",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash1",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash2",
+                "type": "bytes32"
+            }
+        ],
+        "name": "DuplicatePaymentConfirmed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "dustUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "DustChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "EmergencyPauseCanceled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [],
+        "name": "EmergencyPauseTransfersCanceled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "pausedUntil",
+                "type": "uint256"
+            }
+        ],
+        "name": "EmergencyPauseTransfersTriggered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "pausedUntil",
+                "type": "uint256"
+            }
+        ],
+        "name": "EmergencyPauseTriggered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "FullLiquidationStarted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string[]",
+                "name": "minterUnderlyingAddresses",
+                "type": "string[]"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "feeUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "HandshakeRequired",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            }
+        ],
+        "name": "IllegalPaymentConfirmed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            }
+        ],
+        "name": "LiquidationEnded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "liquidator",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "paidVaultCollateralWei",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "paidPoolCollateralWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidationPerformed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "LiquidationStarted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "mintedAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "agentFeeUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "poolFeeUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "MintingExecuted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "minter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "collateralReservationId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "reservedAmountUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "MintingPaymentDefault",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "amountWei",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "withdrawalAllowedAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "PoolTokenRedemptionAnnounced",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redemptionAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "paidVaultCollateralWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedeemedInCollateral",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redemptionAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redeemedVaultCollateralWei",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redeemedPoolCollateralWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionDefault",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redemptionAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "spentUnderlyingUBA",
+                "type": "int256"
+            }
+        ],
+        "name": "RedemptionPaymentBlocked",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "spentUnderlyingUBA",
+                "type": "int256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "failureReason",
+                "type": "string"
+            }
+        ],
+        "name": "RedemptionPaymentFailed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redemptionAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "spentUnderlyingUBA",
+                "type": "int256"
+            }
+        ],
+        "name": "RedemptionPerformed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "redemptionAmountUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionRejected",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "remainingLots",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionRequestIncomplete",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "paymentAddress",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionRequestRejected",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "requestId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueTakenOverUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "newAgentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint64",
+                "name": "newRequestId",
+                "type": "uint64"
+            }
+        ],
+        "name": "RedemptionRequestTakenOver",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "redeemer",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "requestId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "paymentAddress",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "feeUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "firstUnderlyingBlock",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "lastUnderlyingBlock",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "lastUnderlyingTimestamp",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "paymentReference",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "address",
+                "name": "executor",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "executorFeeNatWei",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionRequested",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "redemptionTicketId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ticketValueUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionTicketCreated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "redemptionTicketId",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionTicketDeleted",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "redemptionTicketId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "ticketValueUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "RedemptionTicketUpdated",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "valueUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "SelfClose",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "mintFromFreeUnderlying",
+                "type": "bool"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "mintedAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "depositedAmountUBA",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "poolFeeUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "SelfMint",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256[]",
+                "name": "value",
+                "type": "uint256[]"
+            }
+        ],
+        "name": "SettingArrayChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "name",
+                "type": "string"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "value",
+                "type": "uint256"
+            }
+        ],
+        "name": "SettingChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "underlyingBalanceUBA",
+                "type": "int256"
+            }
+        ],
+        "name": "UnderlyingBalanceChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "balance",
+                "type": "int256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "requiredBalance",
+                "type": "uint256"
+            }
+        ],
+        "name": "UnderlyingBalanceTooLow",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "depositedUBA",
+                "type": "uint256"
+            }
+        ],
+        "name": "UnderlyingBalanceToppedUp",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "announcementId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "paymentReference",
+                "type": "bytes32"
+            }
+        ],
+        "name": "UnderlyingWithdrawalAnnounced",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "announcementId",
+                "type": "uint64"
+            }
+        ],
+        "name": "UnderlyingWithdrawalCancelled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint64",
+                "name": "announcementId",
+                "type": "uint64"
+            },
+            {
+                "indexed": false,
+                "internalType": "int256",
+                "name": "spentUBA",
+                "type": "int256"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32",
+                "name": "transactionHash",
+                "type": "bytes32"
+            }
+        ],
+        "name": "UnderlyingWithdrawalConfirmed",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "agentVault",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "amountWei",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "withdrawalAllowedAt",
+                "type": "uint256"
+            }
+        ],
+        "name": "VaultCollateralWithdrawalAnnounced",
+        "type": "event"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "fallback"
+    },
+    {
+        "stateMutability": "payable",
+        "type": "receive"
+    }
+]
