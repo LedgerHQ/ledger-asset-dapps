@@ -34,6 +34,17 @@
                     "plugin": "Uniswap"
                 }
             }
+        },
+        {
+            "address": "0x2d01411773c8c24805306e89a41f7855c3c4fe65",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
         }
     ],
     "name": "Uniswap"
