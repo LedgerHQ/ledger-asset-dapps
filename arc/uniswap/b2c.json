@@ -1,0 +1,18 @@
+{
+    "blockchainName": "arc",
+    "chainId": 5042,
+    "contracts": [
+        {
+            "address": "0x8702463e73f74d0b6765abceb314ef07acb92650",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}

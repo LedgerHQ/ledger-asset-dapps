@@ -1,0 +1,18 @@
+{
+    "blockchainName": "hyperevm",
+    "chainId": 999,
+    "contracts": [
+        {
+            "address": "0xed270a1bcdc63cf1356d695e7f40961d4819d6bf",
+            "contractName": "UniversalRouter",
+            "selectors": {
+                "0x3593564c": {
+                    "erc20OfInterest": [],
+                    "method": "execute",
+                    "plugin": "Uniswap"
+                }
+            }
+        }
+    ],
+    "name": "Uniswap"
+}
